@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Details | Daniil Kulakov</title>
+  <meta
+    name="description"
+    content="Detailed project view for Daniil Kulakov's IT Support Specialist portfolio."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  >
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=DM+Sans:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="project.css">
+</head>
+<body>
+  <div class="site-shell project-page-shell">
+    <header class="site-header project-header">
+      <a class="brand" href="index.html#projects">
+        <span class="brand-mark"></span>
+        <span class="brand-copy">
+          <strong>Daniil Kulakov</strong>
+          <span>Project Detail</span>
+        </span>
+      </a>
+      <nav class="project-top-nav">
+        <a class="button button-secondary" href="index.html#projects">Back to Portfolio</a>
+      </nav>
+      <div class="language-switcher" aria-label="Language selector">
+        <button class="language-button is-active" type="button" data-lang="en">EN</button>
+        <button class="language-button" type="button" data-lang="ja">日本語</button>
+        <button class="language-button" type="button" data-lang="ms">BM</button>
+        <button class="language-button" type="button" data-lang="th">ไทย</button>
+      </div>
+    </header>
+
+    <main class="project-page" id="page-content">
+      <section class="project-hero">
+        <div class="project-hero-copy">
+          <p class="section-kicker" id="project-tag"></p>
+          <h1 id="project-title"></h1>
+          <p class="project-summary" id="project-summary"></p>
+        </div>
+      </section>
+
+      <section class="project-detail-layout">
+        <div class="project-detail-main">
+          <section class="project-detail-card">
+            <h2>Project Overview</h2>
+            <p id="project-overview"></p>
+          </section>
+
+          <section class="project-detail-card">
+            <h2>My Role</h2>
+            <p id="project-role"></p>
+          </section>
+
+          <section class="project-detail-card">
+            <h2>Key Tasks</h2>
+            <ul id="project-tasks"></ul>
+          </section>
+
+          <section class="project-detail-card">
+            <h2>Outcome / What I Learned</h2>
+            <p id="project-outcome"></p>
+          </section>
+        </div>
+
+        <aside class="project-detail-side">
+          <section class="project-detail-card">
+            <h2>Tools / Technologies</h2>
+            <div class="project-tools" id="project-tools"></div>
+          </section>
+        </aside>
+      </section>
+
+      <section class="project-gallery-section-block">
+        <div class="project-detail-card project-gallery-card">
+          <div class="project-gallery-head">
+            <h2>Screenshots</h2>
+            <p id="project-gallery-note"></p>
+          </div>
+          <div class="project-gallery-wrap" id="project-gallery-wrap">
+            <div class="swiper project-swiper" id="project-swiper">
+              <div class="swiper-wrapper" id="project-gallery"></div>
+              <div class="project-swiper-meta">
+                <button class="swiper-button-prev project-swiper-button" type="button" aria-label="Previous screenshot"></button>
+                <div class="swiper-pagination"></div>
+                <button class="swiper-button-next project-swiper-button" type="button" aria-label="Next screenshot"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="image-lightbox" id="image-lightbox" aria-hidden="true">
+    <div class="image-lightbox-backdrop" data-lightbox-close></div>
+    <div class="image-lightbox-dialog" role="dialog" aria-modal="true" aria-label="Screenshot viewer">
+      <div class="image-lightbox-toolbar">
+        <button class="image-lightbox-button" type="button" id="lightbox-zoom-out" aria-label="Zoom out">-</button>
+        <button class="image-lightbox-button" type="button" id="lightbox-zoom-in" aria-label="Zoom in">+</button>
+        <button class="image-lightbox-button" type="button" id="lightbox-reset" aria-label="Reset zoom">Reset</button>
+        <button class="image-lightbox-button image-lightbox-close" type="button" id="lightbox-close" aria-label="Close viewer">Close</button>
+      </div>
+      <div class="image-lightbox-stage" id="image-lightbox-stage">
+        <img id="image-lightbox-image" alt="Expanded project screenshot">
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="translations.js"></script>
+  <script src="project-data.js"></script>
+  <script src="project-view.js"></script>
+</body>
+</html>
