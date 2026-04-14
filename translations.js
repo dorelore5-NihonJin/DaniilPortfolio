@@ -4,31 +4,31 @@ window.portfolioTranslations = {
   index: {
     en: {
       title: "Daniil Kulakov | IT Support Specialist",
-      description: "Portfolio of Daniil Kulakov, an IT Support Specialist and Junior System Administrator focused on Windows support, troubleshooting, hardware, networking basics, and Ubuntu VPS administration.",
+      description: "Portfolio of Daniil Kulakov, an IT Support Specialist with 2+ years of Windows support experience across troubleshooting, hardware, networking basics, Microsoft 365, and Ubuntu VPS administration.",
       nav: ["About", "Skills", "Projects", "Resume", "Contact"],
       hero: {
         eyebrow: "Open to international relocation",
-        role: "Daniil Kulakov / IT Support Specialist / Junior System Administrator",
-        title: "Reliable support for Windows users, hardware issues, and entry-level infrastructure.",
-        text: "I help keep systems stable and usable through practical troubleshooting, PC assembly, networking basics, Linux fundamentals, and Ubuntu VPS maintenance.",
+        role: "Daniil Kulakov / IT Support Specialist / Systems Support",
+        title: "Reliable IT support for Windows users, hardware issues, and day-to-day infrastructure operations.",
+        text: "I bring 2+ years of hands-on Windows support experience across troubleshooting, hardware work, connectivity issues, Microsoft 365 usage, and Ubuntu VPS maintenance.",
         actions: ["Contact Me", "View CV"],
         proof: [
           ["Experience focus", "Windows support, troubleshooting, documentation"],
-          ["Hands-on work", "30+ PCs assembled, upgraded, or repaired"],
-          ["Relocation", "Vietnam, Thailand, Malaysia"]
+          ["Hands-on work", "50+ systems built, upgraded, or repaired"],
+          ["Relocation", "Open internationally, with preference for Southeast Asia"]
         ]
       },
       about: {
         kicker: "About Me",
-        title: "Hands-on support experience with a clear junior sysadmin path.",
+        title: "Hands-on IT support experience with 2+ years in a small-office Windows environment.",
         copy: [
-          "I support Windows-based users with installation, troubleshooting, hardware diagnostics, software setup, and everyday connectivity issues.",
-          "My experience combines user-facing IT support with practical technical work, from replacing faulty components to documenting repeatable fixes.",
-          "Alongside desktop support, I maintain an Ubuntu VPS using SSH, Apache, MySQL, and WinSCP, which gives me a solid entry-level foundation in Linux administration and routine server upkeep."
+          "I provide L1/L2 IT support for Windows-based users, covering operating system issues, application troubleshooting, software setup, hardware diagnostics, and everyday connectivity problems.",
+          "My background combines user-facing support with practical technical execution, including incident handling, component replacement, repeatable fix documentation, and dependable day-to-day support work.",
+          "Alongside desktop support, I maintain Ubuntu VPS environments with SSH, Apache, MySQL, and WinSCP, giving me practical exposure to Linux administration, hosted services, and routine server upkeep."
         ],
         facts: [
           ["Experience", "KiliaService", "IT Support Technician / Junior System Administration Intern"],
-          ["Education", "IT / Information Systems and Programming", "Expected graduation: June 2026"],
+          ["Education", "IT / Information Systems and Programming", "Specialist Diploma expected: June 2026"],
           ["Languages", "Russian, English, Japanese", "Russian native, English B2, JLPT N2 Japanese"]
         ]
       },
@@ -37,10 +37,10 @@ window.portfolioTranslations = {
         title: "Built around support, troubleshooting, and dependable technical execution.",
         groups: [
           ["Windows Support", ["Windows 7/10/11 installation, setup, and recovery", "Driver issues, software installation, update troubleshooting", "L1/L2 end-user issue handling and incident support"]],
-          ["Hardware & PC Assembly", ["30+ PC builds, upgrades, and repairs", "Diagnostics for PSU, RAM, SSD, GPU, and peripherals", "Component replacement and stable workstation setup"]],
+          ["Hardware & PC Assembly", ["50+ systems built, upgraded, or repaired", "Diagnostics for PSU, RAM, SSD, GPU, and peripherals", "Component replacement and stable workstation setup"]],
           ["Networking Basics", ["IP addressing, connectivity troubleshooting, Wi-Fi issues", "Router configuration and basic network problem isolation", "TCP/IP fundamentals and entry-level routing awareness"]],
           ["Linux & Remote Access", ["Ubuntu basics, file permissions, package updates", "SSH administration, WinSCP, Command Prompt, Terminal", "Apache, MySQL, and practical VPS maintenance"]],
-          ["Virtualization & Testing", ["VirtualBox setup for Windows/Linux compatibility checks", "Cross-platform test environments for practical troubleshooting", "Comfortable moving between local and virtual systems"]],
+          ["Microsoft 365 & Identity", ["Confident day-to-day use of Microsoft 365 applications", "Working knowledge of Active Directory users, accounts, and permissions", "Comfortable supporting office productivity and access issues"]],
           ["Documentation", ["Knowledge base style write-ups for common fixes", "Clear user communication and issue reporting", "Repeatable troubleshooting steps for faster resolution"]]
         ]
       },
@@ -48,23 +48,23 @@ window.portfolioTranslations = {
         kicker: "Projects",
         title: "Practical projects that show support skills beyond theory.",
         cards: [
-          ["Desktop support / hardware", "Windows Deployment, Repair, and PC Build Work", "Reinstalled Windows, configured drivers and software, diagnosed hardware failures, and assembled more than 30 PCs for real use cases.", ["Windows deployment and post-install configuration", "Fault isolation across hardware and software layers", "Peripheral setup and end-user readiness"], "View details"],
+          ["Desktop support / hardware", "Windows Deployment, Repair, and PC Build Work", "Delivered Windows reinstallations, driver and software setup, hardware diagnostics, and hands-on build or upgrade work across 50+ user systems in real support scenarios.", ["Windows deployment and post-install configuration", "Fault isolation across hardware and software layers", "Peripheral setup and end-user readiness"], "View details"],
           ["Linux / hosting", "JKT Personal Website on Ubuntu VPS", "Set up and maintained a personal website on an Ubuntu VPS using Apache and MySQL, with server access handled through SSH and WinSCP.", ["Ubuntu VPS setup and basic server administration", "SSH-based remote management", "Routine troubleshooting and website maintenance"], "View details"],
           ["Remote administration", "Self-Hosted VPN and Telegram Web App", "Configured a VPN server and supported a Telegram web application on Ubuntu VPS infrastructure, including updates and remote maintenance tasks.", ["Linux server upkeep and patching", "Remote operations with SSH", "Practical exposure to hosted service reliability"], "View details"]
         ]
       },
       resume: {
         kicker: "Resume / CV",
-        title: "A recruiter-friendly summary for support and junior infrastructure roles.",
+        title: "A recruiter-friendly summary for support and systems operations roles.",
         panels: [
-          ["What I bring", ["Hands-on L1/L2 Windows support and user issue resolution", "Hardware diagnostics, PC assembly, and workstation setup", "Networking basics, Linux fundamentals, and Ubuntu VPS support", "Clear documentation and communication with end users"]],
-          ["Availability", ["Open to relocation to Vietnam, Thailand, and Malaysia", "Visa sponsorship required", "Remote work possible immediately", "On-site relocation target from late June 2026"], "Open Resume PDF"]
+          ["What I bring", ["Hands-on L1/L2 Windows support and user issue resolution", "Hardware diagnostics, PC assembly, upgrades, and workstation setup", "Networking basics, Microsoft 365, Active Directory awareness, and Ubuntu VPS support", "Clear documentation and communication with end users"]],
+          ["Availability", ["Open to international relocation, with preference for Southeast Asia", "Priority countries: Vietnam, Thailand, Malaysia", "Visa sponsorship required", "Remote work possible immediately", "On-site availability from late June 2026"], "Open Resume PDF"]
         ]
       },
       contact: {
         kicker: "Contact",
-        title: "Available for international IT support and junior system administration opportunities.",
-        text: "If you are hiring for IT support, helpdesk, desktop support, or junior system administration, I'm available to discuss remote or relocation-based opportunities.",
+        title: "Available for international IT support and systems support opportunities.",
+        text: "If you are hiring for IT support, helpdesk, desktop support, or systems support, I'm available to discuss remote work immediately or onsite relocation from late June 2026.",
         labels: ["Email", "Phone", "WhatsApp", "Telegram", "LinkedIn"]
       }
     },
@@ -74,19 +74,19 @@ window.portfolioTranslations = {
       nav: ["概要", "スキル", "プロジェクト", "履歴書", "連絡先"],
       hero: {
         eyebrow: "海外移住に対応可能",
-        role: "Daniil Kulakov / ITサポートスペシャリスト / ジュニアシステム管理者",
-        title: "Windows利用者対応、ハードウェア障害、初級インフラ業務に信頼できるサポートを提供します。",
+        role: "Daniil Kulakov / ITサポートスペシャリスト / システムサポート",
+        title: "Windows利用者対応、ハードウェア障害、日常的なインフラ運用に信頼できるサポートを提供します。",
         text: "実践的なトラブルシューティング、PC組み立て、ネットワーク基礎、Linux基礎、Ubuntu VPS運用を通じて、安定して使える環境づくりを支援します。",
         actions: ["連絡する", "履歴書を見る"],
         proof: [
           ["経験分野", "Windowsサポート、トラブル対応、ドキュメント作成"],
           ["実務経験", "30台以上のPCを組立・アップグレード・修理"],
-          ["移住先希望", "ベトナム、タイ、マレーシア"]
+          ["Relocation", "Internationally open, with preference for Southeast Asia"]
         ]
       },
       about: {
         kicker: "概要",
-        title: "実務ベースのサポート経験を持ち、ジュニアシステム管理へ進める人材です。",
+        title: "実務ベースのサポート経験があり、システムサポートの基盤を持つ人材です。",
         copy: [
           "Windows環境の導入、障害対応、ハードウェア診断、ソフトウェア設定、日常的な接続トラブル対応を行っています。",
           "ユーザー対応のITサポートと、部品交換や再発防止のための手順書作成のような実務的な技術作業を両立してきました。",
@@ -121,38 +121,38 @@ window.portfolioTranslations = {
       },
       resume: {
         kicker: "履歴書",
-        title: "サポート職と初級インフラ職向けの要点をまとめた内容です。",
+        title: "サポート職とシステム運用支援職向けの要点をまとめた内容です。",
         panels: [
           ["強み", ["実務的なL1/L2 Windowsサポート", "ハードウェア診断、PC組立、作業端末準備", "ネットワーク基礎、Linux基礎、Ubuntu VPS運用", "明確なドキュメント作成とユーザー対応"]],
-          ["就業条件", ["ベトナム、タイ、マレーシアへの移住可", "ビザスポンサー必要", "リモート勤務はすぐ可能", "現地勤務は2026年6月下旬以降を想定"], "履歴書PDFを開く"]
+          ["就業条件", ["海外 relocation に対応可能で、東南アジアを優先しています", "優先国: ベトナム、タイ、マレーシア", "ビザスポンサーが必要です", "リモート勤務はすぐ可能です", "現地勤務は2026年6月下旬以降を想定しています"], "履歴書PDFを開く"]
         ]
       },
       contact: {
         kicker: "連絡先",
-        title: "海外のITサポート職・ジュニアシステム管理職の機会に対応可能です。",
-        text: "ITサポート、ヘルプデスク、デスクトップサポート、ジュニアシステム管理の採用があれば、リモートまたは移住前提でご相談いただけます。",
+        title: "海外のITサポート職・システムサポート職の機会に対応可能です。",
+        text: "ITサポート、ヘルプデスク、デスクトップサポート、システムサポートの採用があれば、リモートまたは移住前提でご相談いただけます。",
         labels: ["メール", "電話", "WhatsApp", "Telegram", "LinkedIn"]
       }
     },
     ms: {
       title: "Daniil Kulakov | Pakar Sokongan IT",
-      description: "Portfolio Daniil Kulakov, Pakar Sokongan IT dan Pentadbir Sistem Junior dengan fokus pada sokongan Windows, troubleshooting, perkakasan, asas rangkaian, dan Ubuntu VPS.",
+      description: "Portfolio Daniil Kulakov, Pakar Sokongan IT dengan fokus pada sokongan Windows, troubleshooting, perkakasan, asas rangkaian, asas Linux, dan Ubuntu VPS.",
       nav: ["Tentang", "Kemahiran", "Projek", "Resume", "Hubungi"],
       hero: {
         eyebrow: "Terbuka untuk relokasi antarabangsa",
-        role: "Daniil Kulakov / Pakar Sokongan IT / Pentadbir Sistem Junior",
-        title: "Sokongan yang boleh dipercayai untuk pengguna Windows, isu perkakasan, dan infrastruktur peringkat junior.",
+        role: "Daniil Kulakov / Pakar Sokongan IT / Sokongan Sistem",
+        title: "Sokongan yang boleh dipercayai untuk pengguna Windows, isu perkakasan, dan operasi infrastruktur harian.",
         text: "Saya membantu memastikan sistem kekal stabil dan boleh digunakan melalui troubleshooting praktikal, pemasangan PC, asas rangkaian, asas Linux, dan penyelenggaraan Ubuntu VPS.",
         actions: ["Hubungi Saya", "Lihat CV"],
         proof: [
           ["Fokus pengalaman", "Sokongan Windows, troubleshooting, dokumentasi"],
           ["Kerja praktikal", "30+ PC dipasang, dinaik taraf, atau dibaiki"],
-          ["Relokasi", "Vietnam, Thailand, Malaysia"]
+          ["Relokasi", "Terbuka secara antarabangsa, dengan keutamaan Asia Tenggara"]
         ]
       },
       about: {
         kicker: "Tentang Saya",
-        title: "Pengalaman sokongan praktikal dengan haluan jelas ke arah sysadmin junior.",
+        title: "Pengalaman sokongan praktikal dengan asas yang kukuh dalam sokongan sistem.",
         copy: [
           "Saya menyokong pengguna berasaskan Windows dengan pemasangan, troubleshooting, diagnostik perkakasan, konfigurasi perisian, dan isu sambungan harian.",
           "Pengalaman saya menggabungkan sokongan IT berhadapan pengguna dengan kerja teknikal praktikal, daripada mengganti komponen rosak hingga menulis dokumentasi penyelesaian yang boleh diulang.",
@@ -187,38 +187,38 @@ window.portfolioTranslations = {
       },
       resume: {
         kicker: "Resume / CV",
-        title: "Ringkasan mesra perekrut untuk peranan sokongan dan infrastruktur junior.",
+        title: "Ringkasan mesra perekrut untuk peranan sokongan dan sokongan infrastruktur.",
         panels: [
           ["Apa yang saya bawa", ["Pengalaman hands-on sokongan Windows L1/L2 dan penyelesaian isu pengguna", "Diagnostik perkakasan, pemasangan PC, dan penyediaan workstation", "Asas rangkaian, asas Linux, dan sokongan Ubuntu VPS", "Dokumentasi dan komunikasi yang jelas dengan pengguna akhir"]],
-          ["Ketersediaan", ["Terbuka untuk relokasi ke Vietnam, Thailand, dan Malaysia", "Penajaan visa diperlukan", "Boleh mula kerja remote dengan segera", "Sasaran relokasi on-site mulai akhir Jun 2026"], "Buka Resume PDF"]
+          ["Ketersediaan", ["Terbuka untuk relokasi antarabangsa, dengan keutamaan Asia Tenggara", "Negara keutamaan: Vietnam, Thailand, Malaysia", "Penajaan visa diperlukan", "Boleh mula kerja remote dengan segera", "Sasaran relokasi on-site mulai akhir Jun 2026"], "Buka Resume PDF"]
         ]
       },
       contact: {
         kicker: "Hubungi",
-        title: "Tersedia untuk peluang sokongan IT antarabangsa dan pentadbiran sistem junior.",
-        text: "Jika anda sedang mengambil untuk IT support, helpdesk, desktop support, atau junior system administration, saya sedia berbincang tentang peluang remote atau relokasi.",
+        title: "Tersedia untuk peluang sokongan IT antarabangsa dan sokongan sistem.",
+        text: "Jika anda sedang mengambil untuk IT support, helpdesk, desktop support, atau sokongan sistem, saya sedia berbincang tentang peluang remote atau relokasi.",
         labels: ["Emel", "Telefon", "WhatsApp", "Telegram", "LinkedIn"]
       }
     },
     th: {
       title: "Daniil Kulakov | ผู้เชี่ยวชาญด้าน IT Support",
-      description: "พอร์ตโฟลิโอของ Daniil Kulakov สำหรับงาน IT Support และ Junior System Administrator โดยเน้น Windows support, troubleshooting, hardware, networking basics และ Ubuntu VPS",
+      description: "พอร์ตโฟลิโอของ Daniil Kulakov สำหรับงาน IT Support โดยเน้น Windows support, troubleshooting, hardware, networking basics, Linux fundamentals และ Ubuntu VPS",
       nav: ["เกี่ยวกับ", "ทักษะ", "โปรเจกต์", "เรซูเม่", "ติดต่อ"],
       hero: {
         eyebrow: "พร้อมย้ายประเทศเพื่อทำงาน",
-        role: "Daniil Kulakov / IT Support Specialist / Junior System Administrator",
-        title: "ซัพพอร์ตที่เชื่อถือได้สำหรับผู้ใช้ Windows ปัญหาฮาร์ดแวร์ และงานโครงสร้างพื้นฐานระดับเริ่มต้น",
+        role: "Daniil Kulakov / IT Support Specialist / Systems Support",
+        title: "ซัพพอร์ตที่เชื่อถือได้สำหรับผู้ใช้ Windows ปัญหาฮาร์ดแวร์ และงานโครงสร้างพื้นฐานประจำวัน",
         text: "ผมช่วยให้ระบบใช้งานได้อย่างเสถียรผ่านการแก้ปัญหาเชิงปฏิบัติ การประกอบคอมพิวเตอร์ พื้นฐานเครือข่าย พื้นฐาน Linux และการดูแล Ubuntu VPS",
         actions: ["ติดต่อ", "ดู CV"],
         proof: [
           ["จุดเน้นประสบการณ์", "Windows support, troubleshooting, documentation"],
           ["งานภาคปฏิบัติ", "ประกอบ อัปเกรด หรือซ่อม PC มากกว่า 30 เครื่อง"],
-          ["ประเทศที่พร้อมย้ายไป", "เวียดนาม ไทย มาเลเซีย"]
+          ["Relocation", "Open internationally, with preference for Southeast Asia"]
         ]
       },
       about: {
         kicker: "เกี่ยวกับผม",
-        title: "มีประสบการณ์ซัพพอร์ตแบบลงมือทำจริง และมีเส้นทางชัดเจนสู่สาย junior sysadmin",
+        title: "มีประสบการณ์ซัพพอร์ตแบบลงมือทำจริง และมีพื้นฐานที่แข็งแรงในงาน systems support",
         copy: [
           "ผมดูแลผู้ใช้ Windows ทั้งการติดตั้ง การแก้ปัญหา การวินิจฉัยฮาร์ดแวร์ การตั้งค่าซอฟต์แวร์ และปัญหาการเชื่อมต่อในงานประจำวัน",
           "ประสบการณ์ของผมผสมผสานงานซัพพอร์ตที่ต้องสื่อสารกับผู้ใช้เข้ากับงานเทคนิคจริง ตั้งแต่เปลี่ยนชิ้นส่วนที่เสียไปจนถึงการเขียนขั้นตอนแก้ปัญหาที่ใช้ซ้ำได้",
@@ -253,16 +253,16 @@ window.portfolioTranslations = {
       },
       resume: {
         kicker: "เรซูเม่ / CV",
-        title: "สรุปแบบเป็นมิตรกับ recruiter สำหรับตำแหน่ง support และ junior infrastructure",
+        title: "สรุปแบบเป็นมิตรกับ recruiter สำหรับตำแหน่ง support และ infrastructure support",
         panels: [
           ["สิ่งที่ผมมี", ["ประสบการณ์ Windows support ระดับ L1/L2 และการแก้ปัญหาให้ผู้ใช้", "วินิจฉัยฮาร์ดแวร์ ประกอบ PC และจัดเตรียม workstation", "พื้นฐานเครือข่าย พื้นฐาน Linux และการดูแล Ubuntu VPS", "การสื่อสารและเอกสารที่ชัดเจนสำหรับผู้ใช้ปลายทาง"]],
-          ["ความพร้อมในการทำงาน", ["พร้อมย้ายไปเวียดนาม ไทย และมาเลเซีย", "ต้องการ visa sponsorship", "พร้อมทำงาน remote ได้ทันที", "พร้อมย้ายไปทำงาน on-site ตั้งแต่ปลายมิถุนายน 2026"], "เปิด Resume PDF"]
+          ["ความพร้อมในการทำงาน", ["พร้อมย้ายประเทศเพื่อทำงานในระดับสากล โดยให้ความสำคัญกับเอเชียตะวันออกเฉียงใต้", "ประเทศเป้าหมายหลัก: เวียดนาม ไทย มาเลเซีย", "ต้องการ visa sponsorship", "พร้อมทำงาน remote ได้ทันที", "พร้อมย้ายไปทำงาน on-site ตั้งแต่ปลายมิถุนายน 2026"], "เปิด Resume PDF"]
         ]
       },
       contact: {
         kicker: "ติดต่อ",
-        title: "พร้อมสำหรับโอกาสงาน IT support และ junior system administration ในต่างประเทศ",
-        text: "หากคุณกำลังเปิดรับตำแหน่ง IT support, helpdesk, desktop support หรือ junior system administration ผมพร้อมพูดคุยทั้งงาน remote และงานที่ต้องย้ายประเทศ",
+        title: "พร้อมสำหรับโอกาสงาน IT support และ systems support ในต่างประเทศ",
+        text: "หากคุณกำลังเปิดรับตำแหน่ง IT support, helpdesk, desktop support หรือ systems support ผมพร้อมพูดคุยทั้งงาน remote และงานที่ต้องย้ายประเทศ",
         labels: ["อีเมล", "โทรศัพท์", "WhatsApp", "Telegram", "LinkedIn"]
       }
     }
@@ -277,23 +277,23 @@ window.portfolioTranslations = {
 
 window.portfolioTranslations.index.vi = {
   title: "Daniil Kulakov | Chuyen vien Ho tro CNTT",
-  description: "Portfolio cua Daniil Kulakov, Chuyen vien Ho tro CNTT va Quan tri He thong Junior, tap trung vao ho tro Windows, xu ly su co, phan cung, kien thuc mang co ban va quan tri Ubuntu VPS.",
+  description: "Portfolio cua Daniil Kulakov, Chuyen vien Ho tro CNTT, tap trung vao ho tro Windows, xu ly su co, phan cung, kien thuc mang co ban, Linux fundamentals va quan tri Ubuntu VPS.",
   nav: ["Gioi thieu", "Ky nang", "Du an", "CV", "Lien he"],
   hero: {
     eyebrow: "San sang cho co hoi lam viec quoc te va tai dinh cu",
-    role: "Daniil Kulakov / Chuyen vien Ho tro CNTT / Junior System Administrator",
-    title: "Ho tro dang tin cay cho nguoi dung Windows, su co phan cung va ha tang cap do junior.",
+    role: "Daniil Kulakov / Chuyen vien Ho tro CNTT / Systems Support",
+    title: "Ho tro dang tin cay cho nguoi dung Windows, su co phan cung va van hanh ha tang hang ngay.",
     text: "Toi giup he thong van hanh on dinh va de su dung thong qua xu ly su co thuc te, lap rap PC, kien thuc mang co ban, nen tang Linux va bao tri Ubuntu VPS.",
     actions: ["Lien he", "Xem CV"],
     proof: [
       ["Trong tam kinh nghiem", "Ho tro Windows, xu ly su co, tai lieu hoa"],
       ["Kinh nghiem thuc hanh", "Hon 30 PC da duoc lap rap, nang cap hoac sua chua"],
-      ["Tai dinh cu", "Viet Nam, Thai Lan, Malaysia"]
+      ["Tai dinh cu", "San sang quoc te, uu tien Dong Nam A"]
     ]
   },
   about: {
     kicker: "Gioi thieu",
-    title: "Kinh nghiem ho tro thuc te voi dinh huong ro rang toi vai tro sysadmin junior.",
+    title: "Kinh nghiem ho tro thuc te voi nen tang vung cho systems support.",
     copy: [
       "Toi ho tro nguoi dung Windows voi cai dat, xu ly su co, chan doan phan cung, cau hinh phan mem va cac van de ket noi hang ngay.",
       "Kinh nghiem cua toi ket hop giua ho tro CNTT cho nguoi dung va cong viec ky thuat thuc te, tu thay the linh kien loi den ghi chep cac cach xu ly co the lap lai.",
@@ -328,16 +328,16 @@ window.portfolioTranslations.index.vi = {
   },
   resume: {
     kicker: "Resume / CV",
-    title: "Tom tat de recruiter de danh gia cho cac vai tro support va ha tang junior.",
+    title: "Tom tat de recruiter de danh gia cho cac vai tro support va infrastructure support.",
     panels: [
       ["Gia tri toi mang lai", ["Kinh nghiem ho tro Windows L1/L2 va giai quyet van de nguoi dung", "Chan doan phan cung, lap rap PC va thiet lap workstation", "Kien thuc mang co ban, Linux fundamentals va ho tro Ubuntu VPS", "Tai lieu hoa ro rang va giao tiep tot voi nguoi dung"]],
-      ["Tinh san sang", ["San sang tai dinh cu den Viet Nam, Thai Lan va Malaysia", "Can visa sponsorship", "Co the bat dau remote ngay", "Muc tieu chuyen sang lam on-site tu cuoi thang 6 nam 2026"], "Mo Resume PDF"]
+      ["Tinh san sang", ["San sang tai dinh cu quoc te, uu tien Dong Nam A", "Quoc gia uu tien: Viet Nam, Thai Lan, Malaysia", "Can visa sponsorship", "Co the bat dau remote ngay", "Muc tieu chuyen sang lam on-site tu cuoi thang 6 nam 2026"], "Mo Resume PDF"]
     ]
   },
   contact: {
     kicker: "Lien he",
-    title: "San sang cho cac co hoi IT support va junior system administration quoc te.",
-    text: "Neu ban dang tuyen cho IT support, helpdesk, desktop support hoac junior system administration, toi san sang trao doi ve co hoi remote hoac tai dinh cu.",
+    title: "San sang cho cac co hoi IT support va systems support quoc te.",
+    text: "Neu ban dang tuyen cho IT support, helpdesk, desktop support hoac systems support, toi san sang trao doi ve co hoi remote hoac tai dinh cu.",
     labels: ["Email", "Dien thoai", "WhatsApp", "Telegram", "LinkedIn"]
   }
 };
