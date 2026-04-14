@@ -545,3 +545,47 @@ const initializeLanguage = async () => {
 
 applyTheme(getStoredTheme());
 initializeLanguage();
+
+const introVideoButton = document.getElementById("open-intro-video");
+const introVideoModal = document.getElementById("intro-video-modal");
+const introVideoPlayer = document.getElementById("intro-video-player");
+const introVideoCloseButtons = document.querySelectorAll("[data-video-close]");
+
+const openIntroVideo = () => {
+  if (!introVideoModal) {
+    return;
+  }
+
+  if (introVideoPlayer) {
+    introVideoPlayer.volume = 0.5;
+  }
+
+  introVideoModal.classList.add("is-open");
+  introVideoModal.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden";
+};
+
+const closeIntroVideo = () => {
+  if (!introVideoModal) {
+    return;
+  }
+
+  introVideoModal.classList.remove("is-open");
+  introVideoModal.setAttribute("aria-hidden", "true");
+  document.body.style.overflow = "";
+
+  if (introVideoPlayer) {
+    introVideoPlayer.pause();
+  }
+};
+
+introVideoButton?.addEventListener("click", openIntroVideo);
+introVideoCloseButtons.forEach((button) => {
+  button.addEventListener("click", closeIntroVideo);
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && introVideoModal?.classList.contains("is-open")) {
+    closeIntroVideo();
+  }
+});

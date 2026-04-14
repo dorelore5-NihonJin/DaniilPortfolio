@@ -72,6 +72,7 @@
             <div class="hero-actions reveal">
               <a class="button button-primary" href="#contact">Contact Me</a>
               <a class="button button-secondary" href="Resume/Int_ITsupport_upd_03.14.pdf" target="_blank" rel="noreferrer">View CV</a>
+              <button class="button button-secondary" type="button" id="open-intro-video">Watch Intro Video</button>
             </div>
             <div class="hero-proof reveal">
               <div>
@@ -90,20 +91,29 @@
           </div>
 
           <div class="hero-visual reveal" aria-hidden="true">
-            <div class="hero-ring hero-ring-large"></div>
-            <div class="hero-ring hero-ring-small"></div>
-            <div class="hero-grid-lines"></div>
-            <div class="hero-signal hero-signal-top">
-              <span>Windows Support</span>
-              <strong>L1/L2 troubleshooting</strong>
-            </div>
-            <div class="hero-signal hero-signal-middle">
-              <span>Ubuntu VPS</span>
-              <strong>SSH, Apache, MySQL</strong>
-            </div>
-            <div class="hero-signal hero-signal-bottom">
-              <span>Infrastructure habits</span>
-              <strong>Documentation, routine maintenance</strong>
+            <div class="hero-summary-board">
+              <div class="hero-summary-head">
+                <span>Core focus</span>
+                <strong>IT Support / Junior Sysadmin</strong>
+              </div>
+              <div class="hero-summary-list">
+                <div class="hero-summary-item">
+                  <span>Windows support</span>
+                  <strong>L1/L2 troubleshooting, setup, recovery</strong>
+                </div>
+                <div class="hero-summary-item">
+                  <span>Hardware and users</span>
+                  <strong>PC assembly, diagnostics, workplace readiness</strong>
+                </div>
+                <div class="hero-summary-item">
+                  <span>Linux fundamentals</span>
+                  <strong>Ubuntu VPS, SSH, Apache, MySQL maintenance</strong>
+                </div>
+              </div>
+              <div class="hero-summary-footer">
+                <span>Practical strengths</span>
+                <p>Documentation, repeatable fixes, networking basics, and calm day-to-day support work.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -343,6 +353,24 @@
         </div>
       </section>
     </main>
+  </div>
+
+  <div class="video-modal" id="intro-video-modal" aria-hidden="true">
+    <div class="video-modal-backdrop" data-video-close></div>
+    <div class="video-modal-dialog" role="dialog" aria-modal="true" aria-label="Introduction video">
+      <div class="video-modal-head">
+        <div>
+          <p class="panel-label">Video Introduction</p>
+          <h3>Short English self-introduction</h3>
+        </div>
+        <button class="video-modal-close" type="button" data-video-close>Close</button>
+      </div>
+      <div class="video-frame">
+        <video id="intro-video-player" controls preload="metadata" playsinline>
+          <source src="Video/動画_introductory.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
   </div>
 
   <script src="translations.js"></script>
