@@ -589,3 +589,149 @@ document.addEventListener("keydown", (event) => {
     closeIntroVideo();
   }
 });
+
+const opsReadout = document.getElementById("ops-readout");
+const opsNodes = document.querySelectorAll(".ops-node");
+const opsLayers = [
+  {
+    title: "Windows support",
+    text: "L1/L2 troubleshooting, clean installs, drivers, recovery, user-ready setup."
+  },
+  {
+    title: "Hardware diagnostics",
+    text: "PSU, RAM, SSD, GPU, peripherals, assembly, upgrades, and replacement work."
+  },
+  {
+    title: "Linux and VPS",
+    text: "Ubuntu VPS, SSH, Apache, MySQL, WinSCP, updates, and routine maintenance."
+  },
+  {
+    title: "Network basics",
+    text: "IP addressing, Wi-Fi issues, router setup, connectivity checks, and isolation."
+  }
+];
+
+const setOpsLayer = (index) => {
+  const layer = opsLayers[index] || opsLayers[0];
+  opsNodes.forEach((node) => {
+    node.classList.toggle("is-active", Number(node.dataset.node) === index);
+  });
+
+  if (!opsReadout) {
+    return;
+  }
+
+  const title = opsReadout.querySelector("strong");
+  const text = opsReadout.querySelector("p");
+  if (title) title.textContent = layer.title;
+  if (text) text.textContent = layer.text;
+};
+
+opsNodes.forEach((node) => {
+  node.addEventListener("click", () => setOpsLayer(Number(node.dataset.node || 0)));
+});
+
+const tiltCards = document.querySelectorAll("[data-tilt-card]");
+tiltCards.forEach((card) => {
+  card.addEventListener("pointermove", (event) => {
+    const rect = card.getBoundingClientRect();
+    const x = (event.clientX - rect.left) / rect.width - 0.5;
+    const y = (event.clientY - rect.top) / rect.height - 0.5;
+    card.style.setProperty("--tilt-x", `${(-y * 4).toFixed(2)}deg`);
+    card.style.setProperty("--tilt-y", `${(x * 5).toFixed(2)}deg`);
+  });
+
+  card.addEventListener("pointerleave", () => {
+    card.style.setProperty("--tilt-x", "0deg");
+    card.style.setProperty("--tilt-y", "0deg");
+  });
+});
+
+const skillFilters = document.querySelectorAll(".skill-filter");
+const skillGroups = document.querySelectorAll(".skill-group[data-skill]");
+
+skillFilters.forEach((filter) => {
+  filter.addEventListener("click", () => {
+    const nextFilter = filter.dataset.filter || "all";
+    skillFilters.forEach((item) => item.classList.toggle("is-active", item === filter));
+    skillGroups.forEach((group) => {
+      const isMatch = nextFilter === "all" || group.dataset.skill === nextFilter;
+      group.classList.toggle("is-dimmed", !isMatch);
+    });
+  });
+});
+
+const projectPreview = document.getElementById("project-preview");
+const projectPreviewCards = document.querySelectorAll("[data-project-preview]");
+const projectPreviewData = [
+  {
+    title: "Windows Deployment, Repair, and PC Build Work",
+    text: "Desktop support work across Windows reinstallations, driver setup, hardware diagnostics, and ready-to-use systems.",
+    visual: "workstation",
+    badge: "Ready",
+    windowTitle: "support-runbook"
+  },
+  {
+    title: "JKT Personal Website on Ubuntu VPS",
+    text: "A self-managed Ubuntu VPS website with Apache, MySQL, SSH access, remote file work, and maintenance routines.",
+    visual: "server",
+    badge: "Online",
+    windowTitle: "vps-health"
+  },
+  {
+    title: "Self-Hosted VPN and Telegram Web App",
+    text: "Remote Linux administration for hosted services, including updates, SSH operations, VPN setup, and service upkeep.",
+    visual: "vpn",
+    badge: "Secured",
+    windowTitle: "vpn-route"
+  }
+];
+
+const setProjectPreview = (index) => {
+  const preview = projectPreviewData[index] || projectPreviewData[0];
+  projectPreviewCards.forEach((card) => {
+    card.classList.toggle("is-active", Number(card.dataset.projectPreview) === index);
+  });
+
+  if (!projectPreview) {
+    return;
+  }
+
+  const title = projectPreview.querySelector("strong");
+  const text = projectPreview.querySelector("p");
+  const visual = projectPreview.querySelector(".preview-visual");
+  const badge = projectPreview.querySelector(".preview-badge");
+  const windowTitle = projectPreview.querySelector(".preview-window-bar span");
+  if (title) title.textContent = preview.title;
+  if (text) text.textContent = preview.text;
+  if (visual) visual.dataset.previewVisual = preview.visual;
+  if (badge) badge.textContent = preview.badge;
+  if (windowTitle) windowTitle.textContent = preview.windowTitle;
+};
+
+projectPreviewCards.forEach((card) => {
+  const index = Number(card.dataset.projectPreview || 0);
+  card.addEventListener("pointerenter", () => setProjectPreview(index));
+  card.addEventListener("mouseenter", () => setProjectPreview(index));
+  card.addEventListener("focus", () => setProjectPreview(index));
+});
+
+if ("IntersectionObserver" in window && projectPreviewCards.length) {
+  const projectPreviewObserver = new IntersectionObserver(
+    (entries) => {
+      const visibleEntry = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+      if (visibleEntry) {
+        setProjectPreview(Number(visibleEntry.target.dataset.projectPreview || 0));
+      }
+    },
+    {
+      threshold: [0.35, 0.55, 0.75],
+      rootMargin: "-20% 0px -30% 0px"
+    }
+  );
+
+  projectPreviewCards.forEach((card) => projectPreviewObserver.observe(card));
+}

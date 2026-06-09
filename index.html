@@ -54,6 +54,7 @@
         <button class="language-button" type="button" data-lang="ms">BM</button>
         <button class="language-button" type="button" data-lang="th">ไทย</button>
       </div>
+      </div>
     </header>
 
     <main id="page-content">
@@ -65,14 +66,14 @@
             <p class="eyebrow reveal">Open to international relocation</p>
             <p class="hero-role reveal">Daniil Kulakov / IT Support Specialist / Systems Support</p>
             <h1 class="reveal">Reliable IT support for Windows users, hardware issues, and day-to-day infrastructure operations.</h1>
-            <p class="hero-text reveal">
-              I bring 2+ years of hands-on Windows support experience across troubleshooting, hardware work, connectivity issues, Microsoft 365 usage, and Ubuntu VPS maintenance.
-            </p>
             <div class="hero-actions reveal">
               <a class="button button-primary" href="#contact">Contact Me</a>
               <a class="button button-secondary" href="Resume/Int_ITsupport_upd_03.14.pdf" target="_blank" rel="noreferrer">View CV</a>
               <button class="button button-secondary" type="button" id="open-intro-video">Watch Intro Video</button>
             </div>
+            <p class="hero-text reveal">
+              I bring 2+ years of hands-on Windows support experience across troubleshooting, hardware work, connectivity issues, Microsoft 365 usage, and Ubuntu VPS maintenance.
+            </p>
             <div class="hero-proof reveal">
               <div>
                 <span>Experience focus</span>
@@ -90,29 +91,36 @@
           </div>
 
           <div class="hero-visual reveal" aria-hidden="true">
-            <div class="hero-summary-board">
-              <div class="hero-summary-head">
-                <span>Core focus</span>
-                <strong>IT Support / Systems Support</strong>
-              </div>
-              <div class="hero-summary-list">
-                <div class="hero-summary-item">
-                  <span>Windows support</span>
-                  <strong>L1/L2 troubleshooting, setup, recovery</strong>
+            <div class="ops-console" data-tilt-card>
+              <div class="ops-console-head">
+                <div>
+                  <span>Live support profile</span>
+                  <strong>Daniil Kulakov</strong>
                 </div>
-                <div class="hero-summary-item">
-                  <span>Hardware and users</span>
-                  <strong>PC assembly, diagnostics, workplace readiness</strong>
-                </div>
-                <div class="hero-summary-item">
-                  <span>Linux fundamentals</span>
-                  <strong>Ubuntu VPS, SSH, Apache, MySQL maintenance</strong>
-                </div>
+                <div class="ops-status">Available</div>
               </div>
-              <div class="hero-summary-footer">
-                <span>Practical strengths</span>
-                <p>Documentation, repeatable fixes, networking basics, and calm day-to-day support work.</p>
+              <div class="ops-map">
+                <button class="ops-node ops-node-main is-active" type="button" data-node="0"><span>Windows</span></button>
+                <button class="ops-node ops-node-hardware" type="button" data-node="1"><span>Hardware</span></button>
+                <button class="ops-node ops-node-linux" type="button" data-node="2"><span>Linux</span></button>
+                <button class="ops-node ops-node-network" type="button" data-node="3"><span>Network</span></button>
+                <div class="ops-path ops-path-one"></div>
+                <div class="ops-path ops-path-two"></div>
+                <div class="ops-path ops-path-three"></div>
               </div>
+              <div class="ops-readout" id="ops-readout">
+                <div>
+                  <span>Selected layer</span>
+                  <strong>Windows support</strong>
+                </div>
+                <p>L1/L2 troubleshooting, clean installs, drivers, recovery, user-ready setup.</p>
+              </div>
+              <div class="ops-log">
+                <div><span>01</span><p>Intake issue and reproduce the behavior</p></div>
+                <div><span>02</span><p>Isolate software, hardware, or network layer</p></div>
+                <div><span>03</span><p>Document the repeatable fix</p></div>
+              </div>
+              <div class="ops-meter"><span></span></div>
             </div>
           </div>
         </div>
@@ -160,8 +168,14 @@
           <p class="section-kicker">Skills</p>
           <h2>Built around support, troubleshooting, and dependable technical execution.</h2>
         </div>
+        <div class="skill-controls reveal" aria-label="Filter skill groups">
+          <button class="skill-filter is-active" type="button" data-filter="all">All</button>
+          <button class="skill-filter" type="button" data-filter="support">Support</button>
+          <button class="skill-filter" type="button" data-filter="systems">Systems</button>
+          <button class="skill-filter" type="button" data-filter="process">Process</button>
+        </div>
         <div class="skills-grid">
-          <article class="skill-group reveal">
+          <article class="skill-group reveal" data-skill="support">
             <h3>Windows Support</h3>
             <ul>
               <li>Windows 7/10/11 installation, setup, and recovery</li>
@@ -169,7 +183,7 @@
               <li>L1/L2 end-user issue handling and incident support</li>
             </ul>
           </article>
-          <article class="skill-group reveal">
+          <article class="skill-group reveal" data-skill="support">
             <h3>Hardware & PC Assembly</h3>
             <ul>
               <li>50+ systems built, upgraded, or repaired</li>
@@ -177,7 +191,7 @@
               <li>Component replacement and stable workstation setup</li>
             </ul>
           </article>
-          <article class="skill-group reveal">
+          <article class="skill-group reveal" data-skill="systems">
             <h3>Networking Basics</h3>
             <ul>
               <li>IP addressing, connectivity troubleshooting, Wi-Fi issues</li>
@@ -185,7 +199,7 @@
               <li>TCP/IP fundamentals and entry-level routing awareness</li>
             </ul>
           </article>
-          <article class="skill-group reveal">
+          <article class="skill-group reveal" data-skill="systems">
             <h3>Linux & Remote Access</h3>
             <ul>
               <li>Ubuntu basics, file permissions, package updates</li>
@@ -193,7 +207,7 @@
               <li>Apache, MySQL, and practical VPS maintenance</li>
             </ul>
           </article>
-          <article class="skill-group reveal">
+          <article class="skill-group reveal" data-skill="systems">
             <h3>Microsoft 365 & Identity</h3>
             <ul>
               <li>Confident day-to-day use of Microsoft 365 applications</li>
@@ -201,7 +215,7 @@
               <li>Comfortable supporting office productivity and access issues</li>
             </ul>
           </article>
-          <article class="skill-group reveal">
+          <article class="skill-group reveal" data-skill="process">
             <h3>Documentation</h3>
             <ul>
               <li>Knowledge base style write-ups for common fixes</li>
@@ -217,8 +231,9 @@
           <p class="section-kicker">Projects</p>
           <h2>Practical projects that show support skills beyond theory.</h2>
         </div>
+        <div class="projects-showcase">
         <div class="projects-list">
-          <a class="project-card reveal" href="project.html?project=pc-support" aria-label="Open details for Windows Deployment, Repair, and PC Build Work">
+          <a class="project-card reveal is-active" data-project-preview="0" href="project.html?project=pc-support" aria-label="Open details for Windows Deployment, Repair, and PC Build Work">
             <div class="project-index">01</div>
             <div class="project-body">
               <p class="project-tag">Desktop support / hardware</p>
@@ -235,7 +250,7 @@
             <div class="project-cta">View details</div>
           </a>
 
-          <a class="project-card reveal" href="project.html?project=jkt-site" aria-label="Open details for JKT Personal Website on Ubuntu VPS">
+          <a class="project-card reveal" data-project-preview="1" href="project.html?project=jkt-site" aria-label="Open details for JKT Personal Website on Ubuntu VPS">
             <div class="project-index">02</div>
             <div class="project-body">
               <p class="project-tag">Linux / hosting</p>
@@ -253,7 +268,7 @@
             <div class="project-cta">View details</div>
           </a>
 
-          <a class="project-card reveal" href="project.html?project=telegram-app" aria-label="Open details for Self-Hosted VPN and Telegram Web App">
+          <a class="project-card reveal" data-project-preview="2" href="project.html?project=telegram-app" aria-label="Open details for Self-Hosted VPN and Telegram Web App">
             <div class="project-index">03</div>
             <div class="project-body">
               <p class="project-tag">Remote administration</p>
@@ -270,6 +285,34 @@
             </div>
             <div class="project-cta">View details</div>
           </a>
+        </div>
+        <aside class="project-preview reveal" id="project-preview" aria-label="Selected project preview">
+          <span>Project preview</span>
+          <strong>Windows Deployment, Repair, and PC Build Work</strong>
+          <p>Desktop support work across Windows reinstallations, driver setup, hardware diagnostics, and ready-to-use systems.</p>
+          <div class="preview-visual" data-preview-visual="workstation" aria-hidden="true">
+            <div class="preview-window">
+              <div class="preview-window-bar">
+                <i></i>
+                <i></i>
+                <i></i>
+                <span>support-runbook</span>
+              </div>
+              <div class="preview-lines">
+                <b></b>
+                <b></b>
+                <b></b>
+                <b></b>
+              </div>
+            </div>
+            <div class="preview-device">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="preview-badge">Ready</div>
+          </div>
+        </aside>
         </div>
       </section>
 
