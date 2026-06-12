@@ -1,3 +1,5 @@
+/* Daniil Kulakov | IT Support Specialist Portfolio Interactive Logic */
+
 const translations = window.portfolioTranslations;
 const pageContent = document.getElementById("page-content");
 const metaDescription = document.querySelector('meta[name="description"]');
@@ -42,21 +44,21 @@ const uiCopy = {
     ja: "ITサポートスペシャリスト",
     ms: "Pakar Sokongan IT",
     th: "IT Support Specialist",
-    vi: "Chuyen vien Ho tro CNTT"
+    vi: "Chuyên viên Hỗ trợ IT"
   },
   navToggleLabel: {
     en: "Toggle navigation",
     ja: "ナビゲーションを切り替える",
     ms: "Tukar navigasi",
     th: "สลับเมนูนำทาง",
-    vi: "Mo hoac dong dieu huong"
+    vi: "Mở hoặc đóng điều hướng"
   },
   languageLabel: {
     en: "Language selector",
     ja: "言語の選択",
     ms: "Pemilih bahasa",
     th: "ตัวเลือกภาษา",
-    vi: "Lua chon ngon ngu"
+    vi: "Lựa chọn ngôn ngữ"
   }
 };
 
@@ -262,7 +264,7 @@ const updateLanguageButtons = (lang) => {
 
 const setSectionList = (items, values, builder) => {
   items.forEach((item, index) => {
-    builder(item, values[index], index);
+    if (values[index]) builder(item, values[index], index);
   });
 };
 
@@ -296,93 +298,145 @@ const applyIndexTranslations = (lang) => {
     item.textContent = value;
   });
 
-  const heroProofItems = document.querySelectorAll(".hero-proof > div");
-  const heroSignals = document.querySelectorAll(".hero-signal");
-  const heroSignalContent = [
-    {
-      en: ["Windows Support", "L1/L2 troubleshooting"],
-      ja: ["Windowsサポート", "L1/L2 トラブルシュート"],
-      ms: ["Sokongan Windows", "Troubleshooting L1/L2"],
-      th: ["Windows Support", "L1/L2 troubleshooting"],
-      vi: ["Ho tro Windows", "Xu ly su co L1/L2"]
-    },
-    {
-      en: ["Ubuntu VPS", "SSH, Apache, MySQL"],
-      ja: ["Ubuntu VPS", "SSH・Apache・MySQL"],
-      ms: ["Ubuntu VPS", "SSH, Apache, MySQL"],
-      th: ["Ubuntu VPS", "SSH, Apache, MySQL"],
-      vi: ["Ubuntu VPS", "SSH, Apache, MySQL"]
-    },
-    {
-      en: ["Infrastructure habits", "Documentation, routine maintenance"],
-      ja: ["運用の基礎姿勢", "ドキュメント作成・定期保守"],
-      ms: ["Tabiat infrastruktur", "Dokumentasi, maintenance rutin"],
-      th: ["แนวทางงานระบบ", "เอกสารและการดูแลตามรอบ"],
-      vi: ["Thoi quen van hanh", "Tai lieu va bao tri dinh ky"]
-    }
-  ];
-
-  const eyebrow = document.querySelector(".hero .eyebrow");
   const heroRole = document.querySelector(".hero-role");
   const heroTitle = document.querySelector(".hero-copy h1");
   const heroText = document.querySelector(".hero-text");
-  const heroActions = document.querySelectorAll(".hero-actions a");
+  const heroActions = document.querySelectorAll(".hero-actions .button");
+  const heroProofItems = document.querySelectorAll(".hero-proof-item");
 
-  if (eyebrow) eyebrow.textContent = content.hero.eyebrow;
   if (heroRole) heroRole.textContent = content.hero.role;
   if (heroTitle) heroTitle.textContent = content.hero.title;
   if (heroText) heroText.textContent = content.hero.text;
 
   setSectionList(heroActions, content.hero.actions, (item, value) => {
-    item.textContent = value;
+    // Keep text node content but preserve child icons
+    const icon = item.querySelector("i");
+    item.innerHTML = "";
+    if (icon) item.appendChild(icon);
+    item.appendChild(document.createTextNode((icon ? " " : "") + value));
   });
 
   setSectionList(heroProofItems, content.hero.proof, (item, value) => {
-    const [label, strong] = item.children;
+    const label = item.querySelector("span");
+    const strong = item.querySelector("strong");
     if (label) label.textContent = value[0];
     if (strong) strong.textContent = value[1];
   });
 
-  setSectionList(heroSignals, heroSignalContent, (item, value) => {
-    const localized = value[lang] || value.en;
-    const [label, strong] = item.children;
-    if (label) label.textContent = localized[0];
-    if (strong) strong.textContent = localized[1];
-  });
+  // Localize Ops Console
+  const consoleContent = content.opsConsole;
+  if (consoleContent) {
+    const consoleLabel = document.querySelector(".ops-console-head .ops-console-window-title");
+    const consoleStatus = document.querySelector(".ops-status");
+    const consoleNodes = document.querySelectorAll(".ops-node span");
+    const logItems = document.querySelectorAll(".ops-log p");
+    
+    if (consoleLabel) consoleLabel.textContent = `operator@daniil-systems:~`;
+    if (consoleStatus) consoleStatus.textContent = consoleContent.status;
+    consoleNodes.forEach((nodeSpan, idx) => {
+      if (consoleContent.nodes[idx]) {
+        nodeSpan.textContent = consoleContent.nodes[idx];
+      }
+    });
 
-  const sectionHeads = {
-    about: document.querySelector("#about .section-head"),
-    skills: document.querySelector("#skills .section-head"),
-    projects: document.querySelector("#projects .section-head"),
-    resume: document.querySelector("#resume .section-head"),
-    contact: document.querySelector("#contact .section-head")
-  };
+    // Update active node details
+    const activeNode = document.querySelector(".ops-node.is-active");
+    if (activeNode) {
+      const activeIdx = Number(activeNode.dataset.node || 0);
+      setOpsLayer(activeIdx);
+    }
 
-  const aboutCopy = document.querySelectorAll(".about-copy p");
-  const aboutFacts = document.querySelectorAll(".about-facts > div");
-
-  if (sectionHeads.about) {
-    sectionHeads.about.querySelector(".section-kicker").textContent = content.about.kicker;
-    sectionHeads.about.querySelector("h2").textContent = content.about.title;
+    logItems.forEach((logP, idx) => {
+      if (consoleContent.logLines[idx]) {
+        logP.textContent = consoleContent.logLines[idx];
+      }
+    });
   }
 
-  setSectionList(aboutCopy, content.about.copy, (item, value) => {
+  // Localize Bento Grid About
+  const bentoBioHead = document.querySelector(".bento-bio h3");
+  const bentoBioParagraphs = document.querySelectorAll(".bento-bio-text p");
+  if (bentoBioHead) bentoBioHead.textContent = content.about.facts[0][2].split("/")[0].trim();
+  setSectionList(bentoBioParagraphs, content.about.copy, (item, value) => {
     item.textContent = value;
   });
 
-  setSectionList(aboutFacts, content.about.facts, (item, value) => {
-    const [label, strong, text] = item.children;
-    if (label) label.textContent = value[0];
-    if (strong) strong.textContent = value[1];
-    if (text) text.textContent = value[2];
-  });
-
-  const skillGroups = document.querySelectorAll(".skill-group");
-  if (sectionHeads.skills) {
-    sectionHeads.skills.querySelector(".section-kicker").textContent = content.skills.kicker;
-    sectionHeads.skills.querySelector("h2").textContent = content.skills.title;
+  const bentoExperience = document.querySelector(".bento-experience");
+  if (bentoExperience) {
+    const label = bentoExperience.querySelector(".bento-label");
+    const company = bentoExperience.querySelector("strong");
+    const role = bentoExperience.querySelector("h4");
+    const subtext = bentoExperience.querySelector(".bento-subtext");
+    if (label) label.textContent = content.about.facts[0][0];
+    if (company) company.textContent = content.about.facts[0][1];
+    if (role) role.textContent = content.about.facts[0][2].split("/")[0].trim();
+    if (subtext) subtext.textContent = content.about.facts[0][2].split("/")[1]?.trim() || "";
   }
 
+  const bentoEducation = document.querySelector(".bento-education");
+  if (bentoEducation) {
+    const label = bentoEducation.querySelector(".bento-label");
+    const school = bentoEducation.querySelector("strong");
+    const program = bentoEducation.querySelector("h4");
+    const degree = bentoEducation.querySelector(".bento-subtext");
+    if (label) label.textContent = content.about.facts[1][0];
+    if (school) school.textContent = content.about.facts[1][1].split("/")[0].trim();
+    if (program) program.textContent = content.about.facts[1][1].split("/")[1]?.trim() || content.about.facts[1][1];
+    if (degree) degree.textContent = content.about.facts[1][2];
+  }
+
+  const langLabel = document.querySelector(".bento-languages .bento-label");
+  if (langLabel) langLabel.textContent = content.about.facts[2][0];
+  
+  const ruBadge = document.querySelector(".lang-ru");
+  const enBadge = document.querySelector(".lang-en");
+  const jaBadge = document.querySelector(".lang-ja");
+  const langNames = document.querySelectorAll(".bento-lang-item span");
+  
+  const langTranslations = {
+    en: { names: ["Russian", "English", "Japanese"], ru: "Native", en: "B2 Fluent", ja: "JLPT N2" },
+    ja: { names: ["ロシア語", "英語", "日本語"], ru: "ネイティブ", en: "B2流暢", ja: "JLPT N2合格" },
+    ms: { names: ["Rusia", "Inggeris", "Jepun"], ru: "Asli", en: "Fasih B2", ja: "JLPT N2" },
+    th: { names: ["รัสเซีย", "อังกฤษ", "ญี่ปุ่น"], ru: "ภาษาแม่", en: "คล่องแคล่ว B2", ja: "JLPT N2" },
+    vi: { names: ["Tiếng Nga", "Tiếng Anh", "Tiếng Nhật"], ru: "Bản ngữ", en: "Lưu loát B2", ja: "JLPT N2" }
+  };
+  
+  const lTrans = langTranslations[lang] || langTranslations.en;
+  if (langNames.length >= 3) {
+    langNames[0].textContent = lTrans.names[0];
+    langNames[1].textContent = lTrans.names[1];
+    langNames[2].textContent = lTrans.names[2];
+  }
+  if (ruBadge) ruBadge.textContent = lTrans.ru;
+  if (enBadge) enBadge.textContent = lTrans.en;
+  if (jaBadge) jaBadge.textContent = lTrans.ja;
+
+  const relocLabel = document.querySelector(".bento-relocation .bento-label");
+  const relocStatus = document.querySelector(".bento-status strong");
+  const relocItems = document.querySelectorAll(".bento-reloc-item");
+  
+  const relocTranslations = {
+    en: { label: "Relocation", status: "Sponsorship Ready", countries: ["Vietnam", "Thailand", "Malaysia"] },
+    ja: { label: "海外移住", status: "スポンサー準備可", countries: ["ベトナム", "タイ", "マレーシア"] },
+    ms: { label: "Relokasi", status: "Sedia Ditaja", countries: ["Vietnam", "Thailand", "Malaysia"] },
+    th: { label: "ย้ายประเทศ", status: "ต้องการสปอนเซอร์", countries: ["เวียดนาม", "ไทย", "มาเลเซีย"] },
+    vi: { label: "Tái định cư", status: "Sẵn sàng tài trợ", countries: ["Việt Nam", "Thái Lan", "Malaysia"] }
+  };
+  
+  const rTrans = relocTranslations[lang] || relocTranslations.en;
+  if (relocLabel) relocLabel.textContent = rTrans.label;
+  if (relocStatus) relocStatus.textContent = rTrans.status;
+  relocItems.forEach((item, idx) => {
+    if (rTrans.countries[idx]) {
+      item.innerHTML = `<i class="ph-bold ph-map-pin"></i>${rTrans.countries[idx]}`;
+    }
+  });
+
+  // Localize Skills Heading
+  const skillsHead = document.querySelector("#skills h2");
+  if (skillsHead) skillsHead.textContent = content.skills.title;
+
+  const skillGroups = document.querySelectorAll(".skill-group");
   setSectionList(skillGroups, content.skills.groups, (item, value) => {
     const heading = item.querySelector("h3");
     const listItems = item.querySelectorAll("li");
@@ -392,34 +446,38 @@ const applyIndexTranslations = (lang) => {
     });
   });
 
-  const projectCards = document.querySelectorAll(".project-card");
-  if (sectionHeads.projects) {
-    sectionHeads.projects.querySelector(".section-kicker").textContent = content.projects.kicker;
-    sectionHeads.projects.querySelector("h2").textContent = content.projects.title;
-  }
+  // Localize Projects
+  const projectsHead = document.querySelector("#projects h2");
+  if (projectsHead) projectsHead.textContent = content.projects.title;
 
+  const projectCards = document.querySelectorAll(".project-card");
   setSectionList(projectCards, content.projects.cards, (item, value) => {
     const projectTag = item.querySelector(".project-tag");
     const projectTitle = item.querySelector("h3");
-    const projectText = item.querySelector(".project-body > p:not(.project-tag)");
-    const projectTasks = item.querySelectorAll("li");
+    const projectText = item.querySelector(".project-body p");
     const cta = item.querySelector(".project-cta");
 
     if (projectTag) projectTag.textContent = value[0];
     if (projectTitle) projectTitle.textContent = value[1];
     if (projectText) projectText.textContent = value[2];
-    setSectionList(projectTasks, value[3], (taskItem, taskValue) => {
-      taskItem.textContent = taskValue;
-    });
-    if (cta) cta.textContent = value[4];
+    if (cta) {
+      cta.innerHTML = "";
+      cta.appendChild(document.createTextNode(value[4]));
+    }
   });
 
-  const resumePanels = document.querySelectorAll(".resume-panel");
-  if (sectionHeads.resume) {
-    sectionHeads.resume.querySelector(".section-kicker").textContent = content.resume.kicker;
-    sectionHeads.resume.querySelector("h2").textContent = content.resume.title;
+  // Update current project preview
+  const activeProj = document.querySelector(".project-card.is-active");
+  if (activeProj) {
+    const activeProjIdx = Number(activeProj.dataset.projectPreview || 0);
+    setProjectPreview(activeProjIdx);
   }
 
+  // Localize Resume
+  const resumeHead = document.querySelector("#resume h2");
+  if (resumeHead) resumeHead.textContent = content.resume.title;
+
+  const resumePanels = document.querySelectorAll(".resume-panel");
   setSectionList(resumePanels, content.resume.panels, (item, value) => {
     const heading = item.querySelector("h3");
     const listItems = item.querySelectorAll("li");
@@ -430,19 +488,19 @@ const applyIndexTranslations = (lang) => {
 
     const button = item.querySelector(".button");
     if (button && value[2]) {
-      button.textContent = value[2];
+      const icon = button.querySelector("i");
+      button.innerHTML = "";
+      if (icon) button.appendChild(icon);
+      button.appendChild(document.createTextNode((icon ? " " : "") + value[2]));
     }
   });
 
+  // Localize Contact
+  const contactHead = document.querySelector("#contact h2");
   const contactCopy = document.querySelector(".contact-copy p");
-  const contactItems = document.querySelectorAll(".contact-list a");
-  if (sectionHeads.contact) {
-    sectionHeads.contact.querySelector(".section-kicker").textContent = content.contact.kicker;
-    sectionHeads.contact.querySelector("h2").textContent = content.contact.title;
-  }
-  if (contactCopy) {
-    contactCopy.textContent = content.contact.text;
-  }
+  const contactItems = document.querySelectorAll(".contact-item");
+  if (contactHead) contactHead.textContent = content.contact.title;
+  if (contactCopy) contactCopy.textContent = content.contact.text;
   setSectionList(contactItems, content.contact.labels, (item, value) => {
     const label = item.querySelector("span");
     if (label) {
@@ -472,8 +530,9 @@ const switchLanguage = (lang, source = "manual") => {
   }, 120);
 };
 
+// --- REVEAL ON SCROLL OBSERVER ---
 revealItems.forEach((item, index) => {
-  item.style.setProperty("--delay", `${Math.min(index * 45, 220)}ms`);
+  item.style.setProperty("--delay", `${Math.min(index * 35, 180)}ms`);
 });
 
 const revealObserver = new IntersectionObserver(
@@ -482,19 +541,19 @@ const revealObserver = new IntersectionObserver(
       if (!entry.isIntersecting) {
         return;
       }
-
       entry.target.classList.add("is-visible");
       observer.unobserve(entry.target);
     });
   },
   {
-    threshold: 0.18,
-    rootMargin: "0px 0px -6% 0px"
+    threshold: 0.12,
+    rootMargin: "0px 0px -4% 0px"
   }
 );
 
 revealItems.forEach((item) => revealObserver.observe(item));
 
+// --- NAVIGATION MENU MOBILE ---
 if (navToggle && nav) {
   navToggle.addEventListener("click", () => {
     const isOpen = nav.classList.toggle("is-open");
@@ -511,12 +570,40 @@ if (navToggle && nav) {
   });
 
   window.addEventListener("resize", () => {
-    if (window.innerWidth > 760) {
+    if (window.innerWidth > 768) {
       nav.classList.remove("is-open");
       navToggle.classList.remove("is-active");
       navToggle.setAttribute("aria-expanded", "false");
     }
   });
+}
+
+// --- NAVIGATION SCROLL SPY ---
+if (navLinks.length) {
+  const spyObserverOptions = {
+    root: null,
+    rootMargin: "-25% 0px -55% 0px",
+    threshold: 0
+  };
+
+  const spyObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute("id");
+        navLinks.forEach((link) => {
+          const href = link.getAttribute("href");
+          if (href === `#${id}`) {
+            link.classList.add("is-active");
+          } else {
+            link.classList.remove("is-active");
+          }
+        });
+      }
+    });
+  }, spyObserverOptions);
+
+  const sections = document.querySelectorAll("section[id]");
+  sections.forEach((section) => spyObserver.observe(section));
 }
 
 languageUi.buttons.forEach((button) => {
@@ -543,9 +630,11 @@ const initializeLanguage = async () => {
   switchLanguage(detectedLanguage || "en", "auto");
 };
 
+// Execute theme & language config
 applyTheme(getStoredTheme());
 initializeLanguage();
 
+// --- VIDEO INTRODUCTION MODAL ---
 const introVideoButton = document.getElementById("open-intro-video");
 const introVideoModal = document.getElementById("intro-video-modal");
 const introVideoPlayer = document.getElementById("intro-video-player");
@@ -590,6 +679,7 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
+// --- INTERACTIVE OPS CONSOLE TELEMETRY ---
 const opsReadout = document.getElementById("ops-readout");
 const opsNodes = document.querySelectorAll(".ops-node");
 const opsLayers = [
@@ -611,8 +701,48 @@ const opsLayers = [
   }
 ];
 
+const updateOpsSchematic = (index) => {
+  const schematicEl = document.getElementById("ops-schematic");
+  if (!schematicEl) return;
+  
+  let content = "";
+  if (index === 0) {
+    content = `[ACTIVE SERVICES]
+● Spooler ............ RUNNING
+● WinRM .............. STANDBY
+● DHCPClient ......... RUNNING
+● WindowsUpdate ...... IDLE
+● GroupPolicy ........ SYNCED`;
+  } else if (index === 1) {
+    content = `[HARDWARE TELEMETRY]
+CPU Temp ............ 42°C [OK]
+PSU Voltage ......... 12.06V [OK]
+SSD Life ............ 98% [OK]
+RAM Usage ........... 4.2GB / 16GB
+GPU Fan Speed ....... 1200 RPM`;
+  } else if (index === 2) {
+    content = `[vps-server:~$ journalctl -n 4]
+systemd[1]: Starting Apache...
+apache2[1042]: HTTP/2 active.
+mysqld[892]: Port 3306 listening.
+systemd[1]: Services operational.`;
+  } else if (index === 3) {
+    content = `[PING TELEMETRY]
+8.8.8.8 ............. 24ms
+1.1.1.1 ............. 18ms
+Local Gateway ....... 1ms
+Packet Loss ......... 0%
+Link Speed .......... 1 Gbps`;
+  }
+  schematicEl.textContent = content;
+};
+
 const setOpsLayer = (index) => {
-  const layer = opsLayers[index] || opsLayers[0];
+  const currentLang = document.documentElement.lang || "en";
+  const consoleContent = translations?.index?.[currentLang]?.opsConsole || translations?.index?.en?.opsConsole;
+  const layers = consoleContent?.layers || opsLayers;
+  const layer = layers[index] || layers[0];
+  
   opsNodes.forEach((node) => {
     node.classList.toggle("is-active", Number(node.dataset.node) === index);
   });
@@ -625,12 +755,28 @@ const setOpsLayer = (index) => {
   const text = opsReadout.querySelector("p");
   if (title) title.textContent = layer.title;
   if (text) text.textContent = layer.text;
+  
+  updateOpsSchematic(index);
 };
 
 opsNodes.forEach((node) => {
   node.addEventListener("click", () => setOpsLayer(Number(node.dataset.node || 0)));
 });
 
+// Start clock Loop
+const startClock = () => {
+  const clockEl = document.getElementById("ops-clock");
+  if (!clockEl) return;
+  const update = () => {
+    const now = new Date();
+    clockEl.textContent = now.toTimeString().split(' ')[0];
+  };
+  update();
+  window.setInterval(update, 1000);
+};
+startClock();
+
+// --- TILT INTERACTION CARD ---
 const tiltCards = document.querySelectorAll("[data-tilt-card]");
 tiltCards.forEach((card) => {
   card.addEventListener("pointermove", (event) => {
@@ -647,20 +793,24 @@ tiltCards.forEach((card) => {
   });
 });
 
+// --- SKILLS DYNAMIC FILTER ---
 const skillFilters = document.querySelectorAll(".skill-filter");
-const skillGroups = document.querySelectorAll(".skill-group[data-skill]");
+const skillGroupsFiltered = document.querySelectorAll(".skill-group[data-skill]");
 
 skillFilters.forEach((filter) => {
   filter.addEventListener("click", () => {
     const nextFilter = filter.dataset.filter || "all";
     skillFilters.forEach((item) => item.classList.toggle("is-active", item === filter));
-    skillGroups.forEach((group) => {
+    skillGroupsFiltered.forEach((group) => {
       const isMatch = nextFilter === "all" || group.dataset.skill === nextFilter;
       group.classList.toggle("is-dimmed", !isMatch);
+      // Toggle is-active-filter class for matching cards when a specific section is chosen
+      group.classList.toggle("is-active-filter", isMatch && nextFilter !== "all");
     });
   });
 });
 
+// --- PROJECTS PREVIEW DYNAMIC HANDLERS ---
 const projectPreview = document.getElementById("project-preview");
 const projectPreviewCards = document.querySelectorAll("[data-project-preview]");
 const projectPreviewData = [
@@ -668,22 +818,39 @@ const projectPreviewData = [
     title: "Windows Deployment, Repair, and PC Build Work",
     text: "Desktop support work across Windows reinstallations, driver setup, hardware diagnostics, and ready-to-use systems.",
     visual: "workstation",
-    badge: "Ready",
-    windowTitle: "support-runbook"
+    badge: { en: "Ready", ja: "完了", ms: "Sedia", th: "พร้อม", vi: "Sẵn sàng" },
+    address: "https://daniil-systems.net/projects/pc-support",
+    terminal: `[SYSTEM_OPERATIONS]
+STATUS ....... OK
+HOST ......... win-dep-01
+HARDWARE ..... 50+ PC Builds
+TELEMETRY .... Validated
+DEPLOYMENT ... Active`
   },
   {
     title: "JKT Personal Website on Ubuntu VPS",
     text: "A self-managed Ubuntu VPS website with Apache, MySQL, SSH access, remote file work, and maintenance routines.",
     visual: "server",
-    badge: "Online",
-    windowTitle: "vps-health"
+    badge: { en: "Online", ja: "稼働中", ms: "Aktif", th: "ออนไลน์", vi: "Trực tuyến" },
+    address: "https://daniil-systems.net/projects/jkt-site",
+    terminal: `[vps-health:~$ uptime]
+19:37:14 up 42 days, 3:12
+Load average: 0.12, 0.08, 0.02
+HTTPD status: Operational
+MySQL connection: Established`
   },
   {
     title: "Self-Hosted VPN and Telegram Web App",
     text: "Remote Linux administration for hosted services, including updates, SSH operations, VPN setup, and service upkeep.",
     visual: "vpn",
-    badge: "Secured",
-    windowTitle: "vpn-route"
+    badge: { en: "Secured", ja: "安全", ms: "Selamat", th: "ปลอดภัย", vi: "Bảo mật" },
+    address: "https://daniil-systems.net/projects/telegram-app",
+    terminal: `[vpn-route:~$ wireguard status]
+Interface: wg0 (enabled)
+Peers connected: 4 active
+Traffic IN: 4.8 GB
+Traffic OUT: 5.2 GB
+Firewall Rules: Enforced`
   }
 ];
 
@@ -697,16 +864,51 @@ const setProjectPreview = (index) => {
     return;
   }
 
+  const currentLang = document.documentElement.lang || "en";
+
   const title = projectPreview.querySelector("strong");
   const text = projectPreview.querySelector("p");
-  const visual = projectPreview.querySelector(".preview-visual");
   const badge = projectPreview.querySelector(".preview-badge");
-  const windowTitle = projectPreview.querySelector(".preview-window-bar span");
-  if (title) title.textContent = preview.title;
-  if (text) text.textContent = preview.text;
-  if (visual) visual.dataset.previewVisual = preview.visual;
-  if (badge) badge.textContent = preview.badge;
-  if (windowTitle) windowTitle.textContent = preview.windowTitle;
+  const address = projectPreview.querySelector(".browser-address");
+  const previewImg = document.getElementById("preview-image");
+  const previewTerm = document.getElementById("preview-terminal");
+
+  // Get localized card translation title/text
+  const localizedCard = translations?.index?.[currentLang]?.projects?.cards?.[index] || translations?.index?.en?.projects?.cards?.[index];
+  if (title) title.textContent = localizedCard ? localizedCard[1] : preview.title;
+  if (text) text.textContent = localizedCard ? localizedCard[2] : preview.text;
+
+  // Localize Badge Status
+  if (badge) {
+    badge.textContent = preview.badge[currentLang] || preview.badge.en;
+  }
+
+  // Update address URL mock
+  if (address) {
+    address.textContent = preview.address;
+  }
+
+  // Handle Dynamic Mock Swap
+  const originalProj = window.projectData?.[Object.keys(window.projectData)[index]];
+  if (originalProj && originalProj.screenshots && originalProj.screenshots.length > 0) {
+    // Show image mockup
+    if (previewImg) {
+      previewImg.src = originalProj.screenshots[0];
+      previewImg.style.display = "block";
+    }
+    if (previewTerm) {
+      previewTerm.style.display = "none";
+    }
+  } else {
+    // Show terminal fallback mockup
+    if (previewImg) {
+      previewImg.style.display = "none";
+    }
+    if (previewTerm) {
+      previewTerm.textContent = preview.terminal;
+      previewTerm.style.display = "block";
+    }
+  }
 };
 
 projectPreviewCards.forEach((card) => {
@@ -729,7 +931,7 @@ if ("IntersectionObserver" in window && projectPreviewCards.length) {
     },
     {
       threshold: [0.35, 0.55, 0.75],
-      rootMargin: "-20% 0px -30% 0px"
+      rootMargin: "-10% 0px -20% 0px"
     }
   );
 

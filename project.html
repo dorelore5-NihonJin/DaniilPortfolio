@@ -8,6 +8,7 @@
     name="description"
     content="Detailed project view for Daniil Kulakov's IT Support Specialist portfolio."
   >
+  <link rel="icon" type="image/png" href="Logo/Main_logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -20,6 +21,7 @@
   >
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="project.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
 <body>
   <div class="site-shell project-page-shell">
@@ -32,22 +34,46 @@
         </span>
       </a>
       <nav class="project-top-nav">
-        <a class="button button-secondary" href="index.html#projects">Back to Portfolio</a>
+        <a class="button button-secondary" href="index.html#projects"><i class="ph-bold ph-arrow-left" style="margin-right: 0.4rem;"></i>Back to Portfolio</a>
       </nav>
-      <div class="language-switcher" aria-label="Language selector">
-        <button class="language-button is-active" type="button" data-lang="en">EN</button>
-        <button class="language-button" type="button" data-lang="ja">日本語</button>
-        <button class="language-button" type="button" data-lang="ms">BM</button>
-        <button class="language-button" type="button" data-lang="th">ไทย</button>
+      <div class="header-actions">
+        <div class="language-switcher" aria-label="Language selector">
+          <button class="language-trigger" type="button" aria-haspopup="true" aria-expanded="false">
+            <span class="language-trigger-label">English</span>
+            <span class="language-trigger-code">EN</span>
+          </button>
+          <div class="language-menu" role="menu">
+            <button class="language-option is-active" type="button" data-lang="en" role="menuitemradio" aria-checked="true">
+              <span>English</span>
+              <strong>EN</strong>
+            </button>
+            <button class="language-option" type="button" data-lang="ja" role="menuitemradio" aria-checked="false">
+              <span>日本語</span>
+              <strong>日本語</strong>
+            </button>
+            <button class="language-option" type="button" data-lang="ms" role="menuitemradio" aria-checked="false">
+              <span>Malay</span>
+              <strong>BM</strong>
+            </button>
+            <button class="language-option" type="button" data-lang="th" role="menuitemradio" aria-checked="false">
+              <span>Thai</span>
+              <strong>ไทย</strong>
+            </button>
+            <button class="language-option" type="button" data-lang="vi" role="menuitemradio" aria-checked="false">
+              <span>Vietnamese</span>
+              <strong>VI</strong>
+            </button>
+          </div>
+        </div>
       </div>
     </header>
 
     <main class="project-page" id="page-content">
       <section class="project-hero">
         <div class="project-hero-copy">
-          <p class="section-kicker" id="project-tag"></p>
-          <h1 id="project-title"></h1>
-          <p class="project-summary" id="project-summary"></p>
+          <span class="project-tag" id="project-tag">Desktop support / hardware</span>
+          <h1 id="project-title">Windows Deployment, Repair, and PC Build Work</h1>
+          <p class="project-summary" id="project-summary">Windows deployment, hardware diagnostics, and practical support work for stable real-world desktop use.</p>
         </div>
       </section>
 
