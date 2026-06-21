@@ -15,13 +15,18 @@ const roleEl = document.getElementById("project-role");
 const tasksEl = document.getElementById("project-tasks");
 const outcomeEl = document.getElementById("project-outcome");
 const toolsEl = document.getElementById("project-tools");
+const snapshotGridEl = document.getElementById("project-snapshot-grid");
+const focusListEl = document.getElementById("project-focus-list");
 const galleryEl = document.getElementById("project-gallery");
 const galleryWrapEl = document.getElementById("project-gallery-wrap");
 const galleryNoteEl = document.getElementById("project-gallery-note");
+const slideStatusEl = document.getElementById("project-slide-status");
+const thumbStripEl = document.getElementById("project-thumb-strip");
 const backButton = document.querySelector(".project-top-nav a");
 const projectSectionHeadings = document.querySelectorAll(".project-detail-card h2");
 const galleryHeading = document.querySelector(".project-gallery-head h2");
 const brandSubtitle = document.querySelector(".brand-copy span:last-child");
+const sideEyebrowEl = document.getElementById("project-side-eyebrow");
 
 const lightbox = document.getElementById("image-lightbox");
 const lightboxDialog = lightbox?.querySelector(".image-lightbox-dialog");
@@ -67,6 +72,34 @@ let swiperInstance = null;
 let isRenderingLanguage = false;
 
 const projectUiExtras = {
+  sideEyebrow: {
+    en: "Project Snapshot",
+    ja: "プロジェクト概要",
+    ms: "Ringkasan Projek",
+    th: "สรุปโปรเจกต์",
+    vi: "Tom tat du an"
+  },
+  snapshotLabels: {
+    en: ["Screens", "Tasks", "Tools"],
+    ja: ["画面", "作業", "技術"],
+    ms: ["Skrin", "Tugas", "Alat"],
+    th: ["หน้าจอ", "งาน", "เครื่องมือ"],
+    vi: ["Man hinh", "Nhiem vu", "Cong cu"]
+  },
+  focusTitle: {
+    en: "What this project shows",
+    ja: "このプロジェクトで示したこと",
+    ms: "Apa yang projek ini tunjukkan",
+    th: "สิ่งที่โปรเจกต์นี้แสดง",
+    vi: "Du an nay the hien"
+  },
+  slideLabel: {
+    en: "Screenshot",
+    ja: "スクリーンショット",
+    ms: "Tangkapan skrin",
+    th: "ภาพหน้าจอ",
+    vi: "Anh man hinh"
+  },
   pageTitle: {
     en: "Project Details | Daniil Kulakov",
     ja: "プロジェクト詳細 | Daniil Kulakov",
@@ -430,6 +463,10 @@ const applyProjectUi = (lang, content) => {
     languageSwitcher.setAttribute("aria-label", projectUiExtras.languageLabel[lang] || projectUiExtras.languageLabel.en);
   }
 
+  if (sideEyebrowEl) {
+    sideEyebrowEl.textContent = projectUiExtras.sideEyebrow[lang] || projectUiExtras.sideEyebrow.en;
+  }
+
   if (backButton) {
     backButton.textContent = ui.back;
   }
@@ -476,10 +513,73 @@ const renderFallback = (lang) => {
   outcomeEl.textContent = projectUiExtras.notAvailable[lang] || projectUiExtras.notAvailable.en;
   tasksEl.innerHTML = "";
   toolsEl.innerHTML = "";
+  if (snapshotGridEl) snapshotGridEl.innerHTML = "";
+  if (focusListEl) focusListEl.innerHTML = "";
   galleryEl.innerHTML = "";
+  if (thumbStripEl) thumbStripEl.innerHTML = "";
+  if (slideStatusEl) slideStatusEl.textContent = "";
   galleryWrapEl.classList.add("is-empty");
   galleryNoteEl.textContent = ui.noScreens;
   applyProjectUi(lang, null);
+};
+
+const listFrom = (field, lang, fallback = []) => {
+  if (!field) {
+    return fallback;
+  }
+
+  if (Array.isArray(field)) {
+    return field;
+  }
+
+  return field[lang] || field.en || fallback;
+};
+
+const renderProjectSide = (lang, content) => {
+  const labels = projectUiExtras.snapshotLabels[lang] || projectUiExtras.snapshotLabels.en;
+  const snapshotItems = listFrom(project.snapshot, lang, [
+    [String(project.screenshots?.length || 0), labels[0]],
+    [String(content.tasks.length), labels[1]],
+    [String(content.tools.length), labels[2]]
+  ]);
+  const focusItems = listFrom(project.focus, lang, content.tasks.slice(0, 3));
+
+  if (snapshotGridEl) {
+    snapshotGridEl.innerHTML = "";
+    snapshotItems.slice(0, 4).forEach((item) => {
+      const value = Array.isArray(item) ? item[0] : "";
+      const label = Array.isArray(item) ? item[1] : item;
+      const stat = document.createElement("article");
+      stat.className = "project-snapshot-item";
+      stat.innerHTML = `<strong>${value}</strong><span>${label}</span>`;
+      snapshotGridEl.appendChild(stat);
+    });
+  }
+
+  if (focusListEl) {
+    focusListEl.innerHTML = "";
+    const heading = document.createElement("h3");
+    heading.textContent = projectUiExtras.focusTitle[lang] || projectUiExtras.focusTitle.en;
+    focusListEl.appendChild(heading);
+
+    const list = document.createElement("ul");
+    focusItems.slice(0, 4).forEach((item) => {
+      const li = document.createElement("li");
+      li.textContent = item;
+      list.appendChild(li);
+    });
+    focusListEl.appendChild(list);
+  }
+};
+
+const updateSlideStatus = (swiper, total, lang) => {
+  if (!slideStatusEl || !total) {
+    return;
+  }
+
+  const index = swiper ? swiper.realIndex + 1 : 1;
+  const label = projectUiExtras.slideLabel[lang] || projectUiExtras.slideLabel.en;
+  slideStatusEl.textContent = `${label} ${index} / ${total}`;
 };
 
 const renderProject = (lang) => {
@@ -525,13 +625,20 @@ const renderProject = (lang) => {
     tag.textContent = tool;
     toolsEl.appendChild(tag);
   });
+  renderProjectSide(lang, content);
 
   galleryEl.innerHTML = "";
+  if (thumbStripEl) {
+    thumbStripEl.innerHTML = "";
+  }
   galleryWrapEl.classList.remove("is-empty");
 
   if (!project.screenshots.length) {
     galleryWrapEl.classList.add("is-empty");
     galleryNoteEl.textContent = ui.noScreens;
+    if (slideStatusEl) {
+      slideStatusEl.textContent = "";
+    }
   } else {
     galleryNoteEl.textContent = ui.galleryHint;
 
@@ -560,6 +667,16 @@ const renderProject = (lang) => {
       link.appendChild(image);
       slide.appendChild(link);
       galleryEl.appendChild(slide);
+
+      if (thumbStripEl) {
+        const thumbButton = document.createElement("button");
+        thumbButton.className = "project-thumb-button";
+        thumbButton.type = "button";
+        thumbButton.dataset.slideIndex = String(index);
+        thumbButton.setAttribute("aria-label", `${projectUiExtras.slideLabel[lang] || projectUiExtras.slideLabel.en} ${index + 1}`);
+        thumbButton.innerHTML = `<img src="${path}" alt="">`;
+        thumbStripEl.appendChild(thumbButton);
+      }
     });
 
     swiperInstance = new Swiper("#project-swiper", {
@@ -583,7 +700,32 @@ const renderProject = (lang) => {
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev"
+      },
+      on: {
+        init(swiper) {
+          updateSlideStatus(swiper, project.screenshots.length, lang);
+          thumbStripEl?.querySelectorAll(".project-thumb-button").forEach((button) => {
+            button.classList.toggle("is-active", Number(button.dataset.slideIndex) === swiper.realIndex);
+          });
+        },
+        slideChange(swiper) {
+          updateSlideStatus(swiper, project.screenshots.length, lang);
+          thumbStripEl?.querySelectorAll(".project-thumb-button").forEach((button) => {
+            button.classList.toggle("is-active", Number(button.dataset.slideIndex) === swiper.realIndex);
+          });
+        }
       }
+    });
+
+    thumbStripEl?.querySelectorAll(".project-thumb-button").forEach((button) => {
+      button.addEventListener("click", () => {
+        const index = Number(button.dataset.slideIndex || 0);
+        if (swiperInstance?.slideToLoop) {
+          swiperInstance.slideToLoop(index);
+        } else {
+          swiperInstance?.slideTo(index);
+        }
+      });
     });
   }
 
@@ -609,13 +751,11 @@ const switchLanguage = (lang, source = "manual") => {
   }
 
   pageContent.classList.add("is-switching");
-  window.setTimeout(() => {
-    renderProject(nextLang);
-    window.requestAnimationFrame(() => {
-      pageContent.classList.remove("is-switching");
-      isRenderingLanguage = false;
-    });
-  }, 120);
+  renderProject(nextLang);
+  window.requestAnimationFrame(() => {
+    pageContent.classList.remove("is-switching");
+    isRenderingLanguage = false;
+  });
 };
 
 zoomInButton?.addEventListener("click", () => stepZoom(0.25));

@@ -8,6 +8,16 @@
     name="description"
     content="Detailed project view for Daniil Kulakov's IT Support Specialist portfolio."
   >
+  <script>
+    (() => {
+      try {
+        const theme = window.localStorage.getItem("portfolio-theme");
+        document.documentElement.dataset.theme = theme === "dark" ? "dark" : "light";
+      } catch (error) {
+        document.documentElement.dataset.theme = "light";
+      }
+    })();
+  </script>
   <link rel="icon" type="image/png" href="Logo/Main_logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -101,9 +111,14 @@
         </div>
 
         <aside class="project-detail-side">
-          <section class="project-detail-card">
-            <h2>Tools / Technologies</h2>
+          <section class="project-detail-card project-side-card">
+            <div class="project-side-head">
+              <span class="project-side-eyebrow" id="project-side-eyebrow">Project Snapshot</span>
+              <h2>Tools / Technologies</h2>
+            </div>
             <div class="project-tools" id="project-tools"></div>
+            <div class="project-snapshot-grid" id="project-snapshot-grid" aria-label="Project snapshot"></div>
+            <div class="project-focus-list" id="project-focus-list"></div>
           </section>
         </aside>
       </section>
@@ -119,9 +134,11 @@
               <div class="swiper-wrapper" id="project-gallery"></div>
               <div class="project-swiper-meta">
                 <button class="swiper-button-prev project-swiper-button" type="button" aria-label="Previous screenshot"></button>
+                <div class="project-slide-status" id="project-slide-status" aria-live="polite">1 / 1</div>
                 <div class="swiper-pagination"></div>
                 <button class="swiper-button-next project-swiper-button" type="button" aria-label="Next screenshot"></button>
               </div>
+              <div class="project-thumb-strip" id="project-thumb-strip" aria-label="Screenshot thumbnails"></div>
             </div>
           </div>
         </div>

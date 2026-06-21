@@ -454,7 +454,7 @@ const applyIndexTranslations = (lang) => {
   setSectionList(projectCards, content.projects.cards, (item, value) => {
     const projectTag = item.querySelector(".project-tag");
     const projectTitle = item.querySelector("h3");
-    const projectText = item.querySelector(".project-body p");
+    const projectText = item.querySelector(".project-body p:not(.project-tag)");
     const cta = item.querySelector(".project-cta");
 
     if (projectTag) projectTag.textContent = value[0];
@@ -851,6 +851,19 @@ Peers connected: 4 active
 Traffic IN: 4.8 GB
 Traffic OUT: 5.2 GB
 Firewall Rules: Enforced`
+  },
+  {
+    title: "MinatoCargo Global Marketplace Platform",
+    text: "A full-stack marketplace project with catalog browsing, product pages, seller operations, admin tooling, support pages, localization, and currency-aware UI.",
+    visual: "marketplace",
+    badge: { en: "Live build", ja: "Live build", ms: "Live build", th: "Live build", vi: "Live build" },
+    address: "https://daniil-systems.net/projects/minatocargo",
+    terminal: `[marketplace:release]
+Catalog pages ..... Ready
+Seller workspace .. Active
+Admin tools ....... Active
+Localization ...... 4 languages
+Currency layer .... 12h refresh`
   }
 ];
 

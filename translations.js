@@ -54,7 +54,7 @@ window.portfolioTranslations = {
         ],
         facts: [
           ["Experience", "KiliaService", "IT Support Technician / Junior System Administration Intern"],
-          ["Education", "IT Systems", "Specialist Diploma expected: June 2026"],
+          ["Education", "IT Systems", "Specialist Diploma completed: June 2026"],
           ["Languages", "Russian, English, Japanese", "Russian native, English B2, JLPT N2 Japanese"]
         ]
       },
@@ -74,7 +74,8 @@ window.portfolioTranslations = {
         cards: [
           ["Desktop support / hardware", "Windows Deployment, Repair, and PC Build Work", "Delivered Windows reinstallations, driver and software setup, hardware diagnostics, and hands-on build or upgrade work across 50+ user systems in real support scenarios.", [], "Details"],
           ["Linux / hosting", "JKT Personal Website on Ubuntu VPS", "Set up and maintained a personal website on an Ubuntu VPS using Apache and MySQL, with server access handled through SSH and WinSCP.", [], "Details"],
-          ["Remote administration", "Self-Hosted VPN and Telegram Web App", "Configured a VPN server and supported a Telegram web application on Ubuntu VPS infrastructure, including updates and remote maintenance tasks.", [], "Details"]
+          ["Remote administration", "Self-Hosted VPN and Telegram Web App", "Configured a VPN server and supported a Telegram web application on Ubuntu VPS infrastructure, including updates and remote maintenance tasks.", [], "Details"],
+          ["Full-stack marketplace / PHP + MySQL", "MinatoCargo Global Marketplace Platform", "Built a multi-page marketplace with catalog browsing, product pages, seller workspace, admin tools, support flows, localization, currency handling, and content pages.", [], "Details"]
         ]
       },
       resume: {
@@ -142,7 +143,7 @@ window.portfolioTranslations = {
         ],
         facts: [
           ["経験", "KiliaService", "ITサポート技術者 / ジュニアシステム管理インターン"],
-          ["学歴", "IT / 情報システムとプログラミング", "卒業予定: 2026年6月"],
+          ["\u5b66\u6b74", "IT / \u60c5\u5831\u30b7\u30b9\u30c6\u30e0\u3068\u30d7\u30ed\u30b0\u30e9\u30df\u30f3\u30b0", "\u5c02\u9580\u30c7\u30a3\u30d7\u30ed\u30de\u4fee\u4e86: 2026\u5e746\u6708"],
           ["言語", "ロシア語、英語、日本語", "ロシア語ネイティブ、英語B2、日本語JLPT N2"]
         ]
       },
@@ -162,7 +163,8 @@ window.portfolioTranslations = {
         cards: [
           ["デスクトップサポート / ハードウェア", "Windows展開・修理・PC組立業務", "Windows再導入、ドライバーやソフト設定、ハード故障診断、50台以上のPC組立を実施しました。", [], "詳細を見る"],
           ["Linux / ホスティング", "Ubuntu VPS上のJKT個人サイト", "Apache と MySQL を用いて Ubuntu VPS 上で個人サイトを構築・運用し、SSH と WinSCP で管理しました。", [], "詳細を見る"],
-          ["リモート管理", "セルフホストVPNとTelegram Web App", "Ubuntu VPS上でVPNサーバーとTelegram Webアプリを構築・保守し、更新やリモート管理を行いました。", [], "詳細を見る"]
+          ["リモート管理", "セルフホストVPNとTelegram Web App", "Ubuntu VPS上でVPNサーバーとTelegram Webアプリを構築・保守し、更新やリモート管理を行いました。", [], "詳細を見る"],
+          ["フルスタックマーケットプレイス / PHP + MySQL", "MinatoCargo グローバルマーケットプレイス", "カタログ、商品ページ、販売者ワークスペース、管理者ツール、サポート導線、多言語対応、通貨処理、コンテンツページを含む大規模なマーケットプレイスを構築しました。", [], "詳細を見る"]
         ]
       },
       resume: {
@@ -230,7 +232,7 @@ window.portfolioTranslations = {
         ],
         facts: [
           ["Experience", "KiliaService", "Juruteknik Sokongan IT / Intern Pentadbiran Sistem Junior"],
-          ["Education", "IT Systems", "Jangkaan tamat pengajian: Jun 2026"],
+          ["Education", "IT Systems", "Diploma specialist completed: Jun 2026"],
           ["Languages", "Rusia, Inggeris, Jepun", "Rusia natif, Inggeris B2, Jepun JLPT N2"]
         ]
       },
@@ -250,7 +252,8 @@ window.portfolioTranslations = {
         cards: [
           ["Sokongan desktop / perkakasan", "Kerja Deployment, Repair, dan PC Build Windows", "Memasang semula Windows, mengkonfigurasi driver dan perisian, mendiagnosis kerosakan perkakasan, dan memasang lebih 50 PC untuk kegunaan sebenar.", [], "Butiran"],
           ["Linux / hosting", "Laman Web Peribadi JKT di Ubuntu VPS", "Menyediakan dan menyelenggara laman web peribadi di Ubuntu VPS menggunakan Apache dan MySQL, dengan akses pelayan melalui SSH dan WinSCP.", [], "Butiran"],
-          ["Pentadbiran jauh", "VPN Self-Hosted dan Telegram Web App", "Mengkonfigurasi pelayan VPN dan menyokong Telegram web app di Ubuntu VPS, termasuk kemas kini dan tugasan penyelenggaraan jauh.", [], "Butiran"]
+          ["Pentadbiran jauh", "VPN Self-Hosted dan Telegram Web App", "Mengkonfigurasi pelayan VPN dan menyokong Telegram web app di Ubuntu VPS, termasuk kemas kini dan tugasan penyelenggaraan jauh.", [], "Butiran"],
+          ["Marketplace full-stack / PHP + MySQL", "Platform Marketplace Global MinatoCargo", "Membina marketplace berbilang halaman dengan katalog, halaman produk, workspace penjual, alat admin, aliran sokongan, lokalisasi, mata wang dan halaman kandungan.", [], "Butiran"]
         ]
       },
       resume: {
@@ -318,7 +321,7 @@ window.portfolioTranslations = {
         ],
         facts: [
           ["Experience", "KiliaService", "IT Support Technician / Junior System Administration Intern"],
-          ["Education", "IT Systems", "คาดว่าจะจบ: มิถุนายน 2026"],
+          ["Education", "IT Systems", "สำเร็จการศึกษา: มิถุนายน 2026"],
           ["Languages", "รัสเซีย อังกฤษ ญี่ปุ่น", "รัสเซียเจ้าของภาษา, อังกฤษระดับ B2, ญี่ปุ่น JLPT N2"]
         ]
       },
@@ -338,7 +341,8 @@ window.portfolioTranslations = {
         cards: [
           ["Desktop support / hardware", "Windows Deployment, Repair, and PC Build Work", "ติดตั้ง Windows ใหม่ ตั้งค่าไดรเวอร์และซอฟต์แวร์ วินิจฉัยปัญหาฮาร์ดแวร์ และประกอบคอมมากกว่า 50 เครื่องสำหรับใช้งานจริง", [], "ดูรายละเอียด"],
           ["Linux / hosting", "JKT Personal Website on Ubuntu VPS", "ติดตั้งและดูแลเว็บไซต์ส่วนตัวบน Ubuntu VPS ด้วย Apache และ MySQL โดยบริหารผ่าน SSH และ WinSCP", [], "ดูรายละเอียด"],
-          ["Remote administration", "Self-Hosted VPN and Telegram Web App", "ตั้งค่า VPN server และดูแล Telegram web app บน Ubuntu VPS รวมถึงงานอัปเดตและบำรุงรักษาจากระยะไกล", [], "ดูรายละเอียด"]
+          ["Remote administration", "Self-Hosted VPN and Telegram Web App", "ตั้งค่า VPN server และดูแล Telegram web app บน Ubuntu VPS รวมถึงงานอัปเดตและบำรุงรักษาจากระยะไกล", [], "ดูรายละเอียด"],
+          ["Full-stack marketplace / PHP + MySQL", "แพลตฟอร์ม Marketplace ระดับโลก MinatoCargo", "สร้าง marketplace หลายหน้าพร้อม catalog, product pages, seller workspace, admin tools, support flows, localization, currency handling และ content pages", [], "ดูรายละเอียด"]
         ]
       },
       resume: {
@@ -406,7 +410,7 @@ window.portfolioTranslations = {
         ],
         facts: [
           ["Kinh nghiệm", "KiliaService", "IT Support Technician / Junior System Administration Intern"],
-          ["Học vấn", "IT Systems", "Dự kiến tốt nghiệp: Tháng 6 năm 2026"],
+          ["Học vấn", "IT Systems", "Da hoan thanh bang chuyen mon: Thang 6 nam 2026"],
           ["Ngôn ngữ", "Nga, Anh, Nhật", "Tiếng Nga bản ngữ, tiếng Anh B2, tiếng Nhật JLPT N2"]
         ]
       },
@@ -426,7 +430,8 @@ window.portfolioTranslations = {
         cards: [
           ["Hỗ trợ desktop / phần cứng", "Triển khai Windows, sửa chữa và lắp ráp PC", "Cài đặt lại Windows, cấu hình driver và phần mềm, chẩn đoán lỗi phần cứng và lắp ráp hơn 50 PC cho các nhu cầu thực tế.", [], "Xem chi tiết"],
           ["Linux / hosting", "Website cá nhân JKT trên Ubuntu VPS", "Thiết lập và duy trì website cá nhân trên Ubuntu VPS bằng Apache và MySQL, quản lý máy chủ thông qua SSH và WinSCP.", [], "Xem chi tiết"],
-          ["Quản trị từ xa", "VPN tự host và Telegram Web App", "Cấu hình VPN server và hỗ trợ Telegram web application trên Ubuntu VPS, bao gồm cập nhật và bảo trì từ xa.", [], "Xem chi tiết"]
+          ["Quản trị từ xa", "VPN tự host và Telegram Web App", "Cấu hình VPN server và hỗ trợ Telegram web application trên Ubuntu VPS, bao gồm cập nhật và bảo trì từ xa.", [], "Xem chi tiết"],
+          ["Marketplace full-stack / PHP + MySQL", "Nen tang marketplace toan cau MinatoCargo", "Xay dung marketplace nhieu trang voi catalog, product pages, seller workspace, admin tools, support flows, localization, currency handling va content pages.", [], "Xem chi tiet"]
         ]
       },
       resume: {

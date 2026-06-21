@@ -224,6 +224,115 @@ window.projectData = {
       "Screenshots/Telegram_web/4_main.png",
       "Screenshots/Telegram_web/5_main.png"
     ]
+  },
+  "minatocargo-marketplace": {
+    tag: {
+      en: "Full-stack marketplace / PHP + MySQL",
+      ja: "フルスタックマーケットプレイス / PHP + MySQL",
+      ms: "Marketplace full-stack / PHP + MySQL",
+      th: "Full-stack marketplace / PHP + MySQL",
+      vi: "Marketplace full-stack / PHP + MySQL"
+    },
+    title: {
+      en: "MinatoCargo Global Marketplace Platform",
+      ja: "MinatoCargo グローバルマーケットプレイス",
+      ms: "Platform Marketplace Global MinatoCargo",
+      th: "แพลตฟอร์ม Marketplace ระดับโลก MinatoCargo",
+      vi: "Nen tang marketplace toan cau MinatoCargo"
+    },
+    overview: {
+      en: "MinatoCargo is a large marketplace project built around Japanese sellers, international buyers, product discovery, seller operations, admin moderation, support workflows, and content pages. It is not a single landing page. The project combines public shopping screens with internal workspaces for sellers, administrators, recruiters, and press content.",
+      ja: "MinatoCargoは、日本の販売者、海外の購入者、商品検索、販売者向け業務、管理者モデレーション、サポート導線、コンテンツページを中心に構成した大規模なマーケットプレイスプロジェクトです。単なるランディングページではなく、公開ショッピング画面と販売者、管理者、採用担当、広報向けの内部ワークスペースを組み合わせています。",
+      ms: "MinatoCargo ialah projek marketplace besar yang dibina untuk penjual Jepun, pembeli antarabangsa, carian produk, operasi penjual, moderasi admin, aliran sokongan dan halaman kandungan. Ia bukan sekadar landing page. Projek ini menggabungkan skrin beli-belah awam dengan ruang kerja dalaman untuk penjual, pentadbir, perekrut dan kandungan press.",
+      th: "MinatoCargo เป็นโปรเจกต์ marketplace ขนาดใหญ่ที่ออกแบบรอบผู้ขายญี่ปุ่น ผู้ซื้อจากต่างประเทศ การค้นหาสินค้า งานฝั่งผู้ขาย การดูแลโดยแอดมิน เวิร์กโฟลว์ซัพพอร์ต และหน้าคอนเทนต์ต่าง ๆ ไม่ใช่แค่ landing page หน้าเดียว แต่รวมทั้งหน้าซื้อสินค้าสาธารณะและ workspace ภายในสำหรับผู้ขาย แอดมิน ทีมสรรหา และทีมข่าวสาร",
+      vi: "MinatoCargo la mot du an marketplace lon xoay quanh nguoi ban Nhat Ban, nguoi mua quoc te, kham pha san pham, van hanh cua nguoi ban, cong cu admin, quy trinh support va cac trang noi dung. Day khong phai chi la mot landing page. Du an ket hop giao dien mua sam cong khai voi workspace noi bo cho seller, admin, recruiter va press."
+    },
+    summary: {
+      en: "A PHP and MySQL marketplace with catalog browsing, product pages, seller and admin workspaces, localization, currency handling, support flows, and structured content pages.",
+      ja: "カタログ閲覧、商品ページ、販売者・管理者ワークスペース、多言語対応、通貨処理、サポート導線、構造化されたコンテンツページを備えたPHP/MySQLマーケットプレイスです。",
+      ms: "Marketplace PHP dan MySQL dengan katalog, halaman produk, workspace penjual dan admin, lokalisasi, mata wang, aliran sokongan dan halaman kandungan berstruktur.",
+      th: "Marketplace ที่สร้างด้วย PHP และ MySQL พร้อม catalog, product pages, seller/admin workspace, localization, currency handling, support flows และ content pages ที่จัดโครงสร้างไว้",
+      vi: "Marketplace PHP va MySQL voi catalog, trang san pham, workspace seller va admin, localization, xu ly tien te, support flows va cac trang noi dung co cau truc."
+    },
+    role: {
+      en: "I designed and implemented the main product experience across frontend and backend surfaces: database-backed catalog pages, product detail pages, seller tools, admin workflows, account screens, support forms, career and press modules, multilingual UI, currency conversion behavior, and visual polish across many public pages.",
+      ja: "フロントエンドとバックエンドの両面で主要なプロダクト体験を設計・実装しました。データベース連動のカタログ、商品詳細、販売者ツール、管理者ワークフロー、アカウント画面、サポートフォーム、採用・広報モジュール、多言語UI、通貨変換、公開ページ全体のUI調整を担当しました。",
+      ms: "Saya mereka bentuk dan melaksanakan pengalaman produk utama merentasi frontend dan backend: katalog berasaskan pangkalan data, halaman produk, alat penjual, workflow admin, skrin akaun, borang sokongan, modul kerjaya dan press, UI berbilang bahasa, tingkah laku pertukaran mata wang dan kemasan visual pada banyak halaman awam.",
+      th: "ผมออกแบบและพัฒนาประสบการณ์หลักของโปรดักต์ทั้งฝั่ง frontend และ backend ตั้งแต่ catalog ที่เชื่อมกับฐานข้อมูล product detail, seller tools, admin workflows, account screens, support forms, career/press modules, multilingual UI, currency conversion และการปรับดีไซน์ในหลายหน้าสาธารณะ",
+      vi: "Toi thiet ke va phat trien trai nghiem san pham chinh tren ca frontend va backend: catalog gan voi database, trang chi tiet san pham, cong cu seller, workflow admin, man hinh account, support forms, career va press modules, UI da ngon ngu, hanh vi doi tien te va visual polish tren nhieu trang cong khai."
+    },
+    tools: {
+      en: ["PHP", "MySQL / MariaDB", "HTML", "CSS", "JavaScript", "AJAX", "XAMPP", "Localization", "Admin dashboards"],
+      ja: ["PHP", "MySQL / MariaDB", "HTML", "CSS", "JavaScript", "AJAX", "XAMPP", "多言語対応", "管理ダッシュボード"],
+      ms: ["PHP", "MySQL / MariaDB", "HTML", "CSS", "JavaScript", "AJAX", "XAMPP", "Lokalisasi", "Dashboard admin"],
+      th: ["PHP", "MySQL / MariaDB", "HTML", "CSS", "JavaScript", "AJAX", "XAMPP", "Localization", "Admin dashboards"],
+      vi: ["PHP", "MySQL / MariaDB", "HTML", "CSS", "JavaScript", "AJAX", "XAMPP", "Localization", "Admin dashboards"]
+    },
+    tasks: {
+      en: [
+        "Built catalog and product detail flows with real product data, images, filters, seller information, cart actions, reviews, and delivery context.",
+        "Created seller-facing workspace screens for products, orders, messages, analytics, payouts, settings, and moderation states.",
+        "Expanded admin, recruiter, and press workspaces so internal roles can review users, orders, sellers, applications, reports, and newsroom posts.",
+        "Added multilingual and currency-aware UI behavior across the site while keeping the header, menus, and product pages consistent.",
+        "Designed supporting pages for help, shipping, returns, cookies, contacts, locations, sustainability, seller policies, and seller onboarding."
+      ],
+      ja: [
+        "実際の商品データ、画像、フィルター、販売者情報、カート操作、レビュー、配送情報を使ったカタログと商品詳細の導線を構築しました。",
+        "商品、注文、メッセージ、分析、支払い、設定、審査状態を扱う販売者向けワークスペースを作成しました。",
+        "ユーザー、注文、販売者、応募、レポート、ニュース投稿を確認できる管理者、採用担当、広報向けワークスペースを拡張しました。",
+        "ヘッダー、メニュー、商品ページの一貫性を保ちながら、多言語対応と通貨対応のUI挙動を追加しました。",
+        "ヘルプ、配送、返品、Cookie、問い合わせ、拠点、サステナビリティ、販売者ポリシー、販売者登録ページを設計しました。"
+      ],
+      ms: [
+        "Membina aliran katalog dan halaman produk dengan data produk sebenar, imej, penapis, maklumat penjual, tindakan cart, ulasan dan konteks penghantaran.",
+        "Mencipta workspace penjual untuk produk, pesanan, mesej, analytics, payout, tetapan dan status moderasi.",
+        "Mengembangkan workspace admin, recruiter dan press supaya role dalaman boleh menyemak pengguna, pesanan, penjual, permohonan, laporan dan post newsroom.",
+        "Menambah UI berbilang bahasa dan mata wang sambil mengekalkan konsistensi header, menu dan halaman produk.",
+        "Mereka bentuk halaman sokongan untuk help, shipping, returns, cookies, contacts, locations, sustainability, seller policies dan seller onboarding."
+      ],
+      th: [
+        "สร้าง flow ของ catalog และ product detail ด้วยข้อมูลสินค้าจริง รูปภาพ filters ข้อมูลผู้ขาย cart actions reviews และข้อมูล delivery",
+        "สร้าง seller workspace สำหรับ products, orders, messages, analytics, payouts, settings และ moderation states",
+        "ขยาย admin, recruiter และ press workspaces เพื่อให้ role ภายในตรวจสอบ users, orders, sellers, applications, reports และ newsroom posts ได้",
+        "เพิ่ม multilingual และ currency-aware UI โดยรักษาความสม่ำเสมอของ header, menus และ product pages",
+        "ออกแบบหน้าสนับสนุน เช่น help, shipping, returns, cookies, contacts, locations, sustainability, seller policies และ seller onboarding"
+      ],
+      vi: [
+        "Xay dung luong catalog va product detail voi du lieu san pham that, hinh anh, filters, thong tin seller, cart actions, reviews va delivery context.",
+        "Tao seller workspace cho products, orders, messages, analytics, payouts, settings va moderation states.",
+        "Mo rong admin, recruiter va press workspaces de cac role noi bo co the review users, orders, sellers, applications, reports va newsroom posts.",
+        "Them UI da ngon ngu va currency-aware trong khi giu header, menus va product pages nhat quan.",
+        "Thiet ke cac trang ho tro cho help, shipping, returns, cookies, contacts, locations, sustainability, seller policies va seller onboarding."
+      ]
+    },
+    outcome: {
+      en: "This project shows that I can work through a product as a system rather than only as isolated pages. It required database thinking, UI consistency, role-based workflows, real content structure, and many rounds of practical debugging across a growing PHP marketplace.",
+      ja: "このプロジェクトは、個別ページだけでなくプロダクト全体を一つのシステムとして考えながら進められることを示しています。データベース設計の視点、UIの一貫性、ロール別ワークフロー、実際のコンテンツ構造、そして成長するPHPマーケットプレイスでの継続的なデバッグが必要でした。",
+      ms: "Projek ini menunjukkan bahawa saya boleh membina produk sebagai satu sistem, bukan hanya halaman berasingan. Ia memerlukan pemikiran pangkalan data, konsistensi UI, workflow berdasarkan role, struktur kandungan sebenar dan banyak pusingan debugging praktikal dalam marketplace PHP yang semakin berkembang.",
+      th: "โปรเจกต์นี้แสดงให้เห็นว่าผมสามารถทำงานกับ product ในฐานะระบบหนึ่ง ไม่ใช่แค่หน้าแยก ๆ ต้องใช้ทั้งการคิดเรื่องฐานข้อมูล ความสม่ำเสมอของ UI workflow ตาม role โครงสร้างคอนเทนต์จริง และการ debug หลายรอบใน PHP marketplace ที่ขยายขึ้นเรื่อย ๆ",
+      vi: "Du an nay cho thay toi co the lam viec voi mot product nhu mot he thong, khong chi la cac trang rieng le. No can tu duy database, UI nhat quan, workflow theo role, cau truc noi dung that va nhieu vong debugging thuc te trong mot PHP marketplace dang lon dan."
+    },
+    snapshot: {
+      en: [["5", "screens shown"], ["5", "main workflows"], ["9", "tools used"]],
+      ja: [["5", "表示スクリーン"], ["5", "主要フロー"], ["9", "使用技術"]],
+      ms: [["5", "skrin dipaparkan"], ["5", "workflow utama"], ["9", "alat digunakan"]],
+      th: [["5", "screens shown"], ["5", "main workflows"], ["9", "tools used"]],
+      vi: [["5", "man hinh"], ["5", "workflow chinh"], ["9", "cong cu"]]
+    },
+    focus: {
+      en: ["Database-backed marketplace pages", "Role-based seller and admin workflows", "Multilingual and currency-aware UI", "Public content pages with real structure"],
+      ja: ["データベース連動のマーケットプレイス画面", "販売者・管理者向けのロール別ワークフロー", "多言語・通貨対応UI", "実際の構造を持つ公開コンテンツページ"],
+      ms: ["Halaman marketplace berasaskan database", "Workflow penjual dan admin berdasarkan role", "UI berbilang bahasa dan mata wang", "Halaman kandungan awam yang berstruktur"],
+      th: ["Database-backed marketplace pages", "Role-based seller and admin workflows", "Multilingual and currency-aware UI", "Public content pages with real structure"],
+      vi: ["Marketplace pages gan voi database", "Workflow seller va admin theo role", "UI da ngon ngu va tien te", "Public content pages co cau truc that"]
+    },
+    screenshots: [
+      "Screenshots/MinatoCargo/1_home.png",
+      "Screenshots/MinatoCargo/2_catalog.png",
+      "Screenshots/MinatoCargo/3_product.png",
+      "Screenshots/MinatoCargo/4_seller_center.png",
+      "Screenshots/MinatoCargo/5_press.png"
+    ]
   }
 };
 
