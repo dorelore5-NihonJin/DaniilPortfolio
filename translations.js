@@ -82,12 +82,12 @@ window.portfolioTranslations = {
         title: "A recruiter-friendly summary for support and systems operations roles.",
         panels: [
           ["What I bring", ["Hands-on L1/L2 Windows support and user issue resolution", "Hardware diagnostics, PC assembly, upgrades, and workstation setup", "Networking basics, Microsoft 365, Active Directory awareness, and Ubuntu VPS support", "Clear documentation and communication with end users"]],
-          ["Availability", ["Open to international relocation, with preference for Southeast Asia", "Priority countries: Vietnam, Thailand, Malaysia", "Visa sponsorship required", "Remote work possible immediately", "On-site availability from late June 2026"], "Open Resume PDF"]
+          ["Availability", ["Open to international relocation, with preference for Southeast Asia", "Priority countries: Vietnam, Thailand, Malaysia", "Visa sponsorship required for on-site roles", "Remote work possible immediately", "On-site availability from late June 2026"], "Open Resume PDF"]
         ]
       },
       contact: {
         title: "Available for international IT support and systems support opportunities.",
-        text: "If you are hiring for IT support, helpdesk, desktop support, or systems support, I'm available to discuss remote work immediately or onsite relocation from late June 2026.",
+        text: "If you are hiring for IT support, helpdesk, desktop support, or systems support, I'm available to discuss remote work immediately or on-site relocation from late June 2026.",
         labels: ["Email", "Phone", "WhatsApp", "Telegram", "LinkedIn"]
       }
     },
@@ -154,7 +154,7 @@ window.portfolioTranslations = {
           ["ハードウェア / PC組立", ["50台以上のPC組立・修理・アップグレード", "PSU、RAM、SSD、GPU、周辺機器の診断", "部品交換と安定した作業環境構築"]],
           ["ネットワーク基礎", ["IPアドレス、接続トラブル、Wi-Fi障害", "ルーター設定と基本的な原因切り分け", "TCP/IP基礎と初級ルーティング理解"]],
           ["Linux / リモート操作", ["Ubuntu基礎、権限、更新管理", "SSH、WinSCP、Command Prompt、Terminal", "Apache、MySQL、VPS日常保守"]],
-          ["仮想化 / テスト", ["VirtualBoxによるWindows/Linux互換検証", "実践的なトラブル対応用のクロスプラットフォーム検証環境", "ローカルと仮想環境の双方に対応可能"]],
+          ["Microsoft 365 / ID管理", ["Microsoft 365 アプリケーションの日常利用に対応", "Active Directory のユーザー、アカウント、権限に関する基礎知識", "オフィス業務とアクセス関連の問題をサポート可能"]],
           ["ドキュメント", ["よくある問題のナレッジベース作成", "明確なユーザー対応と報告", "再利用可能なトラブルシュート手順"]]
         ]
       },
@@ -170,8 +170,8 @@ window.portfolioTranslations = {
       resume: {
         title: "サポート職とシステム運用支援職向けの要点をまとめた内容です。",
         panels: [
-          ["強み", ["実務的なL1/L2 Windowsサポート", "ハードウェア診断、PC組立、作業端末準備", "ネットワーク基礎、Linux基礎、Ubuntu VPS運用", "明確なドキュメント作成とユーザー対応"]],
-          ["就業条件", ["海外 relocation に対応可能で、東南アジアを優先しています", "優先国: ベトナム、タイ、マレーシア", "ビザスポンサーが必要です", "リモート勤務はすぐ可能です", "現地勤務は2026年6月下旬以降を想定しています"], "履歴書PDFを開く"]
+          ["強み", ["実務的なL1/L2 Windowsサポート", "ハードウェア診断、PC組立、作業端末準備", "ネットワーク基礎、Microsoft 365、Active Directory基礎、Ubuntu VPS運用", "明確なドキュメント作成とユーザー対応"]],
+          ["就業条件", ["海外移住を伴う勤務にも対応可能で、東南アジアを優先しています", "優先国: ベトナム、タイ、マレーシア", "現地勤務ではビザスポンサーが必要です", "リモート勤務はすぐ可能です", "現地勤務は2026年6月下旬以降を想定しています"], "履歴書PDFを開く"]
         ]
       },
       contact: {
@@ -243,7 +243,7 @@ window.portfolioTranslations = {
           ["Perkakasan & Pemasangan PC", ["50+ binaan, naik taraf, dan pembaikan PC", "Diagnostik PSU, RAM, SSD, GPU, dan periferal", "Penggantian komponen dan penyediaan workstation stabil"]],
           ["Asas Rangkaian", ["Alamat IP, troubleshooting sambungan, isu Wi-Fi", "Konfigurasi router dan pengasingan masalah rangkaian asas", "Asas TCP/IP dan pemahaman routing peringkat awal"]],
           ["Linux & Akses Jauh", ["Asas Ubuntu, kebenaran fail, dan kemas kini pakej", "Pentadbiran SSH, WinSCP, Command Prompt, Terminal", "Apache, MySQL, dan penyelenggaraan VPS praktikal"]],
-          ["Virtualisasi & Ujian", ["Penyediaan VirtualBox untuk semakan keserasian Windows/Linux", "Persekitaran ujian silang platform untuk troubleshooting", "Selesa bekerja antara sistem tempatan dan maya"]],
+          ["Microsoft 365 & Identiti", ["Yakin menggunakan aplikasi Microsoft 365 untuk kerja harian", "Pengetahuan asas Active Directory untuk pengguna, akaun, dan kebenaran", "Selesa menyokong isu produktiviti pejabat dan akses"]],
           ["Dokumentasi", ["Penulisan knowledge base untuk isu biasa", "Komunikasi jelas dengan pengguna dan pelaporan isu", "Langkah troubleshooting yang boleh diulang untuk penyelesaian lebih pantas"]]
         ]
       },
@@ -259,8 +259,8 @@ window.portfolioTranslations = {
       resume: {
         title: "Ringkasan mesra perekrut untuk peranan sokongan dan sokongan infrastruktur.",
         panels: [
-          ["Apa yang saya bawa", ["Pengalaman hands-on sokongan Windows L1/L2 dan penyelesaian isu pengguna", "Diagnostik perkakasan, pemasangan PC, dan penyediaan workstation", "Asas rangkaian, asas Linux, dan sokongan Ubuntu VPS", "Dokumentasi dan komunikasi yang jelas dengan pengguna akhir"]],
-          ["Ketersediaan", ["Terbuka untuk relokasi antarabangsa, dengan keutamaan Asia Tenggara", "Negara keutamaan: Vietnam, Thailand, Malaysia", "Penajaan visa diperlukan", "Boleh mula kerja remote dengan segera", "Sasaran relokasi on-site mulai akhir Jun 2026"], "Buka Resume PDF"]
+          ["Apa yang saya bawa", ["Pengalaman hands-on sokongan Windows L1/L2 dan penyelesaian isu pengguna", "Diagnostik perkakasan, pemasangan PC, dan penyediaan workstation", "Asas rangkaian, Microsoft 365, asas Active Directory, dan sokongan Ubuntu VPS", "Dokumentasi dan komunikasi yang jelas dengan pengguna akhir"]],
+          ["Ketersediaan", ["Terbuka untuk relokasi antarabangsa, dengan keutamaan Asia Tenggara", "Negara keutamaan: Vietnam, Thailand, Malaysia", "Penajaan visa diperlukan untuk peranan on-site", "Boleh mula kerja remote dengan segera", "Sasaran relokasi on-site mulai akhir Jun 2026"], "Buka Resume PDF"]
         ]
       },
       contact: {
@@ -332,7 +332,7 @@ window.portfolioTranslations = {
           ["Hardware & PC Assembly", ["50+ ประกอบ อัปเกรด และซ่อม PC", "วินิจฉัย PSU, RAM, SSD, GPU และอุปกรณ์ต่อพ่วง", "เปลี่ยนชิ้นส่วนและจัดเตรียม workstation ที่เสถียร"]],
           ["Networking Basics", ["IP addressing, troubleshooting การเชื่อมต่อ และปัญหา Wi-Fi", "ตั้งค่าเราเตอร์และแยกสาเหตุของปัญหาเครือข่ายเบื้องต้น", "พื้นฐาน TCP/IP และความเข้าใจ routing ระดับต้น"]],
           ["Linux & Remote Access", ["พื้นฐาน Ubuntu, permission และ package updates", "SSH, WinSCP, Command Prompt และ Terminal", "Apache, MySQL และการดูแล VPS เชิงปฏิบัติ"]],
-          ["Virtualization & Testing", ["ใช้ VirtualBox เพื่อตรวจสอบความเข้ากันได้ของ Windows/Linux", "สภาพแวดล้อมทดสอบข้ามแพลตฟอร์มเพื่อการ troubleshooting", "ทำงานได้ทั้งบนระบบจริงและระบบเสมือน"]],
+          ["Microsoft 365 & Identity", ["ใช้งานแอป Microsoft 365 ในงานประจำวันได้อย่างมั่นใจ", "มีความรู้พื้นฐาน Active Directory เกี่ยวกับ users, accounts และ permissions", "รองรับปัญหา productivity และ access ของผู้ใช้ในออฟฟิศได้"]],
           ["Documentation", ["เขียน knowledge base สำหรับปัญหาที่พบบ่อย", "สื่อสารกับผู้ใช้อย่างชัดเจนและรายงานปัญหาเป็นระบบ", "สร้างขั้นตอน troubleshooting ที่ทำซ้ำได้"]]
         ]
       },
@@ -348,8 +348,8 @@ window.portfolioTranslations = {
       resume: {
         title: "สรุปแบบเป็นมิตรกับ recruiter สำหรับตำแหน่ง support และ infrastructure support",
         panels: [
-          ["สิ่งที่ผมมี", ["ประสบการณ์ Windows support ระดับ L1/L2 และการแก้ปัญหาให้ผู้ใช้", "วินิจฉัยฮาร์ดแวร์ ประกอบ PC และจัดเตรียม workstation", "พื้นฐานเครือข่าย พื้นฐาน Linux และการดูแล Ubuntu VPS", "การสื่อสารและเอกสารที่ชัดเจนสำหรับผู้ใช้ปลายทาง"]],
-          ["ความพร้อมในการทำงาน", ["พร้อมย้ายประเทศเพื่อทำงานในระดับสากล โดยให้ความสำคัญกับเอเชียตะวันออกเฉียงใต้", "ประเทศเป้าหมายหลัก: เวียดนาม ไทย มาเลเซีย", "ต้องการ visa sponsorship", "พร้อมทำงาน remote ได้ทันที", "พร้อมย้ายไปทำงาน on-site ตั้งแต่ปลายมิถุนายน 2026"], "เปิด Resume PDF"]
+          ["สิ่งที่ผมมี", ["ประสบการณ์ Windows support ระดับ L1/L2 และการแก้ปัญหาให้ผู้ใช้", "วินิจฉัยฮาร์ดแวร์ ประกอบ PC และจัดเตรียม workstation", "พื้นฐานเครือข่าย, Microsoft 365, พื้นฐาน Active Directory และการดูแล Ubuntu VPS", "การสื่อสารและเอกสารที่ชัดเจนสำหรับผู้ใช้ปลายทาง"]],
+          ["ความพร้อมในการทำงาน", ["พร้อมย้ายประเทศเพื่อทำงานในระดับสากล โดยให้ความสำคัญกับเอเชียตะวันออกเฉียงใต้", "ประเทศเป้าหมายหลัก: เวียดนาม ไทย มาเลเซีย", "ต้องการ visa sponsorship สำหรับงาน on-site", "พร้อมทำงาน remote ได้ทันที", "พร้อมย้ายไปทำงาน on-site ตั้งแต่ปลายมิถุนายน 2026"], "เปิด Resume PDF"]
         ]
       },
       contact: {
@@ -421,7 +421,7 @@ window.portfolioTranslations = {
           ["Phần cứng và lắp ráp PC", ["Hơn 50 bộ PC được lắp ráp, nâng cấp và sửa chữa", "Chẩn đoán PSU, RAM, SSD, GPU và thiết bị ngoại vi", "Thay thế linh kiện và thiết lập máy trạm ổn định"]],
           ["Kiến thức mạng cơ bản", ["Địa chỉ IP, xử lý lỗi kết nối, sự cố Wi-Fi", "Cấu hình router và khoanh vùng sự cố mạng cơ bản", "Nền tảng TCP/IP và nhận thức routing cấp đầu"]],
           ["Linux và truy cập từ xa", ["Nền tảng Ubuntu, quyền tệp và cập nhật gói", "SSH, WinSCP, Command Prompt, Terminal", "Apache, MySQL và bảo trì VPS trong thực tế"]],
-          ["Tích hợp & Kiểm thử", ["Thiết lập VirtualBox để kiểm tra tương thích Windows/Linux", "Môi trường test đa nền tảng cho troubleshooting thực tế", "Linh hoạt giữa hệ thống thật và máy ảo"]],
+          ["Microsoft 365 & Identity", ["Sử dụng thành thạo các ứng dụng Microsoft 365 trong công việc hằng ngày", "Có kiến thức cơ bản về Active Directory cho người dùng, tài khoản và phân quyền", "Hỗ trợ các vấn đề về công cụ văn phòng và quyền truy cập"]],
           ["Tài liệu hóa", ["Tài liệu kiểu knowledge base cho các lỗi phổ biến", "Giao tiếp rõ ràng với người dùng và báo cáo vấn đề", "Các bước troubleshooting có thể tái sử dụng để giải quyết nhanh hơn"]]
         ]
       },
@@ -437,8 +437,8 @@ window.portfolioTranslations = {
       resume: {
         title: "Tóm tắt dễ dàng cho nhà tuyển dụng đánh giá về kỹ năng hỗ trợ và vận hành hệ thống.",
         panels: [
-          ["Giá trị tôi mang lại", ["Kinh nghiệm hỗ trợ Windows L1/L2 và giải quyết vấn đề người dùng", "Chẩn đoán phần cứng, lắp ráp PC và thiết lập máy trạm", "Kiến thức mạng cơ bản, Linux fundamentals và hỗ trợ Ubuntu VPS", "Tài liệu hóa rõ ràng và giao tiếp tốt với người dùng"]],
-          ["Tính sẵn sàng", ["Sẵn sàng tái định cư quốc tế, ưu tiên Đông Nam Á", "Quốc gia ưu tiên: Việt Nam, Thái Lan, Malaysia", "Cần visa sponsorship", "Có thể bắt đầu remote ngay", "Mục tiêu chuyển sang làm on-site từ cuối tháng 6 năm 2026"], "Mở Resume PDF"]
+          ["Giá trị tôi mang lại", ["Kinh nghiệm hỗ trợ Windows L1/L2 và giải quyết vấn đề người dùng", "Chẩn đoán phần cứng, lắp ráp PC và thiết lập máy trạm", "Kiến thức mạng cơ bản, Microsoft 365, nền tảng Active Directory và hỗ trợ Ubuntu VPS", "Tài liệu hóa rõ ràng và giao tiếp tốt với người dùng"]],
+          ["Tính sẵn sàng", ["Sẵn sàng tái định cư quốc tế, ưu tiên Đông Nam Á", "Quốc gia ưu tiên: Việt Nam, Thái Lan, Malaysia", "Cần visa sponsorship cho công việc on-site", "Có thể bắt đầu remote ngay", "Mục tiêu chuyển sang làm on-site từ cuối tháng 6 năm 2026"], "Mở Resume PDF"]
         ]
       },
       contact: {

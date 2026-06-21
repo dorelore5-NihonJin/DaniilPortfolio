@@ -40,25 +40,25 @@ window.projectData = {
       en: [
         "Installed or reinstalled Windows and completed post-install software setup.",
         "Diagnosed failures involving PSU, RAM, SSD, GPU, and connected peripherals.",
-        "Assembled and upgraded more than 30 PCs for stable daily operation.",
+        "Assembled and upgraded 50+ PCs for stable daily operation.",
         "Prepared systems for end users and documented repeatable troubleshooting steps."
       ],
       ja: [
         "Windows の新規導入または再インストールを行い、導入後のソフトウェア設定を完了しました。",
         "PSU、RAM、SSD、GPU、周辺機器に関する障害を診断しました。",
-        "30 台以上の PC を組み立て、アップグレードし、安定運用できる状態にしました。",
+        "50 台以上の PC を組み立て、アップグレードし、安定運用できる状態にしました。",
         "エンドユーザー向けにシステムを準備し、再利用できるトラブルシュート手順を記録しました。"
       ],
       ms: [
         "Memasang atau memasang semula Windows dan melengkapkan setup perisian selepas pemasangan.",
         "Mendiagnosis kegagalan melibatkan PSU, RAM, SSD, GPU, dan periferal yang disambungkan.",
-        "Memasang dan menaik taraf lebih daripada 30 PC untuk operasi harian yang stabil.",
+        "Memasang dan menaik taraf 50+ PC untuk operasi harian yang stabil.",
         "Menyediakan sistem untuk pengguna akhir dan mendokumenkan langkah troubleshooting yang boleh diulang."
       ],
       th: [
         "ติดตั้งหรือติดตั้ง Windows ใหม่ พร้อมตั้งค่าซอฟต์แวร์หลังการติดตั้งให้เสร็จสมบูรณ์",
         "วิเคราะห์ปัญหาที่เกี่ยวข้องกับ PSU, RAM, SSD, GPU และอุปกรณ์ต่อพ่วง",
-        "ประกอบและอัปเกรด PC มากกว่า 30 เครื่องให้พร้อมใช้งานประจำวันอย่างเสถียร",
+        "ประกอบและอัปเกรด PC มากกว่า 50 เครื่องให้พร้อมใช้งานประจำวันอย่างเสถียร",
         "เตรียมระบบสำหรับผู้ใช้ปลายทางและบันทึกขั้นตอน troubleshooting ที่นำกลับมาใช้ซ้ำได้"
       ]
     },
@@ -345,7 +345,7 @@ window.projectData["pc-support"].tools.vi = ["Windows 7/10/11", "Driver", "Phan 
 window.projectData["pc-support"].tasks.vi = [
   "Cai dat hoac cai dat lai Windows va hoan tat cau hinh phan mem sau khi cai dat.",
   "Chan doan cac loi lien quan den PSU, RAM, SSD, GPU va thiet bi ngoai vi ket noi.",
-  "Lap rap va nang cap hon 30 PC de dam bao van hanh on dinh hang ngay.",
+  "Lap rap va nang cap hon 50 PC de dam bao van hanh on dinh hang ngay.",
   "Chuan bi he thong cho nguoi dung cuoi va tai lieu hoa cac buoc troubleshooting co the lap lai."
 ];
 window.projectData["pc-support"].outcome.vi = "Cong viec nay giup toi nang cao quy trinh troubleshooting, su tu tin voi phan cung va kha nang dua mot van de tu buoc tiep nhan den he thong hoat dong on dinh. Dong thoi, toi hieu ro hon cach trinh bay giai phap mot cach ro rang va bien cong viec support thanh quy trinh co the tai su dung.";
