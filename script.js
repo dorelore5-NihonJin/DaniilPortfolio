@@ -678,10 +678,6 @@ const initializeLanguage = async () => {
   switchLanguage(detectedLanguage || "en", "auto");
 };
 
-// Execute theme & language config
-applyTheme(getStoredTheme());
-initializeLanguage();
-
 // --- VIDEO INTRODUCTION MODAL ---
 const introVideoButton = document.getElementById("open-intro-video");
 const introVideoModal = document.getElementById("intro-video-modal");
@@ -1009,3 +1005,7 @@ if ("IntersectionObserver" in window && projectPreviewCards.length) {
 
   projectPreviewCards.forEach((card) => projectPreviewObserver.observe(card));
 }
+
+// Initialize only after every function used by the translation renderer exists.
+applyTheme(getStoredTheme());
+initializeLanguage();
