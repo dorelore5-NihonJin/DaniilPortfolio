@@ -12,6 +12,7 @@ const languageSwitcher = document.querySelector(".language-switcher");
 
 const languageMeta = {
   en: { name: "English", code: "EN" },
+  ru: { name: "Русский", code: "RU" },
   ja: { name: "Japanese", code: "日本語" },
   ms: { name: "Malay", code: "BM" },
   th: { name: "Thai", code: "ไทย" },
@@ -21,11 +22,22 @@ const languageMeta = {
 const languageSourceKey = "portfolio-language-source";
 const themeStorageKey = "portfolio-theme";
 const autoLanguageMap = {
+  RU: "ru",
+  BY: "ru",
+  KZ: "ru",
+  KG: "ru",
+  AM: "ru",
+  AZ: "ru",
+  MD: "ru",
+  TJ: "ru",
+  TM: "ru",
+  UZ: "ru",
   JP: "ja",
   MY: "ms",
   TH: "th",
   VN: "vi"
 };
+const russianFallbackLanguages = new Set(["be", "kk", "ky", "hy", "az", "tg", "tk", "uz"]);
 
 const themeMeta = {
   light: {
@@ -37,10 +49,15 @@ const themeMeta = {
     label: "Light mode"
   }
 };
+const themeCopy = {
+  en: { light: "Dark mode", dark: "Light mode", ariaLight: "Switch to dark theme", ariaDark: "Switch to light theme" },
+  ru: { light: "Тёмная тема", dark: "Светлая тема", ariaLight: "Переключить на тёмную тему", ariaDark: "Переключить на светлую тему" }
+};
 
 const uiCopy = {
   brandRole: {
     en: "IT Support Specialist",
+    ru: "Специалист технической поддержки",
     ja: "ITサポートスペシャリスト",
     ms: "Pakar Sokongan IT",
     th: "IT Support Specialist",
@@ -48,6 +65,7 @@ const uiCopy = {
   },
   navToggleLabel: {
     en: "Toggle navigation",
+    ru: "Открыть или закрыть навигацию",
     ja: "ナビゲーションを切り替える",
     ms: "Tukar navigasi",
     th: "สลับเมนูนำทาง",
@@ -55,6 +73,7 @@ const uiCopy = {
   },
   languageLabel: {
     en: "Language selector",
+    ru: "Выбор языка",
     ja: "言語の選択",
     ms: "Pemilih bahasa",
     th: "ตัวเลือกภาษา",
@@ -116,7 +135,7 @@ const initializeLanguageSwitcher = () => {
     return { buttons: [], trigger: null, label: null, code: null };
   }
 
-  ["en", "ja", "ms", "th", "vi"].forEach((lang) => {
+  ["en", "ru", "ja", "ms", "th", "vi"].forEach((lang) => {
     if (!languageSwitcher.querySelector(`[data-lang="${lang}"]`)) {
       languageSwitcher.appendChild(createLanguageOption(lang));
     }
@@ -208,6 +227,8 @@ const applyTheme = (theme) => {
   window.localStorage.setItem(themeStorageKey, theme);
 
   const nextMode = theme === "dark" ? "light" : "dark";
+  const currentLanguage = document.documentElement.lang || "en";
+  const localizedTheme = themeCopy[currentLanguage] || themeCopy.en;
   const icon = headerUi.themeToggle?.querySelector(".theme-toggle-icon");
   const label = headerUi.themeToggle?.querySelector(".theme-toggle-label");
 
@@ -216,11 +237,11 @@ const applyTheme = (theme) => {
   }
 
   if (label) {
-    label.textContent = themeMeta[theme].label;
+    label.textContent = localizedTheme[theme];
   }
 
   if (headerUi.themeToggle) {
-    headerUi.themeToggle.setAttribute("aria-label", `Switch to ${nextMode} theme`);
+    headerUi.themeToggle.setAttribute("aria-label", nextMode === "dark" ? localizedTheme.ariaLight : localizedTheme.ariaDark);
   }
 };
 
@@ -247,6 +268,31 @@ const detectLanguageByIp = async () => {
   } catch {
     return "en";
   }
+};
+
+const detectLanguageFromBrowser = () => {
+  const browserLanguages = Array.isArray(window.navigator.languages) && window.navigator.languages.length
+    ? window.navigator.languages
+    : [window.navigator.language];
+
+  for (const locale of browserLanguages) {
+    const normalizedLocale = String(locale || "").trim().toLowerCase().replace("_", "-");
+    const [language, region] = normalizedLocale.split("-");
+
+    if (languageMeta[language]) {
+      return language;
+    }
+
+    if (russianFallbackLanguages.has(language) || autoLanguageMap[String(region || "").toUpperCase()] === "ru") {
+      return "ru";
+    }
+  }
+
+  return null;
+};
+
+const detectPreferredLanguage = async () => {
+  return detectLanguageFromBrowser() || await detectLanguageByIp() || translations?.defaultLang || "en";
 };
 
 const updateLanguageButtons = (lang) => {
@@ -293,6 +339,8 @@ const applyIndexTranslations = (lang) => {
   if (languageSwitcher) {
     languageSwitcher.setAttribute("aria-label", uiCopy.languageLabel[lang] || uiCopy.languageLabel.en);
   }
+
+  applyTheme(document.documentElement.dataset.theme || getStoredTheme());
 
   setSectionList(navLinks, content.nav, (item, value) => {
     item.textContent = value;
@@ -395,6 +443,7 @@ const applyIndexTranslations = (lang) => {
   
   const langTranslations = {
     en: { names: ["Russian", "English", "Japanese"], ru: "Native", en: "B2 Fluent", ja: "JLPT N2" },
+    ru: { names: ["Русский", "Английский", "Японский"], ru: "Родной", en: "B2", ja: "JLPT N2" },
     ja: { names: ["ロシア語", "英語", "日本語"], ru: "ネイティブ", en: "B2流暢", ja: "JLPT N2合格" },
     ms: { names: ["Rusia", "Inggeris", "Jepun"], ru: "Asli", en: "Fasih B2", ja: "JLPT N2" },
     th: { names: ["รัสเซีย", "อังกฤษ", "ญี่ปุ่น"], ru: "ภาษาแม่", en: "คล่องแคล่ว B2", ja: "JLPT N2" },
@@ -417,6 +466,7 @@ const applyIndexTranslations = (lang) => {
   
   const relocTranslations = {
     en: { label: "Relocation", status: "Sponsorship Ready", countries: ["Vietnam", "Thailand", "Malaysia"] },
+    ru: { label: "Релокация", status: "Требуется визовая поддержка", countries: ["Вьетнам", "Таиланд", "Малайзия"] },
     ja: { label: "海外移住", status: "スポンサー準備可", countries: ["ベトナム", "タイ", "マレーシア"] },
     ms: { label: "Relokasi", status: "Sedia Ditaja", countries: ["Vietnam", "Thailand", "Malaysia"] },
     th: { label: "ย้ายประเทศ", status: "ต้องการสปอนเซอร์", countries: ["เวียดนาม", "ไทย", "มาเลเซีย"] },
@@ -522,12 +572,10 @@ const switchLanguage = (lang, source = "manual") => {
   }
 
   pageContent.classList.add("is-switching");
-  window.setTimeout(() => {
-    applyIndexTranslations(nextLang);
-    window.requestAnimationFrame(() => {
-      pageContent.classList.remove("is-switching");
-    });
-  }, 120);
+  applyIndexTranslations(nextLang);
+  window.requestAnimationFrame(() => {
+    pageContent.classList.remove("is-switching");
+  });
 };
 
 // --- REVEAL ON SCROLL OBSERVER ---
@@ -626,7 +674,7 @@ const initializeLanguage = async () => {
     return;
   }
 
-  const detectedLanguage = await detectLanguageByIp();
+  const detectedLanguage = await detectPreferredLanguage();
   switchLanguage(detectedLanguage || "en", "auto");
 };
 
@@ -813,12 +861,13 @@ skillFilters.forEach((filter) => {
 // --- PROJECTS PREVIEW DYNAMIC HANDLERS ---
 const projectPreview = document.getElementById("project-preview");
 const projectPreviewCards = document.querySelectorAll("[data-project-preview]");
+const previewLiveLink = document.getElementById("preview-live-link");
 const projectPreviewData = [
   {
     title: "Windows Deployment, Repair, and PC Build Work",
     text: "Desktop support work across Windows reinstallations, driver setup, hardware diagnostics, and ready-to-use systems.",
     visual: "workstation",
-    badge: { en: "Ready", ja: "完了", ms: "Sedia", th: "พร้อม", vi: "Sẵn sàng" },
+    badge: { en: "Ready", ru: "Готово", ja: "完了", ms: "Sedia", th: "พร้อม", vi: "Sẵn sàng" },
     address: "https://daniil-systems.net/projects/pc-support",
     terminal: `[SYSTEM_OPERATIONS]
 STATUS ....... OK
@@ -831,7 +880,7 @@ DEPLOYMENT ... Active`
     title: "JKT Personal Website on Ubuntu VPS",
     text: "A self-managed Ubuntu VPS website with Apache, MySQL, SSH access, remote file work, and maintenance routines.",
     visual: "server",
-    badge: { en: "Online", ja: "稼働中", ms: "Aktif", th: "ออนไลน์", vi: "Trực tuyến" },
+    badge: { en: "Online", ru: "Онлайн", ja: "稼働中", ms: "Aktif", th: "ออนไลน์", vi: "Trực tuyến" },
     address: "https://daniil-systems.net/projects/jkt-site",
     terminal: `[vps-health:~$ uptime]
 19:37:14 up 42 days, 3:12
@@ -843,7 +892,7 @@ MySQL connection: Established`
     title: "Self-Hosted VPN and Telegram Web App",
     text: "Remote Linux administration for hosted services, including updates, SSH operations, VPN setup, and service upkeep.",
     visual: "vpn",
-    badge: { en: "Secured", ja: "安全", ms: "Selamat", th: "ปลอดภัย", vi: "Bảo mật" },
+    badge: { en: "Secured", ru: "Защищено", ja: "安全", ms: "Selamat", th: "ปลอดภัย", vi: "Bảo mật" },
     address: "https://daniil-systems.net/projects/telegram-app",
     terminal: `[vpn-route:~$ wireguard status]
 Interface: wg0 (enabled)
@@ -856,7 +905,7 @@ Firewall Rules: Enforced`
     title: "MinatoCargo Global Marketplace Platform",
     text: "A full-stack marketplace project with catalog browsing, product pages, seller operations, admin tooling, support pages, localization, and currency-aware UI.",
     visual: "marketplace",
-    badge: { en: "Live build", ja: "Live build", ms: "Live build", th: "Live build", vi: "Live build" },
+    badge: { en: "Live build", ru: "Рабочая версия", ja: "Live build", ms: "Live build", th: "Live build", vi: "Live build" },
     address: "https://daniil-systems.net/projects/minatocargo",
     terminal: `[marketplace:release]
 Catalog pages ..... Ready
@@ -903,6 +952,16 @@ const setProjectPreview = (index) => {
 
   // Handle Dynamic Mock Swap
   const originalProj = window.projectData?.[Object.keys(window.projectData)[index]];
+  if (previewLiveLink) {
+    const liveLabel = originalProj?.liveLabel?.[currentLang] || originalProj?.liveLabel?.en;
+    previewLiveLink.hidden = !originalProj?.liveUrl;
+    previewLiveLink.href = originalProj?.liveUrl || "#";
+    const liveLabelElement = previewLiveLink.querySelector("span");
+    if (liveLabelElement && liveLabel) {
+      liveLabelElement.textContent = liveLabel;
+    }
+  }
+
   if (originalProj && originalProj.screenshots && originalProj.screenshots.length > 0) {
     // Show image mockup
     if (previewImg) {

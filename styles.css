@@ -1356,6 +1356,15 @@ h2 {
   color: var(--muted-strong);
 }
 
+.project-preview .project-live-link {
+  align-self: flex-start;
+  gap: 0.5rem;
+}
+
+.project-preview .project-live-link[hidden] {
+  display: none;
+}
+
 /* Browser Mockup inside Preview */
 .browser-mockup {
   border: 1px solid var(--border-strong);
@@ -1570,14 +1579,12 @@ h2 {
 /* --- 12. UTILITY ANIMATIONS (REVEAL) --- */
 .reveal {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 600ms var(--ease-out), transform 600ms var(--ease-out);
+  transition: opacity 500ms var(--ease-out);
   transition-delay: var(--delay, 0ms);
 }
 
 .reveal.is-visible {
   opacity: 1;
-  transform: translateY(0);
 }
 
 /* --- 13. MODALS (VIDEO INTRODUCTION) --- */

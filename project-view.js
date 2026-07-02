@@ -27,6 +27,8 @@ const projectSectionHeadings = document.querySelectorAll(".project-detail-card h
 const galleryHeading = document.querySelector(".project-gallery-head h2");
 const brandSubtitle = document.querySelector(".brand-copy span:last-child");
 const sideEyebrowEl = document.getElementById("project-side-eyebrow");
+const projectHeroActions = document.getElementById("project-hero-actions");
+const projectLiveLink = document.getElementById("project-live-link");
 
 const lightbox = document.getElementById("image-lightbox");
 const lightboxDialog = lightbox?.querySelector(".image-lightbox-dialog");
@@ -40,6 +42,7 @@ const lightboxCloseButtons = document.querySelectorAll("[data-lightbox-close], #
 
 const languageMeta = {
   en: { name: "English", code: "EN" },
+  ru: { name: "Русский", code: "RU" },
   ja: { name: "Japanese", code: "日本語" },
   ms: { name: "Malay", code: "BM" },
   th: { name: "Thai", code: "ไทย" },
@@ -49,11 +52,22 @@ const languageMeta = {
 const languageSourceKey = "portfolio-language-source";
 const themeStorageKey = "portfolio-theme";
 const autoLanguageMap = {
+  RU: "ru",
+  BY: "ru",
+  KZ: "ru",
+  KG: "ru",
+  AM: "ru",
+  AZ: "ru",
+  MD: "ru",
+  TJ: "ru",
+  TM: "ru",
+  UZ: "ru",
   JP: "ja",
   MY: "ms",
   TH: "th",
   VN: "vi"
 };
+const russianFallbackLanguages = new Set(["be", "kk", "ky", "hy", "az", "tg", "tk", "uz"]);
 
 const themeMeta = {
   light: {
@@ -65,6 +79,10 @@ const themeMeta = {
     label: "Light mode"
   }
 };
+const themeCopy = {
+  en: { light: "Dark mode", dark: "Light mode", ariaLight: "Switch to dark theme", ariaDark: "Switch to light theme" },
+  ru: { light: "Тёмная тема", dark: "Светлая тема", ariaLight: "Переключить на тёмную тему", ariaDark: "Переключить на светлую тему" }
+};
 
 let currentZoom = 1;
 let lastLightboxTrigger = null;
@@ -74,6 +92,7 @@ let isRenderingLanguage = false;
 const projectUiExtras = {
   sideEyebrow: {
     en: "Project Snapshot",
+    ru: "Кратко о проекте",
     ja: "プロジェクト概要",
     ms: "Ringkasan Projek",
     th: "สรุปโปรเจกต์",
@@ -81,6 +100,7 @@ const projectUiExtras = {
   },
   snapshotLabels: {
     en: ["Screens", "Tasks", "Tools"],
+    ru: ["Экранов", "Задач", "Инструментов"],
     ja: ["画面", "作業", "技術"],
     ms: ["Skrin", "Tugas", "Alat"],
     th: ["หน้าจอ", "งาน", "เครื่องมือ"],
@@ -88,6 +108,7 @@ const projectUiExtras = {
   },
   focusTitle: {
     en: "What this project shows",
+    ru: "Что показывает этот проект",
     ja: "このプロジェクトで示したこと",
     ms: "Apa yang projek ini tunjukkan",
     th: "สิ่งที่โปรเจกต์นี้แสดง",
@@ -95,6 +116,7 @@ const projectUiExtras = {
   },
   slideLabel: {
     en: "Screenshot",
+    ru: "Скриншот",
     ja: "スクリーンショット",
     ms: "Tangkapan skrin",
     th: "ภาพหน้าจอ",
@@ -102,6 +124,7 @@ const projectUiExtras = {
   },
   pageTitle: {
     en: "Project Details | Daniil Kulakov",
+    ru: "Подробности проекта | Даниил Кулаков",
     ja: "プロジェクト詳細 | Daniil Kulakov",
     ms: "Butiran Projek | Daniil Kulakov",
     th: "รายละเอียดโปรเจกต์ | Daniil Kulakov",
@@ -109,6 +132,7 @@ const projectUiExtras = {
   },
   pageDescription: {
     en: "Detailed project view for Daniil Kulakov's IT Support Specialist portfolio.",
+    ru: "Подробное описание проекта из портфолио специалиста технической поддержки Даниила Кулакова.",
     ja: "Daniil Kulakov の IT サポートポートフォリオ向けプロジェクト詳細ページ。",
     ms: "Paparan terperinci projek untuk portfolio Pakar Sokongan IT Daniil Kulakov.",
     th: "หน้ารายละเอียดโปรเจกต์สำหรับพอร์ตโฟลิโอ IT Support Specialist ของ Daniil Kulakov",
@@ -116,6 +140,7 @@ const projectUiExtras = {
   },
   brandSubtitle: {
     en: "Project Detail",
+    ru: "Подробности проекта",
     ja: "プロジェクト詳細",
     ms: "Butiran Projek",
     th: "รายละเอียดโปรเจกต์",
@@ -123,6 +148,7 @@ const projectUiExtras = {
   },
   languageLabel: {
     en: "Language selector",
+    ru: "Выбор языка",
     ja: "言語の選択",
     ms: "Pemilih bahasa",
     th: "ตัวเลือกภาษา",
@@ -130,6 +156,7 @@ const projectUiExtras = {
   },
   viewerLabel: {
     en: "Screenshot viewer",
+    ru: "Просмотр скриншота",
     ja: "スクリーンショットビューア",
     ms: "Pemapar tangkapan skrin",
     th: "ตัวดูภาพหน้าจอ",
@@ -137,6 +164,7 @@ const projectUiExtras = {
   },
   zoomIn: {
     en: "Zoom in",
+    ru: "Увеличить",
     ja: "拡大",
     ms: "Zum masuk",
     th: "ขยาย",
@@ -144,6 +172,7 @@ const projectUiExtras = {
   },
   zoomOut: {
     en: "Zoom out",
+    ru: "Уменьшить",
     ja: "縮小",
     ms: "Zum keluar",
     th: "ย่อ",
@@ -151,6 +180,7 @@ const projectUiExtras = {
   },
   closeViewer: {
     en: "Close viewer",
+    ru: "Закрыть просмотр",
     ja: "ビューアを閉じる",
     ms: "Tutup paparan",
     th: "ปิดตัวดูภาพ",
@@ -158,6 +188,7 @@ const projectUiExtras = {
   },
   galleryAlt: {
     en: "screenshot",
+    ru: "скриншот",
     ja: "スクリーンショット",
     ms: "tangkapan skrin",
     th: "ภาพหน้าจอ",
@@ -165,6 +196,7 @@ const projectUiExtras = {
   },
   openInViewer: {
     en: "Open screenshot",
+    ru: "Открыть скриншот",
     ja: "スクリーンショットを開く",
     ms: "Buka tangkapan skrin",
     th: "เปิดภาพหน้าจอ",
@@ -172,6 +204,7 @@ const projectUiExtras = {
   },
   notAvailable: {
     en: "N/A",
+    ru: "Нет данных",
     ja: "該当なし",
     ms: "Tiada",
     th: "ไม่มี",
@@ -233,7 +266,7 @@ const initializeLanguageSwitcher = () => {
     return { buttons: [], trigger: null, label: null, code: null };
   }
 
-  ["en", "ja", "ms", "th", "vi"].forEach((lang) => {
+  ["en", "ru", "ja", "ms", "th", "vi"].forEach((lang) => {
     if (!languageSwitcher.querySelector(`[data-lang="${lang}"]`)) {
       languageSwitcher.appendChild(createLanguageOption(lang));
     }
@@ -325,6 +358,8 @@ const applyTheme = (theme) => {
   window.localStorage.setItem(themeStorageKey, theme);
 
   const nextMode = theme === "dark" ? "light" : "dark";
+  const currentLanguage = document.documentElement.lang || "en";
+  const localizedTheme = themeCopy[currentLanguage] || themeCopy.en;
   const icon = headerUi.themeToggle?.querySelector(".theme-toggle-icon");
   const label = headerUi.themeToggle?.querySelector(".theme-toggle-label");
 
@@ -333,11 +368,11 @@ const applyTheme = (theme) => {
   }
 
   if (label) {
-    label.textContent = themeMeta[theme].label;
+    label.textContent = localizedTheme[theme];
   }
 
   if (headerUi.themeToggle) {
-    headerUi.themeToggle.setAttribute("aria-label", `Switch to ${nextMode} theme`);
+    headerUi.themeToggle.setAttribute("aria-label", nextMode === "dark" ? localizedTheme.ariaLight : localizedTheme.ariaDark);
   }
 };
 
@@ -364,6 +399,31 @@ const detectLanguageByIp = async () => {
   } catch {
     return "en";
   }
+};
+
+const detectLanguageFromBrowser = () => {
+  const browserLanguages = Array.isArray(window.navigator.languages) && window.navigator.languages.length
+    ? window.navigator.languages
+    : [window.navigator.language];
+
+  for (const locale of browserLanguages) {
+    const normalizedLocale = String(locale || "").trim().toLowerCase().replace("_", "-");
+    const [language, region] = normalizedLocale.split("-");
+
+    if (languageMeta[language]) {
+      return language;
+    }
+
+    if (russianFallbackLanguages.has(language) || autoLanguageMap[String(region || "").toUpperCase()] === "ru") {
+      return "ru";
+    }
+  }
+
+  return null;
+};
+
+const detectPreferredLanguage = async () => {
+  return detectLanguageFromBrowser() || await detectLanguageByIp() || translations?.defaultLang || "en";
 };
 
 const getLocalizedValue = (field, lang) => {
@@ -462,6 +522,8 @@ const applyProjectUi = (lang, content) => {
   if (languageSwitcher) {
     languageSwitcher.setAttribute("aria-label", projectUiExtras.languageLabel[lang] || projectUiExtras.languageLabel.en);
   }
+
+  applyTheme(document.documentElement.dataset.theme || getStoredTheme());
 
   if (sideEyebrowEl) {
     sideEyebrowEl.textContent = projectUiExtras.sideEyebrow[lang] || projectUiExtras.sideEyebrow.en;
@@ -611,6 +673,16 @@ const renderProject = (lang) => {
   overviewEl.textContent = content.overview;
   roleEl.textContent = content.role;
   outcomeEl.textContent = content.outcome;
+
+  if (projectHeroActions && projectLiveLink) {
+    const liveLabel = getLocalizedValue(project.liveLabel, lang);
+    projectHeroActions.hidden = !project.liveUrl;
+    projectLiveLink.href = project.liveUrl || "#";
+    const liveLabelElement = projectLiveLink.querySelector("span");
+    if (liveLabelElement && liveLabel) {
+      liveLabelElement.textContent = liveLabel;
+    }
+  }
 
   tasksEl.innerHTML = "";
   content.tasks.forEach((task) => {
@@ -820,7 +892,7 @@ const initializeLanguage = async () => {
     return;
   }
 
-  const detectedLanguage = await detectLanguageByIp();
+  const detectedLanguage = await detectPreferredLanguage();
   switchLanguage(detectedLanguage || "en", "auto");
 };
 
