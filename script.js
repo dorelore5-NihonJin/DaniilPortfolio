@@ -4,7 +4,6 @@ const translations = window.portfolioTranslations;
 const pageContent = document.getElementById("page-content");
 const metaDescription = document.querySelector('meta[name="description"]');
 
-const revealItems = document.querySelectorAll(".reveal");
 const navToggle = document.querySelector(".nav-toggle");
 const nav = document.querySelector(".site-nav");
 const navLinks = document.querySelectorAll(".site-nav a");
@@ -78,6 +77,102 @@ const uiCopy = {
     ms: "Pemilih bahasa",
     th: "ตัวเลือกภาษา",
     vi: "Lựa chọn ngôn ngữ"
+  },
+  skillFilterLabel: {
+    en: "Filter skill groups",
+    ru: "Фильтр групп навыков",
+    ja: "スキルグループを絞り込む",
+    ms: "Tapis kumpulan kemahiran",
+    th: "กรองกลุ่มทักษะ",
+    vi: "Lọc nhóm kỹ năng"
+  },
+  skillFilters: {
+    en: ["All", "Support", "Systems", "Process"],
+    ru: ["Все", "Поддержка", "Системы", "Процессы"],
+    ja: ["すべて", "サポート", "システム", "プロセス"],
+    ms: ["Semua", "Sokongan", "Sistem", "Proses"],
+    th: ["ทั้งหมด", "ซัพพอร์ต", "ระบบ", "กระบวนการ"],
+    vi: ["Tất cả", "Hỗ trợ", "Hệ thống", "Quy trình"]
+  },
+  projectPreview: {
+    en: "Project preview",
+    ru: "Превью проекта",
+    ja: "プロジェクトプレビュー",
+    ms: "Pratonton projek",
+    th: "ตัวอย่างโปรเจกต์",
+    vi: "Xem trước dự án"
+  },
+  projectDetails: {
+    en: "Details",
+    ru: "Подробнее",
+    ja: "詳細",
+    ms: "Butiran",
+    th: "รายละเอียด",
+    vi: "Chi tiết"
+  },
+  projectLive: {
+    en: "Open Telegram bot",
+    ru: "Открыть Telegram-бота",
+    ja: "Telegramボットを開く",
+    ms: "Buka bot Telegram",
+    th: "เปิดบอต Telegram",
+    vi: "Mở bot Telegram"
+  },
+  skipLink: {
+    en: "Skip to content",
+    ru: "Перейти к содержимому",
+    ja: "コンテンツへスキップ",
+    ms: "Langkau ke kandungan",
+    th: "ข้ามไปยังเนื้อหา",
+    vi: "Chuyển đến nội dung"
+  },
+  footerCopy: {
+    en: "© 2026 Daniil Kulakov. IT Support Specialist.",
+    ru: "© 2026 Даниил Кулаков. Специалист технической поддержки.",
+    ja: "© 2026 Daniil Kulakov. ITサポートスペシャリスト.",
+    ms: "© 2026 Daniil Kulakov. Pakar Sokongan IT.",
+    th: "© 2026 Daniil Kulakov. IT Support Specialist.",
+    vi: "© 2026 Daniil Kulakov. Chuyên viên Hỗ trợ IT."
+  },
+  footerNav: {
+    en: ["Contact", "Resume", "Email"],
+    ru: ["Контакты", "Резюме", "Email"],
+    ja: ["連絡先", "履歴書", "メール"],
+    ms: ["Hubungi", "Resume", "E-mel"],
+    th: ["ติดต่อ", "Resume", "อีเมล"],
+    vi: ["Liên hệ", "CV", "Email"]
+  },
+  videoModal: {
+    en: ["Video Introduction", "Short English self-introduction", "Close"],
+    ru: ["Видеопрезентация", "Короткая самопрезентация на английском", "Закрыть"],
+    ja: ["動画紹介", "英語による短い自己紹介", "閉じる"],
+    ms: ["Pengenalan Video", "Pengenalan diri ringkas dalam bahasa Inggeris", "Tutup"],
+    th: ["วิดีโอแนะนำตัว", "แนะนำตัวสั้น ๆ เป็นภาษาอังกฤษ", "ปิด"],
+    vi: ["Video giới thiệu", "Phần tự giới thiệu ngắn bằng tiếng Anh", "Đóng"]
+  },
+  aboutLeadTitle: {
+    en: "IT Operations & User Support",
+    ru: "IT-операции и поддержка пользователей",
+    ja: "IT運用とユーザーサポート",
+    ms: "Operasi IT & Sokongan Pengguna",
+    th: "งานระบบ IT และซัพพอร์ตผู้ใช้",
+    vi: "Vận hành IT & Hỗ trợ người dùng"
+  },
+  educationField: {
+    en: "IT Systems",
+    ru: "IT-системы",
+    ja: "ITシステム",
+    ms: "Sistem IT",
+    th: "ระบบ IT",
+    vi: "Hệ thống IT"
+  },
+  educationProgram: {
+    en: "Information Systems & Programming",
+    ru: "Информационные системы и программирование",
+    ja: "情報システムとプログラミング",
+    ms: "Sistem Maklumat & Pengaturcaraan",
+    th: "ระบบสารสนเทศและการเขียนโปรแกรม",
+    vi: "Hệ thống thông tin & Lập trình"
   }
 };
 
@@ -96,97 +191,59 @@ const createLanguageOption = (lang) => {
 };
 
 const initializeHeaderActions = () => {
-  const siteHeader = document.querySelector(".site-header");
-  if (!siteHeader) {
-    return { themeToggle: null };
-  }
-
-  let actions = siteHeader.querySelector(".header-actions");
-  if (!actions) {
-    actions = document.createElement("div");
-    actions.className = "header-actions";
-    siteHeader.appendChild(actions);
-  }
-
-  if (languageSwitcher && languageSwitcher.parentElement !== actions) {
-    actions.appendChild(languageSwitcher);
-  }
-
-  let themeToggle = actions.querySelector(".theme-toggle");
-  if (!themeToggle) {
-    themeToggle = document.createElement("button");
-    themeToggle.className = "theme-toggle";
-    themeToggle.type = "button";
-    themeToggle.setAttribute("aria-label", "Toggle color theme");
-    themeToggle.innerHTML = `
-      <span class="theme-toggle-icon" aria-hidden="true">◐</span>
-      <span class="theme-toggle-label">Dark mode</span>
-    `;
-    actions.prepend(themeToggle);
-  }
-
-  return { themeToggle };
+  // Language switcher already exists in markup. No theme toggle (site is dark-only per design).
+  return { themeToggle: null };
 };
 
 const headerUi = initializeHeaderActions();
 
 const initializeLanguageSwitcher = () => {
   if (!languageSwitcher) {
-    return { buttons: [], trigger: null, label: null, code: null };
+    return { buttons: [], trigger: null, label: null, code: null, closeMenu: () => {} };
   }
 
-  ["en", "ru", "ja", "ms", "th", "vi"].forEach((lang) => {
-    if (!languageSwitcher.querySelector(`[data-lang="${lang}"]`)) {
-      languageSwitcher.appendChild(createLanguageOption(lang));
-    }
-  });
-
-  let trigger = languageSwitcher.querySelector(".language-trigger");
-  if (!trigger) {
-    trigger = document.createElement("button");
-    trigger.className = "language-trigger";
-    trigger.type = "button";
-    trigger.setAttribute("aria-haspopup", "true");
-    trigger.setAttribute("aria-expanded", "false");
-    trigger.innerHTML = `
-      <span class="language-trigger-label">English</span>
-      <span class="language-trigger-code">EN</span>
-    `;
-    languageSwitcher.prepend(trigger);
-  }
-
-  let menu = languageSwitcher.querySelector(".language-menu");
-  if (!menu) {
-    menu = document.createElement("div");
-    menu.className = "language-menu";
-    menu.setAttribute("role", "menu");
-    languageSwitcher.appendChild(menu);
-  }
-
-  const buttons = Array.from(languageSwitcher.querySelectorAll("[data-lang]"));
-  buttons.forEach((button) => {
-    const meta = languageMeta[button.dataset.lang];
-    button.classList.remove("language-button");
-    button.classList.add("language-option");
-    button.setAttribute("role", "menuitemradio");
-    button.setAttribute("aria-checked", button.classList.contains("is-active") ? "true" : "false");
-    button.innerHTML = `<span>${meta.name}</span><strong>${meta.code}</strong>`;
-    menu.appendChild(button);
-  });
+  const trigger = languageSwitcher.querySelector(".language-trigger");
+  const menu = languageSwitcher.querySelector(".language-menu");
+  let buttons = Array.from(languageSwitcher.querySelectorAll("[data-lang]"));
 
   const closeMenu = () => {
     languageSwitcher.classList.remove("is-open");
-    trigger.setAttribute("aria-expanded", "false");
+    if (trigger) trigger.setAttribute("aria-expanded", "false");
   };
 
-  trigger.addEventListener("click", () => {
-    const nextState = !languageSwitcher.classList.contains("is-open");
-    languageSwitcher.classList.toggle("is-open", nextState);
-    trigger.setAttribute("aria-expanded", String(nextState));
+  if (trigger) {
+    trigger.addEventListener("click", () => {
+      const nextState = !languageSwitcher.classList.contains("is-open");
+      languageSwitcher.classList.toggle("is-open", nextState);
+      trigger.setAttribute("aria-expanded", String(nextState));
+    });
+
+    trigger.addEventListener("keydown", (event) => {
+      if (!buttons.length || !["ArrowDown", "ArrowUp", "Home", "End"].includes(event.key)) return;
+      event.preventDefault();
+      languageSwitcher.classList.add("is-open");
+      trigger.setAttribute("aria-expanded", "true");
+      const targetIndex = event.key === "ArrowUp" || event.key === "End" ? buttons.length - 1 : 0;
+      buttons[targetIndex].focus();
+    });
+  }
+
+  menu?.addEventListener("keydown", (event) => {
+    const currentIndex = buttons.indexOf(document.activeElement);
+    if (event.key === "Escape") {
+      event.preventDefault();
+      closeMenu();
+      trigger?.focus();
+      return;
+    }
+    if (!buttons.length || !["ArrowDown", "ArrowUp", "Home", "End"].includes(event.key)) return;
+    event.preventDefault();
+    const nextIndex = event.key === "Home" ? 0 : event.key === "End" ? buttons.length - 1 : (currentIndex + (event.key === "ArrowDown" ? 1 : -1) + buttons.length) % buttons.length;
+    buttons[nextIndex].focus();
   });
 
   document.addEventListener("click", (event) => {
-    if (!languageSwitcher.contains(event.target)) {
+    if (languageSwitcher && !languageSwitcher.contains(event.target)) {
       closeMenu();
     }
   });
@@ -197,11 +254,19 @@ const initializeLanguageSwitcher = () => {
     }
   });
 
+  // Ensure ARIA on existing buttons
+  buttons.forEach((button) => {
+    const lang = button.dataset.lang;
+    if (languageMeta[lang]) {
+      button.setAttribute("role", "menuitemradio");
+    }
+  });
+
   return {
     buttons,
     trigger,
-    label: trigger.querySelector(".language-trigger-label"),
-    code: trigger.querySelector(".language-trigger-code"),
+    label: trigger ? trigger.querySelector(".language-trigger-label") : null,
+    code: trigger ? trigger.querySelector(".language-trigger-code") : null,
     closeMenu
   };
 };
@@ -217,10 +282,7 @@ const getStoredLanguageSource = () => {
   return window.localStorage.getItem(languageSourceKey);
 };
 
-const getStoredTheme = () => {
-  const storedTheme = window.localStorage.getItem(themeStorageKey);
-  return storedTheme === "dark" ? "dark" : "light";
-};
+const getStoredTheme = () => "dark";
 
 const applyTheme = (theme) => {
   document.documentElement.dataset.theme = theme;
@@ -245,31 +307,6 @@ const applyTheme = (theme) => {
   }
 };
 
-const detectLanguageByIp = async () => {
-  try {
-    const controller = new AbortController();
-    const timeoutId = window.setTimeout(() => controller.abort(), 2500);
-    const response = await fetch("https://ipwho.is/", {
-      signal: controller.signal,
-      headers: {
-        Accept: "application/json"
-      }
-    });
-
-    window.clearTimeout(timeoutId);
-
-    if (!response.ok) {
-      return "en";
-    }
-
-    const data = await response.json();
-    const countryCode = String(data?.country_code || "").toUpperCase();
-    return autoLanguageMap[countryCode] || "en";
-  } catch {
-    return "en";
-  }
-};
-
 const detectLanguageFromBrowser = () => {
   const browserLanguages = Array.isArray(window.navigator.languages) && window.navigator.languages.length
     ? window.navigator.languages
@@ -291,8 +328,9 @@ const detectLanguageFromBrowser = () => {
   return null;
 };
 
-const detectPreferredLanguage = async () => {
-  return detectLanguageFromBrowser() || await detectLanguageByIp() || translations?.defaultLang || "en";
+const detectPreferredLanguage = () => {
+  // Browser language only (fast, private, no external requests). IP-based was removed for performance/privacy.
+  return detectLanguageFromBrowser() || translations?.defaultLang || "en";
 };
 
 const updateLanguageButtons = (lang) => {
@@ -371,40 +409,13 @@ const applyIndexTranslations = (lang) => {
     if (strong) strong.textContent = value[1];
   });
 
-  // Localize Ops Console
-  const consoleContent = content.opsConsole;
-  if (consoleContent) {
-    const consoleLabel = document.querySelector(".ops-console-head .ops-console-window-title");
-    const consoleStatus = document.querySelector(".ops-status");
-    const consoleNodes = document.querySelectorAll(".ops-node span");
-    const logItems = document.querySelectorAll(".ops-log p");
-    
-    if (consoleLabel) consoleLabel.textContent = `operator@daniil-systems:~`;
-    if (consoleStatus) consoleStatus.textContent = consoleContent.status;
-    consoleNodes.forEach((nodeSpan, idx) => {
-      if (consoleContent.nodes[idx]) {
-        nodeSpan.textContent = consoleContent.nodes[idx];
-      }
-    });
-
-    // Update active node details
-    const activeNode = document.querySelector(".ops-node.is-active");
-    if (activeNode) {
-      const activeIdx = Number(activeNode.dataset.node || 0);
-      setOpsLayer(activeIdx);
-    }
-
-    logItems.forEach((logP, idx) => {
-      if (consoleContent.logLines[idx]) {
-        logP.textContent = consoleContent.logLines[idx];
-      }
-    });
-  }
+  const aboutHead = document.querySelector("#about h2");
+  if (aboutHead) aboutHead.textContent = content.about.title;
 
   // Localize Bento Grid About
   const bentoBioHead = document.querySelector(".bento-bio h3");
   const bentoBioParagraphs = document.querySelectorAll(".bento-bio-text p");
-  if (bentoBioHead) bentoBioHead.textContent = content.about.facts[0][2].split("/")[0].trim();
+  if (bentoBioHead) bentoBioHead.textContent = uiCopy.aboutLeadTitle[lang] || uiCopy.aboutLeadTitle.en;
   setSectionList(bentoBioParagraphs, content.about.copy, (item, value) => {
     item.textContent = value;
   });
@@ -428,8 +439,8 @@ const applyIndexTranslations = (lang) => {
     const program = bentoEducation.querySelector("h4");
     const degree = bentoEducation.querySelector(".bento-subtext");
     if (label) label.textContent = content.about.facts[1][0];
-    if (school) school.textContent = content.about.facts[1][1].split("/")[0].trim();
-    if (program) program.textContent = content.about.facts[1][1].split("/")[1]?.trim() || content.about.facts[1][1];
+    if (school) school.textContent = uiCopy.educationField[lang] || uiCopy.educationField.en;
+    if (program) program.textContent = uiCopy.educationProgram[lang] || uiCopy.educationProgram.en;
     if (degree) degree.textContent = content.about.facts[1][2];
   }
 
@@ -464,27 +475,37 @@ const applyIndexTranslations = (lang) => {
   const relocStatus = document.querySelector(".bento-status strong");
   const relocItems = document.querySelectorAll(".bento-reloc-item");
   
+  const relocFlags = ["🇻🇳", "🇹🇭", "🇲🇾", "🇬🇪", "🇦🇲", "🇨🇾"];
   const relocTranslations = {
-    en: { label: "Relocation", status: "Sponsorship Ready", countries: ["Vietnam", "Thailand", "Malaysia"] },
-    ru: { label: "Релокация", status: "Требуется визовая поддержка", countries: ["Вьетнам", "Таиланд", "Малайзия"] },
-    ja: { label: "海外移住", status: "スポンサー準備可", countries: ["ベトナム", "タイ", "マレーシア"] },
-    ms: { label: "Relokasi", status: "Sedia Ditaja", countries: ["Vietnam", "Thailand", "Malaysia"] },
-    th: { label: "ย้ายประเทศ", status: "ต้องการสปอนเซอร์", countries: ["เวียดนาม", "ไทย", "มาเลเซีย"] },
-    vi: { label: "Tái định cư", status: "Sẵn sàng tài trợ", countries: ["Việt Nam", "Thái Lan", "Malaysia"] }
+    en: { label: "Relocation", status: "Open to suitable opportunities", countries: ["Vietnam", "Thailand", "Malaysia", "Georgia", "Armenia", "Cyprus"] },
+    ru: { label: "Релокация", status: "Открыт к подходящим возможностям", countries: ["Вьетнам", "Таиланд", "Малайзия", "Грузия", "Армения", "Кипр"] },
+    ja: { label: "海外移住", status: "適した機会を検討可能", countries: ["ベトナム", "タイ", "マレーシア", "ジョージア", "アルメニア", "キプロス"] },
+    ms: { label: "Relokasi", status: "Terbuka kepada peluang sesuai", countries: ["Vietnam", "Thailand", "Malaysia", "Georgia", "Armenia", "Cyprus"] },
+    th: { label: "ย้ายประเทศ", status: "เปิดรับโอกาสที่เหมาะสม", countries: ["เวียดนาม", "ไทย", "มาเลเซีย", "จอร์เจีย", "อาร์เมเนีย", "ไซปรัส"] },
+    vi: { label: "Tái định cư", status: "Sẵn sàng xem xét cơ hội phù hợp", countries: ["Việt Nam", "Thái Lan", "Malaysia", "Georgia", "Armenia", "Síp"] }
   };
-  
+
   const rTrans = relocTranslations[lang] || relocTranslations.en;
   if (relocLabel) relocLabel.textContent = rTrans.label;
   if (relocStatus) relocStatus.textContent = rTrans.status;
   relocItems.forEach((item, idx) => {
     if (rTrans.countries[idx]) {
-      item.innerHTML = `<i class="ph-bold ph-map-pin"></i>${rTrans.countries[idx]}`;
+      item.innerHTML = `<span class="bento-reloc-flag" aria-hidden="true">${relocFlags[idx]}</span><span class="bento-reloc-name">${rTrans.countries[idx]}</span>`;
     }
   });
 
   // Localize Skills Heading
   const skillsHead = document.querySelector("#skills h2");
   if (skillsHead) skillsHead.textContent = content.skills.title;
+
+  const skillControls = document.querySelector(".skill-controls");
+  const skillFilterButtons = document.querySelectorAll(".skill-filter");
+  if (skillControls) {
+    skillControls.setAttribute("aria-label", uiCopy.skillFilterLabel[lang] || uiCopy.skillFilterLabel.en);
+  }
+  setSectionList(skillFilterButtons, uiCopy.skillFilters[lang] || uiCopy.skillFilters.en, (item, value) => {
+    item.textContent = value;
+  });
 
   const skillGroups = document.querySelectorAll(".skill-group");
   setSectionList(skillGroups, content.skills.groups, (item, value) => {
@@ -500,28 +521,29 @@ const applyIndexTranslations = (lang) => {
   const projectsHead = document.querySelector("#projects h2");
   if (projectsHead) projectsHead.textContent = content.projects.title;
 
-  const projectCards = document.querySelectorAll(".project-card");
-  setSectionList(projectCards, content.projects.cards, (item, value) => {
+  const projectRows = document.querySelectorAll(".project-row");
+  const projectDetailsLabel = uiCopy.projectDetails[lang] || uiCopy.projectDetails.en;
+  const projectPreviewLabel = document.querySelector(".project-stage-label");
+
+  if (projectPreviewLabel) {
+    projectPreviewLabel.textContent = uiCopy.projectPreview[lang] || uiCopy.projectPreview.en;
+  }
+
+  setSectionList(projectRows, content.projects.cards, (item, value) => {
     const projectTag = item.querySelector(".project-tag");
     const projectTitle = item.querySelector("h3");
-    const projectText = item.querySelector(".project-body p:not(.project-tag)");
-    const cta = item.querySelector(".project-cta");
+    const projectText = item.querySelector(".project-row-text");
+    const cta = item.querySelector(".project-row-cta");
 
     if (projectTag) projectTag.textContent = value[0];
     if (projectTitle) projectTitle.textContent = value[1];
     if (projectText) projectText.textContent = value[2];
-    if (cta) {
-      cta.innerHTML = "";
-      cta.appendChild(document.createTextNode(value[4]));
-    }
+    if (cta) cta.textContent = value[4] || projectDetailsLabel;
+    item.setAttribute("aria-label", `${projectDetailsLabel}: ${value[1]}`);
   });
 
-  // Update current project preview
-  const activeProj = document.querySelector(".project-card.is-active");
-  if (activeProj) {
-    const activeProjIdx = Number(activeProj.dataset.projectPreview || 0);
-    setProjectPreview(activeProjIdx);
-  }
+  const activeIndex = Number(document.querySelector(".project-row.is-active")?.dataset.projectIndex || 0);
+  setProjectStage(activeIndex, lang);
 
   // Localize Resume
   const resumeHead = document.querySelector("#resume h2");
@@ -557,6 +579,30 @@ const applyIndexTranslations = (lang) => {
       label.textContent = value;
     }
   });
+
+  const videoCopy = uiCopy.videoModal[lang] || uiCopy.videoModal.en;
+  const videoEyebrow = document.querySelector(".video-modal-head p");
+  const videoTitle = document.querySelector(".video-modal-head h3");
+  const videoClose = document.querySelector(".video-modal-close");
+  if (videoEyebrow) videoEyebrow.textContent = videoCopy[0];
+  if (videoTitle) videoTitle.textContent = videoCopy[1];
+  if (videoClose) videoClose.textContent = videoCopy[2];
+
+  const skipLink = document.querySelector(".skip-link");
+  if (skipLink) {
+    skipLink.textContent = uiCopy.skipLink[lang] || uiCopy.skipLink.en;
+  }
+
+  const footerCopy = document.querySelector(".site-footer-copy");
+  if (footerCopy) {
+    footerCopy.textContent = uiCopy.footerCopy[lang] || uiCopy.footerCopy.en;
+  }
+
+  const footerLinks = document.querySelectorAll(".site-footer-nav a");
+  const footerLabels = uiCopy.footerNav[lang] || uiCopy.footerNav.en;
+  setSectionList(footerLinks, footerLabels, (item, value) => {
+    item.textContent = value;
+  });
 };
 
 const switchLanguage = (lang, source = "manual") => {
@@ -578,35 +624,21 @@ const switchLanguage = (lang, source = "manual") => {
   });
 };
 
-// --- REVEAL ON SCROLL OBSERVER ---
-revealItems.forEach((item, index) => {
-  item.style.setProperty("--delay", `${Math.min(index * 35, 180)}ms`);
-});
-
-const revealObserver = new IntersectionObserver(
-  (entries, observer) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) {
-        return;
-      }
-      entry.target.classList.add("is-visible");
-      observer.unobserve(entry.target);
-    });
-  },
-  {
-    threshold: 0.12,
-    rootMargin: "0px 0px -4% 0px"
-  }
-);
-
-revealItems.forEach((item) => revealObserver.observe(item));
-
 // --- NAVIGATION MENU MOBILE ---
 if (navToggle && nav) {
   navToggle.addEventListener("click", () => {
     const isOpen = nav.classList.toggle("is-open");
     navToggle.classList.toggle("is-active", isOpen);
     navToggle.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && nav.classList.contains("is-open")) {
+      nav.classList.remove("is-open");
+      navToggle.classList.remove("is-active");
+      navToggle.setAttribute("aria-expanded", "false");
+      navToggle.focus();
+    }
   });
 
   navLinks.forEach((link) => {
@@ -657,6 +689,7 @@ if (navLinks.length) {
 languageUi.buttons.forEach((button) => {
   button.addEventListener("click", () => {
     switchLanguage(button.dataset.lang, "manual");
+    languageUi.trigger?.focus();
   });
 });
 
@@ -665,7 +698,7 @@ headerUi.themeToggle?.addEventListener("click", () => {
   applyTheme(nextTheme);
 });
 
-const initializeLanguage = async () => {
+const initializeLanguage = () => {
   const storedLanguage = getStoredLanguage();
   const storedSource = getStoredLanguageSource();
 
@@ -674,7 +707,7 @@ const initializeLanguage = async () => {
     return;
   }
 
-  const detectedLanguage = await detectPreferredLanguage();
+  const detectedLanguage = detectPreferredLanguage();
   switchLanguage(detectedLanguage || "en", "auto");
 };
 
@@ -684,6 +717,63 @@ const introVideoModal = document.getElementById("intro-video-modal");
 const introVideoPlayer = document.getElementById("intro-video-player");
 const introVideoCloseButtons = document.querySelectorAll("[data-video-close]");
 
+const trapFocus = (container, onEscape) => {
+  const focusable = container.querySelectorAll(
+    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+  );
+  const first = focusable[0];
+  const last = focusable[focusable.length - 1];
+
+  const handleKeydown = (event) => {
+    if (event.key === "Escape") {
+      onEscape();
+      return;
+    }
+
+    if (event.key !== "Tab" || !focusable.length) {
+      return;
+    }
+
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  };
+
+  container.addEventListener("keydown", handleKeydown);
+  first?.focus();
+
+  return () => container.removeEventListener("keydown", handleKeydown);
+};
+
+let releaseVideoFocusTrap = null;
+
+const fitIntroVideo = () => {
+  if (!introVideoPlayer || !introVideoPlayer.videoWidth) {
+    return;
+  }
+
+  const viewportHeight = window.innerHeight;
+  const dialog = introVideoModal?.querySelector(".video-modal-dialog");
+  const head = introVideoModal?.querySelector(".video-modal-head");
+  const headHeight = head?.offsetHeight || 72;
+  const verticalPadding = 48;
+  const maxVideoHeight = Math.min(viewportHeight * 0.68, 520, viewportHeight - headHeight - verticalPadding);
+  const aspectRatio = introVideoPlayer.videoWidth / introVideoPlayer.videoHeight;
+  const widthFromHeight = maxVideoHeight * aspectRatio;
+
+  introVideoPlayer.style.maxHeight = `${maxVideoHeight}px`;
+  introVideoPlayer.style.width = widthFromHeight > 840 ? "100%" : "auto";
+  introVideoPlayer.style.maxWidth = "100%";
+
+  if (dialog) {
+    dialog.style.maxHeight = `${Math.min(viewportHeight * 0.92, maxVideoHeight + headHeight + 36)}px`;
+  }
+};
+
 const openIntroVideo = () => {
   if (!introVideoModal) {
     return;
@@ -691,11 +781,22 @@ const openIntroVideo = () => {
 
   if (introVideoPlayer) {
     introVideoPlayer.volume = 0.5;
+    if (introVideoPlayer.readyState >= 1) {
+      fitIntroVideo();
+    } else {
+      introVideoPlayer.addEventListener("loadedmetadata", fitIntroVideo, { once: true });
+    }
   }
 
   introVideoModal.classList.add("is-open");
   introVideoModal.setAttribute("aria-hidden", "false");
   document.body.style.overflow = "hidden";
+
+  const dialog = introVideoModal.querySelector(".video-modal-dialog");
+  if (dialog) {
+    releaseVideoFocusTrap?.();
+    releaseVideoFocusTrap = trapFocus(dialog, closeIntroVideo);
+  }
 };
 
 const closeIntroVideo = () => {
@@ -709,7 +810,20 @@ const closeIntroVideo = () => {
 
   if (introVideoPlayer) {
     introVideoPlayer.pause();
+    introVideoPlayer.currentTime = 0;
+    introVideoPlayer.style.maxHeight = "";
+    introVideoPlayer.style.width = "";
+    introVideoPlayer.style.maxWidth = "";
   }
+
+  const dialog = introVideoModal?.querySelector(".video-modal-dialog");
+  if (dialog) {
+    dialog.style.maxHeight = "";
+  }
+
+  releaseVideoFocusTrap?.();
+  releaseVideoFocusTrap = null;
+  introVideoButton?.focus();
 };
 
 introVideoButton?.addEventListener("click", openIntroVideo);
@@ -717,124 +831,16 @@ introVideoCloseButtons.forEach((button) => {
   button.addEventListener("click", closeIntroVideo);
 });
 
+window.addEventListener("resize", () => {
+  if (introVideoModal?.classList.contains("is-open")) {
+    fitIntroVideo();
+  }
+});
+
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && introVideoModal?.classList.contains("is-open")) {
     closeIntroVideo();
   }
-});
-
-// --- INTERACTIVE OPS CONSOLE TELEMETRY ---
-const opsReadout = document.getElementById("ops-readout");
-const opsNodes = document.querySelectorAll(".ops-node");
-const opsLayers = [
-  {
-    title: "Windows support",
-    text: "L1/L2 troubleshooting, clean installs, drivers, recovery, user-ready setup."
-  },
-  {
-    title: "Hardware diagnostics",
-    text: "PSU, RAM, SSD, GPU, peripherals, assembly, upgrades, and replacement work."
-  },
-  {
-    title: "Linux and VPS",
-    text: "Ubuntu VPS, SSH, Apache, MySQL, WinSCP, updates, and routine maintenance."
-  },
-  {
-    title: "Network basics",
-    text: "IP addressing, Wi-Fi issues, router setup, connectivity checks, and isolation."
-  }
-];
-
-const updateOpsSchematic = (index) => {
-  const schematicEl = document.getElementById("ops-schematic");
-  if (!schematicEl) return;
-  
-  let content = "";
-  if (index === 0) {
-    content = `[ACTIVE SERVICES]
-● Spooler ............ RUNNING
-● WinRM .............. STANDBY
-● DHCPClient ......... RUNNING
-● WindowsUpdate ...... IDLE
-● GroupPolicy ........ SYNCED`;
-  } else if (index === 1) {
-    content = `[HARDWARE TELEMETRY]
-CPU Temp ............ 42°C [OK]
-PSU Voltage ......... 12.06V [OK]
-SSD Life ............ 98% [OK]
-RAM Usage ........... 4.2GB / 16GB
-GPU Fan Speed ....... 1200 RPM`;
-  } else if (index === 2) {
-    content = `[vps-server:~$ journalctl -n 4]
-systemd[1]: Starting Apache...
-apache2[1042]: HTTP/2 active.
-mysqld[892]: Port 3306 listening.
-systemd[1]: Services operational.`;
-  } else if (index === 3) {
-    content = `[PING TELEMETRY]
-8.8.8.8 ............. 24ms
-1.1.1.1 ............. 18ms
-Local Gateway ....... 1ms
-Packet Loss ......... 0%
-Link Speed .......... 1 Gbps`;
-  }
-  schematicEl.textContent = content;
-};
-
-const setOpsLayer = (index) => {
-  const currentLang = document.documentElement.lang || "en";
-  const consoleContent = translations?.index?.[currentLang]?.opsConsole || translations?.index?.en?.opsConsole;
-  const layers = consoleContent?.layers || opsLayers;
-  const layer = layers[index] || layers[0];
-  
-  opsNodes.forEach((node) => {
-    node.classList.toggle("is-active", Number(node.dataset.node) === index);
-  });
-
-  if (!opsReadout) {
-    return;
-  }
-
-  const title = opsReadout.querySelector("strong");
-  const text = opsReadout.querySelector("p");
-  if (title) title.textContent = layer.title;
-  if (text) text.textContent = layer.text;
-  
-  updateOpsSchematic(index);
-};
-
-opsNodes.forEach((node) => {
-  node.addEventListener("click", () => setOpsLayer(Number(node.dataset.node || 0)));
-});
-
-// Start clock Loop
-const startClock = () => {
-  const clockEl = document.getElementById("ops-clock");
-  if (!clockEl) return;
-  const update = () => {
-    const now = new Date();
-    clockEl.textContent = now.toTimeString().split(' ')[0];
-  };
-  update();
-  window.setInterval(update, 1000);
-};
-startClock();
-
-// --- TILT INTERACTION CARD ---
-const tiltCards = document.querySelectorAll("[data-tilt-card]");
-tiltCards.forEach((card) => {
-  card.addEventListener("pointermove", (event) => {
-    const rect = card.getBoundingClientRect();
-    const x = (event.clientX - rect.left) / rect.width - 0.5;
-    const y = (event.clientY - rect.top) / rect.height - 0.5;
-    card.style.setProperty("--tilt-x", `${(-y * 4).toFixed(2)}deg`);
-    card.style.setProperty("--tilt-y", `${(x * 5).toFixed(2)}deg`);
-  });
-
-  card.addEventListener("pointerleave", () => {
-    card.style.setProperty("--tilt-x", "0deg");
-    card.style.setProperty("--tilt-y", "0deg");
-  });
 });
 
 // --- SKILLS DYNAMIC FILTER ---
@@ -844,7 +850,11 @@ const skillGroupsFiltered = document.querySelectorAll(".skill-group[data-skill]"
 skillFilters.forEach((filter) => {
   filter.addEventListener("click", () => {
     const nextFilter = filter.dataset.filter || "all";
-    skillFilters.forEach((item) => item.classList.toggle("is-active", item === filter));
+    skillFilters.forEach((item) => {
+      const isActive = item === filter;
+      item.classList.toggle("is-active", isActive);
+      item.setAttribute("aria-pressed", String(isActive));
+    });
     skillGroupsFiltered.forEach((group) => {
       const isMatch = nextFilter === "all" || group.dataset.skill === nextFilter;
       group.classList.toggle("is-dimmed", !isMatch);
@@ -854,158 +864,184 @@ skillFilters.forEach((filter) => {
   });
 });
 
-// --- PROJECTS PREVIEW DYNAMIC HANDLERS ---
-const projectPreview = document.getElementById("project-preview");
-const projectPreviewCards = document.querySelectorAll("[data-project-preview]");
-const previewLiveLink = document.getElementById("preview-live-link");
-const projectPreviewData = [
-  {
-    title: "Windows Deployment, Repair, and PC Build Work",
-    text: "Desktop support work across Windows reinstallations, driver setup, hardware diagnostics, and ready-to-use systems.",
-    visual: "workstation",
-    badge: { en: "Ready", ru: "Готово", ja: "完了", ms: "Sedia", th: "พร้อม", vi: "Sẵn sàng" },
-    address: "https://daniil-systems.net/projects/pc-support",
-    terminal: `[SYSTEM_OPERATIONS]
-STATUS ....... OK
-HOST ......... win-dep-01
-HARDWARE ..... 50+ PC Builds
-TELEMETRY .... Validated
-DEPLOYMENT ... Active`
-  },
-  {
-    title: "JKT Personal Website on Ubuntu VPS",
-    text: "A self-managed Ubuntu VPS website with Apache, MySQL, SSH access, remote file work, and maintenance routines.",
-    visual: "server",
-    badge: { en: "Online", ru: "Онлайн", ja: "稼働中", ms: "Aktif", th: "ออนไลน์", vi: "Trực tuyến" },
-    address: "https://daniil-systems.net/projects/jkt-site",
-    terminal: `[vps-health:~$ uptime]
-19:37:14 up 42 days, 3:12
-Load average: 0.12, 0.08, 0.02
-HTTPD status: Operational
-MySQL connection: Established`
-  },
-  {
-    title: "Self-Hosted VPN and Telegram Web App",
-    text: "Remote Linux administration for hosted services, including updates, SSH operations, VPN setup, and service upkeep.",
-    visual: "vpn",
-    badge: { en: "Secured", ru: "Защищено", ja: "安全", ms: "Selamat", th: "ปลอดภัย", vi: "Bảo mật" },
-    address: "https://daniil-systems.net/projects/telegram-app",
-    terminal: `[vpn-route:~$ wireguard status]
-Interface: wg0 (enabled)
-Peers connected: 4 active
-Traffic IN: 4.8 GB
-Traffic OUT: 5.2 GB
-Firewall Rules: Enforced`
-  },
-  {
-    title: "MinatoCargo Global Marketplace Platform",
-    text: "A full-stack marketplace project with catalog browsing, product pages, seller operations, admin tooling, support pages, localization, and currency-aware UI.",
-    visual: "marketplace",
-    badge: { en: "Live build", ru: "Рабочая версия", ja: "Live build", ms: "Live build", th: "Live build", vi: "Live build" },
-    address: "https://daniil-systems.net/projects/minatocargo",
-    terminal: `[marketplace:release]
-Catalog pages ..... Ready
-Seller workspace .. Active
-Admin tools ....... Active
-Localization ...... 4 languages
-Currency layer .... 12h refresh`
-  }
+// --- PROJECTS STAGE (stable list + preview) ---
+const projectStage = document.getElementById("project-stage");
+const projectStageTitle = document.getElementById("project-stage-title");
+const projectStageText = document.getElementById("project-stage-text");
+const projectStageUrl = document.getElementById("project-stage-url");
+const projectStageLive = document.getElementById("project-stage-live");
+const projectStageShots = document.querySelectorAll(".project-stage-shot");
+const projectRows = document.querySelectorAll(".project-row");
+
+const projectStageMeta = [
+  { id: "pc-support", slug: "portfolio / pc-support" },
+  { id: "jkt-site", slug: "portfolio / jkt-site" },
+  { id: "telegram-app", slug: "portfolio / telegram-app" },
+  { id: "minatocargo-marketplace", slug: "portfolio / minatocargo" }
 ];
 
-const setProjectPreview = (index) => {
-  const preview = projectPreviewData[index] || projectPreviewData[0];
-  projectPreviewCards.forEach((card) => {
-    card.classList.toggle("is-active", Number(card.dataset.projectPreview) === index);
+let activeProjectIndex = 0;
+
+const setProjectStage = (index, lang = document.documentElement.lang || "en") => {
+  const nextIndex = Number.isFinite(index) ? index : 0;
+  activeProjectIndex = nextIndex;
+
+  projectRows.forEach((row) => {
+    row.classList.toggle("is-active", Number(row.dataset.projectIndex) === nextIndex);
   });
 
-  if (!projectPreview) {
-    return;
+  projectStageShots.forEach((shot) => {
+    shot.classList.toggle("is-active", Number(shot.dataset.projectIndex) === nextIndex);
+  });
+
+  const localizedCard = translations?.index?.[lang]?.projects?.cards?.[nextIndex]
+    || translations?.index?.en?.projects?.cards?.[nextIndex];
+  const meta = projectStageMeta[nextIndex];
+  const project = meta ? window.projectData?.[meta.id] : null;
+
+  if (projectStageTitle && localizedCard) {
+    projectStageTitle.textContent = localizedCard[1];
   }
 
-  const currentLang = document.documentElement.lang || "en";
-
-  const title = projectPreview.querySelector("strong");
-  const text = projectPreview.querySelector("p");
-  const badge = projectPreview.querySelector(".preview-badge");
-  const address = projectPreview.querySelector(".browser-address");
-  const previewImg = document.getElementById("preview-image");
-  const previewTerm = document.getElementById("preview-terminal");
-
-  // Get localized card translation title/text
-  const localizedCard = translations?.index?.[currentLang]?.projects?.cards?.[index] || translations?.index?.en?.projects?.cards?.[index];
-  if (title) title.textContent = localizedCard ? localizedCard[1] : preview.title;
-  if (text) text.textContent = localizedCard ? localizedCard[2] : preview.text;
-
-  // Localize Badge Status
-  if (badge) {
-    badge.textContent = preview.badge[currentLang] || preview.badge.en;
+  if (projectStageText && localizedCard) {
+    projectStageText.textContent = localizedCard[2];
   }
 
-  // Update address URL mock
-  if (address) {
-    address.textContent = preview.address;
+  if (projectStageUrl && meta) {
+    projectStageUrl.textContent = meta.slug;
   }
 
-  // Handle Dynamic Mock Swap
-  const originalProj = window.projectData?.[Object.keys(window.projectData)[index]];
-  if (previewLiveLink) {
-    const liveLabel = originalProj?.liveLabel?.[currentLang] || originalProj?.liveLabel?.en;
-    previewLiveLink.hidden = !originalProj?.liveUrl;
-    previewLiveLink.href = originalProj?.liveUrl || "#";
-    const liveLabelElement = previewLiveLink.querySelector("span");
+  if (projectStageLive) {
+    const liveLabel = project?.liveLabel?.[lang] || project?.liveLabel?.en;
+    projectStageLive.hidden = !project?.liveUrl;
+    projectStageLive.href = project?.liveUrl || "#";
+    const liveLabelElement = projectStageLive.querySelector("span");
     if (liveLabelElement && liveLabel) {
       liveLabelElement.textContent = liveLabel;
     }
   }
-
-  if (originalProj && originalProj.screenshots && originalProj.screenshots.length > 0) {
-    // Show image mockup
-    if (previewImg) {
-      previewImg.src = originalProj.screenshots[0];
-      previewImg.style.display = "block";
-    }
-    if (previewTerm) {
-      previewTerm.style.display = "none";
-    }
-  } else {
-    // Show terminal fallback mockup
-    if (previewImg) {
-      previewImg.style.display = "none";
-    }
-    if (previewTerm) {
-      previewTerm.textContent = preview.terminal;
-      previewTerm.style.display = "block";
-    }
-  }
 };
 
-projectPreviewCards.forEach((card) => {
-  const index = Number(card.dataset.projectPreview || 0);
-  card.addEventListener("pointerenter", () => setProjectPreview(index));
-  card.addEventListener("mouseenter", () => setProjectPreview(index));
-  card.addEventListener("focus", () => setProjectPreview(index));
-});
+const initializeProjectsStage = () => {
+  if (!projectRows.length) {
+    return;
+  }
 
-if ("IntersectionObserver" in window && projectPreviewCards.length) {
-  const projectPreviewObserver = new IntersectionObserver(
-    (entries) => {
-      const visibleEntry = entries
-        .filter((entry) => entry.isIntersecting)
-        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+  const canHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
 
-      if (visibleEntry) {
-        setProjectPreview(Number(visibleEntry.target.dataset.projectPreview || 0));
-      }
-    },
-    {
-      threshold: [0.35, 0.55, 0.75],
-      rootMargin: "-10% 0px -20% 0px"
+  projectRows.forEach((row) => {
+    const index = Number(row.dataset.projectIndex || 0);
+
+    if (canHover) {
+      row.addEventListener("mouseenter", () => setProjectStage(index));
     }
-  );
 
-  projectPreviewCards.forEach((card) => projectPreviewObserver.observe(card));
-}
+    row.addEventListener("focus", () => setProjectStage(index));
+  });
+
+  setProjectStage(activeProjectIndex);
+};
+
+// --- BIOLUMINESCENT PARTICLE SPHERE ---
+const initializeParticleSphere = () => {
+  const canvas = document.getElementById("particle-sphere");
+  if (!canvas) return;
+
+  const context = canvas.getContext("2d");
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const particleCount = window.innerWidth < 700 ? 360 : 720;
+  const particles = Array.from({ length: particleCount }, (_, index) => {
+    const y = 1 - (index / (particleCount - 1)) * 2;
+    const radius = Math.sqrt(1 - y * y);
+    const theta = Math.PI * (3 - Math.sqrt(5)) * index;
+    return {
+      x: Math.cos(theta) * radius,
+      y,
+      z: Math.sin(theta) * radius,
+      size: 0.55 + Math.random() * 1.2,
+      pink: Math.random() > 0.91
+    };
+  });
+
+  let width = 0;
+  let height = 0;
+  let frame = 0;
+  let animationId = 0;
+
+  const resize = () => {
+    const bounds = canvas.getBoundingClientRect();
+    const pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
+    width = bounds.width;
+    height = bounds.height;
+    canvas.width = Math.round(width * pixelRatio);
+    canvas.height = Math.round(height * pixelRatio);
+    context.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
+  };
+
+  const draw = () => {
+    context.clearRect(0, 0, width, height);
+    const time = reduceMotion ? 0.4 : frame * 0.0022;
+    const cosine = Math.cos(time);
+    const sine = Math.sin(time);
+    const radius = Math.min(width, height) * 0.31;
+    const centerX = width * 0.52;
+    const centerY = height * 0.5;
+
+    context.save();
+    context.translate(centerX, centerY);
+    context.strokeStyle = "rgba(141, 233, 227, 0.17)";
+    context.lineWidth = 0.8;
+    [-0.12, 0.08, 0.26].forEach((offset, index) => {
+      context.save();
+      context.rotate(offset);
+      context.beginPath();
+      context.ellipse(0, 0, radius * (1.43 + index * 0.08), radius * (0.32 + index * 0.035), 0, 0, Math.PI * 2);
+      context.stroke();
+      context.restore();
+    });
+    context.restore();
+
+    particles.forEach((particle) => {
+      const rotatedX = particle.x * cosine - particle.z * sine;
+      const rotatedZ = particle.x * sine + particle.z * cosine;
+      const depth = (rotatedZ + 1) / 2;
+      const perspective = 0.78 + depth * 0.3;
+      const x = centerX + rotatedX * radius * perspective;
+      const y = centerY + particle.y * radius * perspective;
+      const alpha = 0.18 + depth * 0.78;
+      const size = particle.size * (0.65 + depth * 0.75);
+
+      context.beginPath();
+      context.arc(x, y, size, 0, Math.PI * 2);
+      context.fillStyle = particle.pink
+        ? `rgba(253, 233, 255, ${alpha * 0.8})`
+        : `rgba(203, 255, 252, ${alpha})`;
+      context.fill();
+    });
+
+    if (!reduceMotion) {
+      frame += 1;
+      animationId = window.requestAnimationFrame(draw);
+    }
+  };
+
+  const observer = new ResizeObserver(() => {
+    resize();
+    if (reduceMotion) draw();
+  });
+  observer.observe(canvas);
+  resize();
+  draw();
+
+  document.addEventListener("visibilitychange", () => {
+    if (reduceMotion) return;
+    window.cancelAnimationFrame(animationId);
+    if (!document.hidden) draw();
+  });
+};
 
 // Initialize only after every function used by the translation renderer exists.
 applyTheme(getStoredTheme());
+initializeParticleSphere();
+initializeProjectsStage();
 initializeLanguage();

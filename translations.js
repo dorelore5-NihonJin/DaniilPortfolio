@@ -10,7 +10,7 @@ window.portfolioTranslations = {
         role: "Daniil Kulakov / IT Support Specialist / Systems Support",
         title: "Reliable IT support for Windows, hardware, and VPS infrastructure.",
         text: "Hands-on IT Support Specialist delivering reliable Windows troubleshooting, hardware repairs, and routine Ubuntu VPS administration.",
-        actions: ["Contact Me", "View CV"],
+        actions: ["Contact Me", "View CV", "Watch Video"],
         proof: [
           ["Experience focus", "Windows support, troubleshooting, documentation"],
           ["Hands-on work", "50+ systems built, upgraded, or repaired"],
@@ -82,28 +82,28 @@ window.portfolioTranslations = {
         title: "A recruiter-friendly summary for support and systems operations roles.",
         panels: [
           ["What I bring", ["Hands-on L1/L2 Windows support and user issue resolution", "Hardware diagnostics, PC assembly, upgrades, and workstation setup", "Networking basics, Microsoft 365, Active Directory awareness, and Ubuntu VPS support", "Clear documentation and communication with end users"]],
-          ["Availability", ["Open to international relocation, with preference for Southeast Asia", "Priority countries: Vietnam, Thailand, Malaysia", "Visa sponsorship required for on-site roles", "Remote work possible immediately", "On-site availability from late June 2026"], "Open Resume PDF"]
+          ["Availability", ["Open to international relocation, including Southeast Asia, Georgia, Armenia, and Cyprus", "Locations of interest: Vietnam, Thailand, Malaysia, Georgia, Armenia, and Cyprus. Open to other suitable opportunities.", "Visa sponsorship required for on-site roles", "Remote work possible immediately", "Available for on-site work and relocation"], "Open Resume PDF"]
         ]
       },
       contact: {
         title: "Available for international IT support and systems support opportunities.",
-        text: "If you are hiring for IT support, helpdesk, desktop support, or systems support, I'm available to discuss remote work immediately or on-site relocation from late June 2026.",
+        text: "If you are hiring for IT support, helpdesk, desktop support, or systems support, I am available for remote work and international relocation.",
         labels: ["Email", "Phone", "WhatsApp", "Telegram", "LinkedIn"]
       }
     },
     ru: {
       title: "Даниил Кулаков | Специалист технической поддержки",
-      description: "Портфолио Даниила Кулакова — специалиста технической поддержки с опытом работы с Windows, оборудованием, сетями, Microsoft 365 и администрированием Ubuntu VPS.",
+      description: "Портфолио Даниила Кулакова, специалиста технической поддержки с опытом работы с Windows, оборудованием, сетями, Microsoft 365 и администрированием Ubuntu VPS.",
       nav: ["Обо мне", "Навыки", "Проекты", "Резюме", "Контакты"],
       hero: {
         role: "Даниил Кулаков / Специалист технической поддержки / Системная поддержка",
         title: "Надёжная IT-поддержка Windows, оборудования и VPS-инфраструктуры.",
         text: "Практическая техническая поддержка: диагностика Windows, ремонт оборудования и регулярное администрирование Ubuntu VPS.",
-        actions: ["Связаться со мной", "Открыть резюме"],
+        actions: ["Связаться со мной", "Открыть резюме", "Смотреть видео"],
         proof: [
           ["Основной опыт", "Поддержка Windows, диагностика, документация"],
           ["Практическая работа", "Более 50 собранных, обновлённых или отремонтированных систем"],
-          ["Релокация", "Готов к переезду, приоритет — Юго-Восточная Азия"]
+          ["Релокация", "Готов к переезду, приоритет: Юго-Восточная Азия"]
         ]
       },
       opsConsole: {
@@ -130,9 +130,9 @@ window.portfolioTranslations = {
           "Помимо поддержки рабочих станций, обслуживаю Ubuntu VPS с SSH, Apache, MySQL и WinSCP, поэтому знаком с администрированием Linux, размещёнными сервисами и регулярным обслуживанием серверов."
         ],
         facts: [
-          ["Опыт", "KiliaService", "Техник IT-поддержки / Стажёр — младший системный администратор"],
+          ["Опыт", "KiliaService", "Техник IT-поддержки / Стажёр, младший системный администратор"],
           ["Образование", "Информационные системы", "Диплом специалиста: июнь 2026"],
-          ["Языки", "Русский, английский, японский", "Русский — родной, английский — B2, японский — JLPT N2"]
+          ["Языки", "Русский, английский, японский", "Русский: родной, английский: B2, японский: JLPT N2"]
         ]
       },
       skills: {
@@ -159,12 +159,12 @@ window.portfolioTranslations = {
         title: "Краткое резюме для вакансий технической и системной поддержки.",
         panels: [
           ["Что я предлагаю", ["Практическая L1/L2-поддержка Windows и решение пользовательских проблем", "Диагностика оборудования, сборка и модернизация ПК, подготовка рабочих мест", "Основы сетей, Microsoft 365, Active Directory и поддержка Ubuntu VPS", "Понятная документация и общение с пользователями"]],
-          ["Доступность", ["Готов к международной релокации, приоритет — Юго-Восточная Азия", "Приоритетные страны: Вьетнам, Таиланд, Малайзия", "Для работы на месте требуется визовая поддержка", "Удалённая работа возможна сразу", "Работа на месте — с конца июня 2026 года"], "Открыть резюме PDF"]
+          ["Доступность", ["Готов к международной релокации, включая Юго-Восточную Азию, Грузию, Армению и Кипр", "Интересующие направления: Вьетнам, Таиланд, Малайзия, Грузия, Армения и Кипр. Открыт и к другим подходящим вариантам.", "Для работы на месте требуется визовая поддержка", "Удалённая работа возможна сразу", "Готов к работе на месте и релокации"], "Открыть резюме PDF"]
         ]
       },
       contact: {
         title: "Открыт к международным предложениям в технической и системной поддержке.",
-        text: "Готов обсудить вакансии в IT-поддержке, helpdesk, поддержке рабочих станций и систем. Удалённая работа возможна сразу, релокация — с конца июня 2026 года.",
+        text: "Готов обсудить вакансии в IT-поддержке, helpdesk, поддержке рабочих станций и систем. Доступен для удалённой работы и международной релокации.",
         labels: ["Email", "Телефон", "WhatsApp", "Telegram", "LinkedIn"]
       }
     },
@@ -176,7 +176,7 @@ window.portfolioTranslations = {
         role: "Daniil Kulakov / ITサポートスペシャリスト / システムサポート",
         title: "Windows、ハードウェア、VPSインフラにおける信頼できるITサポートを提供します。",
         text: "実践的なトラブルシューティング、PCの組み立て・修理、Linuxサーバー管理およびUbuntu VPS保守を通じ、安定したシステム運用を支援します。",
-        actions: ["連絡する", "履歴書を見る"],
+        actions: ["連絡する", "履歴書を見る", "動画を見る"],
         proof: [
           ["経験分野", "Windowsサポート、トラブル対応、ドキュメント作成"],
           ["実務経験", "50台以上のPCを組立・アップグレード・修理"],
@@ -248,7 +248,7 @@ window.portfolioTranslations = {
         title: "サポート職とシステム運用支援職向けの要点をまとめた内容です。",
         panels: [
           ["強み", ["実務的なL1/L2 Windowsサポート", "ハードウェア診断、PC組立、作業端末準備", "ネットワーク基礎、Microsoft 365、Active Directory基礎、Ubuntu VPS運用", "明確なドキュメント作成とユーザー対応"]],
-          ["就業条件", ["海外移住を伴う勤務にも対応可能で、東南アジアを優先しています", "優先国: ベトナム、タイ、マレーシア", "現地勤務ではビザスポンサーが必要です", "リモート勤務はすぐ可能です", "現地勤務は2026年6月下旬以降を想定しています"], "履歴書PDFを開く"]
+          ["就業条件", ["東南アジア、ジョージア、アルメニア、キプロスを含む海外移住を伴う勤務に対応可能です", "関心のある地域: ベトナム、タイ、マレーシア、ジョージア、アルメニア、キプロス。その他の適した機会も検討可能です", "現地勤務ではビザスポンサーが必要です", "リモート勤務はすぐ可能です", "現地勤務と海外移住に対応可能です"], "履歴書PDFを開く"]
         ]
       },
       contact: {
@@ -265,7 +265,7 @@ window.portfolioTranslations = {
         role: "Daniil Kulakov / Pakar Sokongan IT / Sokongan Sistem",
         title: "Sokongan IT yang boleh dipercayai untuk Windows, perkakasan, dan infrastruktur VPS.",
         text: "Pakar Sokongan IT yang praktikal menyampaikan troubleshooting Windows yang boleh dipercayai, pembaikan perkakasan, dan pentadbiran Ubuntu VPS harian.",
-        actions: ["Hubungi Saya", "Lihat CV"],
+        actions: ["Hubungi Saya", "Lihat CV", "Tonton Video"],
         proof: [
           ["Fokus pengalaman", "Sokongan Windows, troubleshooting, dokumentasi"],
           ["Kerja praktikal", "50+ PC dipasang, dinaik taraf, atau dibaiki"],
@@ -337,7 +337,7 @@ window.portfolioTranslations = {
         title: "Ringkasan mesra perekrut untuk peranan sokongan dan sokongan infrastruktur.",
         panels: [
           ["Apa yang saya bawa", ["Pengalaman hands-on sokongan Windows L1/L2 dan penyelesaian isu pengguna", "Diagnostik perkakasan, pemasangan PC, dan penyediaan workstation", "Asas rangkaian, Microsoft 365, asas Active Directory, dan sokongan Ubuntu VPS", "Dokumentasi dan komunikasi yang jelas dengan pengguna akhir"]],
-          ["Ketersediaan", ["Terbuka untuk relokasi antarabangsa, dengan keutamaan Asia Tenggara", "Negara keutamaan: Vietnam, Thailand, Malaysia", "Penajaan visa diperlukan untuk peranan on-site", "Boleh mula kerja remote dengan segera", "Sasaran relokasi on-site mulai akhir Jun 2026"], "Buka Resume PDF"]
+          ["Ketersediaan", ["Terbuka untuk relokasi antarabangsa, termasuk Asia Tenggara, Georgia, Armenia dan Cyprus", "Lokasi diminati: Vietnam, Thailand, Malaysia, Georgia, Armenia dan Cyprus. Terbuka kepada peluang lain yang sesuai.", "Penajaan visa diperlukan untuk peranan on-site", "Boleh mula kerja remote dengan segera", "Sedia untuk kerja on-site dan relokasi"], "Buka Resume PDF"]
         ]
       },
       contact: {
@@ -354,7 +354,7 @@ window.portfolioTranslations = {
         role: "Daniil Kulakov / IT Support Specialist / Systems Support",
         title: "ซัพพอร์ตไอทีที่เชื่อถือได้สำหรับระบบ Windows ฮาร์ดแวร์ และโครงสร้างพื้นฐาน VPS",
         text: "IT Support Specialist ที่ลงมือปฏิบัติจริง แก้ไขปัญหา Windows ซ่อมบำรุงฮาร์ดแวร์คอมพิวเตอร์ และดูแลระบบ Ubuntu VPS ทั่วไป",
-        actions: ["ติดต่อ", "ดู CV"],
+        actions: ["ติดต่อ", "ดู CV", "ดูวิดีโอ"],
         proof: [
           ["จุดเน้นประสบการณ์", "Windows support, troubleshooting, documentation"],
           ["งานภาคปฏิบัติ", "ประกอบ อัปเกรด หรือซ่อม PC มากกว่า 50 เครื่อง"],
@@ -426,7 +426,7 @@ window.portfolioTranslations = {
         title: "สรุปแบบเป็นมิตรกับ recruiter สำหรับตำแหน่ง support และ infrastructure support",
         panels: [
           ["สิ่งที่ผมมี", ["ประสบการณ์ Windows support ระดับ L1/L2 และการแก้ปัญหาให้ผู้ใช้", "วินิจฉัยฮาร์ดแวร์ ประกอบ PC และจัดเตรียม workstation", "พื้นฐานเครือข่าย, Microsoft 365, พื้นฐาน Active Directory และการดูแล Ubuntu VPS", "การสื่อสารและเอกสารที่ชัดเจนสำหรับผู้ใช้ปลายทาง"]],
-          ["ความพร้อมในการทำงาน", ["พร้อมย้ายประเทศเพื่อทำงานในระดับสากล โดยให้ความสำคัญกับเอเชียตะวันออกเฉียงใต้", "ประเทศเป้าหมายหลัก: เวียดนาม ไทย มาเลเซีย", "ต้องการ visa sponsorship สำหรับงาน on-site", "พร้อมทำงาน remote ได้ทันที", "พร้อมย้ายไปทำงาน on-site ตั้งแต่ปลายมิถุนายน 2026"], "เปิด Resume PDF"]
+          ["ความพร้อมในการทำงาน", ["พร้อมย้ายประเทศเพื่อทำงานในระดับสากล รวมถึงเอเชียตะวันออกเฉียงใต้ จอร์เจีย อาร์เมเนีย และไซปรัส", "ประเทศที่สนใจ: เวียดนาม ไทย มาเลเซีย จอร์เจีย อาร์เมเนีย และไซปรัส พร้อมพิจารณาโอกาสอื่นที่เหมาะสม", "ต้องการ visa sponsorship สำหรับงาน on-site", "พร้อมทำงาน remote ได้ทันที", "พร้อมทำงาน on-site และย้ายประเทศ"], "เปิด Resume PDF"]
         ]
       },
       contact: {
@@ -443,7 +443,7 @@ window.portfolioTranslations = {
         role: "Daniil Kulakov / IT Support Specialist / Systems Support",
         title: "Hỗ trợ IT đáng tin cậy cho Windows, phần cứng và hạ tầng VPS.",
         text: "Chuyên viên IT Support thực tế cung cấp các dịch vụ xử lý sự cố Windows, sửa chữa phần cứng và quản trị Ubuntu VPS hàng ngày.",
-        actions: ["Liên hệ", "Xem CV"],
+        actions: ["Liên hệ", "Xem CV", "Xem video"],
         proof: [
           ["Trọng tâm kinh nghiệm", "Hỗ trợ Windows, xử lý sự cố, tài liệu hóa"],
           ["Kinh nghiệm thực hành", "Hơn 50 hệ thống PC được lắp ráp, nâng cấp, sửa chữa"],
@@ -487,7 +487,7 @@ window.portfolioTranslations = {
         ],
         facts: [
           ["Kinh nghiệm", "KiliaService", "IT Support Technician / Junior System Administration Intern"],
-          ["Học vấn", "IT Systems", "Da hoan thanh bang chuyen mon: Thang 6 nam 2026"],
+          ["Học vấn", "IT Systems", "Hoàn thành bằng chuyên môn: Tháng 6 năm 2026"],
           ["Ngôn ngữ", "Nga, Anh, Nhật", "Tiếng Nga bản ngữ, tiếng Anh B2, tiếng Nhật JLPT N2"]
         ]
       },
@@ -508,14 +508,14 @@ window.portfolioTranslations = {
           ["Hỗ trợ desktop / phần cứng", "Triển khai Windows, sửa chữa và lắp ráp PC", "Cài đặt lại Windows, cấu hình driver và phần mềm, chẩn đoán lỗi phần cứng và lắp ráp hơn 50 PC cho các nhu cầu thực tế.", [], "Xem chi tiết"],
           ["Linux / hosting", "Website cá nhân JKT trên Ubuntu VPS", "Thiết lập và duy trì website cá nhân trên Ubuntu VPS bằng Apache và MySQL, quản lý máy chủ thông qua SSH và WinSCP.", [], "Xem chi tiết"],
           ["Quản trị từ xa", "VPN tự host và Telegram Web App", "Cấu hình VPN server và hỗ trợ Telegram web application trên Ubuntu VPS, bao gồm cập nhật và bảo trì từ xa.", [], "Xem chi tiết"],
-          ["Marketplace full-stack / PHP + MySQL", "Nen tang marketplace toan cau MinatoCargo", "Xay dung marketplace nhieu trang voi catalog, product pages, seller workspace, admin tools, support flows, localization, currency handling va content pages.", [], "Xem chi tiet"]
+          ["Marketplace full-stack / PHP + MySQL", "Nền tảng Marketplace toàn cầu MinatoCargo", "Xây dựng marketplace nhiều trang với catalog, product pages, seller workspace, admin tools, support flows, localization, currency handling và content pages.", [], "Xem chi tiết"]
         ]
       },
       resume: {
         title: "Tóm tắt dễ dàng cho nhà tuyển dụng đánh giá về kỹ năng hỗ trợ và vận hành hệ thống.",
         panels: [
           ["Giá trị tôi mang lại", ["Kinh nghiệm hỗ trợ Windows L1/L2 và giải quyết vấn đề người dùng", "Chẩn đoán phần cứng, lắp ráp PC và thiết lập máy trạm", "Kiến thức mạng cơ bản, Microsoft 365, nền tảng Active Directory và hỗ trợ Ubuntu VPS", "Tài liệu hóa rõ ràng và giao tiếp tốt với người dùng"]],
-          ["Tính sẵn sàng", ["Sẵn sàng tái định cư quốc tế, ưu tiên Đông Nam Á", "Quốc gia ưu tiên: Việt Nam, Thái Lan, Malaysia", "Cần visa sponsorship cho công việc on-site", "Có thể bắt đầu remote ngay", "Mục tiêu chuyển sang làm on-site từ cuối tháng 6 năm 2026"], "Mở Resume PDF"]
+          ["Tính sẵn sàng", ["Sẵn sàng tái định cư quốc tế, bao gồm Đông Nam Á, Georgia, Armenia và Síp", "Địa điểm quan tâm: Việt Nam, Thái Lan, Malaysia, Georgia, Armenia và Síp. Sẵn sàng xem xét các cơ hội phù hợp khác.", "Cần visa sponsorship cho công việc on-site", "Có thể bắt đầu remote ngay", "Sẵn sàng làm việc tại chỗ và tái định cư"], "Mở Resume PDF"]
         ]
       },
       contact: {
@@ -526,11 +526,11 @@ window.portfolioTranslations = {
     }
   },
   projectUi: {
-    en: { back: "Back to Portfolio", overview: "Project Overview", role: "My Role", tasks: "Key Tasks", outcome: "Outcome / What I Learned", tools: "Tools / Technologies", gallery: "Screenshots", notFoundTitle: "Project not found", notFoundSummary: "The requested project could not be loaded.", notFoundOverview: "Please return to the portfolio and open one of the listed projects.", noScreens: "Screenshots were not added for this project.", galleryHint: "Slides change automatically. Click the current image to open zoom view.", close: "Close", reset: "Reset" },
-    ru: { back: "Назад к портфолио", overview: "Обзор проекта", role: "Моя роль", tasks: "Основные задачи", outcome: "Результат / Чему я научился", tools: "Инструменты / Технологии", gallery: "Скриншоты", notFoundTitle: "Проект не найден", notFoundSummary: "Не удалось загрузить запрошенный проект.", notFoundOverview: "Вернитесь в портфолио и выберите один из проектов.", noScreens: "Для этого проекта скриншоты не добавлены.", galleryHint: "Слайды переключаются автоматически. Нажмите на изображение, чтобы открыть его в режиме увеличения.", close: "Закрыть", reset: "Сбросить" },
-    ja: { back: "ポートフォリオに戻る", overview: "プロジェクト概要", role: "担当内容", tasks: "主な作業", outcome: "成果 / 学んだこと", tools: "使用技術", gallery: "スクリーンショット", notFoundTitle: "プロジェクトが見つかりません", notFoundSummary: "指定されたプロジェクトを読み込めませんでした。", notFoundOverview: "ポートフォリオに戻ってプロジェクトを選択してください。", noScreens: "このプロジェクトにはスクリーンショットがありません。", galleryHint: "スライドは自動で切り替わります。画像をクリックすると拡大表示できます。", close: "閉じる", reset: "リセット" },
-    ms: { back: "Kembali ke Portfolio", overview: "Gambaran Projek", role: "Peranan Saya", tasks: "Tugas Utama", outcome: "Hasil / Apa Yang Saya Pelajari", tools: "Alat / Teknologi", gallery: "Tangkapan Skrin", notFoundTitle: "Projek tidak dijumpai", notFoundSummary: "Projek yang diminta tidak dapat dimuatkan.", notFoundOverview: "Sila kembali to portfolio dan buka salah satu projek yang disenaraikan.", noScreens: "Tangkapan skrin belum ditambah untuk projek ini.", galleryHint: "Slaid bertukar secara automatik. Klik imej semasa untuk buka paparan zoom.", close: "Tutup", reset: "Set Semula" },
-    th: { back: "กลับไปยังพอร์ตโฟลิโอ", overview: "ภาพรวมโปรเจกต์", role: "บทบาทของผม", tasks: "งานหลัก", outcome: "ผลลัพธ์ / สิ่งที่ได้เรียนรู้", tools: "เครื่องมือ / เทคโนโลยี", gallery: "ภาพหน้าจอ", notFoundTitle: "ไม่พบโปรเจกต์", notFoundSummary: "ไม่สามารถโหลดโปรเจกต์ที่ร้องขอได้", notFoundOverview: "กรุณากลับไปยังพอร์ตโฟลิโอและเลือกโปรเจกต์จากรายการ", noScreens: "ยังไม่มีการเพิ่มภาพหน้าจอสำหรับโปรเจกต์นี้", galleryHint: "สไลด์จะเปลี่ยนอัตโนมัติ คลิกที่ภาพเพื่อเปิดโหมดซูม", close: "ปิด", reset: "รีเซ็ต" },
-    vi: { back: "Quay lại Portfolio", overview: "Tổng quan dự án", role: "Vai trò của tôi", tasks: "Nhiệm vụ chính", outcome: "Kết quả / Điều tôi học được", tools: "Công cụ / Công nghệ", gallery: "Ảnh chụp màn hình", notFoundTitle: "Không tìm thấy dự án", notFoundSummary: "Không thể tải dự án được yêu cầu.", notFoundOverview: "Vui lòng quay lại portfolio và mở một dự án trong danh sách.", noScreens: "Chưa có ảnh chụp màn hình cho dự án này.", galleryHint: "Slide tự động chuyển. Bấm vào ảnh hiện tại để mở chế độ zoom.", close: "Đóng", reset: "Đặt lại" }
+    en: { back: "Back to Portfolio", backShort: "Back", overview: "Project Overview", role: "My Role", tasks: "Key Tasks", outcome: "Outcome / What I Learned", tools: "Tools / Technologies", gallery: "Screenshots", notFoundTitle: "Project not found", notFoundSummary: "The requested project could not be loaded.", notFoundOverview: "Please return to the portfolio and open one of the listed projects.", noScreens: "Screenshots were not added for this project.", galleryHint: "Slides change automatically. Click the current image to open zoom view.", close: "Close", reset: "Reset" },
+    ru: { back: "Назад к портфолио", backShort: "Назад", overview: "Обзор проекта", role: "Моя роль", tasks: "Основные задачи", outcome: "Результат / Чему я научился", tools: "Инструменты / Технологии", gallery: "Скриншоты", notFoundTitle: "Проект не найден", notFoundSummary: "Не удалось загрузить запрошенный проект.", notFoundOverview: "Вернитесь в портфолио и выберите один из проектов.", noScreens: "Для этого проекта скриншоты не добавлены.", galleryHint: "Слайды переключаются автоматически. Нажмите на изображение, чтобы открыть его в режиме увеличения.", close: "Закрыть", reset: "Сбросить" },
+    ja: { back: "ポートフォリオに戻る", backShort: "戻る", overview: "プロジェクト概要", role: "担当内容", tasks: "主な作業", outcome: "成果 / 学んだこと", tools: "使用技術", gallery: "スクリーンショット", notFoundTitle: "プロジェクトが見つかりません", notFoundSummary: "指定されたプロジェクトを読み込めませんでした。", notFoundOverview: "ポートフォリオに戻ってプロジェクトを選択してください。", noScreens: "このプロジェクトにはスクリーンショットがありません。", galleryHint: "スライドは自動で切り替わります。画像をクリックすると拡大表示できます。", close: "閉じる", reset: "リセット" },
+    ms: { back: "Kembali ke Portfolio", backShort: "Kembali", overview: "Gambaran Projek", role: "Peranan Saya", tasks: "Tugas Utama", outcome: "Hasil / Apa Yang Saya Pelajari", tools: "Alat / Teknologi", gallery: "Tangkapan Skrin", notFoundTitle: "Projek tidak dijumpai", notFoundSummary: "Projek yang diminta tidak dapat dimuatkan.", notFoundOverview: "Sila kembali to portfolio dan buka salah satu projek yang disenaraikan.", noScreens: "Tangkapan skrin belum ditambah untuk projek ini.", galleryHint: "Slaid bertukar secara automatik. Klik imej semasa untuk buka paparan zoom.", close: "Tutup", reset: "Set Semula" },
+    th: { back: "กลับไปยังพอร์ตโฟลิโอ", backShort: "กลับ", overview: "ภาพรวมโปรเจกต์", role: "บทบาทของผม", tasks: "งานหลัก", outcome: "ผลลัพธ์ / สิ่งที่ได้เรียนรู้", tools: "เครื่องมือ / เทคโนโลยี", gallery: "ภาพหน้าจอ", notFoundTitle: "ไม่พบโปรเจกต์", notFoundSummary: "ไม่สามารถโหลดโปรเจกต์ที่ร้องขอได้", notFoundOverview: "กรุณากลับไปยังพอร์ตโฟลิโอและเลือกโปรเจกต์จากรายการ", noScreens: "ยังไม่มีการเพิ่มภาพหน้าจอสำหรับโปรเจกต์นี้", galleryHint: "สไลด์จะเปลี่ยนอัตโนมัติ คลิกที่ภาพเพื่อเปิดโหมดซูม", close: "ปิด", reset: "รีเซ็ต" },
+    vi: { back: "Quay lại Portfolio", backShort: "Quay lại", overview: "Tổng quan dự án", role: "Vai trò của tôi", tasks: "Nhiệm vụ chính", outcome: "Kết quả / Điều tôi học được", tools: "Công cụ / Công nghệ", gallery: "Ảnh chụp màn hình", notFoundTitle: "Không tìm thấy dự án", notFoundSummary: "Không thể tải dự án được yêu cầu.", notFoundOverview: "Vui lòng quay lại portfolio và mở một dự án trong danh sách.", noScreens: "Chưa có ảnh chụp màn hình cho dự án này.", galleryHint: "Slide tự động chuyển. Bấm vào ảnh hiện tại để mở chế độ zoom.", close: "Đóng", reset: "Đặt lại" }
   }
 };

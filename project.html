@@ -8,16 +8,10 @@
     name="description"
     content="Detailed project view for Daniil Kulakov's IT Support Specialist portfolio."
   >
-  <script>
-    (() => {
-      try {
-        const theme = window.localStorage.getItem("portfolio-theme");
-        document.documentElement.dataset.theme = theme === "dark" ? "dark" : "light";
-      } catch (error) {
-        document.documentElement.dataset.theme = "light";
-      }
-    })();
-  </script>
+  <meta property="og:title" content="Project Details | Daniil Kulakov">
+  <meta property="og:description" content="Practical IT support and systems projects by Daniil Kulakov.">
+  <meta property="og:type" content="website">
+  <script>document.documentElement.classList.add("js"); document.documentElement.dataset.theme = "dark";</script>
   <link rel="icon" type="image/png" href="Logo/Main_logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,11 +23,12 @@
     href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=DM+Sans:wght@400;500;700&display=optional"
     rel="stylesheet"
   >
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="project.css">
+  <link rel="stylesheet" href="styles.css?v=20260709-8">
+  <link rel="stylesheet" href="project.css?v=20260709-8">
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
 <body>
+  <a class="skip-link" href="#page-content">Skip to content</a>
   <div class="site-shell project-page-shell">
     <header class="site-header project-header">
       <a class="brand" href="index.html#projects">
@@ -44,18 +39,23 @@
         </span>
       </a>
       <nav class="project-top-nav">
-        <a class="button button-secondary" href="index.html#projects"><i class="ph-bold ph-arrow-left" style="margin-right: 0.4rem;"></i>Back to Portfolio</a>
+        <a class="button button-secondary" href="index.html#projects"><i class="ph-bold ph-arrow-left button-icon" aria-hidden="true"></i>Back to Portfolio</a>
       </nav>
       <div class="header-actions">
+        <a class="button button-secondary project-mobile-back" href="index.html#projects"><i class="ph-bold ph-arrow-left button-icon" aria-hidden="true"></i><span>Back</span></a>
         <div class="language-switcher" aria-label="Language selector">
-          <button class="language-trigger" type="button" aria-haspopup="true" aria-expanded="false">
+          <button class="language-trigger" type="button" aria-controls="project-language-menu" aria-haspopup="menu" aria-expanded="false">
             <span class="language-trigger-label">English</span>
             <span class="language-trigger-code">EN</span>
           </button>
-          <div class="language-menu" role="menu">
+          <div class="language-menu" id="project-language-menu" role="menu">
             <button class="language-option is-active" type="button" data-lang="en" role="menuitemradio" aria-checked="true">
               <span>English</span>
               <strong>EN</strong>
+            </button>
+            <button class="language-option" type="button" data-lang="ru" role="menuitemradio" aria-checked="false">
+              <span>Русский</span>
+              <strong>RU</strong>
             </button>
             <button class="language-option" type="button" data-lang="ja" role="menuitemradio" aria-checked="false">
               <span>日本語</span>
@@ -150,6 +150,17 @@
         </div>
       </section>
     </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <p class="site-footer-copy">&copy; 2026 Daniil Kulakov. IT Support Specialist.</p>
+        <nav class="site-footer-nav" aria-label="Footer">
+          <a href="index.html#projects">Portfolio</a>
+          <a href="index.html#contact">Contact</a>
+          <a href="Resume/Int_ITsupport_upd_06.15.pdf" target="_blank" rel="noreferrer">Resume</a>
+        </nav>
+      </div>
+    </footer>
   </div>
 
   <div class="image-lightbox" id="image-lightbox" aria-hidden="true">
@@ -167,9 +178,9 @@
     </div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="translations.js"></script>
-  <script src="project-data.js"></script>
-  <script src="project-view.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+  <script src="translations.js?v=20260709-8" defer></script>
+  <script src="project-data.js?v=20260709-8" defer></script>
+  <script src="project-view.js?v=20260709-8" defer></script>
 </body>
 </html>

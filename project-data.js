@@ -81,7 +81,9 @@ window.projectData = {
       ms: "Kerja ini menguatkan proses troubleshooting saya, keyakinan terhadap perkakasan, dan keupayaan untuk membawa masalah daripada laporan awal kepada sistem yang stabil. Ia juga meningkatkan kefahaman saya tentang cara menjelaskan penyelesaian dengan jelas dan menjadikan kerja sokongan boleh diulang.",
       th: "งานนี้ทำให้กระบวนการ troubleshooting ของผมแข็งแรงขึ้น เพิ่มความมั่นใจด้านฮาร์ดแวร์ และช่วยให้ผมจัดการปัญหาตั้งแต่รับเคสจนถึงระบบที่ใช้งานได้เสถียร นอกจากนี้ยังทำให้ผมเข้าใจมากขึ้นว่าควรสื่อสารวิธีแก้ไขอย่างชัดเจนและทำให้งานซัพพอร์ตทำซ้ำได้อย่างไร"
     },
-    screenshots: []
+    screenshots: [
+      "Screenshots/PC_support/1_workbench.png"
+    ]
   },
   "jkt-site": {
     tag: {
@@ -292,7 +294,7 @@ window.projectData = {
     },
     overview: {
       en: "MinatoCargo is a large marketplace project built around Japanese sellers, international buyers, product discovery, seller operations, admin moderation, support workflows, and content pages. It is not a single landing page. The project combines public shopping screens with internal workspaces for sellers, administrators, recruiters, and press content.",
-      ru: "MinatoCargo — крупный маркетплейс для японских продавцов и международных покупателей с поиском товаров, кабинетом продавца, модерацией, поддержкой и контентными страницами. Это не отдельный лендинг, а система, объединяющая публичную витрину с рабочими разделами продавцов, администраторов, рекрутеров и пресс-службы.",
+      ru: "MinatoCargo представляет собой крупный маркетплейс для японских продавцов и международных покупателей с поиском товаров, кабинетом продавца, модерацией, поддержкой и контентными страницами. Это не отдельный лендинг, а система, объединяющая публичную витрину с рабочими разделами продавцов, администраторов, рекрутеров и пресс-службы.",
       ja: "MinatoCargoは、日本の販売者、海外の購入者、商品検索、販売者向け業務、管理者モデレーション、サポート導線、コンテンツページを中心に構成した大規模なマーケットプレイスプロジェクトです。単なるランディングページではなく、公開ショッピング画面と販売者、管理者、採用担当、広報向けの内部ワークスペースを組み合わせています。",
       ms: "MinatoCargo ialah projek marketplace besar yang dibina untuk penjual Jepun, pembeli antarabangsa, carian produk, operasi penjual, moderasi admin, aliran sokongan dan halaman kandungan. Ia bukan sekadar landing page. Projek ini menggabungkan skrin beli-belah awam dengan ruang kerja dalaman untuk penjual, pentadbir, perekrut dan kandungan press.",
       th: "MinatoCargo เป็นโปรเจกต์ marketplace ขนาดใหญ่ที่ออกแบบรอบผู้ขายญี่ปุ่น ผู้ซื้อจากต่างประเทศ การค้นหาสินค้า งานฝั่งผู้ขาย การดูแลโดยแอดมิน เวิร์กโฟลว์ซัพพอร์ต และหน้าคอนเทนต์ต่าง ๆ ไม่ใช่แค่ landing page หน้าเดียว แต่รวมทั้งหน้าซื้อสินค้าสาธารณะและ workspace ภายในสำหรับผู้ขาย แอดมิน ทีมสรรหา และทีมข่าวสาร",

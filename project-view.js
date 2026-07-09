@@ -4,6 +4,21 @@ const projectId = params.get("project");
 const project = window.projectData?.[projectId];
 
 const pageContent = document.getElementById("page-content");
+
+if (!project || !projectId) {
+  // Professional fallback for bad links
+  document.title = "Project not found | Daniil Kulakov";
+  if (pageContent) {
+    pageContent.innerHTML = `
+      <div style="max-width:720px;margin:120px auto 80px;padding:0 24px;text-align:center;">
+        <h1 style="font-size:42px;line-height:1.05;margin-bottom:16px;">Project not found</h1>
+        <p style="color:var(--muted);font-size:17px;">The requested project does not exist or the link is outdated.</p>
+        <a class="button button-primary" href="index.html#projects" style="margin-top:28px;display:inline-flex;">Back to Projects</a>
+      </div>
+    `;
+  }
+  // Graceful exit — remaining code will safely no-op on missing els
+} else {
 const metaDescription = document.querySelector('meta[name="description"]');
 const languageSwitcher = document.querySelector(".language-switcher");
 
@@ -209,6 +224,30 @@ const projectUiExtras = {
     ms: "Tiada",
     th: "ไม่มี",
     vi: "Khong co"
+  },
+  skipLink: {
+    en: "Skip to content",
+    ru: "Перейти к содержимому",
+    ja: "コンテンツへスキップ",
+    ms: "Langkau ke kandungan",
+    th: "ข้ามไปยังเนื้อหา",
+    vi: "Chuyển đến nội dung"
+  },
+  footerCopy: {
+    en: "© 2026 Daniil Kulakov. IT Support Specialist.",
+    ru: "© 2026 Даниил Кулаков. Специалист технической поддержки.",
+    ja: "© 2026 Daniil Kulakov. ITサポートスペシャリスト.",
+    ms: "© 2026 Daniil Kulakov. Pakar Sokongan IT.",
+    th: "© 2026 Daniil Kulakov. IT Support Specialist.",
+    vi: "© 2026 Daniil Kulakov. Chuyên viên Hỗ trợ IT."
+  },
+  footerNav: {
+    en: ["Portfolio", "Contact", "Resume"],
+    ru: ["Портфолио", "Контакты", "Резюме"],
+    ja: ["ポートフォリオ", "連絡先", "履歴書"],
+    ms: ["Portfolio", "Hubungi", "Resume"],
+    th: ["พอร์ตโฟลิโอ", "ติดต่อ", "Resume"],
+    vi: ["Portfolio", "Liên hệ", "CV"]
   }
 };
 
@@ -243,20 +282,7 @@ const initializeHeaderActions = () => {
     actions.appendChild(languageSwitcher);
   }
 
-  let themeToggle = actions.querySelector(".theme-toggle");
-  if (!themeToggle) {
-    themeToggle = document.createElement("button");
-    themeToggle.className = "theme-toggle";
-    themeToggle.type = "button";
-    themeToggle.setAttribute("aria-label", "Toggle color theme");
-    themeToggle.innerHTML = `
-      <span class="theme-toggle-icon" aria-hidden="true">◐</span>
-      <span class="theme-toggle-label">Dark mode</span>
-    `;
-    actions.prepend(themeToggle);
-  }
-
-  return { themeToggle };
+  return { themeToggle: null };
 };
 
 const headerUi = initializeHeaderActions();
@@ -277,7 +303,7 @@ const initializeLanguageSwitcher = () => {
     trigger = document.createElement("button");
     trigger.className = "language-trigger";
     trigger.type = "button";
-    trigger.setAttribute("aria-haspopup", "true");
+    trigger.setAttribute("aria-haspopup", "menu");
     trigger.setAttribute("aria-expanded", "false");
     trigger.innerHTML = `
       <span class="language-trigger-label">English</span>
@@ -290,9 +316,12 @@ const initializeLanguageSwitcher = () => {
   if (!menu) {
     menu = document.createElement("div");
     menu.className = "language-menu";
+    menu.id = "project-language-menu";
     menu.setAttribute("role", "menu");
     languageSwitcher.appendChild(menu);
   }
+
+  trigger.setAttribute("aria-controls", menu.id || "project-language-menu");
 
   const buttons = Array.from(languageSwitcher.querySelectorAll("[data-lang]"));
   buttons.forEach((button) => {
@@ -314,6 +343,29 @@ const initializeLanguageSwitcher = () => {
     const nextState = !languageSwitcher.classList.contains("is-open");
     languageSwitcher.classList.toggle("is-open", nextState);
     trigger.setAttribute("aria-expanded", String(nextState));
+  });
+
+  trigger.addEventListener("keydown", (event) => {
+    if (!buttons.length || !["ArrowDown", "ArrowUp", "Home", "End"].includes(event.key)) return;
+    event.preventDefault();
+    languageSwitcher.classList.add("is-open");
+    trigger.setAttribute("aria-expanded", "true");
+    const targetIndex = event.key === "ArrowUp" || event.key === "End" ? buttons.length - 1 : 0;
+    buttons[targetIndex].focus();
+  });
+
+  menu.addEventListener("keydown", (event) => {
+    const currentIndex = buttons.indexOf(document.activeElement);
+    if (event.key === "Escape") {
+      event.preventDefault();
+      closeMenu();
+      trigger.focus();
+      return;
+    }
+    if (!buttons.length || !["ArrowDown", "ArrowUp", "Home", "End"].includes(event.key)) return;
+    event.preventDefault();
+    const nextIndex = event.key === "Home" ? 0 : event.key === "End" ? buttons.length - 1 : (currentIndex + (event.key === "ArrowDown" ? 1 : -1) + buttons.length) % buttons.length;
+    buttons[nextIndex].focus();
   });
 
   document.addEventListener("click", (event) => {
@@ -348,10 +400,7 @@ const getStoredLanguageSource = () => {
   return window.localStorage.getItem(languageSourceKey);
 };
 
-const getStoredTheme = () => {
-  const storedTheme = window.localStorage.getItem(themeStorageKey);
-  return storedTheme === "dark" ? "dark" : "light";
-};
+const getStoredTheme = () => "dark";
 
 const applyTheme = (theme) => {
   document.documentElement.dataset.theme = theme;
@@ -376,31 +425,6 @@ const applyTheme = (theme) => {
   }
 };
 
-const detectLanguageByIp = async () => {
-  try {
-    const controller = new AbortController();
-    const timeoutId = window.setTimeout(() => controller.abort(), 2500);
-    const response = await fetch("https://ipwho.is/", {
-      signal: controller.signal,
-      headers: {
-        Accept: "application/json"
-      }
-    });
-
-    window.clearTimeout(timeoutId);
-
-    if (!response.ok) {
-      return "en";
-    }
-
-    const data = await response.json();
-    const countryCode = String(data?.country_code || "").toUpperCase();
-    return autoLanguageMap[countryCode] || "en";
-  } catch {
-    return "en";
-  }
-};
-
 const detectLanguageFromBrowser = () => {
   const browserLanguages = Array.isArray(window.navigator.languages) && window.navigator.languages.length
     ? window.navigator.languages
@@ -422,8 +446,9 @@ const detectLanguageFromBrowser = () => {
   return null;
 };
 
-const detectPreferredLanguage = async () => {
-  return detectLanguageFromBrowser() || await detectLanguageByIp() || translations?.defaultLang || "en";
+const detectPreferredLanguage = () => {
+  // Browser language only (fast + private)
+  return detectLanguageFromBrowser() || translations?.defaultLang || "en";
 };
 
 const getLocalizedValue = (field, lang) => {
@@ -452,6 +477,40 @@ const applyZoom = () => {
   }
 };
 
+let releaseLightboxFocusTrap = null;
+
+const trapFocus = (container, onEscape) => {
+  const focusable = container.querySelectorAll(
+    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+  );
+  const first = focusable[0];
+  const last = focusable[focusable.length - 1];
+
+  const handleKeydown = (event) => {
+    if (event.key === "Escape") {
+      onEscape();
+      return;
+    }
+
+    if (event.key !== "Tab" || !focusable.length) {
+      return;
+    }
+
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  };
+
+  container.addEventListener("keydown", handleKeydown);
+  first?.focus();
+
+  return () => container.removeEventListener("keydown", handleKeydown);
+};
+
 const openLightbox = (src, alt, trigger) => {
   if (!lightbox || !lightboxImage) {
     return;
@@ -465,6 +524,11 @@ const openLightbox = (src, alt, trigger) => {
   lightbox.classList.add("is-open");
   lightbox.setAttribute("aria-hidden", "false");
   document.body.style.overflow = "hidden";
+
+  if (lightboxDialog) {
+    releaseLightboxFocusTrap?.();
+    releaseLightboxFocusTrap = trapFocus(lightboxDialog, closeLightbox);
+  }
 };
 
 const closeLightbox = () => {
@@ -476,6 +540,8 @@ const closeLightbox = () => {
   lightbox.setAttribute("aria-hidden", "true");
   lightboxImage.src = "";
   document.body.style.overflow = "";
+  releaseLightboxFocusTrap?.();
+  releaseLightboxFocusTrap = null;
 
   if (lastLightboxTrigger) {
     lastLightboxTrigger.focus();
@@ -530,7 +596,19 @@ const applyProjectUi = (lang, content) => {
   }
 
   if (backButton) {
-    backButton.textContent = ui.back;
+    const icon = backButton.querySelector("i");
+    backButton.innerHTML = "";
+    if (icon) backButton.appendChild(icon);
+    backButton.appendChild(document.createTextNode((icon ? " " : "") + ui.back));
+  }
+
+  const mobileBackButton = document.querySelector(".project-mobile-back");
+  if (mobileBackButton) {
+    const label = mobileBackButton.querySelector("span");
+    if (label) {
+      label.textContent = ui.backShort || "Back";
+    }
+    mobileBackButton.setAttribute("aria-label", ui.back);
   }
 
   const headings = [ui.overview, ui.role, ui.tasks, ui.outcome, ui.tools];
@@ -562,6 +640,24 @@ const applyProjectUi = (lang, content) => {
     lightboxCloseButton.textContent = ui.close;
     lightboxCloseButton.setAttribute("aria-label", projectUiExtras.closeViewer[lang] || projectUiExtras.closeViewer.en);
   }
+
+  const skipLink = document.querySelector(".skip-link");
+  if (skipLink) {
+    skipLink.textContent = projectUiExtras.skipLink[lang] || projectUiExtras.skipLink.en;
+  }
+
+  const footerCopy = document.querySelector(".site-footer-copy");
+  if (footerCopy) {
+    footerCopy.textContent = projectUiExtras.footerCopy[lang] || projectUiExtras.footerCopy.en;
+  }
+
+  const footerLinks = document.querySelectorAll(".site-footer-nav a");
+  const footerLabels = projectUiExtras.footerNav[lang] || projectUiExtras.footerNav.en;
+  footerLinks.forEach((item, index) => {
+    if (footerLabels[index]) {
+      item.textContent = footerLabels[index];
+    }
+  });
 };
 
 const renderFallback = (lang) => {
@@ -751,6 +847,11 @@ const renderProject = (lang) => {
       }
     });
 
+    if (typeof Swiper === "undefined") {
+      galleryNoteEl.textContent = ui.galleryHint;
+      return;
+    }
+
     swiperInstance = new Swiper("#project-swiper", {
       loop: project.screenshots.length > 1,
       speed: 900,
@@ -875,6 +976,7 @@ document.addEventListener("keydown", (event) => {
 languageUi.buttons.forEach((button) => {
   button.addEventListener("click", () => {
     switchLanguage(button.dataset.lang, "manual");
+    languageUi.trigger?.focus();
   });
 });
 
@@ -883,7 +985,7 @@ headerUi.themeToggle?.addEventListener("click", () => {
   applyTheme(nextTheme);
 });
 
-const initializeLanguage = async () => {
+const initializeLanguage = () => {
   const storedLanguage = getStoredLanguage();
   const storedSource = getStoredLanguageSource();
 
@@ -892,9 +994,10 @@ const initializeLanguage = async () => {
     return;
   }
 
-  const detectedLanguage = await detectPreferredLanguage();
+  const detectedLanguage = detectPreferredLanguage();
   switchLanguage(detectedLanguage || "en", "auto");
 };
 
 applyTheme(getStoredTheme());
 initializeLanguage();
+}
