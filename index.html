@@ -9,22 +9,18 @@
     content="Portfolio of Daniil Kulakov, an IT Support Specialist with 2+ years of Windows support experience across troubleshooting, hardware, networking basics, Microsoft 365, and Ubuntu VPS administration."
   >
   <meta property="og:title" content="Daniil Kulakov | IT Support Specialist">
-  <meta property="og:description" content="Hands-on IT Support Specialist. Windows troubleshooting, hardware, and Ubuntu VPS infrastructure. Open to international opportunities in Southeast Asia.">
+  <meta property="og:description" content="Hands-on IT Support Specialist. Windows troubleshooting, hardware, and Ubuntu VPS infrastructure. Open to work in Japan, South Korea, and Southeast Asia.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://example.com/portfolio/">
   <meta property="og:image" content="Logo/Main_logo.png">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Daniil Kulakov | IT Support Specialist">
   <meta name="twitter:description" content="Reliable IT support for Windows, hardware, and VPS infrastructure.">
-  <script>document.documentElement.classList.add("js"); document.documentElement.dataset.theme = "dark";</script>
+  <script>
+    document.documentElement.classList.add("js");
+    document.documentElement.dataset.theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  </script>
   <link rel="icon" type="image/png" href="Logo/Main_logo.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=DM+Sans:wght@400;500;700&display=optional"
-    rel="stylesheet"
-  >
-  <link rel="stylesheet" href="styles.css?v=20260709-8">
+  <link rel="stylesheet" href="styles.css?v=20260906-1">
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
 <body>
@@ -69,7 +65,7 @@
             </button>
             <button class="language-option" type="button" data-lang="ja" role="menuitemradio" aria-checked="false">
               <span>日本語</span>
-              <strong>日本語</strong>
+              <strong>JA</strong>
             </button>
             <button class="language-option" type="button" data-lang="ms" role="menuitemradio" aria-checked="false">
               <span>Malay</span>
@@ -77,7 +73,7 @@
             </button>
             <button class="language-option" type="button" data-lang="th" role="menuitemradio" aria-checked="false">
               <span>Thai</span>
-              <strong>ไทย</strong>
+              <strong>TH</strong>
             </button>
             <button class="language-option" type="button" data-lang="vi" role="menuitemradio" aria-checked="false">
               <span>Vietnamese</span>
@@ -90,8 +86,6 @@
 
     <main id="page-content">
       <section class="hero" id="hero">
-        <div class="hero-orb hero-orb-left"></div>
-        <div class="hero-orb hero-orb-right"></div>
         <div class="hero-grid">
           <div class="hero-copy">
             <span class="hero-role reveal">Daniil Kulakov / IT Support Specialist / Systems Support</span>
@@ -101,14 +95,16 @@
             </p>
             <div class="hero-actions reveal">
               <a class="button button-primary" href="#contact">Contact Me</a>
-              <a class="button button-secondary" href="Resume/Int_ITsupport_upd_06.15.pdf" target="_blank" rel="noreferrer"><i class="ph-bold ph-file-pdf button-icon" aria-hidden="true"></i>View CV</a>
+              <a class="button button-secondary" href="Resume/Daniil_Kulakov_IT_Support.pdf" target="_blank" rel="noreferrer"><i class="ph-bold ph-file-pdf button-icon" aria-hidden="true"></i>View CV</a>
               <button class="button button-secondary" type="button" id="open-intro-video"><i class="ph-bold ph-play button-icon" aria-hidden="true"></i>Watch Video</button>
             </div>
           </div>
 
-          <div class="hero-visual reveal" aria-hidden="true">
-            <canvas id="particle-sphere"></canvas>
-            <div class="sphere-core"></div>
+          <div class="hero-visual reveal">
+            <figure class="hero-photo">
+              <img src="Screenshots/PC_support/1_workbench.png" alt="Windows workstation on the bench during hardware diagnostics and deployment work">
+              <figcaption>Real support work: Windows deployment, diagnostics, and PC builds.</figcaption>
+            </figure>
           </div>
         </div>
         <div class="hero-proof reveal">
@@ -121,8 +117,8 @@
             <strong>50+ systems built, upgraded, or repaired</strong>
           </div>
           <div class="hero-proof-item">
-            <span>Relocation</span>
-            <strong>Open internationally, with preference for Southeast Asia</strong>
+            <span>Where I can work</span>
+            <strong>Open to Japan, South Korea, and Southeast Asia</strong>
           </div>
         </div>
       </section>
@@ -132,11 +128,10 @@
           <h2>Hands-on IT support experience with 2+ years in a small-office Windows environment.</h2>
         </div>
         <div class="bento-grid">
-          <!-- Card 1: Bio (2x2 span) -->
           <div class="bento-card bento-bio reveal">
             <div class="bento-bio-head">
               <i class="ph-bold ph-user-focus bento-icon"></i>
-              <h3>IT Operations & User Support</h3>
+              <h3>IT Operations &amp; User Support</h3>
             </div>
             <div class="bento-bio-text">
               <p>
@@ -151,7 +146,6 @@
             </div>
           </div>
 
-          <!-- Card 2: Experience (1x1 span) -->
           <div class="bento-card bento-experience reveal">
             <span class="bento-label">Experience</span>
             <div class="bento-badge">
@@ -162,21 +156,18 @@
             <p class="bento-subtext">Junior System Administration Intern</p>
           </div>
 
-          <!-- Card 3: Education (1x1 span) -->
           <div class="bento-card bento-education reveal">
             <span class="bento-label">Education</span>
             <div class="bento-badge">
               <i class="ph-bold ph-graduation-cap"></i>
               <strong>IT Systems</strong>
             </div>
-            <h4>Information Systems & Programming</h4>
+            <h4>Information Systems &amp; Programming</h4>
             <div class="bento-progress-container">
               <p class="bento-subtext">Specialist Diploma completed: June 2026</p>
-              <div class="bento-progress-bar"><span style="width: 100%;"></span></div>
             </div>
           </div>
 
-          <!-- Card 4: Languages (1x1 span) -->
           <div class="bento-card bento-languages reveal">
             <span class="bento-label">Languages</span>
             <div class="bento-lang-list">
@@ -195,14 +186,14 @@
             </div>
           </div>
 
-          <!-- Card 5: Relocation (1x1 span) -->
           <div class="bento-card bento-relocation reveal">
-            <span class="bento-label">Relocation</span>
+            <span class="bento-label">Where I can work</span>
             <div class="bento-reloc-list">
+              <div class="bento-reloc-item"><span class="bento-reloc-flag" aria-hidden="true">🇯🇵</span><span class="bento-reloc-name">Japan</span></div>
+              <div class="bento-reloc-item"><span class="bento-reloc-flag" aria-hidden="true">🇰🇷</span><span class="bento-reloc-name">South Korea</span></div>
               <div class="bento-reloc-item"><span class="bento-reloc-flag" aria-hidden="true">🇻🇳</span><span class="bento-reloc-name">Vietnam</span></div>
               <div class="bento-reloc-item"><span class="bento-reloc-flag" aria-hidden="true">🇹🇭</span><span class="bento-reloc-name">Thailand</span></div>
               <div class="bento-reloc-item"><span class="bento-reloc-flag" aria-hidden="true">🇲🇾</span><span class="bento-reloc-name">Malaysia</span></div>
-              <div class="bento-reloc-item"><span class="bento-reloc-flag" aria-hidden="true">🇬🇪</span><span class="bento-reloc-name">Georgia</span></div>
               <div class="bento-reloc-item"><span class="bento-reloc-flag" aria-hidden="true">🇦🇲</span><span class="bento-reloc-name">Armenia</span></div>
               <div class="bento-reloc-item"><span class="bento-reloc-flag" aria-hidden="true">🇨🇾</span><span class="bento-reloc-name">Cyprus</span></div>
             </div>
@@ -239,7 +230,7 @@
           <article class="skill-group reveal" data-skill="support">
             <div class="skill-group-head">
               <i class="ph-bold ph-cpu"></i>
-              <h3>Hardware & PC Assembly</h3>
+              <h3>Hardware &amp; PC Assembly</h3>
             </div>
             <ul>
               <li>50+ systems built, upgraded, or repaired</li>
@@ -261,7 +252,7 @@
           <article class="skill-group reveal" data-skill="systems">
             <div class="skill-group-head">
               <i class="ph-bold ph-terminal-window"></i>
-              <h3>Linux & Remote Access</h3>
+              <h3>Linux &amp; Remote Access</h3>
             </div>
             <ul>
               <li>Ubuntu basics, file permissions, package updates</li>
@@ -272,7 +263,7 @@
           <article class="skill-group reveal" data-skill="systems">
             <div class="skill-group-head">
               <i class="ph-bold ph-microsoft-outlook-logo"></i>
-              <h3>Microsoft 365 & Identity</h3>
+              <h3>Microsoft 365 &amp; Identity</h3>
             </div>
             <ul>
               <li>Confident day-to-day use of Microsoft 365 applications</li>
@@ -386,13 +377,13 @@
           <div class="resume-panel reveal">
             <h3>Availability</h3>
             <ul>
-              <li>Open to international relocation, including Southeast Asia, Georgia, Armenia, and Cyprus</li>
-              <li>Locations of interest: Vietnam, Thailand, Malaysia, Georgia, Armenia, and Cyprus. Open to other suitable opportunities.</li>
+              <li>Open to Japan, South Korea, and Southeast Asia</li>
+              <li>Also considering Armenia, Cyprus, and other suitable locations</li>
               <li>Visa sponsorship required for on-site roles</li>
               <li>Remote work possible immediately</li>
               <li>Available for on-site work and relocation</li>
             </ul>
-            <a class="button button-primary" href="Resume/Int_ITsupport_upd_06.15.pdf" target="_blank" rel="noreferrer"><i class="ph-bold ph-download-simple button-icon" aria-hidden="true"></i>Open Resume PDF</a>
+            <a class="button button-primary" href="Resume/Daniil_Kulakov_IT_Support.pdf" target="_blank" rel="noreferrer"><i class="ph-bold ph-download-simple button-icon" aria-hidden="true"></i>Open Resume PDF</a>
           </div>
         </div>
       </section>
@@ -453,7 +444,7 @@
         <p class="site-footer-copy">&copy; 2026 Daniil Kulakov. IT Support Specialist.</p>
         <nav class="site-footer-nav" aria-label="Footer">
           <a href="#contact">Contact</a>
-          <a href="Resume/Int_ITsupport_upd_06.15.pdf" target="_blank" rel="noreferrer">Resume</a>
+          <a href="Resume/Daniil_Kulakov_IT_Support.pdf" target="_blank" rel="noreferrer">Resume</a>
           <a href="mailto:dorelore5@gmail.com">Email</a>
         </nav>
       </div>
@@ -472,17 +463,16 @@
       </div>
       <div class="video-frame">
         <video id="intro-video-player" controls preload="metadata" playsinline>
-          <source src="Video/動画_introductory.mp4" type="video/mp4">
+          <source src="Video/introductory.mp4" type="video/mp4">
         </video>
       </div>
     </div>
   </div>
 
-  <script src="translations.js?v=20260709-8" defer></script>
-  <script src="project-data.js?v=20260709-8" defer></script>
-  <script src="script.js?v=20260709-8" defer></script>
+  <script src="translations.js?v=20260906-1" defer></script>
+  <script src="project-data.js?v=20260906-1" defer></script>
+  <script src="script.js?v=20260906-1" defer></script>
 
-  <!-- Professional structured data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",

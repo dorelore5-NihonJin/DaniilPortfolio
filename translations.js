@@ -14,7 +14,7 @@ window.portfolioTranslations = {
         proof: [
           ["Experience focus", "Windows support, troubleshooting, documentation"],
           ["Hands-on work", "50+ systems built, upgraded, or repaired"],
-          ["Relocation", "Open internationally, with preference for Southeast Asia"]
+          ["Where I can work", "Open to Japan, South Korea, and Southeast Asia"]
         ]
       },
       opsConsole: {
@@ -82,7 +82,7 @@ window.portfolioTranslations = {
         title: "A recruiter-friendly summary for support and systems operations roles.",
         panels: [
           ["What I bring", ["Hands-on L1/L2 Windows support and user issue resolution", "Hardware diagnostics, PC assembly, upgrades, and workstation setup", "Networking basics, Microsoft 365, Active Directory awareness, and Ubuntu VPS support", "Clear documentation and communication with end users"]],
-          ["Availability", ["Open to international relocation, including Southeast Asia, Georgia, Armenia, and Cyprus", "Locations of interest: Vietnam, Thailand, Malaysia, Georgia, Armenia, and Cyprus. Open to other suitable opportunities.", "Visa sponsorship required for on-site roles", "Remote work possible immediately", "Available for on-site work and relocation"], "Open Resume PDF"]
+          ["Availability", ["Open to Japan, South Korea, and Southeast Asia", "Also considering Armenia, Cyprus, and other suitable locations", "Visa sponsorship required for on-site roles", "Remote work possible immediately", "Available for on-site work and relocation"], "Open Resume PDF"]
         ]
       },
       contact: {
@@ -103,7 +103,7 @@ window.portfolioTranslations = {
         proof: [
           ["Основной опыт", "Поддержка Windows, диагностика, документация"],
           ["Практическая работа", "Более 50 собранных, обновлённых или отремонтированных систем"],
-          ["Релокация", "Готов к переезду, приоритет: Юго-Восточная Азия"]
+          ["Где могу работать", "Япония, Южная Корея и Юго-Восточная Азия"]
         ]
       },
       opsConsole: {
@@ -159,7 +159,7 @@ window.portfolioTranslations = {
         title: "Краткое резюме для вакансий технической и системной поддержки.",
         panels: [
           ["Что я предлагаю", ["Практическая L1/L2-поддержка Windows и решение пользовательских проблем", "Диагностика оборудования, сборка и модернизация ПК, подготовка рабочих мест", "Основы сетей, Microsoft 365, Active Directory и поддержка Ubuntu VPS", "Понятная документация и общение с пользователями"]],
-          ["Доступность", ["Готов к международной релокации, включая Юго-Восточную Азию, Грузию, Армению и Кипр", "Интересующие направления: Вьетнам, Таиланд, Малайзия, Грузия, Армения и Кипр. Открыт и к другим подходящим вариантам.", "Для работы на месте требуется визовая поддержка", "Удалённая работа возможна сразу", "Готов к работе на месте и релокации"], "Открыть резюме PDF"]
+          ["Доступность", ["Открыт к работе в Японии, Южной Корее и Юго-Восточной Азии", "Также рассматриваю Армению, Кипр и другие подходящие локации", "Для работы на месте требуется визовая поддержка", "Удалённая работа возможна сразу", "Готов к работе на месте и релокации"], "Открыть резюме PDF"]
         ]
       },
       contact: {
@@ -180,7 +180,7 @@ window.portfolioTranslations = {
         proof: [
           ["経験分野", "Windowsサポート、トラブル対応、ドキュメント作成"],
           ["実務経験", "50台以上のPCを組立・アップグレード・修理"],
-          ["就業条件", "海外勤務対応可能（東南アジア優先）"]
+          ["勤務可能な地域", "日本、韓国、東南アジアでの勤務を検討できます"]
         ]
       },
       opsConsole: {
@@ -248,7 +248,7 @@ window.portfolioTranslations = {
         title: "サポート職とシステム運用支援職向けの要点をまとめた内容です。",
         panels: [
           ["強み", ["実務的なL1/L2 Windowsサポート", "ハードウェア診断、PC組立、作業端末準備", "ネットワーク基礎、Microsoft 365、Active Directory基礎、Ubuntu VPS運用", "明確なドキュメント作成とユーザー対応"]],
-          ["就業条件", ["東南アジア、ジョージア、アルメニア、キプロスを含む海外移住を伴う勤務に対応可能です", "関心のある地域: ベトナム、タイ、マレーシア、ジョージア、アルメニア、キプロス。その他の適した機会も検討可能です", "現地勤務ではビザスポンサーが必要です", "リモート勤務はすぐ可能です", "現地勤務と海外移住に対応可能です"], "履歴書PDFを開く"]
+          ["就業条件", ["日本、韓国、東南アジアでの勤務を検討できます", "アルメニア、キプロス、その他の適した地域も検討可能です", "現地勤務ではビザスポンサーが必要です", "リモート勤務はすぐ可能です", "現地勤務と海外移住に対応可能です"], "履歴書PDFを開く"]
         ]
       },
       contact: {
@@ -269,7 +269,7 @@ window.portfolioTranslations = {
         proof: [
           ["Fokus pengalaman", "Sokongan Windows, troubleshooting, dokumentasi"],
           ["Kerja praktikal", "50+ PC dipasang, dinaik taraf, atau dibaiki"],
-          ["Relokasi", "Terbuka secara antarabangsa, dengan keutamaan Asia Tenggara"]
+          ["Lokasi kerja", "Terbuka untuk Jepun, Korea Selatan dan Asia Tenggara"]
         ]
       },
       opsConsole: {
@@ -337,7 +337,7 @@ window.portfolioTranslations = {
         title: "Ringkasan mesra perekrut untuk peranan sokongan dan sokongan infrastruktur.",
         panels: [
           ["Apa yang saya bawa", ["Pengalaman hands-on sokongan Windows L1/L2 dan penyelesaian isu pengguna", "Diagnostik perkakasan, pemasangan PC, dan penyediaan workstation", "Asas rangkaian, Microsoft 365, asas Active Directory, dan sokongan Ubuntu VPS", "Dokumentasi dan komunikasi yang jelas dengan pengguna akhir"]],
-          ["Ketersediaan", ["Terbuka untuk relokasi antarabangsa, termasuk Asia Tenggara, Georgia, Armenia dan Cyprus", "Lokasi diminati: Vietnam, Thailand, Malaysia, Georgia, Armenia dan Cyprus. Terbuka kepada peluang lain yang sesuai.", "Penajaan visa diperlukan untuk peranan on-site", "Boleh mula kerja remote dengan segera", "Sedia untuk kerja on-site dan relokasi"], "Buka Resume PDF"]
+          ["Ketersediaan", ["Terbuka untuk bekerja di Jepun, Korea Selatan dan Asia Tenggara", "Juga mempertimbangkan Armenia, Cyprus dan lokasi sesuai yang lain", "Penajaan visa diperlukan untuk peranan on-site", "Boleh mula kerja remote dengan segera", "Sedia untuk kerja on-site dan relokasi"], "Buka Resume PDF"]
         ]
       },
       contact: {
@@ -358,7 +358,7 @@ window.portfolioTranslations = {
         proof: [
           ["จุดเน้นประสบการณ์", "Windows support, troubleshooting, documentation"],
           ["งานภาคปฏิบัติ", "ประกอบ อัปเกรด หรือซ่อม PC มากกว่า 50 เครื่อง"],
-          ["Relocation", "พร้อมย้ายประเทศทำงาน โดยเน้นเอเชียตะวันออกเฉียงใต้"]
+          ["สถานที่ที่พร้อมทำงาน", "เปิดรับงานที่ญี่ปุ่น เกาหลีใต้ และเอเชียตะวันออกเฉียงใต้"]
         ]
       },
       opsConsole: {
@@ -447,7 +447,7 @@ window.portfolioTranslations = {
         proof: [
           ["Trọng tâm kinh nghiệm", "Hỗ trợ Windows, xử lý sự cố, tài liệu hóa"],
           ["Kinh nghiệm thực hành", "Hơn 50 hệ thống PC được lắp ráp, nâng cấp, sửa chữa"],
-          ["Tái định cư", "Sẵn sàng làm việc quốc tế, ưu tiên Đông Nam Á"]
+          ["Nơi có thể làm việc", "Sẵn sàng làm việc tại Nhật Bản, Hàn Quốc và Đông Nam Á"]
         ]
       },
       opsConsole: {
@@ -515,7 +515,7 @@ window.portfolioTranslations = {
         title: "Tóm tắt dễ dàng cho nhà tuyển dụng đánh giá về kỹ năng hỗ trợ và vận hành hệ thống.",
         panels: [
           ["Giá trị tôi mang lại", ["Kinh nghiệm hỗ trợ Windows L1/L2 và giải quyết vấn đề người dùng", "Chẩn đoán phần cứng, lắp ráp PC và thiết lập máy trạm", "Kiến thức mạng cơ bản, Microsoft 365, nền tảng Active Directory và hỗ trợ Ubuntu VPS", "Tài liệu hóa rõ ràng và giao tiếp tốt với người dùng"]],
-          ["Tính sẵn sàng", ["Sẵn sàng tái định cư quốc tế, bao gồm Đông Nam Á, Georgia, Armenia và Síp", "Địa điểm quan tâm: Việt Nam, Thái Lan, Malaysia, Georgia, Armenia và Síp. Sẵn sàng xem xét các cơ hội phù hợp khác.", "Cần visa sponsorship cho công việc on-site", "Có thể bắt đầu remote ngay", "Sẵn sàng làm việc tại chỗ và tái định cư"], "Mở Resume PDF"]
+          ["Tính sẵn sàng", ["Sẵn sàng làm việc tại Nhật Bản, Hàn Quốc và Đông Nam Á", "Cũng cân nhắc Armenia, Síp và các địa điểm phù hợp khác", "Cần visa sponsorship cho công việc on-site", "Có thể bắt đầu remote ngay", "Sẵn sàng làm việc tại chỗ và tái định cư"], "Mở Resume PDF"]
         ]
       },
       contact: {

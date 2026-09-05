@@ -282,7 +282,11 @@ const getStoredLanguageSource = () => {
   return window.localStorage.getItem(languageSourceKey);
 };
 
-const getStoredTheme = () => "dark";
+const getStoredTheme = () => {
+  const stored = window.localStorage.getItem(themeStorageKey);
+  if (stored === "light" || stored === "dark") return stored;
+  return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+};
 
 const applyTheme = (theme) => {
   document.documentElement.dataset.theme = theme;
@@ -475,14 +479,14 @@ const applyIndexTranslations = (lang) => {
   const relocStatus = document.querySelector(".bento-status strong");
   const relocItems = document.querySelectorAll(".bento-reloc-item");
   
-  const relocFlags = ["🇻🇳", "🇹🇭", "🇲🇾", "🇬🇪", "🇦🇲", "🇨🇾"];
+  const relocFlags = ["🇯🇵", "🇰🇷", "🇻🇳", "🇹🇭", "🇲🇾", "🇦🇲", "🇨🇾"];
   const relocTranslations = {
-    en: { label: "Relocation", status: "Open to suitable opportunities", countries: ["Vietnam", "Thailand", "Malaysia", "Georgia", "Armenia", "Cyprus"] },
-    ru: { label: "Релокация", status: "Открыт к подходящим возможностям", countries: ["Вьетнам", "Таиланд", "Малайзия", "Грузия", "Армения", "Кипр"] },
-    ja: { label: "海外移住", status: "適した機会を検討可能", countries: ["ベトナム", "タイ", "マレーシア", "ジョージア", "アルメニア", "キプロス"] },
-    ms: { label: "Relokasi", status: "Terbuka kepada peluang sesuai", countries: ["Vietnam", "Thailand", "Malaysia", "Georgia", "Armenia", "Cyprus"] },
-    th: { label: "ย้ายประเทศ", status: "เปิดรับโอกาสที่เหมาะสม", countries: ["เวียดนาม", "ไทย", "มาเลเซีย", "จอร์เจีย", "อาร์เมเนีย", "ไซปรัส"] },
-    vi: { label: "Tái định cư", status: "Sẵn sàng xem xét cơ hội phù hợp", countries: ["Việt Nam", "Thái Lan", "Malaysia", "Georgia", "Armenia", "Síp"] }
+    en: { label: "Where I can work", status: "Open to suitable opportunities", countries: ["Japan", "South Korea", "Vietnam", "Thailand", "Malaysia", "Armenia", "Cyprus"] },
+    ru: { label: "Где могу работать", status: "Открыт к подходящим возможностям", countries: ["Япония", "Южная Корея", "Вьетнам", "Таиланд", "Малайзия", "Армения", "Кипр"] },
+    ja: { label: "勤務可能な地域", status: "適した機会を検討可能", countries: ["日本", "韓国", "ベトナム", "タイ", "マレーシア", "アルメニア", "キプロス"] },
+    ms: { label: "Lokasi kerja", status: "Terbuka kepada peluang sesuai", countries: ["Jepun", "Korea Selatan", "Vietnam", "Thailand", "Malaysia", "Armenia", "Cyprus"] },
+    th: { label: "สถานที่ที่พร้อมทำงาน", status: "เปิดรับโอกาสที่เหมาะสม", countries: ["ญี่ปุ่น", "เกาหลีใต้", "เวียดนาม", "ไทย", "มาเลเซีย", "อาร์เมเนีย", "ไซปรัส"] },
+    vi: { label: "Nơi có thể làm việc", status: "Sẵn sàng xem xét cơ hội phù hợp", countries: ["Nhật Bản", "Hàn Quốc", "Việt Nam", "Thái Lan", "Malaysia", "Armenia", "Síp"] }
   };
 
   const rTrans = relocTranslations[lang] || relocTranslations.en;
@@ -1042,6 +1046,5 @@ const initializeParticleSphere = () => {
 
 // Initialize only after every function used by the translation renderer exists.
 applyTheme(getStoredTheme());
-initializeParticleSphere();
 initializeProjectsStage();
 initializeLanguage();
