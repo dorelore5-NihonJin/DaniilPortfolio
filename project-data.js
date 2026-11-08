@@ -1,5 +1,6 @@
 window.projectData = {
   "pc-support": {
+    imageVersion: "20261108-2",
     tag: {
       en: "Desktop support / hardware",
       ru: "Поддержка рабочих станций / оборудование",
@@ -136,7 +137,7 @@ window.projectData = {
       th: "งานนี้ทำให้กระบวนการ troubleshooting ของผมแข็งแรงขึ้น เพิ่มความมั่นใจด้านฮาร์ดแวร์ และช่วยให้ผมจัดการปัญหาตั้งแต่รับเคสจนถึงระบบที่ใช้งานได้เสถียร นอกจากนี้ยังทำให้ผมเข้าใจมากขึ้นว่าควรสื่อสารวิธีแก้ไขอย่างชัดเจนและทำให้งานซัพพอร์ตทำซ้ำได้อย่างไร",
       vi: "Công việc giúp tôi cải thiện quy trình xử lý sự cố: từ tiếp nhận vấn đề đến khôi phục hệ thống ổn định, giải thích cách khắc phục và ghi lại hướng dẫn để tái sử dụng.",
     },
-    screenshots: ["Screenshots/PC_support/1_workbench.png"],
+    screenshots: ["Screenshots/PC_support/Pc_support.png"],
   },
   "jkt-site": {
     tag: {

@@ -159,13 +159,10 @@ button:hover .arrow {
   flex-shrink: 0;
 }
 .brand-mark {
-  font-size: 34px;
-  font-weight: 650;
-  letter-spacing: -0.1em;
-  line-height: 1;
-}
-.brand-mark > span {
-  color: var(--accent);
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  object-fit: contain;
 }
 .brand-copy {
   display: grid;
@@ -1121,7 +1118,8 @@ html:not(.js) .copy-email {
     gap: 10px;
   }
   .brand-mark {
-    font-size: 30px;
+    width: 36px;
+    height: 36px;
   }
   .brand-copy strong {
     font-size: 12px;

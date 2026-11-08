@@ -53,6 +53,9 @@
   let activeImage = 0;
   let zoom = 1;
   const screenshots = project.screenshots || [];
+  const imageQuery = project.imageVersion
+    ? `?v=${encodeURIComponent(project.imageVersion)}`
+    : "";
   const updateZoom = () => {
     const fitWidth = Math.min(
       stage.clientWidth,
@@ -70,7 +73,7 @@
   };
   const selectImage = (index) => {
     activeImage = (index + screenshots.length) % screenshots.length;
-    image.src = `assets/images/${projectId}-${activeImage + 1}-1200.webp`;
+    image.src = `assets/images/${projectId}-${activeImage + 1}-1200.webp${imageQuery}`;
     image.alt = `${localized(project.title)} — ${api.text("image")} ${activeImage + 1}`;
     featured.href = screenshots[activeImage];
     featured.setAttribute(
@@ -150,7 +153,7 @@
       button.type = "button";
       button.setAttribute("aria-label", `${api.text("image")} ${index + 1}`);
       const thumbnail = document.createElement("img");
-      thumbnail.src = `assets/images/${projectId}-${index + 1}-${index === 0 ? 640 : 1200}.webp`;
+      thumbnail.src = `assets/images/${projectId}-${index + 1}-${index === 0 ? 640 : 1200}.webp${imageQuery}`;
       thumbnail.alt = "";
       thumbnail.loading = "lazy";
       button.append(thumbnail);
