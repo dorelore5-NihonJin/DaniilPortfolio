@@ -1,493 +1,727 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Daniil Kulakov | IT Support Specialist</title>
-  <meta
-    name="description"
-    content="Portfolio of Daniil Kulakov, an IT Support Specialist with 2+ years of Windows support experience across troubleshooting, hardware, networking basics, Microsoft 365, and Ubuntu VPS administration."
-  >
-  <meta property="og:title" content="Daniil Kulakov | IT Support Specialist">
-  <meta property="og:description" content="Hands-on IT Support Specialist. Windows troubleshooting, hardware, and Ubuntu VPS infrastructure. Open to work in Japan, South Korea, and Southeast Asia.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="Logo/Main_logo.png">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Daniil Kulakov | IT Support Specialist">
-  <meta name="twitter:description" content="Reliable IT support for Windows, hardware, and VPS infrastructure.">
-  <script>
-    document.documentElement.classList.add("js");
-    document.documentElement.dataset.theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-  </script>
-  <link rel="icon" type="image/png" href="Logo/Main_logo.png">
-  <link rel="stylesheet" href="styles.css?v=20260906-1">
-  <script src="https://unpkg.com/@phosphor-icons/web"></script>
-</head>
-<body>
-  <a class="skip-link" href="#page-content">Skip to content</a>
-  <div class="site-shell">
+<!doctype html>
+<html lang="en" data-type="service">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#101714" />
+    <meta name="page-type" content="service" />
+    <meta name="site-kind" content="other" />
+    <title>Daniil Kulakov | IT Support Specialist</title>
+    <meta
+      name="description"
+      content="Portfolio of Daniil Kulakov, an IT Support Specialist with 2+ years of Windows support experience across troubleshooting, hardware, networking basics, Microsoft 365, and Ubuntu VPS administration."
+    />
+    <meta
+      property="og:title"
+      content="Daniil Kulakov | IT Support Specialist"
+    />
+    <meta
+      property="og:description"
+      content="Portfolio of Daniil Kulakov, an IT Support Specialist with 2+ years of Windows support experience across troubleshooting, hardware, networking basics, Microsoft 365, and Ubuntu VPS administration."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" type="image/png" href="Logo/Main_logo.png" />
+    <link rel="stylesheet" href="styles.css?v=20261108" />
+
+    <script src="translations.js?v=20261108" defer></script>
+    <script src="project-data.js?v=20261108" defer></script>
+    <script src="ui.js?v=20261108" defer></script>
+    <script src="script.js?v=20261108" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#page-content" data-i18n="ui.skip"
+      >Skip to content</a
+    >
     <header class="site-header">
-      <a class="brand" href="#hero">
-        <span class="brand-mark"></span>
-        <span class="brand-copy">
-          <strong>Daniil Kulakov</strong>
-          <span>IT Support Specialist</span>
-        </span>
-      </a>
-
-      <button class="nav-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-      </button>
-
-      <nav class="site-nav" id="primary-navigation" aria-label="Primary navigation">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#resume">Resume</a>
-        <a href="#contact">Contact</a>
-      </nav>
-
-      <div class="header-actions">
-        <div class="language-switcher" aria-label="Language selector">
-          <button class="language-trigger" type="button" aria-controls="language-menu" aria-haspopup="menu" aria-expanded="false">
-            <span class="language-trigger-label">English</span>
-            <span class="language-trigger-code">EN</span>
-          </button>
-          <div class="language-menu" id="language-menu" role="menu">
-            <button class="language-option is-active" type="button" data-lang="en" role="menuitemradio" aria-checked="true">
-              <span>English</span>
-              <strong>EN</strong>
+      <div class="header-inner wrap">
+        <a class="brand" href="#hero" aria-label="Daniil Kulakov — portfolio">
+          <span class="brand-mark" aria-hidden="true">dk<span>.</span></span>
+          <span class="brand-copy"
+            ><strong data-i18n="ui.name">Daniil Kulakov</strong
+            ><span data-i18n="ui.role">IT Support Specialist</span></span
+          >
+        </a>
+        <nav
+          class="site-nav"
+          id="primary-navigation"
+          aria-label="Primary navigation"
+        >
+          <a href="#projects"><span data-i18n="nav.0">Selected work</span></a
+          ><a href="#about"><span data-i18n="nav.1">About me</span></a
+          ><a href="#skills"><span data-i18n="nav.2">Technical skills</span></a
+          ><a href="#resume"
+            ><span data-i18n="nav.3">Resume &amp; availability</span></a
+          ><a href="#contact"><span data-i18n="nav.4">Contact</span></a>
+        </nav>
+        <div class="header-actions">
+          <div class="language-switcher">
+            <button
+              class="language-trigger"
+              type="button"
+              aria-controls="language-menu"
+              aria-haspopup="menu"
+              aria-expanded="false"
+              data-label="language"
+            >
+              <span aria-hidden="true">◎</span
+              ><span class="language-code">EN</span
+              ><span class="chevron" aria-hidden="true">⌄</span>
             </button>
-            <button class="language-option" type="button" data-lang="ru" role="menuitemradio" aria-checked="false">
-              <span>Русский</span>
-              <strong>RU</strong>
-            </button>
-            <button class="language-option" type="button" data-lang="ja" role="menuitemradio" aria-checked="false">
-              <span>日本語</span>
-              <strong>JA</strong>
-            </button>
-            <button class="language-option" type="button" data-lang="ms" role="menuitemradio" aria-checked="false">
-              <span>Malay</span>
-              <strong>BM</strong>
-            </button>
-            <button class="language-option" type="button" data-lang="th" role="menuitemradio" aria-checked="false">
-              <span>Thai</span>
-              <strong>TH</strong>
-            </button>
-            <button class="language-option" type="button" data-lang="vi" role="menuitemradio" aria-checked="false">
-              <span>Vietnamese</span>
-              <strong>VI</strong>
-            </button>
+            <div class="language-menu" id="language-menu" role="menu" hidden>
+              <button
+                type="button"
+                class="language-option"
+                data-lang="en"
+                role="menuitemradio"
+                aria-checked="true"
+              >
+                <span lang="en">English</span><span>EN</span></button
+              ><button
+                type="button"
+                class="language-option"
+                data-lang="ru"
+                role="menuitemradio"
+                aria-checked="false"
+              >
+                <span lang="ru">Русский</span><span>RU</span></button
+              ><button
+                type="button"
+                class="language-option"
+                data-lang="ja"
+                role="menuitemradio"
+                aria-checked="false"
+              >
+                <span lang="ja">日本語</span><span>JA</span></button
+              ><button
+                type="button"
+                class="language-option"
+                data-lang="ms"
+                role="menuitemradio"
+                aria-checked="false"
+              >
+                <span lang="ms">Bahasa Melayu</span><span>MS</span></button
+              ><button
+                type="button"
+                class="language-option"
+                data-lang="th"
+                role="menuitemradio"
+                aria-checked="false"
+              >
+                <span lang="th">ไทย</span><span>TH</span></button
+              ><button
+                type="button"
+                class="language-option"
+                data-lang="vi"
+                role="menuitemradio"
+                aria-checked="false"
+              >
+                <span lang="vi">Tiếng Việt</span><span>VI</span>
+              </button>
+            </div>
           </div>
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-controls="primary-navigation"
+            aria-expanded="false"
+            data-label="menuOpen"
+          >
+            <span></span><span></span>
+          </button>
         </div>
       </div>
     </header>
 
-    <main id="page-content">
-      <section class="hero" id="hero">
-        <div class="hero-grid">
+    <main id="page-content" tabindex="-1">
+      <section class="hero wrap" id="hero" aria-labelledby="hero-title">
+        <div class="hero-main">
           <div class="hero-copy">
-            <span class="hero-role reveal">Daniil Kulakov / IT Support Specialist / Systems Support</span>
-            <h1 class="reveal">Reliable IT support for Windows, hardware, and VPS infrastructure.</h1>
-            <p class="hero-text reveal">
-              Hands-on IT Support Specialist delivering reliable Windows troubleshooting, hardware repairs, and routine Ubuntu VPS administration.
+            <p class="eyebrow hero-role">
+              <span data-i18n="ui.name">Daniil Kulakov</span>
+              <span class="muted">/</span>
+              <span data-i18n="ui.role">IT Support Specialist</span>
             </p>
-            <div class="hero-actions reveal">
-              <a class="button button-primary" href="#contact">Contact Me</a>
-              <a class="button button-secondary" href="Resume/Daniil_Kulakov_IT_Support.pdf" target="_blank" rel="noreferrer"><i class="ph-bold ph-file-pdf button-icon" aria-hidden="true"></i>View CV</a>
-              <button class="button button-secondary" type="button" id="open-intro-video"><i class="ph-bold ph-play button-icon" aria-hidden="true"></i>Watch Video</button>
+            <h1 id="hero-title" data-i18n="hero.title">
+              IT support. From desktop to server.
+            </h1>
+            <p data-i18n="hero.text" class="hero-text">
+              2+ years of hands-on Windows support, hardware diagnostics and
+              Ubuntu VPS administration.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#projects"
+                ><span data-i18n="ui.viewProjects">View projects</span
+                ><span class="arrow" aria-hidden="true">↗</span></a
+              ><a
+                class="button button-secondary"
+                href="Resume/Int_ITsupport_upd_06.15.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><span data-i18n="ui.viewResume">View resume</span
+                ><span class="arrow" aria-hidden="true">↗</span></a
+              >
             </div>
+            <p class="availability">
+              <span class="status-dot" aria-hidden="true"></span
+              ><span data-i18n="ui.available">Open to opportunities</span>
+            </p>
           </div>
-
-          <div class="hero-visual reveal">
-            <figure class="hero-photo">
-              <img src="Screenshots/PC_support/1_workbench.png" alt="Windows workstation on the bench during hardware diagnostics and deployment work">
-              <figcaption>Real support work: Windows deployment, diagnostics, and PC builds.</figcaption>
-            </figure>
-          </div>
+          <a class="hero-work" href="project.html?project=jkt-site">
+            <div class="hero-work-top">
+              <span class="eyebrow"
+                ><span data-i18n="ui.work">Selected work</span> / 02</span
+              ><span class="arrow" aria-hidden="true">↗</span>
+            </div>
+            <div class="hero-work-title">
+              JKT<span>Ubuntu / Apache / MySQL</span>
+            </div>
+            <div class="hero-work-image">
+              <img
+                src="assets/images/jkt-site-1-640.webp"
+                srcset="
+                  assets/images/jkt-site-1-640.webp   640w,
+                  assets/images/jkt-site-1-1200.webp 1200w
+                "
+                sizes="(max-width: 640px) 90vw, 45vw"
+                alt="JKT website running on Ubuntu VPS"
+                width="1200"
+                height="750"
+                fetchpriority="high"
+              />
+            </div>
+          </a>
         </div>
-        <div class="hero-proof reveal">
-          <div class="hero-proof-item">
-            <span>Experience focus</span>
-            <strong>Windows support, troubleshooting, documentation</strong>
+        <div class="hero-proof">
+          <div>
+            <strong>2<span>+</span></strong
+            ><span data-i18n="ui.years">Years in IT support</span>
           </div>
-          <div class="hero-proof-item">
-            <span>Hands-on work</span>
-            <strong>50+ systems built, upgraded, or repaired</strong>
+          <div>
+            <strong>50<span>+</span></strong
+            ><span data-i18n="ui.systems"
+              >Systems built, upgraded or repaired</span
+            >
           </div>
-          <div class="hero-proof-item">
-            <span>Where I can work</span>
-            <strong>Open to Japan, South Korea, and Southeast Asia</strong>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="about">
-        <div class="section-head reveal">
-          <h2>Hands-on IT support experience with 2+ years in a small-office Windows environment.</h2>
-        </div>
-        <div class="bento-grid">
-          <div class="bento-card bento-bio reveal">
-            <div class="bento-bio-head">
-              <i class="ph-bold ph-user-focus bento-icon"></i>
-              <h3>IT Operations &amp; User Support</h3>
-            </div>
-            <div class="bento-bio-text">
-              <p>
-                I provide L1/L2 IT support for Windows-based users, covering operating system issues, application troubleshooting, software setup, hardware diagnostics, and everyday connectivity problems.
-              </p>
-              <p>
-                My background combines user-facing support with practical technical execution, including incident handling, component replacement, repeatable fix documentation, and dependable day-to-day support work.
-              </p>
-              <p>
-                Alongside desktop support, I maintain Ubuntu VPS environments with SSH, Apache, MySQL, and WinSCP, giving me practical exposure to Linux administration, hosted services, and routine server upkeep.
-              </p>
-            </div>
-          </div>
-
-          <div class="bento-card bento-experience reveal">
-            <span class="bento-label">Experience</span>
-            <div class="bento-badge">
-              <i class="ph-bold ph-buildings"></i>
-              <strong>KiliaService</strong>
-            </div>
-            <h4>IT Support Technician</h4>
-            <p class="bento-subtext">Junior System Administration Intern</p>
-          </div>
-
-          <div class="bento-card bento-education reveal">
-            <span class="bento-label">Education</span>
-            <div class="bento-badge">
-              <i class="ph-bold ph-graduation-cap"></i>
-              <strong>IT Systems</strong>
-            </div>
-            <h4>Information Systems &amp; Programming</h4>
-            <div class="bento-progress-container">
-              <p class="bento-subtext">Specialist Diploma completed: June 2026</p>
-            </div>
-          </div>
-
-          <div class="bento-card bento-languages reveal">
-            <span class="bento-label">Languages</span>
-            <div class="bento-lang-list">
-              <div class="bento-lang-item">
-                <span>Russian</span>
-                <strong class="lang-badge lang-ru">Native</strong>
-              </div>
-              <div class="bento-lang-item">
-                <span>English</span>
-                <strong class="lang-badge lang-en">B2 Fluent</strong>
-              </div>
-              <div class="bento-lang-item">
-                <span>Japanese</span>
-                <strong class="lang-badge lang-ja">JLPT N2</strong>
-              </div>
-            </div>
-          </div>
-
-          <div class="bento-card bento-relocation reveal">
-            <span class="bento-label">Where I can work</span>
-            <div class="bento-reloc-list">
-              <div class="bento-reloc-item"><span class="bento-reloc-flag" aria-hidden="true">🇯🇵</span><span class="bento-reloc-name">Japan</span></div>
-              <div class="bento-reloc-item"><span class="bento-reloc-flag" aria-hidden="true">🇰🇷</span><span class="bento-reloc-name">South Korea</span></div>
-              <div class="bento-reloc-item"><span class="bento-reloc-flag" aria-hidden="true">🇻🇳</span><span class="bento-reloc-name">Vietnam</span></div>
-              <div class="bento-reloc-item"><span class="bento-reloc-flag" aria-hidden="true">🇹🇭</span><span class="bento-reloc-name">Thailand</span></div>
-              <div class="bento-reloc-item"><span class="bento-reloc-flag" aria-hidden="true">🇲🇾</span><span class="bento-reloc-name">Malaysia</span></div>
-              <div class="bento-reloc-item"><span class="bento-reloc-flag" aria-hidden="true">🇦🇲</span><span class="bento-reloc-name">Armenia</span></div>
-              <div class="bento-reloc-item"><span class="bento-reloc-flag" aria-hidden="true">🇨🇾</span><span class="bento-reloc-name">Cyprus</span></div>
-            </div>
-            <div class="bento-status">
-              <span class="pulsing-dot"></span>
-              <strong>Open to suitable opportunities</strong>
-            </div>
+          <div>
+            <strong>L1<span>/</span>L2</strong
+            ><span data-i18n="ui.endUser">End-user support</span>
           </div>
         </div>
       </section>
-
-      <section class="section" id="skills">
-        <div class="section-head reveal">
-          <h2>Built around support, troubleshooting, and dependable technical execution.</h2>
+      <section
+        class="section wrap"
+        id="projects"
+        aria-labelledby="projects-heading"
+      >
+        <div class="section-head">
+          <p class="eyebrow">
+            01 / <span data-i18n="ui.portfolio">Portfolio</span>
+          </p>
+          <h2 id="projects-heading" data-i18n="ui.work">Selected work</h2>
+          <p class="section-intro" data-i18n="ui.skillsTitle">
+            Support, systems & the work in between.
+          </p>
         </div>
-        <div class="skill-controls reveal" role="group" aria-label="Filter skill groups">
-          <button class="skill-filter is-active" type="button" data-filter="all" aria-pressed="true">All</button>
-          <button class="skill-filter" type="button" data-filter="support" aria-pressed="false">Support</button>
-          <button class="skill-filter" type="button" data-filter="systems" aria-pressed="false">Systems</button>
-          <button class="skill-filter" type="button" data-filter="process" aria-pressed="false">Process</button>
+        <div class="projects-grid">
+          <a class="project-card" href="project.html?project=pc-support">
+            <div class="project-card-top">
+              <span class="eyebrow"
+                >01 /
+                <span data-i18n="projects.cards.0.0"
+                  >Desktop support / hardware</span
+                ></span
+              ><span class="arrow" aria-hidden="true">↗</span>
+            </div>
+            <h3 data-i18n="projects.cards.0.1">Windows &amp; hardware</h3>
+            <p data-i18n="projects.cards.0.2" class="project-card-description">
+              Delivered Windows reinstallations, driver and software setup,
+              hardware diagnostics, and hands-on build or upgrade work across
+              50+ user systems in real support scenarios.
+            </p>
+            <div class="project-card-image">
+              <img
+                src="assets/images/pc-support-1-640.webp"
+                srcset="
+                  assets/images/pc-support-1-640.webp   640w,
+                  assets/images/pc-support-1-1200.webp 1200w
+                "
+                sizes="(max-width: 640px) 100vw, 50vw"
+                alt="Windows Deployment, Repair, and PC Build Work"
+                loading="lazy"
+                width="640"
+                height="400"
+              />
+            </div> </a
+          ><a class="project-card" href="project.html?project=jkt-site">
+            <div class="project-card-top">
+              <span class="eyebrow"
+                >02 /
+                <span data-i18n="projects.cards.1.0"
+                  >Linux / hosting</span
+                ></span
+              ><span class="arrow" aria-hidden="true">↗</span>
+            </div>
+            <h3 data-i18n="projects.cards.1.1">Linux &amp; hosting</h3>
+            <p data-i18n="projects.cards.1.2" class="project-card-description">
+              Set up and maintained a personal website on an Ubuntu VPS using
+              Apache and MySQL, with server access handled through SSH and
+              WinSCP.
+            </p>
+            <div class="project-card-image">
+              <img
+                src="assets/images/jkt-site-1-640.webp"
+                srcset="
+                  assets/images/jkt-site-1-640.webp   640w,
+                  assets/images/jkt-site-1-1200.webp 1200w
+                "
+                sizes="(max-width: 640px) 100vw, 50vw"
+                alt="JKT Personal Website on Ubuntu VPS"
+                loading="lazy"
+                width="640"
+                height="400"
+              />
+            </div> </a
+          ><a class="project-card" href="project.html?project=telegram-app">
+            <div class="project-card-top">
+              <span class="eyebrow"
+                >03 /
+                <span data-i18n="projects.cards.2.0"
+                  >Remote administration</span
+                ></span
+              ><span class="arrow" aria-hidden="true">↗</span>
+            </div>
+            <h3 data-i18n="projects.cards.2.1">VPS &amp; Telegram</h3>
+            <p data-i18n="projects.cards.2.2" class="project-card-description">
+              Configured a VPN server and supported a Telegram web application
+              on Ubuntu VPS infrastructure, including updates and remote
+              maintenance tasks.
+            </p>
+            <div class="project-card-image">
+              <img
+                src="assets/images/telegram-app-1-640.webp"
+                srcset="
+                  assets/images/telegram-app-1-640.webp   640w,
+                  assets/images/telegram-app-1-1200.webp 1200w
+                "
+                sizes="(max-width: 640px) 100vw, 50vw"
+                alt="Self-Hosted VPN and Telegram Web App"
+                loading="lazy"
+                width="640"
+                height="400"
+              />
+            </div> </a
+          ><a
+            class="project-card"
+            href="project.html?project=minatocargo-marketplace"
+          >
+            <div class="project-card-top">
+              <span class="eyebrow"
+                >04 /
+                <span data-i18n="projects.cards.3.0"
+                  >Full-stack marketplace / PHP + MySQL</span
+                ></span
+              ><span class="arrow" aria-hidden="true">↗</span>
+            </div>
+            <h3 data-i18n="projects.cards.3.1">MinatoCargo marketplace</h3>
+            <p data-i18n="projects.cards.3.2" class="project-card-description">
+              Built a multi-page marketplace with catalog browsing, product
+              pages, seller workspace, admin tools, support flows, localization,
+              currency handling, and content pages.
+            </p>
+            <div class="project-card-image">
+              <img
+                src="assets/images/minatocargo-marketplace-1-640.webp"
+                srcset="
+                  assets/images/minatocargo-marketplace-1-640.webp   640w,
+                  assets/images/minatocargo-marketplace-1-1200.webp 1200w
+                "
+                sizes="(max-width: 640px) 100vw, 50vw"
+                alt="MinatoCargo Global Marketplace Platform"
+                loading="lazy"
+                width="640"
+                height="400"
+              />
+            </div>
+          </a>
+        </div>
+      </section>
+      <section class="section about-section" id="about">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow">
+              <span>02 /</span> <span data-i18n="ui.about">About me</span>
+            </p>
+            <h2 data-i18n="about.title">
+              Practical experience. Clear solutions.
+            </h2>
+          </div>
+          <div class="about-layout">
+            <div class="about-copy">
+              <p data-i18n="about.copy.0">
+                I provide L1/L2 IT support for Windows-based users, covering
+                operating system issues, application troubleshooting, software
+                setup, hardware diagnostics, and everyday connectivity problems.
+              </p>
+              <p data-i18n="about.copy.1">
+                Alongside desktop support, I maintain Ubuntu VPS environments
+                with SSH, Apache, MySQL, and WinSCP, giving me practical
+                exposure to Linux administration, hosted services, and routine
+                server upkeep.
+              </p>
+              <button class="text-button" id="open-intro-video" type="button">
+                <span class="play-icon" aria-hidden="true">▷</span
+                ><span data-i18n="ui.video">Video introduction</span
+                ><span class="arrow" aria-hidden="true">↗</span>
+              </button>
+            </div>
+            <div class="about-facts">
+              <h3 class="sr-only" data-i18n="ui.background">
+                Experience & education
+              </h3>
+              <div class="fact-row">
+                <span data-i18n="about.facts.0.0" class="eyebrow"
+                  >Experience</span
+                >
+                <div>
+                  <h3 data-i18n="about.facts.0.1">KiliaService</h3>
+                  <p data-i18n="about.facts.0.2">
+                    IT Support Technician / Junior System Administration Intern
+                  </p>
+                </div>
+              </div>
+              <div class="fact-row">
+                <span data-i18n="about.facts.1.0" class="eyebrow"
+                  >Education</span
+                >
+                <div>
+                  <h3 data-i18n="about.facts.1.1">IT Systems</h3>
+                  <p data-i18n="about.facts.1.2">
+                    Specialist Diploma completed: June 2026
+                  </p>
+                </div>
+              </div>
+              <div class="fact-row">
+                <span data-i18n="ui.languages" class="eyebrow">Languages</span>
+                <div class="language-facts">
+                  <p>
+                    <span data-language-name="ru">Russian</span
+                    ><strong data-proficiency="native">Native</strong>
+                  </p>
+                  <p>
+                    <span data-language-name="en">English</span
+                    ><strong>B2</strong>
+                  </p>
+                  <p>
+                    <span data-language-name="ja">Japanese</span
+                    ><strong>JLPT N2</strong>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section wrap" id="skills">
+        <div class="section-head">
+          <p class="eyebrow">
+            <span>03 /</span>
+            <span data-i18n="ui.skills">Technical skills</span>
+          </p>
+          <h2 data-i18n="skills.title">
+            Support, systems &amp; the work in between.
+          </h2>
+        </div>
+        <div class="skill-controls" role="group" data-label="skills">
+          <button
+            type="button"
+            class="skill-filter"
+            data-filter="all"
+            aria-pressed="true"
+          >
+            <span data-i18n="ui.all">All skills</span></button
+          ><button
+            type="button"
+            class="skill-filter"
+            data-filter="support"
+            aria-pressed="false"
+          >
+            <span data-i18n="ui.support">Support</span></button
+          ><button
+            type="button"
+            class="skill-filter"
+            data-filter="systems"
+            aria-pressed="false"
+          >
+            <span data-i18n="ui.system">Systems</span></button
+          ><button
+            type="button"
+            class="skill-filter"
+            data-filter="process"
+            aria-pressed="false"
+          >
+            <span data-i18n="ui.process">Process</span>
+          </button>
         </div>
         <div class="skills-grid">
-          <article class="skill-group reveal" data-skill="support">
-            <div class="skill-group-head">
-              <i class="ph-bold ph-windows-logo"></i>
-              <h3>Windows Support</h3>
-            </div>
+          <article class="skill-group" data-skill="support">
+            <span class="skill-number" aria-hidden="true">01</span>
+            <h3 data-i18n="skills.groups.0.0">Windows Support</h3>
             <ul>
-              <li>Windows 7/10/11 installation, setup, and recovery</li>
-              <li>Driver issues, software installation, update troubleshooting</li>
-              <li>L1/L2 end-user issue handling and incident support</li>
+              <li data-i18n="skills.groups.0.1.0">
+                Windows 7/10/11 installation, setup, and recovery
+              </li>
+              <li data-i18n="skills.groups.0.1.1">
+                Driver issues, software installation, update troubleshooting
+              </li>
+              <li data-i18n="skills.groups.0.1.2">
+                L1/L2 end-user issue handling and incident support
+              </li>
             </ul>
           </article>
-          <article class="skill-group reveal" data-skill="support">
-            <div class="skill-group-head">
-              <i class="ph-bold ph-cpu"></i>
-              <h3>Hardware &amp; PC Assembly</h3>
-            </div>
+          <article class="skill-group" data-skill="support">
+            <span class="skill-number" aria-hidden="true">02</span>
+            <h3 data-i18n="skills.groups.1.0">Hardware &amp; PC Assembly</h3>
             <ul>
-              <li>50+ systems built, upgraded, or repaired</li>
-              <li>Diagnostics for PSU, RAM, SSD, GPU, and peripherals</li>
-              <li>Component replacement and stable workstation setup</li>
+              <li data-i18n="skills.groups.1.1.0">
+                50+ systems built, upgraded, or repaired
+              </li>
+              <li data-i18n="skills.groups.1.1.1">
+                Diagnostics for PSU, RAM, SSD, GPU, and peripherals
+              </li>
+              <li data-i18n="skills.groups.1.1.2">
+                Component replacement and stable workstation setup
+              </li>
             </ul>
           </article>
-          <article class="skill-group reveal" data-skill="systems">
-            <div class="skill-group-head">
-              <i class="ph-bold ph-globe-hemisphere-east"></i>
-              <h3>Networking Basics</h3>
-            </div>
+          <article class="skill-group" data-skill="systems">
+            <span class="skill-number" aria-hidden="true">03</span>
+            <h3 data-i18n="skills.groups.2.0">Networking Basics</h3>
             <ul>
-              <li>IP addressing, connectivity troubleshooting, Wi-Fi issues</li>
-              <li>Router configuration and basic network problem isolation</li>
-              <li>TCP/IP fundamentals and entry-level routing awareness</li>
+              <li data-i18n="skills.groups.2.1.0">
+                IP addressing, connectivity troubleshooting, Wi-Fi issues
+              </li>
+              <li data-i18n="skills.groups.2.1.1">
+                Router configuration and basic network problem isolation
+              </li>
+              <li data-i18n="skills.groups.2.1.2">
+                TCP/IP fundamentals and entry-level routing awareness
+              </li>
             </ul>
           </article>
-          <article class="skill-group reveal" data-skill="systems">
-            <div class="skill-group-head">
-              <i class="ph-bold ph-terminal-window"></i>
-              <h3>Linux &amp; Remote Access</h3>
-            </div>
+          <article class="skill-group" data-skill="systems">
+            <span class="skill-number" aria-hidden="true">04</span>
+            <h3 data-i18n="skills.groups.3.0">Linux &amp; Remote Access</h3>
             <ul>
-              <li>Ubuntu basics, file permissions, package updates</li>
-              <li>SSH administration, WinSCP, Command Prompt, Terminal</li>
-              <li>Apache, MySQL, and practical VPS maintenance</li>
+              <li data-i18n="skills.groups.3.1.0">
+                Ubuntu basics, file permissions, package updates
+              </li>
+              <li data-i18n="skills.groups.3.1.1">
+                SSH administration, WinSCP, Command Prompt, Terminal
+              </li>
+              <li data-i18n="skills.groups.3.1.2">
+                Apache, MySQL, and practical VPS maintenance
+              </li>
             </ul>
           </article>
-          <article class="skill-group reveal" data-skill="systems">
-            <div class="skill-group-head">
-              <i class="ph-bold ph-microsoft-outlook-logo"></i>
-              <h3>Microsoft 365 &amp; Identity</h3>
-            </div>
+          <article class="skill-group" data-skill="systems">
+            <span class="skill-number" aria-hidden="true">05</span>
+            <h3 data-i18n="skills.groups.4.0">Microsoft 365 &amp; Identity</h3>
             <ul>
-              <li>Confident day-to-day use of Microsoft 365 applications</li>
-              <li>Working knowledge of Active Directory users, accounts, and permissions</li>
-              <li>Comfortable supporting office productivity and access issues</li>
+              <li data-i18n="skills.groups.4.1.0">
+                Confident day-to-day use of Microsoft 365 applications
+              </li>
+              <li data-i18n="skills.groups.4.1.1">
+                Working knowledge of Active Directory users, accounts, and
+                permissions
+              </li>
+              <li data-i18n="skills.groups.4.1.2">
+                Comfortable supporting office productivity and access issues
+              </li>
             </ul>
           </article>
-          <article class="skill-group reveal" data-skill="process">
-            <div class="skill-group-head">
-              <i class="ph-bold ph-file-text"></i>
-              <h3>Documentation</h3>
-            </div>
+          <article class="skill-group" data-skill="process">
+            <span class="skill-number" aria-hidden="true">06</span>
+            <h3 data-i18n="skills.groups.5.0">Documentation</h3>
             <ul>
-              <li>Knowledge base style write-ups for common fixes</li>
-              <li>Clear user communication and issue reporting</li>
-              <li>Repeatable troubleshooting steps for faster resolution</li>
+              <li data-i18n="skills.groups.5.1.0">
+                Knowledge base style write-ups for common fixes
+              </li>
+              <li data-i18n="skills.groups.5.1.1">
+                Clear user communication and issue reporting
+              </li>
+              <li data-i18n="skills.groups.5.1.2">
+                Repeatable troubleshooting steps for faster resolution
+              </li>
             </ul>
           </article>
         </div>
       </section>
-
-      <section class="section" id="projects">
-        <div class="section-head reveal">
-          <h2>Practical projects that show support skills beyond theory.</h2>
-        </div>
-        <div class="projects-stage reveal">
-          <div class="projects-rail" role="list">
-            <a class="project-row is-active" role="listitem" href="project.html?project=pc-support" data-project-index="0" data-project-id="pc-support" aria-label="Open details for Windows Deployment, Repair, and PC Build Work">
-              <span class="project-index">01</span>
-              <div class="project-row-body">
-                <p class="project-tag">Desktop support / hardware</p>
-                <h3>Windows Deployment, Repair, and PC Build Work</h3>
-                <p class="project-row-text">Delivered Windows reinstallations, driver and software setup, hardware diagnostics, and hands-on build or upgrade work across 50+ user systems in real support scenarios.</p>
-              </div>
-              <span class="project-row-cta">Details</span>
-            </a>
-
-            <a class="project-row" role="listitem" href="project.html?project=jkt-site" data-project-index="1" data-project-id="jkt-site" aria-label="Open details for JKT Personal Website on Ubuntu VPS">
-              <span class="project-index">02</span>
-              <div class="project-row-body">
-                <p class="project-tag">Linux / hosting</p>
-                <h3>JKT Personal Website on Ubuntu VPS</h3>
-                <p class="project-row-text">Set up and maintained a personal website on an Ubuntu VPS using Apache and MySQL, with server access handled through SSH and WinSCP.</p>
-              </div>
-              <span class="project-row-cta">Details</span>
-            </a>
-
-            <a class="project-row" role="listitem" href="project.html?project=telegram-app" data-project-index="2" data-project-id="telegram-app" aria-label="Open details for Self-Hosted VPN and Telegram Web App">
-              <span class="project-index">03</span>
-              <div class="project-row-body">
-                <p class="project-tag">Remote administration</p>
-                <h3>Self-Hosted VPN and Telegram Web App</h3>
-                <p class="project-row-text">Configured a VPN server and supported a Telegram web application on Ubuntu VPS infrastructure, including updates and remote maintenance tasks.</p>
-              </div>
-              <span class="project-row-cta">Details</span>
-            </a>
-
-            <a class="project-row" role="listitem" href="project.html?project=minatocargo-marketplace" data-project-index="3" data-project-id="minatocargo-marketplace" aria-label="Open details for MinatoCargo Global Marketplace Platform">
-              <span class="project-index">04</span>
-              <div class="project-row-body">
-                <p class="project-tag">Full-stack marketplace / PHP + MySQL</p>
-                <h3>MinatoCargo Global Marketplace Platform</h3>
-                <p class="project-row-text">Built a multi-page marketplace with product catalog, product detail pages, seller workspace, admin tools, support flows, localization, currency handling, and content pages.</p>
-              </div>
-              <span class="project-row-cta">Details</span>
-            </a>
-          </div>
-
-          <aside class="project-stage" id="project-stage" aria-label="Selected project preview">
-            <div class="project-stage-copy">
-              <p class="project-stage-label">Project preview</p>
-              <h3 class="project-stage-title" id="project-stage-title">Windows Deployment, Repair, and PC Build Work</h3>
-              <p class="project-stage-text" id="project-stage-text">Desktop support work across Windows reinstallations, driver setup, hardware diagnostics, and ready-to-use systems.</p>
-              <a class="button button-primary project-stage-live" id="project-stage-live" href="https://t.me/NihonServer_bot" target="_blank" rel="noopener noreferrer" hidden>
-                <i class="ph-bold ph-telegram-logo button-icon" aria-hidden="true"></i>
-                <span>Open Telegram bot</span>
-              </a>
-            </div>
-
-            <div class="project-stage-browser">
-              <div class="project-stage-browser-bar">
-                <div class="browser-dots"><span></span><span></span><span></span></div>
-                <div class="project-stage-url" id="project-stage-url">portfolio / pc-support</div>
-                <div class="project-stage-bar-spacer" aria-hidden="true"></div>
-              </div>
-              <div class="project-stage-viewport">
-                <img class="project-stage-shot is-active" data-project-index="0" src="Screenshots/PC_support/1_workbench.png" alt="Windows deployment and PC build work preview">
-                <img class="project-stage-shot" data-project-index="1" src="Screenshots/JKT_site/1_main.png" alt="JKT personal website preview" loading="lazy">
-                <img class="project-stage-shot" data-project-index="2" src="Screenshots/Telegram_web/1_main.png" alt="Telegram web app preview" loading="lazy">
-                <img class="project-stage-shot" data-project-index="3" src="Screenshots/MinatoCargo/1_home.png" alt="MinatoCargo marketplace preview" loading="lazy">
-              </div>
-            </div>
-          </aside>
-        </div>
-      </section>
-
-      <section class="section" id="resume">
-        <div class="section-head reveal">
-          <h2>A recruiter-friendly summary for support and systems operations roles.</h2>
-        </div>
-        <div class="resume-layout">
-          <div class="resume-panel reveal">
-            <h3>What I bring</h3>
-            <ul>
-              <li>Hands-on L1/L2 Windows support and user issue resolution</li>
-              <li>Hardware diagnostics, PC assembly, upgrades, and workstation setup</li>
-              <li>Networking basics, Microsoft 365, Active Directory awareness, and Ubuntu VPS support</li>
-              <li>Clear documentation and communication with end users</li>
-            </ul>
-          </div>
-          <div class="resume-panel reveal">
-            <h3>Availability</h3>
-            <ul>
-              <li>Open to Japan, South Korea, and Southeast Asia</li>
-              <li>Also considering Armenia, Cyprus, and other suitable locations</li>
-              <li>Visa sponsorship required for on-site roles</li>
-              <li>Remote work possible immediately</li>
-              <li>Available for on-site work and relocation</li>
-            </ul>
-            <a class="button button-primary" href="Resume/Daniil_Kulakov_IT_Support.pdf" target="_blank" rel="noreferrer"><i class="ph-bold ph-download-simple button-icon" aria-hidden="true"></i>Open Resume PDF</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="section contact-section" id="contact">
-        <div class="section-head reveal">
-          <h2>Available for international IT support and systems support opportunities.</h2>
-        </div>
-        <div class="contact-layout reveal">
-          <div class="contact-copy">
-            <p>
-              If you are hiring for IT support, helpdesk, desktop support, or systems support, I am available for remote work and international relocation.
+      <section class="section resume-section" id="resume">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow">
+              <span>04 /</span>
+              <span data-i18n="ui.available">Open to opportunities</span>
             </p>
+            <h2 data-i18n="resume.title">Resume &amp; availability</h2>
+          </div>
+          <div class="resume-layout">
+            <div class="resume-document">
+              <span class="document-icon" aria-hidden="true">↙</span>
+              <div>
+                <h3 data-i18n="ui.name">Daniil Kulakov</h3>
+                <p data-i18n="ui.resumeLabel">English resume</p>
+                <p data-i18n="ui.pdf" class="muted small">
+                  PDF · Opens in a new tab
+                </p>
+              </div>
+              <a
+                class="button button-primary"
+                href="Resume/Int_ITsupport_upd_06.15.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><span data-i18n="ui.viewResume">View resume</span
+                ><span class="arrow" aria-hidden="true">↗</span></a
+              >
+            </div>
+            <dl class="availability-list">
+              <div>
+                <dt data-i18n="ui.remote">Remote work</dt>
+                <dd data-i18n="ui.remoteText">
+                  Available to start immediately
+                </dd>
+              </div>
+              <div>
+                <dt data-i18n="ui.relocation">Relocation</dt>
+                <dd data-i18n="ui.relocationText">
+                  Southeast Asia, Georgia, Armenia and Cyprus; open to other
+                  suitable locations.
+                </dd>
+              </div>
+              <div>
+                <dt data-i18n="ui.onsite">On-site roles</dt>
+                <dd data-i18n="ui.onsiteText">Visa sponsorship required</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+      <section class="section wrap contact-section" id="contact">
+        <div class="section-head">
+          <p class="eyebrow">
+            <span>05 /</span> <span data-i18n="ui.contact">Contact</span>
+          </p>
+          <h2 data-i18n="contact.title">Let’s talk.</h2>
+        </div>
+        <div class="contact-layout">
+          <div class="contact-main">
+            <p data-i18n="contact.text">
+              If you are hiring for IT support, helpdesk, desktop support, or
+              systems support, I am available for remote work and international
+              relocation.
+            </p>
+            <a class="email-link" href="mailto:dorelore5@gmail.com"
+              >dorelore5@gmail.com
+              <span class="arrow" aria-hidden="true">↗</span></a
+            ><button class="text-button copy-email" type="button">
+              <span data-i18n="ui.copy">Copy email</span
+              ><span aria-hidden="true">⧉</span>
+            </button>
+            <p class="copy-status sr-only" role="status"></p>
           </div>
           <div class="contact-list">
-            <a href="mailto:dorelore5@gmail.com" class="contact-item" aria-label="Send email to dorelore5@gmail.com">
-              <div class="contact-info">
-                <span>Email</span>
-                <strong>dorelore5@gmail.com</strong>
-              </div>
-              <i class="ph-bold ph-envelope contact-link-icon" aria-hidden="true"></i>
-            </a>
-            <a href="tel:+79517413464" class="contact-item" aria-label="Call +7 951 741 34 64">
-              <div class="contact-info">
-                <span>Phone</span>
-                <strong>+7 951 741 34 64</strong>
-              </div>
-              <i class="ph-bold ph-phone contact-link-icon" aria-hidden="true"></i>
-            </a>
-            <a href="https://wa.me/79517413464" target="_blank" rel="noreferrer" class="contact-item">
-              <div class="contact-info">
-                <span>WhatsApp</span>
-                <strong>wa.me/79517413464</strong>
-              </div>
-              <i class="ph-bold ph-whatsapp-logo contact-link-icon" aria-hidden="true"></i>
-            </a>
-            <a href="https://t.me/neverlandfff" target="_blank" rel="noreferrer" class="contact-item">
-              <div class="contact-info">
-                <span>Telegram</span>
-                <strong>t.me/neverlandfff</strong>
-              </div>
-              <i class="ph-bold ph-telegram-logo contact-link-icon" aria-hidden="true"></i>
-            </a>
-            <a href="https://linkedin.com/in/daniil-kulakov-362a203b1" target="_blank" rel="noreferrer" class="contact-item">
-              <div class="contact-info">
-                <span>LinkedIn</span>
-                <strong>linkedin.com/in/daniil-kulakov-362a203b1</strong>
-              </div>
-              <i class="ph-bold ph-linkedin-logo contact-link-icon" aria-hidden="true"></i>
-            </a>
+            <a
+              href="https://t.me/neverlandfff"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><span>Telegram</span
+              ><span
+                >@neverlandfff
+                <span class="arrow" aria-hidden="true">↗</span></span
+              ></a
+            >
+            <a
+              href="https://linkedin.com/in/daniil-kulakov-362a203b1"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><span>LinkedIn</span
+              ><span
+                ><span data-i18n="ui.name">Daniil Kulakov</span>
+                <span class="arrow" aria-hidden="true">↗</span></span
+              ></a
+            >
+            <a
+              href="https://wa.me/79517413464"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><span>WhatsApp</span
+              ><span
+                >+7 951 741 34 64
+                <span class="arrow" aria-hidden="true">↗</span></span
+              ></a
+            >
+            <a href="tel:+79517413464"
+              ><span data-i18n="ui.phone">Phone</span
+              ><span
+                >+7 951 741 34 64
+                <span class="arrow" aria-hidden="true">↗</span></span
+              ></a
+            >
           </div>
         </div>
       </section>
     </main>
-
-    <footer class="site-footer">
-      <div class="site-footer-inner">
-        <p class="site-footer-copy">&copy; 2026 Daniil Kulakov. IT Support Specialist.</p>
-        <nav class="site-footer-nav" aria-label="Footer">
-          <a href="#contact">Contact</a>
-          <a href="Resume/Daniil_Kulakov_IT_Support.pdf" target="_blank" rel="noreferrer">Resume</a>
-          <a href="mailto:dorelore5@gmail.com">Email</a>
-        </nav>
-      </div>
+    <footer class="site-footer wrap">
+      <p>
+        © <span data-year>2026</span>
+        <span data-i18n="ui.name">Daniil Kulakov</span
+        ><span class="footer-divider">/</span
+        ><span data-i18n="ui.role">IT Support Specialist</span>
+      </p>
+      <a href="#hero">↑ <span data-i18n="ui.portfolio">Portfolio</span></a>
     </footer>
-  </div>
-
-  <div class="video-modal" id="intro-video-modal" aria-hidden="true">
-    <div class="video-modal-backdrop" data-video-close></div>
-    <div class="video-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="intro-video-title" aria-describedby="intro-video-description">
-      <div class="video-modal-head">
-        <div>
-          <p id="intro-video-description">Video Introduction</p>
-          <h3 id="intro-video-title">Short English self-introduction</h3>
-        </div>
-        <button class="video-modal-close" type="button" data-video-close>Close</button>
+    <dialog
+      class="media-dialog video-dialog"
+      id="intro-video-modal"
+      aria-labelledby="intro-video-title"
+    >
+      <div class="dialog-toolbar">
+        <h2 id="intro-video-title" data-i18n="ui.videoTitle">
+          Introduction in English
+        </h2>
+        <button
+          class="dialog-close"
+          type="button"
+          data-close-dialog
+          data-label="close"
+        >
+          ×
+        </button>
       </div>
-      <div class="video-frame">
-        <video id="intro-video-player" controls preload="metadata" playsinline>
-          <source src="Video/introductory.mp4" type="video/mp4">
-        </video>
-      </div>
-    </div>
-  </div>
-
-  <script src="translations.js?v=20260906-1" defer></script>
-  <script src="project-data.js?v=20260906-1" defer></script>
-  <script src="script.js?v=20260906-1" defer></script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Daniil Kulakov",
-    "jobTitle": "IT Support Specialist",
-    "description": "Hands-on IT Support Specialist with expertise in Windows troubleshooting, hardware diagnostics, PC assembly, and Ubuntu VPS administration.",
-    "email": "mailto:dorelore5@gmail.com",
-    "telephone": "+7-951-741-34-64",
-    "sameAs": [
-      "https://linkedin.com/in/daniil-kulakov-362a203b1",
-      "https://t.me/neverlandfff"
-    ],
-    "knowsAbout": ["Windows Support", "PC Hardware", "Linux Administration", "Networking", "IT Support"]
-  }
-  </script>
-</body>
+      <video id="intro-video-player" controls preload="none" playsinline>
+        <source src="Video/動画_introductory.mp4" type="video/mp4" />
+      </video>
+    </dialog>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Daniil Kulakov",
+        "jobTitle": "IT Support Specialist",
+        "email": "mailto:dorelore5@gmail.com",
+        "sameAs": [
+          "https://linkedin.com/in/daniil-kulakov-362a203b1",
+          "https://t.me/neverlandfff"
+        ],
+        "knowsAbout": [
+          "Windows Support",
+          "PC Hardware",
+          "Linux Administration",
+          "Networking"
+        ]
+      }
+    </script>
+  </body>
 </html>

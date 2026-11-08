@@ -4,533 +4,1143 @@ window.portfolioTranslations = {
   index: {
     en: {
       title: "Daniil Kulakov | IT Support Specialist",
-      description: "Portfolio of Daniil Kulakov, an IT Support Specialist with 2+ years of Windows support experience across troubleshooting, hardware, networking basics, Microsoft 365, and Ubuntu VPS administration.",
-      nav: ["About", "Skills", "Projects", "Resume", "Contact"],
+      description:
+        "Portfolio of Daniil Kulakov, an IT Support Specialist with 2+ years of Windows support experience across troubleshooting, hardware, networking basics, Microsoft 365, and Ubuntu VPS administration.",
+      nav: [
+        "Selected work",
+        "About me",
+        "Technical skills",
+        "Resume & availability",
+        "Contact",
+      ],
       hero: {
-        role: "Daniil Kulakov / IT Support Specialist / Systems Support",
-        title: "Reliable IT support for Windows, hardware, and VPS infrastructure.",
-        text: "Hands-on IT Support Specialist delivering reliable Windows troubleshooting, hardware repairs, and routine Ubuntu VPS administration.",
-        actions: ["Contact Me", "View CV", "Watch Video"],
-        proof: [
-          ["Experience focus", "Windows support, troubleshooting, documentation"],
-          ["Hands-on work", "50+ systems built, upgraded, or repaired"],
-          ["Where I can work", "Open to Japan, South Korea, and Southeast Asia"]
-        ]
-      },
-      opsConsole: {
-        title: "Live support profile",
-        status: "Online",
-        nodes: ["Windows", "Hardware", "Linux", "Network"],
-        layers: [
-          {
-            title: "Windows support",
-            text: "L1/L2 troubleshooting, clean installs, drivers, recovery, user-ready setup."
-          },
-          {
-            title: "Hardware diagnostics",
-            text: "PSU, RAM, SSD, GPU, peripherals, assembly, upgrades, and replacement work."
-          },
-          {
-            title: "Linux and VPS",
-            text: "Ubuntu VPS, SSH, Apache, MySQL, WinSCP, updates, and routine maintenance."
-          },
-          {
-            title: "Network basics",
-            text: "IP addressing, Wi-Fi issues, router setup, connectivity checks, and isolation."
-          }
-        ],
-        logLines: [
-          "Intake issue and reproduce the behavior",
-          "Isolate software, hardware, or network layer",
-          "Document the repeatable fix"
-        ]
+        title: "IT support.\nFrom desktop\nto server.",
+        text: "2+ years of hands-on Windows support, hardware diagnostics and Ubuntu VPS administration.",
       },
       about: {
-        title: "Hands-on IT support experience with 2+ years in a small-office Windows environment.",
+        title: "Practical experience. Clear solutions.",
         copy: [
           "I provide L1/L2 IT support for Windows-based users, covering operating system issues, application troubleshooting, software setup, hardware diagnostics, and everyday connectivity problems.",
-          "My background combines user-facing support with practical technical execution, including incident handling, component replacement, repeatable fix documentation, and dependable day-to-day support work.",
-          "Alongside desktop support, I maintain Ubuntu VPS environments with SSH, Apache, MySQL, and WinSCP, giving me practical exposure to Linux administration, hosted services, and routine server upkeep."
+          "Alongside desktop support, I maintain Ubuntu VPS environments with SSH, Apache, MySQL, and WinSCP, giving me practical exposure to Linux administration, hosted services, and routine server upkeep.",
         ],
         facts: [
-          ["Experience", "KiliaService", "IT Support Technician / Junior System Administration Intern"],
-          ["Education", "IT Systems", "Specialist Diploma completed: June 2026"],
-          ["Languages", "Russian, English, Japanese", "Russian native, English B2, JLPT N2 Japanese"]
-        ]
+          [
+            "Experience",
+            "KiliaService",
+            "IT Support Technician / Junior System Administration Intern",
+          ],
+          [
+            "Education",
+            "IT Systems",
+            "Specialist Diploma completed: June 2026",
+          ],
+        ],
       },
       skills: {
-        title: "Built around support, troubleshooting, and dependable technical execution.",
+        title: "Support, systems & the work in between.",
         groups: [
-          ["Windows Support", ["Windows 7/10/11 installation, setup, and recovery", "Driver issues, software installation, update troubleshooting", "L1/L2 end-user issue handling and incident support"]],
-          ["Hardware & PC Assembly", ["50+ systems built, upgraded, or repaired", "Diagnostics for PSU, RAM, SSD, GPU, and peripherals", "Component replacement and stable workstation setup"]],
-          ["Networking Basics", ["IP addressing, connectivity troubleshooting, Wi-Fi issues", "Router configuration and basic network problem isolation", "TCP/IP fundamentals and entry-level routing awareness"]],
-          ["Linux & Remote Access", ["Ubuntu basics, file permissions, package updates", "SSH administration, WinSCP, Command Prompt, Terminal", "Apache, MySQL, and practical VPS maintenance"]],
-          ["Microsoft 365 & Identity", ["Confident day-to-day use of Microsoft 365 applications", "Working knowledge of Active Directory users, accounts, and permissions", "Comfortable supporting office productivity and access issues"]],
-          ["Documentation", ["Knowledge base style write-ups for common fixes", "Clear user communication and issue reporting", "Repeatable troubleshooting steps for faster resolution"]]
-        ]
+          [
+            "Windows Support",
+            [
+              "Windows 7/10/11 installation, setup, and recovery",
+              "Driver issues, software installation, update troubleshooting",
+              "L1/L2 end-user issue handling and incident support",
+            ],
+          ],
+          [
+            "Hardware & PC Assembly",
+            [
+              "50+ systems built, upgraded, or repaired",
+              "Diagnostics for PSU, RAM, SSD, GPU, and peripherals",
+              "Component replacement and stable workstation setup",
+            ],
+          ],
+          [
+            "Networking Basics",
+            [
+              "IP addressing, connectivity troubleshooting, Wi-Fi issues",
+              "Router configuration and basic network problem isolation",
+              "TCP/IP fundamentals and entry-level routing awareness",
+            ],
+          ],
+          [
+            "Linux & Remote Access",
+            [
+              "Ubuntu basics, file permissions, package updates",
+              "SSH administration, WinSCP, Command Prompt, Terminal",
+              "Apache, MySQL, and practical VPS maintenance",
+            ],
+          ],
+          [
+            "Microsoft 365 & Identity",
+            [
+              "Confident day-to-day use of Microsoft 365 applications",
+              "Working knowledge of Active Directory users, accounts, and permissions",
+              "Comfortable supporting office productivity and access issues",
+            ],
+          ],
+          [
+            "Documentation",
+            [
+              "Knowledge base style write-ups for common fixes",
+              "Clear user communication and issue reporting",
+              "Repeatable troubleshooting steps for faster resolution",
+            ],
+          ],
+        ],
       },
       projects: {
-        title: "Practical projects that show support skills beyond theory.",
         cards: [
-          ["Desktop support / hardware", "Windows Deployment, Repair, and PC Build Work", "Delivered Windows reinstallations, driver and software setup, hardware diagnostics, and hands-on build or upgrade work across 50+ user systems in real support scenarios.", [], "Details"],
-          ["Linux / hosting", "JKT Personal Website on Ubuntu VPS", "Set up and maintained a personal website on an Ubuntu VPS using Apache and MySQL, with server access handled through SSH and WinSCP.", [], "Details"],
-          ["Remote administration", "Self-Hosted VPN and Telegram Web App", "Configured a VPN server and supported a Telegram web application on Ubuntu VPS infrastructure, including updates and remote maintenance tasks.", [], "Details"],
-          ["Full-stack marketplace / PHP + MySQL", "MinatoCargo Global Marketplace Platform", "Built a multi-page marketplace with catalog browsing, product pages, seller workspace, admin tools, support flows, localization, currency handling, and content pages.", [], "Details"]
-        ]
+          [
+            "Desktop support / hardware",
+            "Windows & hardware",
+            "Delivered Windows reinstallations, driver and software setup, hardware diagnostics, and hands-on build or upgrade work across 50+ user systems in real support scenarios.",
+          ],
+          [
+            "Linux / hosting",
+            "Linux & hosting",
+            "Set up and maintained a personal website on an Ubuntu VPS using Apache and MySQL, with server access handled through SSH and WinSCP.",
+          ],
+          [
+            "Remote administration",
+            "VPS & Telegram",
+            "Configured a VPN server and supported a Telegram web application on Ubuntu VPS infrastructure, including updates and remote maintenance tasks.",
+          ],
+          [
+            "Full-stack marketplace / PHP + MySQL",
+            "MinatoCargo marketplace",
+            "Built a multi-page marketplace with catalog browsing, product pages, seller workspace, admin tools, support flows, localization, currency handling, and content pages.",
+          ],
+        ],
       },
       resume: {
-        title: "A recruiter-friendly summary for support and systems operations roles.",
-        panels: [
-          ["What I bring", ["Hands-on L1/L2 Windows support and user issue resolution", "Hardware diagnostics, PC assembly, upgrades, and workstation setup", "Networking basics, Microsoft 365, Active Directory awareness, and Ubuntu VPS support", "Clear documentation and communication with end users"]],
-          ["Availability", ["Open to Japan, South Korea, and Southeast Asia", "Also considering Armenia, Cyprus, and other suitable locations", "Visa sponsorship required for on-site roles", "Remote work possible immediately", "Available for on-site work and relocation"], "Open Resume PDF"]
-        ]
+        title: "Resume & availability",
       },
       contact: {
-        title: "Available for international IT support and systems support opportunities.",
+        title: "Let’s talk.",
         text: "If you are hiring for IT support, helpdesk, desktop support, or systems support, I am available for remote work and international relocation.",
-        labels: ["Email", "Phone", "WhatsApp", "Telegram", "LinkedIn"]
-      }
+      },
+      ui: {
+        name: "Daniil Kulakov",
+        role: "IT Support Specialist",
+        work: "Selected work",
+        about: "About me",
+        skills: "Technical skills",
+        resume: "Resume & availability",
+        contactTitle: "Let’s talk.",
+        viewProjects: "View projects",
+        viewResume: "View resume",
+        video: "Video introduction",
+        available: "Open to opportunities",
+        years: "Years in IT support",
+        systems: "Systems built, upgraded or repaired",
+        endUser: "End-user support",
+        aboutTitle: "Practical experience. Clear solutions.",
+        skillsTitle: "Support, systems & the work in between.",
+        background: "Experience & education",
+        languages: "Languages",
+        all: "All skills",
+        support: "Support",
+        system: "Systems",
+        process: "Process",
+        resumeLabel: "English resume",
+        pdf: "PDF · Opens in a new tab",
+        remote: "Remote work",
+        remoteText: "Available to start immediately",
+        relocation: "Relocation",
+        relocationText:
+          "Southeast Asia, Georgia, Armenia and Cyprus; open to other suitable locations.",
+        onsite: "On-site roles",
+        onsiteText: "Visa sponsorship required",
+        contact: "Contact",
+        phone: "Phone",
+        skip: "Skip to content",
+        menuOpen: "Open navigation",
+        menuClose: "Close navigation",
+        language: "Choose language",
+        close: "Close",
+        back: "Back to projects",
+        projectDetails: "Project details",
+        prev: "Previous image",
+        next: "Next image",
+        openImage: "Open image",
+        image: "Image",
+        zoomIn: "Zoom in",
+        zoomOut: "Zoom out",
+        reset: "Reset zoom",
+        notFound: "Project not found",
+        notFoundText:
+          "This project does not exist. Choose one of the projects in the portfolio.",
+        portfolio: "Portfolio",
+        myRole: "My role",
+        overview: "Overview",
+        tasks: "Key tasks",
+        outcome: "Outcome & learning",
+        tools: "Tools & technologies",
+        gallery: "Project gallery",
+        noImages: "No images available.",
+        galleryHint: "Click an image to enlarge it.",
+        videoTitle: "Introduction in English",
+        heroTitle: "IT support.\nFrom desktop\nto server.",
+        heroText:
+          "2+ years of hands-on Windows support, hardware diagnostics and Ubuntu VPS administration.",
+        copy: "Copy email",
+        copied: "Email copied",
+        copyError: "Could not copy. Use the email link.",
+        download: "Download resume",
+        pcTitle: "Windows & hardware",
+        jktTitle: "Linux & hosting",
+        telegramTitle: "VPS & Telegram",
+        minatoTitle: "MinatoCargo marketplace",
+      },
     },
     ru: {
       title: "Даниил Кулаков | Специалист технической поддержки",
-      description: "Портфолио Даниила Кулакова, специалиста технической поддержки с опытом работы с Windows, оборудованием, сетями, Microsoft 365 и администрированием Ubuntu VPS.",
-      nav: ["Обо мне", "Навыки", "Проекты", "Резюме", "Контакты"],
+      description:
+        "Портфолио Даниила Кулакова, специалиста технической поддержки с опытом работы с Windows, оборудованием, сетями, Microsoft 365 и администрированием Ubuntu VPS.",
+      nav: [
+        "Избранные проекты",
+        "Обо мне",
+        "Технические навыки",
+        "Резюме и работа",
+        "Контакты",
+      ],
       hero: {
-        role: "Даниил Кулаков / Специалист технической поддержки / Системная поддержка",
-        title: "Надёжная IT-поддержка Windows, оборудования и VPS-инфраструктуры.",
-        text: "Практическая техническая поддержка: диагностика Windows, ремонт оборудования и регулярное администрирование Ubuntu VPS.",
-        actions: ["Связаться со мной", "Открыть резюме", "Смотреть видео"],
-        proof: [
-          ["Основной опыт", "Поддержка Windows, диагностика, документация"],
-          ["Практическая работа", "Более 50 собранных, обновлённых или отремонтированных систем"],
-          ["Где могу работать", "Япония, Южная Корея и Юго-Восточная Азия"]
-        ]
-      },
-      opsConsole: {
-        title: "Профиль поддержки",
-        status: "Онлайн",
-        nodes: ["Windows", "Оборудование", "Linux", "Сеть"],
-        layers: [
-          { title: "Поддержка Windows", text: "Диагностика L1/L2, чистая установка, драйверы, восстановление и подготовка рабочего места." },
-          { title: "Диагностика оборудования", text: "Блоки питания, RAM, SSD, видеокарты, периферия, сборка, модернизация и замена компонентов." },
-          { title: "Linux и VPS", text: "Ubuntu VPS, SSH, Apache, MySQL, WinSCP, обновления и регулярное обслуживание." },
-          { title: "Основы сетей", text: "IP-адресация, проблемы Wi-Fi, настройка роутеров, проверка подключения и локализация неисправностей." }
-        ],
-        logLines: [
-          "Принять обращение и воспроизвести проблему",
-          "Определить программный, аппаратный или сетевой уровень",
-          "Задокументировать воспроизводимое решение"
-        ]
+        title: "IT-поддержка.\nОт компьютера\nдо сервера.",
+        text: "Более двух лет поддержки Windows, диагностики оборудования и администрирования Ubuntu VPS.",
       },
       about: {
-        title: "Более двух лет практического опыта IT-поддержки в офисной Windows-среде.",
+        title: "Практический опыт. Понятные решения.",
         copy: [
           "Оказываю L1/L2-поддержку пользователей Windows: решаю проблемы операционной системы и приложений, устанавливаю ПО, диагностирую оборудование и устраняю повседневные проблемы с подключением.",
-          "Мой опыт сочетает общение с пользователями и практическую техническую работу: обработку инцидентов, замену компонентов, документирование решений и ежедневную поддержку.",
-          "Помимо поддержки рабочих станций, обслуживаю Ubuntu VPS с SSH, Apache, MySQL и WinSCP, поэтому знаком с администрированием Linux, размещёнными сервисами и регулярным обслуживанием серверов."
+          "Помимо поддержки рабочих станций, обслуживаю Ubuntu VPS с SSH, Apache, MySQL и WinSCP, поэтому знаком с администрированием Linux, размещёнными сервисами и регулярным обслуживанием серверов.",
         ],
         facts: [
-          ["Опыт", "KiliaService", "Техник IT-поддержки / Стажёр, младший системный администратор"],
-          ["Образование", "Информационные системы", "Диплом специалиста: июнь 2026"],
-          ["Языки", "Русский, английский, японский", "Русский: родной, английский: B2, японский: JLPT N2"]
-        ]
+          [
+            "Опыт",
+            "KiliaService",
+            "Техник IT-поддержки / Стажёр, младший системный администратор",
+          ],
+          [
+            "Образование",
+            "Информационные системы",
+            "Диплом специалиста: июнь 2026",
+          ],
+        ],
       },
       skills: {
-        title: "Поддержка, диагностика и надёжное техническое выполнение задач.",
+        title: "Поддержка, системы и реальные задачи.",
         groups: [
-          ["Поддержка Windows", ["Установка, настройка и восстановление Windows 7/10/11", "Драйверы, установка ПО и устранение проблем с обновлениями", "L1/L2-поддержка пользователей и обработка инцидентов"]],
-          ["Оборудование и сборка ПК", ["Более 50 собранных, обновлённых или отремонтированных систем", "Диагностика блоков питания, RAM, SSD, GPU и периферии", "Замена компонентов и подготовка стабильных рабочих станций"]],
-          ["Основы сетей", ["IP-адресация, диагностика подключения и проблем Wi-Fi", "Настройка роутеров и базовая локализация сетевых проблем", "Основы TCP/IP и начальное понимание маршрутизации"]],
-          ["Linux и удалённый доступ", ["Основы Ubuntu, права файлов и обновление пакетов", "Администрирование через SSH, WinSCP, командную строку и терминал", "Apache, MySQL и практическое обслуживание VPS"]],
-          ["Microsoft 365 и учётные записи", ["Уверенная повседневная работа с приложениями Microsoft 365", "Базовые знания пользователей, учётных записей и прав Active Directory", "Поддержка офисных приложений и решение проблем с доступом"]],
-          ["Документация", ["Статьи базы знаний по типовым проблемам", "Понятное общение с пользователями и описание инцидентов", "Повторяемые инструкции для более быстрого решения проблем"]]
-        ]
+          [
+            "Поддержка Windows",
+            [
+              "Установка, настройка и восстановление Windows 7/10/11",
+              "Драйверы, установка ПО и устранение проблем с обновлениями",
+              "L1/L2-поддержка пользователей и обработка инцидентов",
+            ],
+          ],
+          [
+            "Оборудование и сборка ПК",
+            [
+              "Более 50 собранных, обновлённых или отремонтированных систем",
+              "Диагностика блоков питания, RAM, SSD, GPU и периферии",
+              "Замена компонентов и подготовка стабильных рабочих станций",
+            ],
+          ],
+          [
+            "Основы сетей",
+            [
+              "IP-адресация, диагностика подключения и проблем Wi-Fi",
+              "Настройка роутеров и базовая локализация сетевых проблем",
+              "Основы TCP/IP и начальное понимание маршрутизации",
+            ],
+          ],
+          [
+            "Linux и удалённый доступ",
+            [
+              "Основы Ubuntu, права файлов и обновление пакетов",
+              "Администрирование через SSH, WinSCP, командную строку и терминал",
+              "Apache, MySQL и практическое обслуживание VPS",
+            ],
+          ],
+          [
+            "Microsoft 365 и учётные записи",
+            [
+              "Уверенная повседневная работа с приложениями Microsoft 365",
+              "Базовые знания пользователей, учётных записей и прав Active Directory",
+              "Поддержка офисных приложений и решение проблем с доступом",
+            ],
+          ],
+          [
+            "Документация",
+            [
+              "Статьи базы знаний по типовым проблемам",
+              "Понятное общение с пользователями и описание инцидентов",
+              "Повторяемые инструкции для более быстрого решения проблем",
+            ],
+          ],
+        ],
       },
       projects: {
-        title: "Практические проекты, демонстрирующие навыки поддержки.",
         cards: [
-          ["Поддержка рабочих станций / оборудование", "Развёртывание Windows, ремонт и сборка ПК", "Переустановка Windows, настройка драйверов и ПО, диагностика оборудования, сборка и модернизация более 50 пользовательских систем.", [], "Подробнее"],
-          ["Linux / хостинг", "Персональный сайт JKT на Ubuntu VPS", "Развернул и обслуживал персональный сайт на Ubuntu VPS с Apache и MySQL, используя SSH и WinSCP для управления сервером.", [], "Подробнее"],
-          ["Удалённое администрирование", "Собственный VPN и веб-приложение Telegram", "Настроил VPN-сервер и поддерживал веб-приложение Telegram на Ubuntu VPS, включая обновления и удалённое обслуживание.", [], "Подробнее"],
-          ["Full-stack маркетплейс / PHP + MySQL", "Глобальная платформа MinatoCargo", "Создал многостраничный маркетплейс с каталогом, карточками товаров, кабинетами продавцов, инструментами администратора, локализацией и поддержкой валют.", [], "Подробнее"]
-        ]
+          [
+            "Поддержка рабочих станций / оборудование",
+            "Windows и оборудование",
+            "Переустановка Windows, настройка драйверов и ПО, диагностика оборудования, сборка и модернизация более 50 пользовательских систем.",
+          ],
+          [
+            "Linux / хостинг",
+            "Linux и хостинг",
+            "Развернул и обслуживал персональный сайт на Ubuntu VPS с Apache и MySQL, используя SSH и WinSCP для управления сервером.",
+          ],
+          [
+            "Удалённое администрирование",
+            "VPS и Telegram",
+            "Настроил VPN-сервер и поддерживал веб-приложение Telegram на Ubuntu VPS, включая обновления и удалённое обслуживание.",
+          ],
+          [
+            "Full-stack маркетплейс / PHP + MySQL",
+            "Маркетплейс MinatoCargo",
+            "Создал многостраничный маркетплейс с каталогом, карточками товаров, кабинетами продавцов, инструментами администратора, локализацией и поддержкой валют.",
+          ],
+        ],
       },
       resume: {
-        title: "Краткое резюме для вакансий технической и системной поддержки.",
-        panels: [
-          ["Что я предлагаю", ["Практическая L1/L2-поддержка Windows и решение пользовательских проблем", "Диагностика оборудования, сборка и модернизация ПК, подготовка рабочих мест", "Основы сетей, Microsoft 365, Active Directory и поддержка Ubuntu VPS", "Понятная документация и общение с пользователями"]],
-          ["Доступность", ["Открыт к работе в Японии, Южной Корее и Юго-Восточной Азии", "Также рассматриваю Армению, Кипр и другие подходящие локации", "Для работы на месте требуется визовая поддержка", "Удалённая работа возможна сразу", "Готов к работе на месте и релокации"], "Открыть резюме PDF"]
-        ]
+        title: "Резюме и работа",
       },
       contact: {
-        title: "Открыт к международным предложениям в технической и системной поддержке.",
+        title: "Давайте обсудим работу.",
         text: "Готов обсудить вакансии в IT-поддержке, helpdesk, поддержке рабочих станций и систем. Доступен для удалённой работы и международной релокации.",
-        labels: ["Email", "Телефон", "WhatsApp", "Telegram", "LinkedIn"]
-      }
+      },
+      ui: {
+        name: "Даниил Кулаков",
+        role: "Специалист IT-поддержки",
+        work: "Избранные проекты",
+        about: "Обо мне",
+        skills: "Технические навыки",
+        resume: "Резюме и работа",
+        contactTitle: "Давайте обсудим работу.",
+        viewProjects: "Смотреть проекты",
+        viewResume: "Открыть резюме",
+        video: "Видеознакомство",
+        available: "Открыт к предложениям",
+        years: "Года в IT-поддержке",
+        systems: "Собранных, обновлённых или отремонтированных ПК",
+        endUser: "Поддержка пользователей",
+        aboutTitle: "Практический опыт. Понятные решения.",
+        skillsTitle: "Поддержка, системы и реальные задачи.",
+        background: "Опыт и образование",
+        languages: "Языки",
+        all: "Все навыки",
+        support: "Поддержка",
+        system: "Системы",
+        process: "Процессы",
+        resumeLabel: "Резюме на английском",
+        pdf: "PDF · Откроется в новой вкладке",
+        remote: "Удалённая работа",
+        remoteText: "Могу приступить сразу",
+        relocation: "Релокация",
+        relocationText:
+          "Юго-Восточная Азия, Грузия, Армения и Кипр. Рассмотрю и другие подходящие направления.",
+        onsite: "Работа на месте",
+        onsiteText: "Нужна визовая поддержка",
+        contact: "Контакты",
+        phone: "Телефон",
+        skip: "Перейти к содержимому",
+        menuOpen: "Открыть навигацию",
+        menuClose: "Закрыть навигацию",
+        language: "Выбрать язык",
+        close: "Закрыть",
+        back: "Назад к проектам",
+        projectDetails: "О проекте",
+        prev: "Предыдущее изображение",
+        next: "Следующее изображение",
+        openImage: "Увеличить изображение",
+        image: "Изображение",
+        zoomIn: "Увеличить",
+        zoomOut: "Уменьшить",
+        reset: "Сбросить масштаб",
+        notFound: "Проект не найден",
+        notFoundText:
+          "Такого проекта нет. Выберите один из проектов в портфолио.",
+        portfolio: "Портфолио",
+        myRole: "Моя роль",
+        overview: "Обзор",
+        tasks: "Основные задачи",
+        outcome: "Результат и опыт",
+        tools: "Инструменты и технологии",
+        gallery: "Галерея проекта",
+        noImages: "Изображения пока не добавлены.",
+        galleryHint: "Нажмите на изображение, чтобы увеличить.",
+        videoTitle: "Знакомство на английском",
+        heroTitle: "IT-поддержка.\nОт компьютера\nдо сервера.",
+        heroText:
+          "Более двух лет поддержки Windows, диагностики оборудования и администрирования Ubuntu VPS.",
+        copy: "Скопировать email",
+        copied: "Email скопирован",
+        copyError: "Не удалось скопировать. Нажмите на адрес почты.",
+        download: "Скачать резюме",
+        pcTitle: "Windows и оборудование",
+        jktTitle: "Linux и хостинг",
+        telegramTitle: "VPS и Telegram",
+        minatoTitle: "Маркетплейс MinatoCargo",
+      },
     },
     ja: {
       title: "Daniil Kulakov | ITサポートスペシャリスト",
-      description: "Windowsサポート、トラブルシューティング、ハードウェア、ネットワーク基礎、Ubuntu VPS運用を強みとするDaniil Kulakovのポートフォリオ。",
-      nav: ["概要", "スキル", "プロジェクト", "履歴書", "連絡先"],
+      description:
+        "Windowsサポート、トラブルシューティング、ハードウェア、ネットワーク基礎、Ubuntu VPS運用を強みとするDaniil Kulakovのポートフォリオ。",
+      nav: [
+        "主なプロジェクト",
+        "自己紹介",
+        "技術スキル",
+        "履歴書・就業条件",
+        "連絡先",
+      ],
       hero: {
-        role: "Daniil Kulakov / ITサポートスペシャリスト / システムサポート",
-        title: "Windows、ハードウェア、VPSインフラにおける信頼できるITサポートを提供します。",
-        text: "実践的なトラブルシューティング、PCの組み立て・修理、Linuxサーバー管理およびUbuntu VPS保守を通じ、安定したシステム運用を支援します。",
-        actions: ["連絡する", "履歴書を見る", "動画を見る"],
-        proof: [
-          ["経験分野", "Windowsサポート、トラブル対応、ドキュメント作成"],
-          ["実務経験", "50台以上のPCを組立・アップグレード・修理"],
-          ["勤務可能な地域", "日本、韓国、東南アジアでの勤務を検討できます"]
-        ]
-      },
-      opsConsole: {
-        title: "サポートプロファイル",
-        status: "オンライン",
-        nodes: ["Windows", "ハードウェア", "Linux", "ネット"],
-        layers: [
-          {
-            title: "Windowsサポート",
-            text: "L1/L2トラブルシューティング、クリーンインストール、ドライバー設定、システム復旧、初期セットアップ。"
-          },
-          {
-            title: "ハードウェア診断",
-            text: "電源、RAM、SSD、グラフィックボード、周辺機器、組立、アップグレード、部品交換。"
-          },
-          {
-            title: "Linux & VPS",
-            text: "Ubuntu VPS、SSHリモート接続、Apache、MySQL、WinSCPを用いたファイル転送と定期保守。"
-          },
-          {
-            title: "ネットワーク基礎",
-            text: "IPアドレス設定、Wi-Fi接続トラブル対応、ルーター設定、疎通確認、ネットワーク隔離試験。"
-          }
-        ],
-        logLines: [
-          "障害状況の聞き取りと事象の再現確認",
-          "ソフトウェア、ハードウェア、ネットワーク層の切り分け",
-          "トラブルシューティング手順の記録と再発防止"
-        ]
+        title: "ITサポート。\nPCから\nサーバーまで。",
+        text: "2年以上のWindowsサポート、ハードウェア診断、Ubuntu VPS管理の実務経験。",
       },
       about: {
-        title: "実務ベースのサポート経験があり、システムサポートの基盤を持つ人材です。",
+        title: "実務経験に基づく、確かな対応。",
         copy: [
           "Windows環境の導入、障害対応、ハードウェア診断、ソフトウェア設定、日常的な接続トラブル対応を行っています。",
-          "ユーザー対応のITサポートと、部品交換や再発防止のための手順書作成のような実務的な技術作業を両立してきました。",
-          "また、SSH、Apache、MySQL、WinSCPを使ってUbuntu VPSも運用しており、Linux管理と日常的なサーバ保守の基礎があります。"
+          "また、SSH、Apache、MySQL、WinSCPを使ってUbuntu VPSも運用しており、Linux管理と日常的なサーバ保守の基礎があります。",
         ],
         facts: [
-          ["経験", "KiliaService", "ITサポート技術者 / ジュニアシステム管理インターン"],
-          ["\u5b66\u6b74", "IT / \u60c5\u5831\u30b7\u30b9\u30c6\u30e0\u3068\u30d7\u30ed\u30b0\u30e9\u30df\u30f3\u30b0", "\u5c02\u9580\u30c7\u30a3\u30d7\u30ed\u30de\u4fee\u4e86: 2026\u5e746\u6708"],
-          ["言語", "ロシア語、英語、日本語", "ロシア語ネイティブ、英語B2、日本語JLPT N2"]
-        ]
+          [
+            "経験",
+            "KiliaService",
+            "ITサポート技術者 / ジュニアシステム管理インターン",
+          ],
+          [
+            "学歴",
+            "IT / 情報システムとプログラミング",
+            "専門ディプロマ修了: 2026年6月",
+          ],
+        ],
       },
       skills: {
-        title: "サポート、障害対応、安定した技術実行に基づく構成です。",
+        title: "サポートからシステム運用まで。",
         groups: [
-          ["Windowsサポート", ["Windows 7/10/11 の導入、設定、復旧", "ドライバー問題、ソフト導入、更新トラブル対応", "L1/L2 エンドユーザーサポート対応"]],
-          ["ハードウェア / PC組立", ["50台以上のPC組立・修理・アップグレード", "PSU、RAM、SSD、GPU、周辺機器の診断", "部品交換と安定した作業環境構築"]],
-          ["ネットワーク基礎", ["IPアドレス、接続トラブル、Wi-Fi障害", "ルーター設定と基本的な原因切り分け", "TCP/IP基礎と初級ルーティング理解"]],
-          ["Linux / リモート操作", ["Ubuntu基礎、権限、更新管理", "SSH、WinSCP、Command Prompt、Terminal", "Apache、MySQL、VPS日常保守"]],
-          ["Microsoft 365 / ID管理", ["Microsoft 365 アプリケーションの日常利用に対応", "Active Directory のユーザー、アカウント、権限に関する基礎知識", "オフィス業務とアクセス関連の問題をサポート可能"]],
-          ["ドキュメント", ["よくある問題のナレッジベース作成", "明確なユーザー対応と報告", "再利用可能なトラブルシュート手順"]]
-        ]
+          [
+            "Windowsサポート",
+            [
+              "Windows 7/10/11 の導入、設定、復旧",
+              "ドライバー問題、ソフト導入、更新トラブル対応",
+              "L1/L2 エンドユーザーサポート対応",
+            ],
+          ],
+          [
+            "ハードウェア / PC組立",
+            [
+              "50台以上のPC組立・修理・アップグレード",
+              "PSU、RAM、SSD、GPU、周辺機器の診断",
+              "部品交換と安定した作業環境構築",
+            ],
+          ],
+          [
+            "ネットワーク基礎",
+            [
+              "IPアドレス、接続トラブル、Wi-Fi障害",
+              "ルーター設定と基本的な原因切り分け",
+              "TCP/IP基礎と初級ルーティング理解",
+            ],
+          ],
+          [
+            "Linux / リモート操作",
+            [
+              "Ubuntu基礎、権限、更新管理",
+              "SSH、WinSCP、Command Prompt、Terminal",
+              "Apache、MySQL、VPS日常保守",
+            ],
+          ],
+          [
+            "Microsoft 365 / ID管理",
+            [
+              "Microsoft 365 アプリケーションの日常利用に対応",
+              "Active Directory のユーザー、アカウント、権限に関する基礎知識",
+              "オフィス業務とアクセス関連の問題をサポート可能",
+            ],
+          ],
+          [
+            "ドキュメント",
+            [
+              "よくある問題のナレッジベース作成",
+              "明確なユーザー対応と報告",
+              "再利用可能なトラブルシュート手順",
+            ],
+          ],
+        ],
       },
       projects: {
-        title: "理論だけでなく実務力を示すプロジェクトです。",
         cards: [
-          ["デスクトップサポート / ハードウェア", "Windows展開・修理・PC組立業務", "Windows再導入、ドライバーやソフト設定、ハード故障診断、50台以上のPC組立を実施しました。", [], "詳細を見る"],
-          ["Linux / ホスティング", "Ubuntu VPS上のJKT個人サイト", "Apache と MySQL を用いて Ubuntu VPS 上で個人サイトを構築・運用し、SSH と WinSCP で管理しました。", [], "詳細を見る"],
-          ["リモート管理", "セルフホストVPNとTelegram Web App", "Ubuntu VPS上でVPNサーバーとTelegram Webアプリを構築・保守し、更新やリモート管理を行いました。", [], "詳細を見る"],
-          ["フルスタックマーケットプレイス / PHP + MySQL", "MinatoCargo グローバルマーケットプレイス", "カタログ、商品ページ、販売者ワークスペース、管理者ツール、サポート導線、多言語対応、通貨処理、コンテンツページを含む大規模なマーケットプレイスを構築しました。", [], "詳細を見る"]
-        ]
+          [
+            "デスクトップサポート / ハードウェア",
+            "Windows・ハードウェア",
+            "Windows再導入、ドライバーやソフト設定、ハード故障診断、50台以上のPC組立を実施しました。",
+          ],
+          [
+            "Linux / ホスティング",
+            "Linux・ホスティング",
+            "Apache と MySQL を用いて Ubuntu VPS 上で個人サイトを構築・運用し、SSH と WinSCP で管理しました。",
+          ],
+          [
+            "リモート管理",
+            "VPS・Telegram",
+            "Ubuntu VPS上でVPNサーバーとTelegram Webアプリを構築・保守し、更新やリモート管理を行いました。",
+          ],
+          [
+            "フルスタックマーケットプレイス / PHP + MySQL",
+            "MinatoCargoマーケットプレイス",
+            "カタログ、商品ページ、販売者ワークスペース、管理者ツール、サポート導線、多言語対応、通貨処理、コンテンツページを含む大規模なマーケットプレイスを構築しました。",
+          ],
+        ],
       },
       resume: {
-        title: "サポート職とシステム運用支援職向けの要点をまとめた内容です。",
-        panels: [
-          ["強み", ["実務的なL1/L2 Windowsサポート", "ハードウェア診断、PC組立、作業端末準備", "ネットワーク基礎、Microsoft 365、Active Directory基礎、Ubuntu VPS運用", "明確なドキュメント作成とユーザー対応"]],
-          ["就業条件", ["日本、韓国、東南アジアでの勤務を検討できます", "アルメニア、キプロス、その他の適した地域も検討可能です", "現地勤務ではビザスポンサーが必要です", "リモート勤務はすぐ可能です", "現地勤務と海外移住に対応可能です"], "履歴書PDFを開く"]
-        ]
+        title: "履歴書・就業条件",
       },
       contact: {
-        title: "海外のITサポート職・システムサポート職の機会に対応可能です。",
+        title: "お話ししましょう。",
         text: "ITサポート、ヘルプデスク、デスクトップサポート、システムサポートの採用があれば、リモートまたは移住前提でご相談いただけます。",
-        labels: ["メール", "電話", "WhatsApp", "Telegram", "LinkedIn"]
-      }
+      },
+      ui: {
+        name: "Daniil Kulakov",
+        role: "ITサポートスペシャリスト",
+        work: "主なプロジェクト",
+        about: "自己紹介",
+        skills: "技術スキル",
+        resume: "履歴書・就業条件",
+        contactTitle: "お話ししましょう。",
+        viewProjects: "プロジェクトを見る",
+        viewResume: "履歴書を見る",
+        video: "自己紹介動画",
+        available: "仕事の機会を募集中",
+        years: "ITサポートの経験年数",
+        systems: "組み立て・更新・修理したPC",
+        endUser: "ユーザーサポート",
+        aboutTitle: "実務経験に基づく、確かな対応。",
+        skillsTitle: "サポートからシステム運用まで。",
+        background: "職歴・学歴",
+        languages: "言語",
+        all: "すべて",
+        support: "サポート",
+        system: "システム",
+        process: "プロセス",
+        resumeLabel: "英語の履歴書",
+        pdf: "PDF · 新しいタブで開きます",
+        remote: "リモート勤務",
+        remoteText: "すぐに勤務開始可能",
+        relocation: "海外移住",
+        relocationText:
+          "東南アジア、ジョージア、アルメニア、キプロス。その他の地域も検討します。",
+        onsite: "現地勤務",
+        onsiteText: "ビザのスポンサーが必要",
+        contact: "連絡先",
+        phone: "電話",
+        skip: "コンテンツへスキップ",
+        menuOpen: "メニューを開く",
+        menuClose: "メニューを閉じる",
+        language: "言語を選択",
+        close: "閉じる",
+        back: "プロジェクトに戻る",
+        projectDetails: "プロジェクト詳細",
+        prev: "前の画像",
+        next: "次の画像",
+        openImage: "画像を拡大",
+        image: "画像",
+        zoomIn: "拡大",
+        zoomOut: "縮小",
+        reset: "倍率をリセット",
+        notFound: "プロジェクトが見つかりません",
+        notFoundText: "ポートフォリオからプロジェクトを選択してください。",
+        portfolio: "ポートフォリオ",
+        myRole: "担当内容",
+        overview: "概要",
+        tasks: "主な作業",
+        outcome: "成果・学んだこと",
+        tools: "使用技術",
+        gallery: "ギャラリー",
+        noImages: "画像がありません。",
+        galleryHint: "画像をクリックすると拡大できます。",
+        videoTitle: "英語の自己紹介",
+        heroTitle: "ITサポート。\nPCから\nサーバーまで。",
+        heroText:
+          "2年以上のWindowsサポート、ハードウェア診断、Ubuntu VPS管理の実務経験。",
+        copy: "メールをコピー",
+        copied: "コピーしました",
+        copyError: "メールのリンクをご利用ください。",
+        download: "履歴書をダウンロード",
+        pcTitle: "Windows・ハードウェア",
+        jktTitle: "Linux・ホスティング",
+        telegramTitle: "VPS・Telegram",
+        minatoTitle: "MinatoCargoマーケットプレイス",
+      },
     },
     ms: {
       title: "Daniil Kulakov | Pakar Sokongan IT",
-      description: "Portfolio Daniil Kulakov, Pakar Sokongan IT dengan fokus pada sokongan Windows, troubleshooting, perkakasan, asas rangkaian, asas Linux, dan Ubuntu VPS.",
-      nav: ["Tentang", "Kemahiran", "Projek", "Resume", "Hubungi"],
+      description:
+        "Portfolio Daniil Kulakov, Pakar Sokongan IT dengan fokus pada sokongan Windows, troubleshooting, perkakasan, asas rangkaian, asas Linux, dan Ubuntu VPS.",
+      nav: [
+        "Projek pilihan",
+        "Tentang saya",
+        "Kemahiran teknikal",
+        "Resume & ketersediaan",
+        "Hubungi",
+      ],
       hero: {
-        role: "Daniil Kulakov / Pakar Sokongan IT / Sokongan Sistem",
-        title: "Sokongan IT yang boleh dipercayai untuk Windows, perkakasan, dan infrastruktur VPS.",
-        text: "Pakar Sokongan IT yang praktikal menyampaikan troubleshooting Windows yang boleh dipercayai, pembaikan perkakasan, dan pentadbiran Ubuntu VPS harian.",
-        actions: ["Hubungi Saya", "Lihat CV", "Tonton Video"],
-        proof: [
-          ["Fokus pengalaman", "Sokongan Windows, troubleshooting, dokumentasi"],
-          ["Kerja praktikal", "50+ PC dipasang, dinaik taraf, atau dibaiki"],
-          ["Lokasi kerja", "Terbuka untuk Jepun, Korea Selatan dan Asia Tenggara"]
-        ]
-      },
-      opsConsole: {
-        title: "Profil sokongan IT",
-        status: "Aktif",
-        nodes: ["Windows", "Perkakasan", "Linux", "Rangkaian"],
-        layers: [
-          {
-            title: "Sokongan Windows",
-            text: "Troubleshooting L1/L2, pemasangan bersih, driver, pemulihan henti, setup pengguna."
-          },
-          {
-            title: "Diagnostik Perkakasan",
-            text: "PSU, RAM, SSD, GPU, periferal, pemasangan sistem, naik taraf, penggantian komponen."
-          },
-          {
-            title: "Linux & VPS",
-            text: "Ubuntu VPS, SSH, Apache, MySQL, WinSCP, kemas kini pakej, penyelenggaraan rutin."
-          },
-          {
-            title: "Asas Rangkaian",
-            text: "Alamat IP, pemulihan Wi-Fi, konfigurasi router, pemeriksaan ping, pengasingan gangguan."
-          }
-        ],
-        logLines: [
-          "Terima laporan isu dan uji semula tingkah laku sistem",
-          "Asingkan punca sama ada perisian, perkakasan, atau rangkaian",
-          "Dokumenkan langkah penyelesaian masalah untuk rujukan"
-        ]
+        title: "Sokongan IT.\nDari desktop\nke server.",
+        text: "Lebih 2 tahun pengalaman sokongan Windows, diagnostik perkakasan dan pentadbiran Ubuntu VPS.",
       },
       about: {
-        title: "Pengalaman sokongan praktikal dengan asas yang kukuh dalam sokongan sistem.",
+        title: "Pengalaman praktikal. Penyelesaian jelas.",
         copy: [
           "Saya menyokong pengguna berasaskan Windows dengan pemasangan, troubleshooting, diagnostik perkakasan, konfigurasi perisian, dan isu sambungan harian.",
-          "Pengalaman saya menggabungkan sokongan IT berhadapan pengguna dengan kerja teknikal praktikal, daripada mengganti komponen rosak hingga menulis dokumentasi penyelesaian yang boleh diulang.",
-          "Selain sokongan desktop, saya juga menyelenggara Ubuntu VPS menggunakan SSH, Apache, MySQL, dan WinSCP, yang memberi saya asas kukuh dalam pentadbiran Linux dan penyelenggaraan pelayan."
+          "Selain sokongan desktop, saya juga menyelenggara Ubuntu VPS menggunakan SSH, Apache, MySQL, dan WinSCP, yang memberi saya asas kukuh dalam pentadbiran Linux dan penyelenggaraan pelayan.",
         ],
         facts: [
-          ["Experience", "KiliaService", "Juruteknik Sokongan IT / Intern Pentadbiran Sistem Junior"],
+          [
+            "Experience",
+            "KiliaService",
+            "Juruteknik Sokongan IT / Intern Pentadbiran Sistem Junior",
+          ],
           ["Education", "IT Systems", "Diploma specialist completed: Jun 2026"],
-          ["Languages", "Rusia, Inggeris, Jepun", "Rusia natif, Inggeris B2, Jepun JLPT N2"]
-        ]
+        ],
       },
       skills: {
-        title: "Dibina berasaskan sokongan, troubleshooting, dan pelaksanaan teknikal yang boleh diharap.",
+        title: "Sokongan, sistem & kerja sebenar.",
         groups: [
-          ["Sokongan Windows", ["Pemasangan, konfigurasi, dan pemulihan Windows 7/10/11", "Masalah driver, pemasangan perisian, troubleshooting kemas kini", "Pengendalian isu pengguna L1/L2 dan sokongan insiden"]],
-          ["Perkakasan & Pemasangan PC", ["50+ binaan, naik taraf, dan pembaikan PC", "Diagnostik PSU, RAM, SSD, GPU, dan periferal", "Penggantian komponen dan penyediaan workstation stabil"]],
-          ["Asas Rangkaian", ["Alamat IP, troubleshooting sambungan, isu Wi-Fi", "Konfigurasi router dan pengasingan masalah rangkaian asas", "Asas TCP/IP dan pemahaman routing peringkat awal"]],
-          ["Linux & Akses Jauh", ["Asas Ubuntu, kebenaran fail, dan kemas kini pakej", "Pentadbiran SSH, WinSCP, Command Prompt, Terminal", "Apache, MySQL, dan penyelenggaraan VPS praktikal"]],
-          ["Microsoft 365 & Identiti", ["Yakin menggunakan aplikasi Microsoft 365 untuk kerja harian", "Pengetahuan asas Active Directory untuk pengguna, akaun, dan kebenaran", "Selesa menyokong isu produktiviti pejabat dan akses"]],
-          ["Dokumentasi", ["Penulisan knowledge base untuk isu biasa", "Komunikasi jelas dengan pengguna dan pelaporan isu", "Langkah troubleshooting yang boleh diulang untuk penyelesaian lebih pantas"]]
-        ]
+          [
+            "Sokongan Windows",
+            [
+              "Pemasangan, konfigurasi, dan pemulihan Windows 7/10/11",
+              "Masalah driver, pemasangan perisian, troubleshooting kemas kini",
+              "Pengendalian isu pengguna L1/L2 dan sokongan insiden",
+            ],
+          ],
+          [
+            "Perkakasan & Pemasangan PC",
+            [
+              "50+ binaan, naik taraf, dan pembaikan PC",
+              "Diagnostik PSU, RAM, SSD, GPU, dan periferal",
+              "Penggantian komponen dan penyediaan workstation stabil",
+            ],
+          ],
+          [
+            "Asas Rangkaian",
+            [
+              "Alamat IP, troubleshooting sambungan, isu Wi-Fi",
+              "Konfigurasi router dan pengasingan masalah rangkaian asas",
+              "Asas TCP/IP dan pemahaman routing peringkat awal",
+            ],
+          ],
+          [
+            "Linux & Akses Jauh",
+            [
+              "Asas Ubuntu, kebenaran fail, dan kemas kini pakej",
+              "Pentadbiran SSH, WinSCP, Command Prompt, Terminal",
+              "Apache, MySQL, dan penyelenggaraan VPS praktikal",
+            ],
+          ],
+          [
+            "Microsoft 365 & Identiti",
+            [
+              "Yakin menggunakan aplikasi Microsoft 365 untuk kerja harian",
+              "Pengetahuan asas Active Directory untuk pengguna, akaun, dan kebenaran",
+              "Selesa menyokong isu produktiviti pejabat dan akses",
+            ],
+          ],
+          [
+            "Dokumentasi",
+            [
+              "Penulisan knowledge base untuk isu biasa",
+              "Komunikasi jelas dengan pengguna dan pelaporan isu",
+              "Langkah troubleshooting yang boleh diulang untuk penyelesaian lebih pantas",
+            ],
+          ],
+        ],
       },
       projects: {
-        title: "Projek praktikal yang menunjukkan kemahiran sokongan melebihi teori.",
         cards: [
-          ["Sokongan desktop / perkakasan", "Kerja Deployment, Repair, dan PC Build Windows", "Memasang semula Windows, mengkonfigurasi driver dan perisian, mendiagnosis kerosakan perkakasan, dan memasang lebih 50 PC untuk kegunaan sebenar.", [], "Butiran"],
-          ["Linux / hosting", "Laman Web Peribadi JKT di Ubuntu VPS", "Menyediakan dan menyelenggara laman web peribadi di Ubuntu VPS menggunakan Apache dan MySQL, dengan akses pelayan melalui SSH dan WinSCP.", [], "Butiran"],
-          ["Pentadbiran jauh", "VPN Self-Hosted dan Telegram Web App", "Mengkonfigurasi pelayan VPN dan menyokong Telegram web app di Ubuntu VPS, termasuk kemas kini dan tugasan penyelenggaraan jauh.", [], "Butiran"],
-          ["Marketplace full-stack / PHP + MySQL", "Platform Marketplace Global MinatoCargo", "Membina marketplace berbilang halaman dengan katalog, halaman produk, workspace penjual, alat admin, aliran sokongan, lokalisasi, mata wang dan halaman kandungan.", [], "Butiran"]
-        ]
+          [
+            "Sokongan desktop / perkakasan",
+            "Windows & perkakasan",
+            "Memasang semula Windows, mengkonfigurasi driver dan perisian, mendiagnosis kerosakan perkakasan, dan memasang lebih 50 PC untuk kegunaan sebenar.",
+          ],
+          [
+            "Linux / hosting",
+            "Linux & hosting",
+            "Menyediakan dan menyelenggara laman web peribadi di Ubuntu VPS menggunakan Apache dan MySQL, dengan akses pelayan melalui SSH dan WinSCP.",
+          ],
+          [
+            "Pentadbiran jauh",
+            "VPS & Telegram",
+            "Mengkonfigurasi pelayan VPN dan menyokong Telegram web app di Ubuntu VPS, termasuk kemas kini dan tugasan penyelenggaraan jauh.",
+          ],
+          [
+            "Marketplace full-stack / PHP + MySQL",
+            "Marketplace MinatoCargo",
+            "Membina marketplace berbilang halaman dengan katalog, halaman produk, workspace penjual, alat admin, aliran sokongan, lokalisasi, mata wang dan halaman kandungan.",
+          ],
+        ],
       },
       resume: {
-        title: "Ringkasan mesra perekrut untuk peranan sokongan dan sokongan infrastruktur.",
-        panels: [
-          ["Apa yang saya bawa", ["Pengalaman hands-on sokongan Windows L1/L2 dan penyelesaian isu pengguna", "Diagnostik perkakasan, pemasangan PC, dan penyediaan workstation", "Asas rangkaian, Microsoft 365, asas Active Directory, dan sokongan Ubuntu VPS", "Dokumentasi dan komunikasi yang jelas dengan pengguna akhir"]],
-          ["Ketersediaan", ["Terbuka untuk bekerja di Jepun, Korea Selatan dan Asia Tenggara", "Juga mempertimbangkan Armenia, Cyprus dan lokasi sesuai yang lain", "Penajaan visa diperlukan untuk peranan on-site", "Boleh mula kerja remote dengan segera", "Sedia untuk kerja on-site dan relokasi"], "Buka Resume PDF"]
-        ]
+        title: "Resume & ketersediaan",
       },
       contact: {
-        title: "Tersedia untuk peluang sokongan IT antarabangsa dan sokongan sistem.",
+        title: "Mari berbincang.",
         text: "Jika anda sedang mengambil untuk IT support, helpdesk, desktop support, atau sokongan sistem, saya sedia berbincang tentang peluang remote atau relokasi.",
-        labels: ["Emel", "Telefon", "WhatsApp", "Telegram", "LinkedIn"]
-      }
+      },
+      ui: {
+        name: "Daniil Kulakov",
+        role: "Pakar Sokongan IT",
+        work: "Projek pilihan",
+        about: "Tentang saya",
+        skills: "Kemahiran teknikal",
+        resume: "Resume & ketersediaan",
+        contactTitle: "Mari berbincang.",
+        viewProjects: "Lihat projek",
+        viewResume: "Lihat resume",
+        video: "Video pengenalan",
+        available: "Terbuka kepada peluang",
+        years: "Tahun dalam sokongan IT",
+        systems: "Sistem dibina, dinaik taraf atau dibaiki",
+        endUser: "Sokongan pengguna",
+        aboutTitle: "Pengalaman praktikal. Penyelesaian jelas.",
+        skillsTitle: "Sokongan, sistem & kerja sebenar.",
+        background: "Pengalaman & pendidikan",
+        languages: "Bahasa",
+        all: "Semua",
+        support: "Sokongan",
+        system: "Sistem",
+        process: "Proses",
+        resumeLabel: "Resume bahasa Inggeris",
+        pdf: "PDF · Dibuka dalam tab baharu",
+        remote: "Kerja jarak jauh",
+        remoteText: "Boleh bermula segera",
+        relocation: "Relokasi",
+        relocationText:
+          "Asia Tenggara, Georgia, Armenia dan Cyprus. Lokasi lain turut dipertimbangkan.",
+        onsite: "Kerja di lokasi",
+        onsiteText: "Memerlukan tajaan visa",
+        contact: "Hubungi",
+        phone: "Telefon",
+        skip: "Langkau ke kandungan",
+        menuOpen: "Buka navigasi",
+        menuClose: "Tutup navigasi",
+        language: "Pilih bahasa",
+        close: "Tutup",
+        back: "Kembali ke projek",
+        projectDetails: "Butiran projek",
+        prev: "Imej sebelumnya",
+        next: "Imej seterusnya",
+        openImage: "Besarkan imej",
+        image: "Imej",
+        zoomIn: "Zum masuk",
+        zoomOut: "Zum keluar",
+        reset: "Set semula zum",
+        notFound: "Projek tidak dijumpai",
+        notFoundText: "Sila pilih projek daripada portfolio.",
+        portfolio: "Portfolio",
+        myRole: "Peranan saya",
+        overview: "Gambaran keseluruhan",
+        tasks: "Tugas utama",
+        outcome: "Hasil & pembelajaran",
+        tools: "Alat & teknologi",
+        gallery: "Galeri projek",
+        noImages: "Tiada imej.",
+        galleryHint: "Klik imej untuk membesarkannya.",
+        videoTitle: "Pengenalan dalam bahasa Inggeris",
+        heroTitle: "Sokongan IT.\nDari desktop\nke server.",
+        heroText:
+          "Lebih 2 tahun pengalaman sokongan Windows, diagnostik perkakasan dan pentadbiran Ubuntu VPS.",
+        copy: "Salin e-mel",
+        copied: "E-mel disalin",
+        copyError: "Sila gunakan pautan e-mel.",
+        download: "Muat turun resume",
+        pcTitle: "Windows & perkakasan",
+        jktTitle: "Linux & hosting",
+        telegramTitle: "VPS & Telegram",
+        minatoTitle: "Marketplace MinatoCargo",
+      },
     },
     th: {
       title: "Daniil Kulakov | ผู้เชี่ยวชาญด้าน IT Support",
-      description: "พอร์ตโฟลิโอของ Daniil Kulakov สำหรับงาน IT Support โดยเน้น Windows support, troubleshooting, hardware, networking basics, Linux fundamentals และ Ubuntu VPS",
-      nav: ["เกี่ยวกับ", "ทักษะ", "โปรเจกต์", "เรซูเม่", "ติดต่อ"],
+      description:
+        "พอร์ตโฟลิโอของ Daniil Kulakov สำหรับงาน IT Support โดยเน้น Windows support, troubleshooting, hardware, networking basics, Linux fundamentals และ Ubuntu VPS",
+      nav: [
+        "โปรเจกต์ที่คัดสรร",
+        "เกี่ยวกับผม",
+        "ทักษะทางเทคนิค",
+        "เรซูเม่และการทำงาน",
+        "ติดต่อ",
+      ],
       hero: {
-        role: "Daniil Kulakov / IT Support Specialist / Systems Support",
-        title: "ซัพพอร์ตไอทีที่เชื่อถือได้สำหรับระบบ Windows ฮาร์ดแวร์ และโครงสร้างพื้นฐาน VPS",
-        text: "IT Support Specialist ที่ลงมือปฏิบัติจริง แก้ไขปัญหา Windows ซ่อมบำรุงฮาร์ดแวร์คอมพิวเตอร์ และดูแลระบบ Ubuntu VPS ทั่วไป",
-        actions: ["ติดต่อ", "ดู CV", "ดูวิดีโอ"],
-        proof: [
-          ["จุดเน้นประสบการณ์", "Windows support, troubleshooting, documentation"],
-          ["งานภาคปฏิบัติ", "ประกอบ อัปเกรด หรือซ่อม PC มากกว่า 50 เครื่อง"],
-          ["สถานที่ที่พร้อมทำงาน", "เปิดรับงานที่ญี่ปุ่น เกาหลีใต้ และเอเชียตะวันออกเฉียงใต้"]
-        ]
-      },
-      opsConsole: {
-        title: "ข้อมูลซัพพอร์ตระบบ",
-        status: "ออนไลน์",
-        nodes: ["Windows", "ฮาร์ดแวร์", "Linux", "เครือข่าย"],
-        layers: [
-          {
-            title: "Windows Support",
-            text: "แก้ปัญหา L1/L2, ติดตั้ง Windows, ลงไดรเวอร์, กู้คืนระบบ และการตั้งค่าให้พร้อมใช้งาน"
-          },
-          {
-            title: "วิเคราะห์ฮาร์ดแวร์",
-            text: "วินิจฉัย PSU, RAM, SSD, GPU, อุปกรณ์ต่อพ่วง, ประกอบเครื่อง และเปลี่ยนอะไหล่"
-          },
-          {
-            title: "Linux & VPS",
-            text: "ดูแล Ubuntu VPS, บริหารผ่าน SSH, ตั้งค่า Apache, MySQL, WinSCP และอัปเดตระบบ"
-          },
-          {
-            title: "พื้นฐานเครือข่าย",
-            text: "ตรวจสอบ IP, แก้ปัญหา Wi-Fi, ตั้งค่าเราเตอร์ และทดสอบการเชื่อมต่ออินเทอร์เน็ต"
-          }
-        ],
-        logLines: [
-          "วิเคราะห์อาการและจำลองอาการปัญหาเพื่อค้นหาสาเหตุ",
-          "แยกแยะสาเหตุระหว่างฮาร์ดแวร์ ซอฟต์แวร์ หรือระบบเครือข่าย",
-          "บันทึกขั้นตอนและแนวทางการแก้ไขปัญหาอย่างละเอียด"
-        ]
+        title: "IT Support\nตั้งแต่ PC\nถึงเซิร์ฟเวอร์",
+        text: "ประสบการณ์ซัพพอร์ต Windows วิเคราะห์ฮาร์ดแวร์ และดูแล Ubuntu VPS มากกว่า 2 ปี",
       },
       about: {
-        title: "มีประสบการณ์ซัพพอร์ตแบบลงมือทำจริง และมีพื้นฐานที่แข็งแรงในงาน systems support",
+        title: "ประสบการณ์จริง แก้ปัญหาชัดเจน",
         copy: [
           "ผมดูแลผู้ใช้ Windows ทั้งการติดตั้ง การแก้ปัญหา การวินิจฉัยฮาร์ดแวร์ การตั้งค่าซอฟต์แวร์ และปัญหาการเชื่อมต่อในงานประจำวัน",
-          "ประสบการณ์ของผมผสมผสานงานซัพพอร์ตที่ต้องสื่อสารกับผู้ใช้เข้ากับงานเทคนิคจริง ตั้งแต่เปลี่ยนชิ้นส่วนที่เสียไปจนถึงการเขียนขั้นตอนแก้ปัญหาที่ใช้ซ้ำได้",
-          "นอกจากงาน desktop support แล้ว ผมยังดูแล Ubuntu VPS ผ่าน SSH, Apache, MySQL และ WinSCP ซึ่งทำให้มีพื้นฐาน Linux administration และการดูแลเซิร์ฟเวอร์ประจำวัน"
+          "นอกจากงาน desktop support แล้ว ผมยังดูแล Ubuntu VPS ผ่าน SSH, Apache, MySQL และ WinSCP ซึ่งทำให้มีพื้นฐาน Linux administration และการดูแลเซิร์ฟเวอร์ประจำวัน",
         ],
         facts: [
-          ["Experience", "KiliaService", "IT Support Technician / Junior System Administration Intern"],
+          [
+            "Experience",
+            "KiliaService",
+            "IT Support Technician / Junior System Administration Intern",
+          ],
           ["Education", "IT Systems", "สำเร็จการศึกษา: มิถุนายน 2026"],
-          ["Languages", "รัสเซีย อังกฤษ ญี่ปุ่น", "รัสเซียเจ้าของภาษา, อังกฤษระดับ B2, ญี่ปุ่น JLPT N2"]
-        ]
+        ],
       },
       skills: {
-        title: "เน้นงาน support, troubleshooting และการทำงานเชิงเทคนิคที่เชื่อถือได้",
+        title: "งานซัพพอร์ตและดูแลระบบ",
         groups: [
-          ["Windows Support", ["ติดตั้ง ตั้งค่า และกู้คืน Windows 7/10/11", "แก้ปัญหาไดรเวอร์ การติดตั้งซอฟต์แวร์ และอัปเดต", "รองรับปัญหาผู้ใช้ระดับ L1/L2"]],
-          ["Hardware & PC Assembly", ["50+ ประกอบ อัปเกรด และซ่อม PC", "วินิจฉัย PSU, RAM, SSD, GPU และอุปกรณ์ต่อพ่วง", "เปลี่ยนชิ้นส่วนและจัดเตรียม workstation ที่เสถียร"]],
-          ["Networking Basics", ["IP addressing, troubleshooting การเชื่อมต่อ และปัญหา Wi-Fi", "ตั้งค่าเราเตอร์และแยกสาเหตุของปัญหาเครือข่ายเบื้องต้น", "พื้นฐาน TCP/IP และความเข้าใจ routing ระดับต้น"]],
-          ["Linux & Remote Access", ["พื้นฐาน Ubuntu, permission และ package updates", "SSH, WinSCP, Command Prompt และ Terminal", "Apache, MySQL และการดูแล VPS เชิงปฏิบัติ"]],
-          ["Microsoft 365 & Identity", ["ใช้งานแอป Microsoft 365 ในงานประจำวันได้อย่างมั่นใจ", "มีความรู้พื้นฐาน Active Directory เกี่ยวกับ users, accounts และ permissions", "รองรับปัญหา productivity และ access ของผู้ใช้ในออฟฟิศได้"]],
-          ["Documentation", ["เขียน knowledge base สำหรับปัญหาที่พบบ่อย", "สื่อสารกับผู้ใช้อย่างชัดเจนและรายงานปัญหาเป็นระบบ", "สร้างขั้นตอน troubleshooting ที่ทำซ้ำได้"]]
-        ]
+          [
+            "Windows Support",
+            [
+              "ติดตั้ง ตั้งค่า และกู้คืน Windows 7/10/11",
+              "แก้ปัญหาไดรเวอร์ การติดตั้งซอฟต์แวร์ และอัปเดต",
+              "รองรับปัญหาผู้ใช้ระดับ L1/L2",
+            ],
+          ],
+          [
+            "Hardware & PC Assembly",
+            [
+              "50+ ประกอบ อัปเกรด และซ่อม PC",
+              "วินิจฉัย PSU, RAM, SSD, GPU และอุปกรณ์ต่อพ่วง",
+              "เปลี่ยนชิ้นส่วนและจัดเตรียม workstation ที่เสถียร",
+            ],
+          ],
+          [
+            "Networking Basics",
+            [
+              "IP addressing, troubleshooting การเชื่อมต่อ และปัญหา Wi-Fi",
+              "ตั้งค่าเราเตอร์และแยกสาเหตุของปัญหาเครือข่ายเบื้องต้น",
+              "พื้นฐาน TCP/IP และความเข้าใจ routing ระดับต้น",
+            ],
+          ],
+          [
+            "Linux & Remote Access",
+            [
+              "พื้นฐาน Ubuntu, permission และ package updates",
+              "SSH, WinSCP, Command Prompt และ Terminal",
+              "Apache, MySQL และการดูแล VPS เชิงปฏิบัติ",
+            ],
+          ],
+          [
+            "Microsoft 365 & Identity",
+            [
+              "ใช้งานแอป Microsoft 365 ในงานประจำวันได้อย่างมั่นใจ",
+              "มีความรู้พื้นฐาน Active Directory เกี่ยวกับ users, accounts และ permissions",
+              "รองรับปัญหา productivity และ access ของผู้ใช้ในออฟฟิศได้",
+            ],
+          ],
+          [
+            "Documentation",
+            [
+              "เขียน knowledge base สำหรับปัญหาที่พบบ่อย",
+              "สื่อสารกับผู้ใช้อย่างชัดเจนและรายงานปัญหาเป็นระบบ",
+              "สร้างขั้นตอน troubleshooting ที่ทำซ้ำได้",
+            ],
+          ],
+        ],
       },
       projects: {
-        title: "โปรเจกต์เชิงปฏิบัติที่แสดงทักษะ support มากกว่าความรู้เชิงทฤษฎี",
         cards: [
-          ["Desktop support / hardware", "Windows Deployment, Repair, and PC Build Work", "ติดตั้ง Windows ใหม่ ตั้งค่าไดรเวอร์และซอฟต์แวร์ วินิจฉัยปัญหาฮาร์ดแวร์ และประกอบคอมมากกว่า 50 เครื่องสำหรับใช้งานจริง", [], "ดูรายละเอียด"],
-          ["Linux / hosting", "JKT Personal Website on Ubuntu VPS", "ติดตั้งและดูแลเว็บไซต์ส่วนตัวบน Ubuntu VPS ด้วย Apache และ MySQL โดยบริหารผ่าน SSH และ WinSCP", [], "ดูรายละเอียด"],
-          ["Remote administration", "Self-Hosted VPN and Telegram Web App", "ตั้งค่า VPN server และดูแล Telegram web app บน Ubuntu VPS รวมถึงงานอัปเดตและบำรุงรักษาจากระยะไกล", [], "ดูรายละเอียด"],
-          ["Full-stack marketplace / PHP + MySQL", "แพลตฟอร์ม Marketplace ระดับโลก MinatoCargo", "สร้าง marketplace หลายหน้าพร้อม catalog, product pages, seller workspace, admin tools, support flows, localization, currency handling และ content pages", [], "ดูรายละเอียด"]
-        ]
+          [
+            "Desktop support / hardware",
+            "Windows และฮาร์ดแวร์",
+            "ติดตั้ง Windows ใหม่ ตั้งค่าไดรเวอร์และซอฟต์แวร์ วินิจฉัยปัญหาฮาร์ดแวร์ และประกอบคอมมากกว่า 50 เครื่องสำหรับใช้งานจริง",
+          ],
+          [
+            "Linux / hosting",
+            "Linux และโฮสติ้ง",
+            "ติดตั้งและดูแลเว็บไซต์ส่วนตัวบน Ubuntu VPS ด้วย Apache และ MySQL โดยบริหารผ่าน SSH และ WinSCP",
+          ],
+          [
+            "Remote administration",
+            "VPS และ Telegram",
+            "ตั้งค่า VPN server และดูแล Telegram web app บน Ubuntu VPS รวมถึงงานอัปเดตและบำรุงรักษาจากระยะไกล",
+          ],
+          [
+            "Full-stack marketplace / PHP + MySQL",
+            "ตลาด MinatoCargo",
+            "สร้าง marketplace หลายหน้าพร้อม catalog, product pages, seller workspace, admin tools, support flows, localization, currency handling และ content pages",
+          ],
+        ],
       },
       resume: {
-        title: "สรุปแบบเป็นมิตรกับ recruiter สำหรับตำแหน่ง support และ infrastructure support",
-        panels: [
-          ["สิ่งที่ผมมี", ["ประสบการณ์ Windows support ระดับ L1/L2 และการแก้ปัญหาให้ผู้ใช้", "วินิจฉัยฮาร์ดแวร์ ประกอบ PC และจัดเตรียม workstation", "พื้นฐานเครือข่าย, Microsoft 365, พื้นฐาน Active Directory และการดูแล Ubuntu VPS", "การสื่อสารและเอกสารที่ชัดเจนสำหรับผู้ใช้ปลายทาง"]],
-          ["ความพร้อมในการทำงาน", ["พร้อมย้ายประเทศเพื่อทำงานในระดับสากล รวมถึงเอเชียตะวันออกเฉียงใต้ จอร์เจีย อาร์เมเนีย และไซปรัส", "ประเทศที่สนใจ: เวียดนาม ไทย มาเลเซีย จอร์เจีย อาร์เมเนีย และไซปรัส พร้อมพิจารณาโอกาสอื่นที่เหมาะสม", "ต้องการ visa sponsorship สำหรับงาน on-site", "พร้อมทำงาน remote ได้ทันที", "พร้อมทำงาน on-site และย้ายประเทศ"], "เปิด Resume PDF"]
-        ]
+        title: "เรซูเม่และการทำงาน",
       },
       contact: {
-        title: "พร้อมสำหรับโอกาสงาน IT support และ systems support ในต่างประเทศ",
+        title: "มาคุยกันครับ",
         text: "หากคุณกำลังเปิดรับตำแหน่ง IT support, helpdesk, desktop support หรือ systems support ผมพร้อมพูดคุยทั้งงาน remote และงานที่ต้องย้ายประเทศ",
-        labels: ["อีเมล", "โทรศัพท์", "WhatsApp", "Telegram", "LinkedIn"]
-      }
+      },
+      ui: {
+        name: "Daniil Kulakov",
+        role: "ผู้เชี่ยวชาญด้าน IT Support",
+        work: "โปรเจกต์ที่คัดสรร",
+        about: "เกี่ยวกับผม",
+        skills: "ทักษะทางเทคนิค",
+        resume: "เรซูเม่และการทำงาน",
+        contactTitle: "มาคุยกันครับ",
+        viewProjects: "ดูโปรเจกต์",
+        viewResume: "ดูเรซูเม่",
+        video: "วิดีโอแนะนำตัว",
+        available: "เปิดรับโอกาสทำงาน",
+        years: "ปีในงาน IT Support",
+        systems: "ระบบที่ประกอบ อัปเกรด หรือซ่อม",
+        endUser: "ซัพพอร์ตผู้ใช้",
+        aboutTitle: "ประสบการณ์จริง แก้ปัญหาชัดเจน",
+        skillsTitle: "งานซัพพอร์ตและดูแลระบบ",
+        background: "ประสบการณ์และการศึกษา",
+        languages: "ภาษา",
+        all: "ทั้งหมด",
+        support: "ซัพพอร์ต",
+        system: "ระบบ",
+        process: "กระบวนการ",
+        resumeLabel: "เรซูเม่ภาษาอังกฤษ",
+        pdf: "PDF · เปิดในแท็บใหม่",
+        remote: "งานระยะไกล",
+        remoteText: "พร้อมเริ่มงานทันที",
+        relocation: "การย้ายประเทศ",
+        relocationText:
+          "เอเชียตะวันออกเฉียงใต้ จอร์เจีย อาร์เมเนีย และไซปรัส พร้อมพิจารณาสถานที่อื่น",
+        onsite: "งานประจำสถานที่",
+        onsiteText: "ต้องการการสนับสนุนวีซ่า",
+        contact: "ติดต่อ",
+        phone: "โทรศัพท์",
+        skip: "ข้ามไปเนื้อหา",
+        menuOpen: "เปิดเมนู",
+        menuClose: "ปิดเมนู",
+        language: "เลือกภาษา",
+        close: "ปิด",
+        back: "กลับไปโปรเจกต์",
+        projectDetails: "รายละเอียดโปรเจกต์",
+        prev: "ภาพก่อนหน้า",
+        next: "ภาพถัดไป",
+        openImage: "ขยายภาพ",
+        image: "ภาพ",
+        zoomIn: "ซูมเข้า",
+        zoomOut: "ซูมออก",
+        reset: "รีเซ็ตซูม",
+        notFound: "ไม่พบโปรเจกต์",
+        notFoundText: "กรุณาเลือกโปรเจกต์จากพอร์ตโฟลิโอ",
+        portfolio: "พอร์ตโฟลิโอ",
+        myRole: "บทบาทของผม",
+        overview: "ภาพรวม",
+        tasks: "งานหลัก",
+        outcome: "ผลลัพธ์และสิ่งที่เรียนรู้",
+        tools: "เครื่องมือและเทคโนโลยี",
+        gallery: "แกลเลอรี",
+        noImages: "ไม่มีภาพ",
+        galleryHint: "คลิกภาพเพื่อขยาย",
+        videoTitle: "แนะนำตัวเป็นภาษาอังกฤษ",
+        heroTitle: "IT Support\nตั้งแต่ PC\nถึงเซิร์ฟเวอร์",
+        heroText:
+          "ประสบการณ์ซัพพอร์ต Windows วิเคราะห์ฮาร์ดแวร์ และดูแล Ubuntu VPS มากกว่า 2 ปี",
+        copy: "คัดลอกอีเมล",
+        copied: "คัดลอกแล้ว",
+        copyError: "กรุณาใช้ลิงก์อีเมล",
+        download: "ดาวน์โหลดเรซูเม่",
+        pcTitle: "Windows และฮาร์ดแวร์",
+        jktTitle: "Linux และโฮสติ้ง",
+        telegramTitle: "VPS และ Telegram",
+        minatoTitle: "ตลาด MinatoCargo",
+      },
     },
     vi: {
       title: "Daniil Kulakov | Chuyên viên Hỗ trợ IT",
-      description: "Portfolio của Daniil Kulakov, Chuyên viên Hỗ trợ IT, tập trung vào hỗ trợ Windows, xử lý sự cố, phần cứng, kiến thức mạng cơ bản, Linux fundamentals và quản trị Ubuntu VPS.",
-      nav: ["Giới thiệu", "Kỹ năng", "Dự án", "CV", "Liên hệ"],
+      description:
+        "Portfolio của Daniil Kulakov, Chuyên viên Hỗ trợ IT, tập trung vào hỗ trợ Windows, xử lý sự cố, phần cứng, kiến thức mạng cơ bản, Linux fundamentals và quản trị Ubuntu VPS.",
+      nav: [
+        "Dự án tiêu biểu",
+        "Giới thiệu",
+        "Kỹ năng kỹ thuật",
+        "CV & công việc",
+        "Liên hệ",
+      ],
       hero: {
-        role: "Daniil Kulakov / IT Support Specialist / Systems Support",
-        title: "Hỗ trợ IT đáng tin cậy cho Windows, phần cứng và hạ tầng VPS.",
-        text: "Chuyên viên IT Support thực tế cung cấp các dịch vụ xử lý sự cố Windows, sửa chữa phần cứng và quản trị Ubuntu VPS hàng ngày.",
-        actions: ["Liên hệ", "Xem CV", "Xem video"],
-        proof: [
-          ["Trọng tâm kinh nghiệm", "Hỗ trợ Windows, xử lý sự cố, tài liệu hóa"],
-          ["Kinh nghiệm thực hành", "Hơn 50 hệ thống PC được lắp ráp, nâng cấp, sửa chữa"],
-          ["Nơi có thể làm việc", "Sẵn sàng làm việc tại Nhật Bản, Hàn Quốc và Đông Nam Á"]
-        ]
-      },
-      opsConsole: {
-        title: "Hồ sơ hỗ trợ IT",
-        status: "Hoạt động",
-        nodes: ["Windows", "Phần cứng", "Linux", "Mạng"],
-        layers: [
-          {
-            title: "Hỗ trợ Windows",
-            text: "Khắc phục sự cố L1/L2, cài đặt sạch, driver, khôi phục hệ thống và thiết lập máy."
-          },
-          {
-            title: "Chẩn đoán phần cứng",
-            text: "Kiểm tra PSU, RAM, SSD, GPU, ngoại vi, lắp ráp, nâng cấp và thay thế linh kiện."
-          },
-          {
-            title: "Linux & VPS",
-            text: "Ubuntu VPS, SSH, Apache, MySQL, WinSCP, cập nhật và bảo trì hệ thống định kỳ."
-          },
-          {
-            title: "Kiến thức mạng",
-            text: "Địa chỉ IP, xử lý lỗi Wi-Fi, cấu hình router, kiểm tra ping và cô lập sự cố mạng."
-          }
-        ],
-        logLines: [
-          "Tiếp nhận lỗi và tái hiện hành vi lỗi để kiểm tra",
-          "Phân lập nguyên nhân do phần cứng, phần mềm hoặc mạng",
-          "Tài liệu hóa quy trình khắc phục lỗi để áp dụng lại"
-        ]
+        title: "Hỗ trợ IT.\nTừ máy tính\nđến máy chủ.",
+        text: "Hơn 2 năm kinh nghiệm hỗ trợ Windows, chẩn đoán phần cứng và quản trị Ubuntu VPS.",
       },
       about: {
-        title: "Kinh nghiệm hỗ trợ thực tế với nền tảng vững cho systems support.",
+        title: "Kinh nghiệm thực tế. Giải pháp rõ ràng.",
         copy: [
           "Tôi hỗ trợ người dùng Windows với cài đặt, xử lý sự cố, chẩn đoán phần cứng, cấu hình phần mềm và các vấn đề kết nối hàng ngày.",
-          "Kinh nghiệm của tôi kết hợp giữa hỗ trợ CNTT cho người dùng và công việc kỹ thuật thực tế, từ thay thế linh kiện lỗi đến ghi chép các cách xử lý có thể lặp lại.",
-          "Bên cạnh desktop support, tôi vận hành Ubuntu VPS thông qua SSH, Apache, MySQL và WinSCP, tạo nên một nền tảng tốt cho Linux administration và bảo trì máy chủ định kỳ."
+          "Bên cạnh desktop support, tôi vận hành Ubuntu VPS thông qua SSH, Apache, MySQL và WinSCP, tạo nên một nền tảng tốt cho Linux administration và bảo trì máy chủ định kỳ.",
         ],
         facts: [
-          ["Kinh nghiệm", "KiliaService", "IT Support Technician / Junior System Administration Intern"],
-          ["Học vấn", "IT Systems", "Hoàn thành bằng chuyên môn: Tháng 6 năm 2026"],
-          ["Ngôn ngữ", "Nga, Anh, Nhật", "Tiếng Nga bản ngữ, tiếng Anh B2, tiếng Nhật JLPT N2"]
-        ]
+          [
+            "Kinh nghiệm",
+            "KiliaService",
+            "IT Support Technician / Junior System Administration Intern",
+          ],
+          [
+            "Học vấn",
+            "IT Systems",
+            "Hoàn thành bằng chuyên môn: Tháng 6 năm 2026",
+          ],
+        ],
       },
       skills: {
-        title: "Xây dựng xung quanh hỗ trợ, xử lý sự cố và khả năng thực thi kỹ thuật đáng tin cậy.",
+        title: "Hỗ trợ và vận hành hệ thống.",
         groups: [
-          ["Hỗ trợ Windows", ["Cài đặt, cấu hình và khôi phục Windows 7/10/11", "Sự cố driver, cài đặt phần mềm, xử lý lỗi cập nhật", "Hỗ trợ người dùng cấp độ L1/L2 và xử lý sự cố"]],
-          ["Phần cứng và lắp ráp PC", ["Hơn 50 bộ PC được lắp ráp, nâng cấp và sửa chữa", "Chẩn đoán PSU, RAM, SSD, GPU và thiết bị ngoại vi", "Thay thế linh kiện và thiết lập máy trạm ổn định"]],
-          ["Kiến thức mạng cơ bản", ["Địa chỉ IP, xử lý lỗi kết nối, sự cố Wi-Fi", "Cấu hình router và khoanh vùng sự cố mạng cơ bản", "Nền tảng TCP/IP và nhận thức routing cấp đầu"]],
-          ["Linux và truy cập từ xa", ["Nền tảng Ubuntu, quyền tệp và cập nhật gói", "SSH, WinSCP, Command Prompt, Terminal", "Apache, MySQL và bảo trì VPS trong thực tế"]],
-          ["Microsoft 365 & Identity", ["Sử dụng thành thạo các ứng dụng Microsoft 365 trong công việc hằng ngày", "Có kiến thức cơ bản về Active Directory cho người dùng, tài khoản và phân quyền", "Hỗ trợ các vấn đề về công cụ văn phòng và quyền truy cập"]],
-          ["Tài liệu hóa", ["Tài liệu kiểu knowledge base cho các lỗi phổ biến", "Giao tiếp rõ ràng với người dùng và báo cáo vấn đề", "Các bước troubleshooting có thể tái sử dụng để giải quyết nhanh hơn"]]
-        ]
+          [
+            "Hỗ trợ Windows",
+            [
+              "Cài đặt, cấu hình và khôi phục Windows 7/10/11",
+              "Sự cố driver, cài đặt phần mềm, xử lý lỗi cập nhật",
+              "Hỗ trợ người dùng cấp độ L1/L2 và xử lý sự cố",
+            ],
+          ],
+          [
+            "Phần cứng và lắp ráp PC",
+            [
+              "Hơn 50 bộ PC được lắp ráp, nâng cấp và sửa chữa",
+              "Chẩn đoán PSU, RAM, SSD, GPU và thiết bị ngoại vi",
+              "Thay thế linh kiện và thiết lập máy trạm ổn định",
+            ],
+          ],
+          [
+            "Kiến thức mạng cơ bản",
+            [
+              "Địa chỉ IP, xử lý lỗi kết nối, sự cố Wi-Fi",
+              "Cấu hình router và khoanh vùng sự cố mạng cơ bản",
+              "Nền tảng TCP/IP và nhận thức routing cấp đầu",
+            ],
+          ],
+          [
+            "Linux và truy cập từ xa",
+            [
+              "Nền tảng Ubuntu, quyền tệp và cập nhật gói",
+              "SSH, WinSCP, Command Prompt, Terminal",
+              "Apache, MySQL và bảo trì VPS trong thực tế",
+            ],
+          ],
+          [
+            "Microsoft 365 & Identity",
+            [
+              "Sử dụng thành thạo các ứng dụng Microsoft 365 trong công việc hằng ngày",
+              "Có kiến thức cơ bản về Active Directory cho người dùng, tài khoản và phân quyền",
+              "Hỗ trợ các vấn đề về công cụ văn phòng và quyền truy cập",
+            ],
+          ],
+          [
+            "Tài liệu hóa",
+            [
+              "Tài liệu kiểu knowledge base cho các lỗi phổ biến",
+              "Giao tiếp rõ ràng với người dùng và báo cáo vấn đề",
+              "Các bước troubleshooting có thể tái sử dụng để giải quyết nhanh hơn",
+            ],
+          ],
+        ],
       },
       projects: {
-        title: "Những dự án thực tế cho thấy kỹ năng support vượt ra ngoài lý thuyết.",
         cards: [
-          ["Hỗ trợ desktop / phần cứng", "Triển khai Windows, sửa chữa và lắp ráp PC", "Cài đặt lại Windows, cấu hình driver và phần mềm, chẩn đoán lỗi phần cứng và lắp ráp hơn 50 PC cho các nhu cầu thực tế.", [], "Xem chi tiết"],
-          ["Linux / hosting", "Website cá nhân JKT trên Ubuntu VPS", "Thiết lập và duy trì website cá nhân trên Ubuntu VPS bằng Apache và MySQL, quản lý máy chủ thông qua SSH và WinSCP.", [], "Xem chi tiết"],
-          ["Quản trị từ xa", "VPN tự host và Telegram Web App", "Cấu hình VPN server và hỗ trợ Telegram web application trên Ubuntu VPS, bao gồm cập nhật và bảo trì từ xa.", [], "Xem chi tiết"],
-          ["Marketplace full-stack / PHP + MySQL", "Nền tảng Marketplace toàn cầu MinatoCargo", "Xây dựng marketplace nhiều trang với catalog, product pages, seller workspace, admin tools, support flows, localization, currency handling và content pages.", [], "Xem chi tiết"]
-        ]
+          [
+            "Hỗ trợ desktop / phần cứng",
+            "Windows & phần cứng",
+            "Cài đặt lại Windows, cấu hình driver và phần mềm, chẩn đoán lỗi phần cứng và lắp ráp hơn 50 PC cho các nhu cầu thực tế.",
+          ],
+          [
+            "Linux / hosting",
+            "Linux & hosting",
+            "Thiết lập và duy trì website cá nhân trên Ubuntu VPS bằng Apache và MySQL, quản lý máy chủ thông qua SSH và WinSCP.",
+          ],
+          [
+            "Quản trị từ xa",
+            "VPS & Telegram",
+            "Cấu hình VPN server và hỗ trợ Telegram web application trên Ubuntu VPS, bao gồm cập nhật và bảo trì từ xa.",
+          ],
+          [
+            "Marketplace full-stack / PHP + MySQL",
+            "Sàn MinatoCargo",
+            "Xây dựng marketplace nhiều trang với catalog, product pages, seller workspace, admin tools, support flows, localization, currency handling và content pages.",
+          ],
+        ],
       },
       resume: {
-        title: "Tóm tắt dễ dàng cho nhà tuyển dụng đánh giá về kỹ năng hỗ trợ và vận hành hệ thống.",
-        panels: [
-          ["Giá trị tôi mang lại", ["Kinh nghiệm hỗ trợ Windows L1/L2 và giải quyết vấn đề người dùng", "Chẩn đoán phần cứng, lắp ráp PC và thiết lập máy trạm", "Kiến thức mạng cơ bản, Microsoft 365, nền tảng Active Directory và hỗ trợ Ubuntu VPS", "Tài liệu hóa rõ ràng và giao tiếp tốt với người dùng"]],
-          ["Tính sẵn sàng", ["Sẵn sàng làm việc tại Nhật Bản, Hàn Quốc và Đông Nam Á", "Cũng cân nhắc Armenia, Síp và các địa điểm phù hợp khác", "Cần visa sponsorship cho công việc on-site", "Có thể bắt đầu remote ngay", "Sẵn sàng làm việc tại chỗ và tái định cư"], "Mở Resume PDF"]
-        ]
+        title: "CV & công việc",
       },
       contact: {
-        title: "Sẵn sàng cho các cơ hội IT support và systems support quốc tế.",
+        title: "Cùng trao đổi nhé.",
         text: "Nếu bạn đang tuyển cho IT support, helpdesk, desktop support hoặc systems support, tôi sẵn sàng trao đổi về cơ hội remote hoặc tái định cư.",
-        labels: ["Email", "Điện thoại", "WhatsApp", "Telegram", "LinkedIn"]
-      }
-    }
+      },
+      ui: {
+        name: "Daniil Kulakov",
+        role: "Chuyên viên Hỗ trợ IT",
+        work: "Dự án tiêu biểu",
+        about: "Giới thiệu",
+        skills: "Kỹ năng kỹ thuật",
+        resume: "CV & công việc",
+        contactTitle: "Cùng trao đổi nhé.",
+        viewProjects: "Xem dự án",
+        viewResume: "Xem CV",
+        video: "Video giới thiệu",
+        available: "Sẵn sàng nhận cơ hội",
+        years: "Năm hỗ trợ IT",
+        systems: "Hệ thống đã lắp ráp, nâng cấp hoặc sửa chữa",
+        endUser: "Hỗ trợ người dùng",
+        aboutTitle: "Kinh nghiệm thực tế. Giải pháp rõ ràng.",
+        skillsTitle: "Hỗ trợ và vận hành hệ thống.",
+        background: "Kinh nghiệm & học vấn",
+        languages: "Ngôn ngữ",
+        all: "Tất cả",
+        support: "Hỗ trợ",
+        system: "Hệ thống",
+        process: "Quy trình",
+        resumeLabel: "CV tiếng Anh",
+        pdf: "PDF · Mở trong tab mới",
+        remote: "Làm việc từ xa",
+        remoteText: "Có thể bắt đầu ngay",
+        relocation: "Chuyển nơi ở",
+        relocationText:
+          "Đông Nam Á, Georgia, Armenia và Síp. Sẵn sàng xem xét địa điểm phù hợp khác.",
+        onsite: "Làm việc tại chỗ",
+        onsiteText: "Cần bảo lãnh thị thực",
+        contact: "Liên hệ",
+        phone: "Điện thoại",
+        skip: "Chuyển đến nội dung",
+        menuOpen: "Mở điều hướng",
+        menuClose: "Đóng điều hướng",
+        language: "Chọn ngôn ngữ",
+        close: "Đóng",
+        back: "Quay lại dự án",
+        projectDetails: "Chi tiết dự án",
+        prev: "Ảnh trước",
+        next: "Ảnh tiếp",
+        openImage: "Phóng to ảnh",
+        image: "Ảnh",
+        zoomIn: "Phóng to",
+        zoomOut: "Thu nhỏ",
+        reset: "Đặt lại thu phóng",
+        notFound: "Không tìm thấy dự án",
+        notFoundText: "Vui lòng chọn một dự án trong portfolio.",
+        portfolio: "Portfolio",
+        myRole: "Vai trò của tôi",
+        overview: "Tổng quan",
+        tasks: "Nhiệm vụ chính",
+        outcome: "Kết quả & bài học",
+        tools: "Công cụ & công nghệ",
+        gallery: "Thư viện dự án",
+        noImages: "Chưa có ảnh.",
+        galleryHint: "Nhấn vào ảnh để phóng to.",
+        videoTitle: "Giới thiệu bằng tiếng Anh",
+        heroTitle: "Hỗ trợ IT.\nTừ máy tính\nđến máy chủ.",
+        heroText:
+          "Hơn 2 năm kinh nghiệm hỗ trợ Windows, chẩn đoán phần cứng và quản trị Ubuntu VPS.",
+        copy: "Sao chép email",
+        copied: "Đã sao chép",
+        copyError: "Vui lòng dùng liên kết email.",
+        download: "Tải CV",
+        pcTitle: "Windows & phần cứng",
+        jktTitle: "Linux & hosting",
+        telegramTitle: "VPS & Telegram",
+        minatoTitle: "Sàn MinatoCargo",
+      },
+    },
   },
-  projectUi: {
-    en: { back: "Back to Portfolio", backShort: "Back", overview: "Project Overview", role: "My Role", tasks: "Key Tasks", outcome: "Outcome / What I Learned", tools: "Tools / Technologies", gallery: "Screenshots", notFoundTitle: "Project not found", notFoundSummary: "The requested project could not be loaded.", notFoundOverview: "Please return to the portfolio and open one of the listed projects.", noScreens: "Screenshots were not added for this project.", galleryHint: "Slides change automatically. Click the current image to open zoom view.", close: "Close", reset: "Reset" },
-    ru: { back: "Назад к портфолио", backShort: "Назад", overview: "Обзор проекта", role: "Моя роль", tasks: "Основные задачи", outcome: "Результат / Чему я научился", tools: "Инструменты / Технологии", gallery: "Скриншоты", notFoundTitle: "Проект не найден", notFoundSummary: "Не удалось загрузить запрошенный проект.", notFoundOverview: "Вернитесь в портфолио и выберите один из проектов.", noScreens: "Для этого проекта скриншоты не добавлены.", galleryHint: "Слайды переключаются автоматически. Нажмите на изображение, чтобы открыть его в режиме увеличения.", close: "Закрыть", reset: "Сбросить" },
-    ja: { back: "ポートフォリオに戻る", backShort: "戻る", overview: "プロジェクト概要", role: "担当内容", tasks: "主な作業", outcome: "成果 / 学んだこと", tools: "使用技術", gallery: "スクリーンショット", notFoundTitle: "プロジェクトが見つかりません", notFoundSummary: "指定されたプロジェクトを読み込めませんでした。", notFoundOverview: "ポートフォリオに戻ってプロジェクトを選択してください。", noScreens: "このプロジェクトにはスクリーンショットがありません。", galleryHint: "スライドは自動で切り替わります。画像をクリックすると拡大表示できます。", close: "閉じる", reset: "リセット" },
-    ms: { back: "Kembali ke Portfolio", backShort: "Kembali", overview: "Gambaran Projek", role: "Peranan Saya", tasks: "Tugas Utama", outcome: "Hasil / Apa Yang Saya Pelajari", tools: "Alat / Teknologi", gallery: "Tangkapan Skrin", notFoundTitle: "Projek tidak dijumpai", notFoundSummary: "Projek yang diminta tidak dapat dimuatkan.", notFoundOverview: "Sila kembali to portfolio dan buka salah satu projek yang disenaraikan.", noScreens: "Tangkapan skrin belum ditambah untuk projek ini.", galleryHint: "Slaid bertukar secara automatik. Klik imej semasa untuk buka paparan zoom.", close: "Tutup", reset: "Set Semula" },
-    th: { back: "กลับไปยังพอร์ตโฟลิโอ", backShort: "กลับ", overview: "ภาพรวมโปรเจกต์", role: "บทบาทของผม", tasks: "งานหลัก", outcome: "ผลลัพธ์ / สิ่งที่ได้เรียนรู้", tools: "เครื่องมือ / เทคโนโลยี", gallery: "ภาพหน้าจอ", notFoundTitle: "ไม่พบโปรเจกต์", notFoundSummary: "ไม่สามารถโหลดโปรเจกต์ที่ร้องขอได้", notFoundOverview: "กรุณากลับไปยังพอร์ตโฟลิโอและเลือกโปรเจกต์จากรายการ", noScreens: "ยังไม่มีการเพิ่มภาพหน้าจอสำหรับโปรเจกต์นี้", galleryHint: "สไลด์จะเปลี่ยนอัตโนมัติ คลิกที่ภาพเพื่อเปิดโหมดซูม", close: "ปิด", reset: "รีเซ็ต" },
-    vi: { back: "Quay lại Portfolio", backShort: "Quay lại", overview: "Tổng quan dự án", role: "Vai trò của tôi", tasks: "Nhiệm vụ chính", outcome: "Kết quả / Điều tôi học được", tools: "Công cụ / Công nghệ", gallery: "Ảnh chụp màn hình", notFoundTitle: "Không tìm thấy dự án", notFoundSummary: "Không thể tải dự án được yêu cầu.", notFoundOverview: "Vui lòng quay lại portfolio và mở một dự án trong danh sách.", noScreens: "Chưa có ảnh chụp màn hình cho dự án này.", galleryHint: "Slide tự động chuyển. Bấm vào ảnh hiện tại để mở chế độ zoom.", close: "Đóng", reset: "Đặt lại" }
-  }
 };
